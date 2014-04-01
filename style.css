@@ -1,0 +1,105 @@
+body {
+	margin: 0;
+	font-family: helvetica;
+	background-color: #3099C9;
+}
+
+#header {
+	width: 900px;
+	height: 58px;
+	margin: auto;
+}
+
+#header-logo {
+	margin-top: 5.5px;
+	margin-bottom: 5.5px;
+	margin-left: 28px;
+	height: 47px;
+	width: 163px;
+	float: left;
+}
+
+#header-nav {
+	float: right;
+}
+
+.header-nav-item {
+	color: white;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 23px;
+	padding-bottom: 23px;
+}
+
+#slideshow {
+	width: 900px;
+	margin: auto;
+	height: 461px;
+}
+
+.slide {
+	width: 900px;
+	height: 461px;
+}
+
+#content {
+	background-color: white;
+	width: 900px;
+	margin: auto;
+	height: 410px;
+}
+
+#content-text {
+	background-color: white;
+	width: 50%;
+	float: left;
+}
+
+#content-graphic {
+	background-color: white;
+	width: 50%;
+	float: left;
+}
+
+#content-graphic-item {
+	width: 100%;
+}
+
+#content-header-first {
+	color: #f5a322;
+	font-size: 28px;
+	margin-top: 24px;
+	margin-left: 28px;
+}
+
+#content-header-second {
+	color: #2898cd;
+	margin-left: 28px;
+	font-size: 20px;
+}
+
+#content-body {
+	margin-top: 12px;
+	margin-left: 28px;
+}
+
+#footer {
+	width: 900px;
+	height: 58px;
+	margin: auto;
+	background-color: white;
+}
+
+#footer-nav {
+	float: right;
+}
+
+.footer-nav-item {
+	color: #808080;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 23px;
+	padding-bottom: 23px;
+}
