@@ -1,0 +1,56 @@
+#content {
+	background-color: white;
+	width: 900px;
+	margin: auto;
+	height: 860px;
+}
+
+#content-nav {
+	height: 78px;
+}
+
+.content-nav-item-left {
+	width: 299px;
+	float: left;
+	border-bottom: 1px solid #808080;
+}
+
+.content-nav-item-middle {
+	width: 299px;
+	float: left;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #808080;
+	border-bottom: 1px solid #808080;
+}
+
+.content-nav-item-right {
+	width: 300px;
+	float: left;
+	border-bottom: 1px solid #808080;
+}
+
+.content-nav-item-icon {
+	width: 77px;
+	height: 77px;
+	float: left;
+}
+
+.content-nav-item-description {
+	float: left;
+	margin-top: 28.5px;
+	margin-left: 10px;
+	font-size: 16pt;
+	color: #808080;
+}
+
+#content-instructions {
+	color: #808080;
+	margin-left: 21px;
+	margin-top: 20px;
+	height: 173px;
+}
+
+#ipad-project-view {
+	margin-left: 21px;
+	width: 629px;
+}
