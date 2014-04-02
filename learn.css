@@ -77,6 +77,8 @@
 	margin-left: 10px;
 }
 
+/* Guide Elements */
+
 .dot {
 	height: 5px;
 	width: 5px;
@@ -96,6 +98,27 @@
 	position: absolute;
 }
 
+.interface-button {
+	font-family: helvetica;
+	border-radius: 50%;
+	position: absolute;
+	border: 1px solid #808080;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+}
+
+.interface-button-text {
+	padding: 7px;
+}
+
+/* 1. Save */
+
+#interface-button-save {
+	left: 67px;
+	top: -54px;
+}
+
 #vertical-line-save {
 	height: 27px;
 	top: -20px;
@@ -105,6 +128,13 @@
 #dot-save {
 	top: 7px;
 	left: 60px;
+}
+
+/* 2. Stage */
+
+#interface-button-stage {
+	left: 160px;
+	top: -54px;
 }
 
 #vertical-line-stage-1 {
@@ -137,6 +167,13 @@
 	left: 197px;
 }
 
+/* 3. Presentation Mode */
+
+#interface-button-presentation-mode {
+	left: 206px;
+	top: -54px;
+}
+
 #vertical-line-presentation-mode {
 	height: 28px;
 	top: -20px;
@@ -146,6 +183,13 @@
 #dot-presentation-mode {
 	top: 8px;
 	left: 200px;
+}
+
+/* 4. Grid */
+
+#interface-button-grid {
+	left: 248px;
+	top: -54px;
 }
 
 #vertical-line-grid {
@@ -159,6 +203,13 @@
 	left: 241px;
 }
 
+/* 5. Add Text */
+
+#interface-button-add-text {
+	left: 318px;
+	top: -54px;
+}
+
 #vertical-line-add-text {
 	height: 27px;
 	top: -20px;
@@ -168,6 +219,13 @@
 #dot-add-text {
 	top: 7px;
 	left: 312px;
+}
+
+/* 6. Change Background */
+
+#interface-button-change-background {
+	left: 359px;
+	top: -54px;
 }
 
 #vertical-line-change-background {
@@ -181,6 +239,13 @@
 	left: 352px;
 }
 
+/* 7. Reset Characters */
+
+#interface-button-reset-characters {
+	left: 434px;
+	top: -54px;
+}
+
 #vertical-line-reset-characters {
 	height: 26px;
 	top: -20px;
@@ -190,6 +255,13 @@
 #dot-reset-characters {
 	top: 6px;
 	left: 427px;
+}
+
+/* 8. Green Flag */
+
+#interface-button-green-flag {
+	left: 475px;
+	top: -54px;
 }
 
 #vertical-line-green-flag {
@@ -203,6 +275,13 @@
 	left: 468px;
 }
 
+/* 9. Pages */
+
+#interface-button-pages {
+	left: 557px;
+	top: -54px;
+}
+
 #vertical-line-pages {
 	height: 30px;
 	top: -20px;
@@ -214,6 +293,13 @@
 	left: 551px;
 }
    
+/* 10. Project Information */
+
+#interface-button-project-information {
+	left: 622px;
+	top: -54px;
+}
+
 #vertical-line-project-information {
 	height: 28px;
 	top: -20px;
@@ -224,6 +310,13 @@
 	top: 8px;
 	left: 615px;
 }   
+
+/* 16. Characters */
+
+#interface-button-characters {
+	left: 54px;
+	top: 493px;
+}
 
 #vertical-line-characters-1 {
 	height: 13px;
@@ -247,6 +340,13 @@
 	height: 250px;
 	top: 243px;
 	left: 70px;
+}
+
+/* 15. Block Categories */
+
+#interface-button-block-categories {
+	left: 103px;
+	top: 493px;
 }
 
 #vertical-line-block-categories-1 {
@@ -273,6 +373,13 @@
 	left: 120px;
 }
 
+/* 14. Block Palette */
+
+#interface-button-block-palette {
+	left: 314px;
+	top: 493px;
+}
+
 #vertical-line-blocks-palette-1 {
 	height: 10px;
 	top: 332px;
@@ -297,6 +404,13 @@
 	left: 330px;
 }
 
+/* 13. Programming Area */
+
+#interface-button-programming-area {
+	left: 377px;
+	top: 493px;
+}
+
 #vertical-line-programming-area {
 	height: 43px;
 	top: 450px;
@@ -306,6 +420,13 @@
 #dot-programming-area {
 	top: 450px;
 	left: 370px;
+}
+
+/* 12. Programming Script */
+
+#interface-button-programming-script {
+	left: 439px;
+	top: 493px;
 }
 
 #vertical-line-programming-script-1 {
@@ -330,6 +451,13 @@
 	height: 66px;
 	top: 427px;
 	left: 455px;
+}
+
+/* 11. Undo Redo */
+
+#interface-button-undo-redo {
+	left: 599px;
+	top: 493px;
 }
 
 #vertical-line-undo-redo-1 {
