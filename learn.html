@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="site.css">
     <link rel="stylesheet" type="text/css" href="learn.css">
   </head>
   <body>
-
     <div id="header">
        <div id="header-logo-wrapper">
         <img src="scratchjrlogo.png" id="header-logo" alt="ScratchJr Logo" />
@@ -66,7 +66,7 @@
       </div>
       <div id="ipad-project-view-wrapper">
         <!-- 1. Save -->
-        <div class="interface-button" id="interface-button-save">
+        <div class="interface-button interface-button-selected" id="interface-button-save">
           <div class="interface-button-text">1</div>
         </div>
         <div class="vertical-line" id="vertical-line-save"></div>
@@ -195,5 +195,36 @@
         </a>
       </div> <!-- end footer-nav -->
     </div> <!-- end footer -->
+  <script type="text/javascript">
+
+    var selectedButtonId = 0;
+
+    var interfaceDescriptions = [
+      ["1 | Save", "Save the current project and exit to the list of projects."],
+      ["2 | Presentation Mode", "Expand the stage to the full screen"],
+      ["3 | Stage", "Where the action takes place in the project. To delete a character, long-press on it."],
+      ["4 | Grid", "Toggle on (and off) the x-y coordinate grid."],
+      ["5 | Add Text", "Write titles and labels on the stage."],
+      ["6 | Change Background", "Select or create a background image for the stage."],
+      ["7 | Reset Characters", "Reset all characters to their starting positions on the stage. (Drag characters to set up new starting positions."],
+      ["8 | Green Flag", "Start all programming scripts that begin with a \"Start on Green Flag\" block."],
+      ["9 | Pages", "Select among the pages in your project \u2014 or tap the plus sign to add a new page. Each page has its own set of characters and a background. To delete a page, long-press on it. To reorder, drag them to new positions."],
+      ["10 | Project Information", "Change the title of the project and see when the project was created."],
+      ["11 | Characters", "Select among the characters in your project \u2014 or tap the plus sign to add a new character. Once a character is selected, you can edit its scripts, tap its name to rename it, or tap the paintbrush to edit its image. To delete a character, long-press it. To copy a character to another page, drag it to the page thumbnail."],
+      ["12 | Block Categories", "Select a category of programming blocks: Start Blocks (Yellow), Motion (Blue), Looks (Purple), Sounds (Green), Control (Orange), End Blocks (Red)."],
+      ["13 | Programming Script", "A sequence of programming blocks, telling the character what to do. Snap blocks together to make a programming script. Tap anywhere on a script to make it run."],
+      ["14 | Programming Area", "Where you put together programming blocks into scripts, telling the character what to do. Each character can have many programming scripts. Tap anywhere on a script to make it run. To copy a block or script into another character, drag it onto the character thumbnail. To delete a block or script, drag it anywhere else outside the Programming Area."],
+      ["15 | Blocks Palette", "A menu of programming blocks. Drag a block into the programming area, then tap on it, to see what it does."],
+      ["16 | Undo and Redo", "If you make a mistake, tap Undo to go back in time, reversing the last action. Tap Redo to reverse the last Undo."]
+    ]; 
+
+    $(document).on('click', '.interface-button', function (e) {
+        $('.interface-button').removeClass('interface-button-selected');
+        $(this).addClass('interface-button-selected');
+        $('#key-header').text(interfaceDescriptions[parseInt($(this).text() - 1)][0]);
+        $('#key-description').text(interfaceDescriptions[parseInt($(this).text() - 1)][1]);
+    });
+
+  </script>
   </body>
 </html>

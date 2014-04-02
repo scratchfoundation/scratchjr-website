@@ -2,7 +2,7 @@
 	background-color: white;
 	width: 900px;
 	margin: auto;
-	height: 860px;
+	height: 800px;
 }
 
 #content-nav {
@@ -47,15 +47,14 @@
 	color: #808080;
 	margin-left: 21px;
 	margin-top: 20px;
-	height: 173px;
+	height: 130px;
 }
 
 #key {
-	width: 217px;
+	width: 225px;
 	height: 472px;
 	float: left;
-	margin-left: 15px;
-	margin-right: 16px;
+	margin-left: 10px;
 	border: 1px solid #e5e5e5;
 }
 
@@ -106,10 +105,16 @@
 	width: 32px;
 	height: 32px;
 	text-align: center;
+	cursor: pointer;
 }
 
 .interface-button-text {
 	padding: 7px;
+}
+
+.interface-button-selected {
+	border: 1px solid #2898CD;
+	color: #2898CD;
 }
 
 /* 1. Save */
