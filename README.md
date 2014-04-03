@@ -14,7 +14,6 @@ To Do:
 - Learn Page
   - nav bar hover
   - remove space below footer
-  - paint editor guide
   - block descriptions
 - Teach Page
 - Contact Page

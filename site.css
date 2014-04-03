@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	font-family: helvetica;
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 	background-color: #3099C9;
 }
 
@@ -24,6 +24,8 @@ body {
 }
 
 .header-nav-item {
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	letter-spacing: 1px;
 	color: white;
 	float: left;
 	padding-left: 20px;

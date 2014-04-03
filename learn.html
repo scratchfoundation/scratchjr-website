@@ -65,7 +65,7 @@
         Click on a label for more information
       </div>
       <div id="ipad-project-view-wrapper">
-        <div class="learn-tab learn-interface">
+        <div class="learn-tab learn-tab-selected learn-interface">
           <!-- 1. Save -->
           <div class="interface-button interface-button-selected" id="interface-button-save">
             <div class="interface-button-text">1</div>
@@ -176,8 +176,16 @@
           <div class="interface-vertical-line" id="interface-vertical-line-undo-redo-2"></div>
           <div class="interface-vertical-line" id="interface-vertical-line-undo-redo-3"></div>
           <img class="ipad-project-view" src="learninterface.png" />
+          <div id="interface-key">
+            <div id="interface-key-header">
+              1 | Save
+            </div>
+            <div id="interface-key-description">
+              Tap here to save the current ScratchJr project and exit to the project menu.
+            </div>
+          </div>
         </div>
-        <div class="learn-tab learn-tab-selected learn-paint">
+        <div class="learn-tab learn-paint">
           <!-- 1. Undo -->
           <div class="paint-button paint-button-selected" id="paint-button-undo">
             <div class="paint-button-text">1</div>
@@ -271,21 +279,384 @@
           <div class="paint-horizontal-line" id="paint-horizontal-line-select-line-size-2"></div>  
           <div class="paint-horizontal-line" id="paint-horizontal-line-select-line-size-3"></div>     
           <img class="ipad-project-view" src="learnpaint.png" />
+          <div id="paint-key">
+            <div id="paint-key-header">
+              1 | Undo
+            </div>
+            <div id="paint-key-description">
+              Reverses the most recent change.
+            </div>
+          </div>
         </div>
         <div class="learn-tab learn-blocks">
-          <img class="ipad-project-view" src="learnblocks.png" />
-        </div>
-      </div>
-      <div id="key">
-        <div id="key-header">
-          1 | Save
-        </div>
-        <div id="key-description">
-          Tap here to save the current ScratchJr project and exit to the project menu.
+          <!-- Yellow Blocks -->
+          <div class="block-category-header" id="yellow-block-category-header">
+            Triggering Blocks
+          </div>
+          <div class="block-category-header-line" id="yellow-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Start on Green Flag
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="onflag.png" />
+              </div>
+              <div class="block-description">
+                Starts the script when the Green Flag is tapped.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Start on Tap
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="ontap.png" />
+              </div>
+              <div class="block-description">
+                Starts the script when someone taps on the character.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Start on Touch
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="onbump.png" />
+              </div>
+              <div class="block-description">
+                Starts the script when the character is touched another character.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Start on Message
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="messagereceive.png" />
+              </div>
+              <div class="block-description">
+                Starts the script whenever a message of the specified color is sent.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Send Message
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="messagesend.png" />
+              </div>
+              <div class="block-description">
+                Sends a message of the specified color.
+              </div>
+            </div>
+          </div>
+          <!-- Blue Blocks -->
+          <div class="block-category-header" id="blue-block-category-header">
+            Motion Blocks
+          </div>
+          <div class="block-category-header-line" id="blue-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Move right
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="right.png" />
+              </div>
+              <div class="block-description">
+                Moves the character a specified number of grid squares to the right.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Move left
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="left.png" />
+              </div>
+              <div class="block-description">
+                Moves the character a specified number of grid squares to the left.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Move up
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="up.png" />
+              </div>
+              <div class="block-description">
+                Moves the character a specified number of grid squares up.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Move down
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="down.png" />
+              </div>
+              <div class="block-description">
+                Moves the character a specified number of grid squares down.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Turn right
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="turnright.png" />
+              </div>
+              <div class="block-description">
+                Rotates the character clockwise a specified amount. Turn 12 for a full rotation.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Turn left
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="turnleft.png" />
+              </div>
+              <div class="block-description">
+                Rotates the character counterclockwise a specified amount. Turn 12 for a full rotation.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Hop
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="hop.png" />
+              </div>
+              <div class="block-description">
+                Moves the character up a specified number of grid squares and then down again.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Go home
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="gohome.png" />
+              </div>
+              <div class="block-description">
+                Resets the character's location.
+              </div>
+            </div>
+          </div>
+          <!-- Purple Blocks -->
+          <div class="block-category-header" id="purple-block-category-header">
+            Looks Blocks
+          </div>
+          <div class="block-category-header-line" id="purple-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Say
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="say.png" />
+              </div>
+              <div class="block-description">
+                Shows a specified message in a speech bubble above the character.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Grow
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="grow.png" />
+              </div>
+              <div class="block-description">
+                Increases the character's size.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Shrink
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="shrink.png" />
+              </div>
+              <div class="block-description">
+                Decreases the character's size.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Reset size
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="reset.png" />
+              </div>
+              <div class="block-description">
+                Returns the character to its default size.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Hide
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="hide.png" />
+              </div>
+              <div class="block-description">
+                Fades out the character until it is invisible.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Show
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="show.png" />
+              </div>
+              <div class="block-description">
+                Fades in the character until it is fully visible.
+              </div>
+            </div>
+          </div>
+          <div class="block-category-header" id="green-block-category-header">
+            Sound Blocks
+          </div>
+          <div class="block-category-header-line" id="green-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Pop
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="pop.png" />
+              </div>
+              <div class="block-description">
+                Plays a "pop" sound
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Play recorded sound
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="playsound.png" />
+              </div>
+              <div class="block-description">
+                Plays a sound recorded by the user.
+              </div>
+            </div>
+          </div>
+          <div class="block-category-header" id="orange-block-category-header">
+            Control Flow Blocks
+          </div>
+          <div class="block-category-header-line" id="orange-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Wait
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="wait.png" />
+              </div>
+              <div class="block-description">
+                Pauses the script for a specified amount of time (in tenths of seconds).
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Stop
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="stop.png" />
+              </div>
+              <div class="block-description">
+                Stops all the characters' scripts.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Set speed
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="speed.png" />
+              </div>
+              <div class="block-description">
+                Changes the rate at which certain blocks are run.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Repeat
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image-repeat" src="repeat.png" />
+              </div>
+              <div class="block-description-repeat">
+                Runs the blocks inside a specified number of times.
+              </div>
+            </div>
+          </div>
+          <div class="block-category-header" id="red-block-category-header">
+            End Blocks
+          </div>
+          <div class="block-category-header-line" id="red-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                End
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="end.png" />
+              </div>
+              <div class="block-description">
+                Indicates the end of the script (but does not affect the script in any way).
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Repeat forever
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="forever.png" />
+              </div>
+              <div class="block-description">
+                Runs the script over and over.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Go to Page
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="page.png" />
+              </div>
+              <div class="block-description">
+                Change to the specified page of the project.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
     <div id="footer">
       <div id="footer-nav">
         <a href="contact.html">
@@ -339,15 +710,15 @@
     $(document).on('click', '.interface-button', function (e) {
         $('.interface-button').removeClass('interface-button-selected');
         $(this).addClass('interface-button-selected');
-        $('#key-header').text(interfaceDescriptions[parseInt($(this).text() - 1)][0]);
-        $('#key-description').text(interfaceDescriptions[parseInt($(this).text() - 1)][1]);
+        $('#interface-key-header').text(interfaceDescriptions[parseInt($(this).text() - 1)][0]);
+        $('#interface-key-description').text(interfaceDescriptions[parseInt($(this).text() - 1)][1]);
     });
 
     $(document).on('click', '.paint-button', function (e) {
         $('.paint-button').removeClass('paint-button-selected');
         $(this).addClass('paint-button-selected');
-        $('#key-header').text(paintDescriptions[parseInt($(this).text() - 1)][0]);
-        $('#key-description').text(paintDescriptions[parseInt($(this).text() - 1)][1]);
+        $('#paint-key-header').text(paintDescriptions[parseInt($(this).text() - 1)][0]);
+        $('#paint-key-description').text(paintDescriptions[parseInt($(this).text() - 1)][1]);
     });
 
     $(document).on('click', '.content-nav-item', function(e) {
@@ -355,6 +726,13 @@
       $(this).addClass('content-nav-item-selected');
       $('.learn-tab').removeClass('learn-tab-selected');
       $(tabSelectors[tabTitles.indexOf($.trim($(this).text()))]).addClass('learn-tab-selected');
+      if ($('.learn-blocks').hasClass('learn-tab-selected')) {
+        $('#content-instructions').hide();
+        $('#content').css('height', 2800)
+      } else {
+        $('#content-instructions').show();
+        $('#content').css('height', 800)
+      }
     });
 
   </script>
