@@ -37,7 +37,7 @@
     <div id="content">
       <div id="content-nav">
         <a href="#">
-          <div class="content-nav-item-left">
+          <div class="content-nav-item content-nav-item-selected content-nav-item-left">
             <img class="content-nav-item-icon" src="interfaceguidebtn.png" />
             <div class="content-nav-item-description">
               Interface Guide
@@ -45,7 +45,7 @@
           </div>
         </a>
         <a href="#">
-          <div class="content-nav-item-middle">
+          <div class="content-nav-item content-nav-item-middle">
             <img class="content-nav-item-icon" src="painteditorguidebtn.png" />
             <div class="content-nav-item-description">
               Paint Editor Guide
@@ -53,7 +53,7 @@
           </div>
         </a>
         <a href="#">
-          <div class="content-nav-item-right">
+          <div class="content-nav-item content-nav-item-right">
             <img class="content-nav-item-icon" src="blockdescriptionsbtn.png" />
             <div class="content-nav-item-description">
               Block Descriptions
@@ -65,116 +65,216 @@
         Click on a label for more information
       </div>
       <div id="ipad-project-view-wrapper">
-        <!-- 1. Save -->
-        <div class="interface-button interface-button-selected" id="interface-button-save">
-          <div class="interface-button-text">1</div>
+        <div class="learn-tab learn-interface">
+          <!-- 1. Save -->
+          <div class="interface-button interface-button-selected" id="interface-button-save">
+            <div class="interface-button-text">1</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-save"></div>
+          <div class="interface-dot" id="interface-dot-save"></div>
+          <!-- 2. Stage -->
+          <div class="interface-button" id="interface-button-stage">
+            <div class="interface-button-text">2</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-stage-1"></div>
+          <div class="interface-horizontal-line" id="interface-horizontal-line-stage-1"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-stage-2"></div>
+          <div class="interface-horizontal-line" id="interface-horizontal-line-stage-2"></div>
+          <div class="interface-horizontal-line" id="interface-horizontal-line-stage-3"></div>
+          <!-- 3. Presentation Mode -->
+          <div class="interface-button" id="interface-button-presentation-mode">
+            <div class="interface-button-text">3</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-presentation-mode"></div>
+          <div class="interface-dot" id="interface-dot-presentation-mode"></div>
+          <!-- 4. Grid -->
+          <div class="interface-button" id="interface-button-grid">
+            <div class="interface-button-text">4</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-grid"></div>
+          <div class="interface-dot" id="interface-dot-grid"></div>
+          <!-- 5. Add Text -->
+          <div class="interface-button" id="interface-button-add-text">
+            <div class="interface-button-text">5</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-add-text"></div>
+          <div class="interface-dot" id="interface-dot-add-text"></div>
+          <!-- 6. Change Background -->
+          <div class="interface-button" id="interface-button-change-background">
+            <div class="interface-button-text">6</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-change-background"></div>
+          <div class="interface-dot" id="interface-dot-change-background"></div>
+          <!-- 7. Reset Characters -->
+          <div class="interface-button" id="interface-button-reset-characters">
+            <div class="interface-button-text">7</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-reset-characters"></div>
+          <div class="interface-dot" id="interface-dot-reset-characters"></div>
+          <!-- 8. Green Flag -->
+          <div class="interface-button" id="interface-button-green-flag">
+            <div class="interface-button-text">8</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-green-flag"></div>
+          <div class="interface-dot" id="interface-dot-green-flag"></div>
+          <!-- 9. Pages -->
+          <div class="interface-button" id="interface-button-pages">
+            <div class="interface-button-text">9</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-pages"></div>
+          <div class="interface-dot" id="interface-dot-pages"></div>    
+          <!-- 10. Project Information -->
+          <div class="interface-button" id="interface-button-project-information">
+            <div class="interface-button-text">10</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-project-information"></div>
+          <div class="interface-dot" id="interface-dot-project-information"></div>
+          <!-- 16. Characters -->
+          <div class="interface-button" id="interface-button-characters">
+            <div class="interface-button-text">16</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-characters-1"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-characters-3"></div>
+          <div class="interface-horizontal-line" id="interface-horizontal-line-characters"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-characters-2"></div>
+          <!-- 15. Block Categories -->
+          <div class="interface-button" id="interface-button-block-categories">
+            <div class="interface-button-text">15</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-block-categories-1"></div>
+          <div class="interface-horizontal-line" id="interface-horizontal-line-block-categories"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-block-categories-2"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-block-categories-3"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-blocks-palette-1"></div>
+          <!-- 14. Blocks Palette -->
+          <div class="interface-button" id="interface-button-block-palette">
+            <div class="interface-button-text">14</div>
+          </div>
+          <div class="interface-horizontal-line" id="interface-horizontal-line-blocks-palette"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-blocks-palette-2"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-blocks-palette-3"></div>
+          <!-- 13. Programming Area -->
+          <div class="interface-button" id="interface-button-programming-area">
+            <div class="interface-button-text">13</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-programming-area"></div>
+          <div class="interface-dot" id="interface-dot-programming-area"></div>
+          <!-- 12. Programming Script -->
+          <div class="interface-button" id="interface-button-programming-script">
+            <div class="interface-button-text">12</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-programming-script-1"></div>
+          <div class="interface-horizontal-line" id="interface-horizontal-line-programming-script"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-programming-script-2"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-programming-script-3"></div>
+          <!-- 11. Undo Redo -->
+          <div class="interface-button" id="interface-button-undo-redo">
+            <div class="interface-button-text">11</div>
+          </div>
+          <div class="interface-vertical-line" id="interface-vertical-line-undo-redo-1"></div>
+          <div class="interface-horizontal-line" id="interface-horizontal-line-undo-redo"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-undo-redo-2"></div>
+          <div class="interface-vertical-line" id="interface-vertical-line-undo-redo-3"></div>
+          <img class="ipad-project-view" src="learninterface.png" />
         </div>
-        <div class="vertical-line" id="vertical-line-save"></div>
-        <div class="dot" id="dot-save"></div>
-        <!-- 2. Stage -->
-        <div class="interface-button" id="interface-button-stage">
-          <div class="interface-button-text">2</div>
+        <div class="learn-tab learn-tab-selected learn-paint">
+          <!-- 1. Undo -->
+          <div class="paint-button paint-button-selected" id="paint-button-undo">
+            <div class="paint-button-text">1</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-undo"></div>
+          <div class="paint-dot" id="paint-dot-undo"></div>
+          <!-- 2. Redo -->
+          <div class="paint-button" id="paint-button-redo">
+            <div class="paint-button-text">2</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-redo"></div>
+          <div class="paint-dot" id="paint-dot-redo"></div>
+          <!-- 3. Select Shape -->
+          <div class="paint-button" id="paint-button-select-shape">
+            <div class="paint-button-text">3</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-select-shape-1"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-select-shape-1"></div>
+          <div class="paint-vertical-line" id="paint-vertical-line-select-shape-2"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-select-shape-2"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-select-shape-3"></div>
+          <!-- 4. Character Name -->
+          <div class="paint-button" id="paint-button-character-name">
+            <div class="paint-button-text">4</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-character-name"></div>
+          <div class="paint-dot" id="paint-dot-character-name"></div>
+          <!-- 5. Cut -->
+          <div class="paint-button" id="paint-button-cut">
+            <div class="paint-button-text">5</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-cut"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-cut"></div>
+          <div class="paint-dot" id="paint-dot-cut"></div>
+          <!-- 6. Duplicate -->
+          <div class="paint-button" id="paint-button-duplicate">
+            <div class="paint-button-text">6</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-duplicate"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-duplicate"></div>
+          <div class="paint-dot" id="paint-dot-duplicate"></div>
+          <!-- 7. Rotate -->
+          <div class="paint-button" id="paint-button-rotate">
+            <div class="paint-button-text">7</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-rotate"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-rotate"></div>
+          <div class="paint-dot" id="paint-dot-rotate"></div>
+          <!-- 8. Drag -->
+          <div class="paint-button" id="paint-button-drag">
+            <div class="paint-button-text">8</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-drag"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-drag"></div>
+          <div class="paint-dot" id="paint-dot-drag"></div>
+          <!-- 9. Save -->
+          <div class="paint-button paint-button-selected" id="paint-button-save">
+            <div class="paint-button-text">9</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-save"></div>
+          <div class="paint-dot" id="paint-dot-save"></div>
+          <!-- 10. Fill -->
+          <div class="paint-button" id="paint-button-fill">
+            <div class="paint-button-text">10</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-fill"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-fill"></div>
+          <div class="paint-dot" id="paint-dot-fill"></div>
+          <!-- 11. Camera -->
+          <div class="paint-button" id="paint-button-camera">
+            <div class="paint-button-text">11</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-camera"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-camera"></div>
+          <div class="paint-dot" id="paint-dot-camera"></div>
+          <!-- 12. Select Color -->
+          <div class="paint-button" id="paint-button-select-color">
+            <div class="paint-button-text">12</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-select-color-1"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-select-color-1"></div>
+          <div class="paint-vertical-line" id="paint-vertical-line-select-color-2"></div>
+          <div class="paint-vertical-line" id="paint-vertical-line-select-color-3"></div>
+          <!-- 13. Select Line Size -->  
+          <div class="paint-button" id="paint-button-select-line-size">
+            <div class="paint-button-text">13</div>
+          </div>
+          <div class="paint-vertical-line" id="paint-vertical-line-select-line-size-1"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-select-line-size-1"></div>
+          <div class="paint-vertical-line" id="paint-vertical-line-select-line-size-2"></div>
+          <div class="paint-horizontal-line" id="paint-horizontal-line-select-line-size-2"></div>  
+          <div class="paint-horizontal-line" id="paint-horizontal-line-select-line-size-3"></div>     
+          <img class="ipad-project-view" src="learnpaint.png" />
         </div>
-        <div class="vertical-line" id="vertical-line-stage-1"></div>
-        <div class="horizontal-line" id="horizontal-line-stage-1"></div>
-        <div class="vertical-line" id="vertical-line-stage-2"></div>
-        <div class="horizontal-line" id="horizontal-line-stage-2"></div>
-        <div class="horizontal-line" id="horizontal-line-stage-3"></div>
-        <!-- 3. Presentation Mode -->
-        <div class="interface-button" id="interface-button-presentation-mode">
-          <div class="interface-button-text">3</div>
+        <div class="learn-tab learn-blocks">
+          <img class="ipad-project-view" src="learnblocks.png" />
         </div>
-        <div class="vertical-line" id="vertical-line-presentation-mode"></div>
-        <div class="dot" id="dot-presentation-mode"></div>
-        <!-- 4. Grid -->
-        <div class="interface-button" id="interface-button-grid">
-          <div class="interface-button-text">4</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-grid"></div>
-        <div class="dot" id="dot-grid"></div>
-        <!-- 5. Add Text -->
-        <div class="interface-button" id="interface-button-add-text">
-          <div class="interface-button-text">5</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-add-text"></div>
-        <div class="dot" id="dot-add-text"></div>
-        <!-- 6. Change Background -->
-        <div class="interface-button" id="interface-button-change-background">
-          <div class="interface-button-text">6</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-change-background"></div>
-        <div class="dot" id="dot-change-background"></div>
-        <!-- 7. Reset Characters -->
-        <div class="interface-button" id="interface-button-reset-characters">
-          <div class="interface-button-text">7</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-reset-characters"></div>
-        <div class="dot" id="dot-reset-characters"></div>
-        <!-- 8. Green Flag -->
-        <div class="interface-button" id="interface-button-green-flag">
-          <div class="interface-button-text">8</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-green-flag"></div>
-        <div class="dot" id="dot-green-flag"></div>
-        <!-- 9. Pages -->
-        <div class="interface-button" id="interface-button-pages">
-          <div class="interface-button-text">9</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-pages"></div>
-        <div class="dot" id="dot-pages"></div>    
-        <!-- 10. Project Information -->
-        <div class="interface-button" id="interface-button-project-information">
-          <div class="interface-button-text">10</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-project-information"></div>
-        <div class="dot" id="dot-project-information"></div>
-        <!-- 16. Characters -->
-        <div class="interface-button" id="interface-button-characters">
-          <div class="interface-button-text">16</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-characters-1"></div>
-        <div class="vertical-line" id="vertical-line-characters-3"></div>
-        <div class="horizontal-line" id="horizontal-line-characters"></div>
-        <div class="vertical-line" id="vertical-line-characters-2"></div>
-        <!-- 15. Block Categories -->
-        <div class="interface-button" id="interface-button-block-categories">
-          <div class="interface-button-text">15</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-block-categories-1"></div>
-        <div class="horizontal-line" id="horizontal-line-block-categories"></div>
-        <div class="vertical-line" id="vertical-line-block-categories-2"></div>
-        <div class="vertical-line" id="vertical-line-block-categories-3"></div>
-        <div class="vertical-line" id="vertical-line-blocks-palette-1"></div>
-        <!-- 14. Blocks Palette -->
-        <div class="interface-button" id="interface-button-block-palette">
-          <div class="interface-button-text">14</div>
-        </div>
-        <div class="horizontal-line" id="horizontal-line-blocks-palette"></div>
-        <div class="vertical-line" id="vertical-line-blocks-palette-2"></div>
-        <div class="vertical-line" id="vertical-line-blocks-palette-3"></div>
-        <!-- 13. Programming Area -->
-        <div class="interface-button" id="interface-button-programming-area">
-          <div class="interface-button-text">13</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-programming-area"></div>
-        <div class="dot" id="dot-programming-area"></div>
-        <!-- 12. Programming Script -->
-        <div class="interface-button" id="interface-button-programming-script">
-          <div class="interface-button-text">12</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-programming-script-1"></div>
-        <div class="horizontal-line" id="horizontal-line-programming-script"></div>
-        <div class="vertical-line" id="vertical-line-programming-script-2"></div>
-        <div class="vertical-line" id="vertical-line-programming-script-3"></div>
-        <!-- 11. Undo Redo -->
-        <div class="interface-button" id="interface-button-undo-redo">
-          <div class="interface-button-text">11</div>
-        </div>
-        <div class="vertical-line" id="vertical-line-undo-redo-1"></div>
-        <div class="horizontal-line" id="horizontal-line-undo-redo"></div>
-        <div class="vertical-line" id="vertical-line-undo-redo-2"></div>
-        <div class="vertical-line" id="vertical-line-undo-redo-3"></div>
-        <img id="ipad-project-view" src="learninterface.png" />
       </div>
       <div id="key">
         <div id="key-header">
@@ -197,7 +297,9 @@
     </div> <!-- end footer -->
   <script type="text/javascript">
 
-    var selectedButtonId = 0;
+    var tabTitles = ["Interface Guide", "Paint Editor Guide", "Block Descriptions"];
+
+    var tabSelectors = [".learn-interface", ".learn-paint", ".learn-blocks"];
 
     var interfaceDescriptions = [
       ["1 | Save", "Save the current project and exit to the list of projects."],
@@ -218,11 +320,41 @@
       ["16 | Undo and Redo", "If you make a mistake, tap Undo to go back in time, reversing the last action. Tap Redo to reverse the last Undo."]
     ]; 
 
+    var paintDescriptions = [
+      ["1 | Undo", "Reverses the most recent change."],
+      ["2 | Redo", "Reverses the most recent Undo."],
+      ["3 | Select Shape", "Choose a shape to draw: line, ellipse, triangle, or rectangle."],
+      ["4 | Character Name", "Edit the name of the character."],
+      ["5 | Cut", "After selecting this tool, you can tap a character or shape to remove it from the canvas."],
+      ["6 | Duplicate", "After selecting the Duplicate tool, you can tap a character or shape to create a copy of it."],
+      ["7 | Rotate", "After selecting the Rotate tool, you can rotate a character or shape around its center."],
+      ["8 | Drag", "After selecting the Drag tool, you can drag a character or shape on the canvas. Tap on a shape to edit its lines."],
+      ["9 | Save", "Save changes and leave the Paint Editor."],
+      ["10 | Fill", "After selecting the Fill tool, you can tap a section of a character or shape to fill it with the currently selected color."],
+      ["11 | Camera", "After selecting the Camera tool, you can tap any area of a character or shape, and then tap the camera button to fill it with a new photo taken with the camera."],
+      ["12 | Select Color", "Select a new color, to use in drawing and filling."],
+      ["13 | Select Line Size", "Change the width of the lines in the shapes you are drawing."],  
+    ];
+
     $(document).on('click', '.interface-button', function (e) {
         $('.interface-button').removeClass('interface-button-selected');
         $(this).addClass('interface-button-selected');
         $('#key-header').text(interfaceDescriptions[parseInt($(this).text() - 1)][0]);
         $('#key-description').text(interfaceDescriptions[parseInt($(this).text() - 1)][1]);
+    });
+
+    $(document).on('click', '.paint-button', function (e) {
+        $('.paint-button').removeClass('paint-button-selected');
+        $(this).addClass('paint-button-selected');
+        $('#key-header').text(paintDescriptions[parseInt($(this).text() - 1)][0]);
+        $('#key-description').text(paintDescriptions[parseInt($(this).text() - 1)][1]);
+    });
+
+    $(document).on('click', '.content-nav-item', function(e) {
+      $('.content-nav-item').removeClass('content-nav-item-selected');
+      $(this).addClass('content-nav-item-selected');
+      $('.learn-tab').removeClass('learn-tab-selected');
+      $(tabSelectors[tabTitles.indexOf($.trim($(this).text()))]).addClass('learn-tab-selected');
     });
 
   </script>
