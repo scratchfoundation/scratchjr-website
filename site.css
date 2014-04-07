@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Lucida Grande", arial, sans-serif;
 	background-color: #3099C9;
 }
 
@@ -21,16 +21,52 @@ body {
 
 #header-nav {
 	float: right;
+	width: 383px;
 }
 
 .header-nav-item {
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Lucida Grande", arial, sans-serif;
 	letter-spacing: 1px;
 	color: white;
 	float: left;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 23px;
+	height: 35px;
+}
+
+.header-nav-item-selected {
+	background-color: #0A7199;
+}
+
+.header-nav-divider-1 {
+	background-color: white;
+	height: 22px;
+	width: 2px;
+	float: right;
+	top: 21px;
+	left: 794px;
+	position: absolute;
+}
+
+.header-nav-divider-2 {
+	background-color: white;
+	height: 22px;
+	width: 2px;
+	float: right;
+	top: 21px;
+	left: 893px;
+	position: absolute;
+}
+
+.header-nav-divider-3 {
+	background-color: white;
+	height: 22px;
+	width: 2px;
+	float: right;
+	top: 21px;
+	left: 988px;
+	position: absolute;
 }
 
 #footer {

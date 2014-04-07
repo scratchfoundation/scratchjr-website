@@ -47,7 +47,7 @@
 	float: left;
 	margin-top: 28.5px;
 	margin-left: 10px;
-	font-size: 16pt;
+	font-size: 12pt;
 }
 
 #content-instructions {
@@ -55,6 +55,7 @@
 	margin-left: 21px;
 	margin-top: 20px;
 	height: 130px;
+	font-size: 14px;
 }
 
 /* Guide Elements */
@@ -79,7 +80,7 @@
 }
 
 .interface-button {
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Lucida Grande", arial, sans-serif;
 	border-radius: 50%;
 	position: absolute;
 	border: 1px solid #808080;
@@ -481,7 +482,7 @@
 }
 
 #interface-key-header {
-	font-size: 14pt;
+	font-size: 12pt;
 	padding-top: 10px;
 	padding-left: 10px;
 	height: 31px;
@@ -503,7 +504,7 @@
 /* Guide 2 - Paint Editor Guide */
 
 .paint-button {
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Lucida Grande", arial, sans-serif;
 	border-radius: 50%;
 	position: absolute;
 	border: 1px solid #808080;
@@ -870,7 +871,7 @@
 }
 
 #paint-key-header {
-	font-size: 14pt;
+	font-size: 12pt;
 	padding-top: 10px;
 	padding-left: 10px;
 	height: 31px;
