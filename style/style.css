@@ -1,0 +1,53 @@
+#slideshow {
+	width: 900px;
+	margin: auto;
+	height: 461px;
+}
+
+.slide {
+	width: 900px;
+	height: 461px;
+}
+
+#content {
+	background-color: white;
+	width: 900px;
+	margin: auto;
+	height: 410px;
+}
+
+#content-text {
+	background-color: white;
+	width: 50%;
+	float: left;
+}
+
+#content-graphic {
+	background-color: white;
+	width: 50%;
+	float: left;
+}
+
+#content-graphic-item {
+	width: 100%;
+}
+
+#content-header-first {
+	color: #f5a322;
+	font-size: 28px;
+	margin-top: 24px;
+	margin-left: 28px;
+}
+
+#content-header-second {
+	color: #2898cd;
+	margin-left: 28px;
+	font-size: 20px;
+}
+
+#content-body {
+	font-family: "Lucida Grande", arial, sans-serif;
+	margin-top: 12px;
+	margin-left: 28px;
+	color: #808080;
+}
