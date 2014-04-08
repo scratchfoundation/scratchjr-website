@@ -22,6 +22,7 @@ body {
 #header-nav {
 	float: right;
 	width: 383px;
+	position: relative;
 }
 
 .header-nav-item {
@@ -45,7 +46,7 @@ body {
 	width: 2px;
 	float: right;
 	top: 21px;
-	left: 794px;
+	left: 89px;
 	position: absolute;
 }
 
@@ -55,7 +56,7 @@ body {
 	width: 2px;
 	float: right;
 	top: 21px;
-	left: 893px;
+	left: 188px;
 	position: absolute;
 }
 
@@ -65,7 +66,7 @@ body {
 	width: 2px;
 	float: right;
 	top: 21px;
-	left: 988px;
+	left: 283px;
 	position: absolute;
 }
 
