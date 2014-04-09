@@ -13,6 +13,7 @@
 	color: #808080;
 	font-size: 14px;
 	line-height: 22px;
+	padding-bottom: 30px;
 }
 
 .content-tapit {
@@ -22,6 +23,7 @@
 	color: #808080;
 	font-size: 14px;
 	line-height: 22px;
+	padding-bottom: 30px;
 }
 
 .content-assessments {
@@ -31,6 +33,7 @@
 	color: #808080;
 	font-size: 14px;
 	line-height: 22px;
+	padding-bottom: 20px;
 }
 
 .content-section {
@@ -38,12 +41,15 @@
 	margin-left: 120px;
 	margin-right: 120px;
 	clear: both;
+	overflow: auto;
+	display: block;
+	padding-bottom: 30px;
 }
 
 .content-section-title {
-	text-align: center;
 	font-weight: 800;
 	font-size: 18px;
+	color: #2898CD;
 }
 
 .content-section-description {
@@ -58,17 +64,21 @@
 
 .content-section-item {
 	padding-top: 20px;
-	padding-bottom: 10px;
+	display: block;
+	overflow: auto;
+	padding-bottom: 30px;
 	clear: both;
+
 }
 
 .content-section-item-title {
-	text-align: center;
 	padding-bottom: 20px;
+	font-weight: 900;
+	color: #808080;
 }
 
 .content-section-item-thumbnail {
-	float: left;
+	float: right;
 }
 
 .content-section-item-thumbnail-image {
@@ -78,7 +88,7 @@
 
 .content-section-item-description {
 	float: left;
-	padding-left: 20px;
+	padding-right: 20px;
 	width: 396px;
 	color: #808080;
 	font-size: 14px;
@@ -88,7 +98,7 @@
 .content-section-item-link {
 	float: left;
 	padding-top: 20px;
-	padding-left: 20px;
+	padding-right: 20px;
 	width: 396px;
 }
 

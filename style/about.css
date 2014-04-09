@@ -21,9 +21,9 @@
 .content-description-question {
 	margin-bottom: 20px;
 	color: #2898CD;
-	background-color: #e5e5e5;
-	padding: 14px;
 	width: 612px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .content-description-answer {
