@@ -13,7 +13,8 @@
 	background-color: white;
 	width: 900px;
 	margin: auto;
-	height: 410px;
+	display: block;
+	overflow: auto;
 }
 
 #content-text {
@@ -50,4 +51,6 @@
 	margin-top: 12px;
 	margin-left: 28px;
 	color: #808080;
+	font-size: 14px;
+	line-height: 22px;
 }

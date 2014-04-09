@@ -2,7 +2,8 @@
 	background-color: white;
 	width: 900px;
 	margin: auto;
-	height: 1350px;
+	display: block;
+	overflow: auto;
 }
 
 #video-wrapper {
@@ -18,10 +19,24 @@
 }
 
 .content-description-question {
-	font-weight: 900;
 	margin-bottom: 20px;
+	color: #2898CD;
+	background-color: #e5e5e5;
+	padding: 14px;
+	width: 612px;
 }
 
 .content-description-answer {
 	margin-bottom: 20px;
+	color: #808080;
+	line-height: 22px;
+	font-size: 14px;
+}
+
+a:link {
+	color: #2898CD;
+}
+
+a:visited {
+	color: #2898CD;
 }

@@ -21,8 +21,12 @@ body {
 
 #header-nav {
 	float: right;
-	width: 383px;
+	width: 446px;
 	position: relative;
+}
+
+.header-nav-item-wrapper {
+	float: left;
 }
 
 .header-nav-item {
@@ -40,13 +44,22 @@ body {
 	background-color: #0A7199;
 }
 
+.header-nav-divider-wrapper {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 23px;
+	height: 35px;
+	width: 1px;
+}
+
 .header-nav-divider-1 {
 	background-color: white;
 	height: 22px;
 	width: 2px;
 	float: right;
 	top: 21px;
-	left: 90px;
+	left: 100px;
 	position: absolute;
 }
 
@@ -56,7 +69,7 @@ body {
 	width: 2px;
 	float: right;
 	top: 21px;
-	left: 189px;
+	left: 220px;
 	position: absolute;
 }
 
@@ -66,7 +79,7 @@ body {
 	width: 2px;
 	float: right;
 	top: 21px;
-	left: 284px;
+	left: 336px;
 	position: absolute;
 }
 
