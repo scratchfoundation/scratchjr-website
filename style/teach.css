@@ -4,6 +4,7 @@
 	margin: auto;
 	display: block;
 	overflow: auto;
+	padding-top: 40px;
 }
 
 .content-animated {
