@@ -1,0 +1,409 @@
+#content-buffer {
+	color: #808080;
+	margin-left: 87px;
+	height: 44px;
+	font-size: 14px;
+}
+
+.paint-button {
+	font-family: "Lucida Grande", arial, sans-serif;
+	border-radius: 50%;
+	position: absolute;
+	border: 1px solid #808080;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.paint-dot {
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	background-color: #333333;
+	position: absolute;
+}
+
+.paint-vertical-line {
+	border-left: 1px solid black;
+	position: absolute;
+}
+
+.paint-horizontal-line {
+	border-top: 1px solid black;
+	position: absolute;
+}
+
+.paint-button-text {
+	padding: 7px;
+}
+
+.paint-button-selected {
+	border: 1px solid #2898CD;
+	color: #2898CD;
+}
+
+/* 1. Undo */
+
+#paint-button-undo {
+	left: 96px;
+	top: -38px;
+}
+
+#paint-vertical-line-undo {
+	height: 12px;
+	top: -4px;
+	left: 112px;
+}
+
+#paint-dot-undo {
+	top: 7px;
+	left: 110px;
+}
+
+/* 2. Redo */
+
+#paint-button-redo {
+	left: 144px;
+	top: -38px;
+}
+
+#paint-vertical-line-redo {
+	height: 12px;
+	top: -4px;
+	left: 160px;
+}
+
+#paint-dot-redo {
+	top: 7px;
+	left: 158px;
+}
+
+/* 3. Select Shape */
+
+#paint-button-select-shape {
+	left: 192px;
+	top: -38px;
+}
+
+#paint-vertical-line-select-shape-1 {
+	height: 150px;
+	top: -4px;
+	left: 208px;
+}
+
+#paint-horizontal-line-select-shape-1 {
+	width: 75px;
+	top: 145px;
+	left: 134px;
+}
+
+#paint-vertical-line-select-shape-2 {
+	height: 142px;
+	top: 62px;
+	left: 134px;
+}
+
+#paint-horizontal-line-select-shape-2 {
+	width: 10px;
+	top: 62px;
+	left: 124px;
+}
+
+#paint-horizontal-line-select-shape-3 {
+	width: 11px;
+	top: 204px;
+	left: 124px;
+}
+
+/* 4. Character Name */
+
+#paint-button-character-name {
+	top: -38px;
+	left: 366px;
+}
+
+#paint-vertical-line-character-name {
+	height: 12px;
+	top: -4px;
+	left: 382px;
+}
+
+#paint-dot-character-name {
+	top: 7px;
+	left: 380px;
+}
+
+/* 5. Cut */
+
+#paint-button-cut {
+	left: 458px;
+	top: -38px;
+}
+
+#paint-vertical-line-cut {
+	height: 275px;
+	top: -4px;
+	left: 474px;
+}
+
+#paint-horizontal-line-cut {
+	width: 153px;
+	top: 270px;
+	left: 474px;
+}
+
+#paint-dot-cut {
+	left: 626px;
+	top: 268px;
+}
+
+/* 6. Duplicate */
+
+#paint-button-duplicate {
+	left: 502px;
+	top: -38px;
+}
+
+#paint-vertical-line-duplicate {
+	height: 237px;
+	top: -4px;
+	left: 518px;
+}
+
+#paint-horizontal-line-duplicate {
+	width: 108px;
+	top: 232px;
+	left: 518px;
+}
+
+#paint-dot-duplicate {
+	left: 626px;
+	top: 230px;
+}
+
+/* 7. Rotate */
+
+#paint-button-rotate {
+	left: 546px;
+	top: -38px;
+}
+
+#paint-vertical-line-rotate {
+	height: 193px;
+	top: -4px;
+	left: 562px;
+}
+
+#paint-horizontal-line-rotate {
+	width: 67px;
+	top: 188px;
+	left: 563px;
+}
+
+#paint-dot-rotate {
+	left: 626px;
+	top: 186px;
+}
+
+/* 8. Drag */
+
+#paint-button-drag {
+	left: 590px;
+	top: -38px;
+}
+
+#paint-vertical-line-drag {
+	height: 156px;
+	top: -4px;
+	left: 606px;
+}
+
+#paint-horizontal-line-drag {
+	width: 22px;
+	top: 152px;
+	left: 606px;
+}
+
+#paint-dot-drag {
+	left: 626px;
+	top: 150px;
+}
+
+/* 9. Save */
+
+#paint-button-save {
+	left: 634px;
+	top: -38px;
+}
+
+#paint-vertical-line-save {
+	height: 12px;
+	top: -4px;
+	left: 651px;
+}
+
+#paint-dot-save {
+	top: 7px;
+	left: 649px;
+}
+
+/* 10. Fill */
+
+#paint-button-fill {
+	left: 593px;
+	top: 444px;
+}
+
+#paint-vertical-line-fill {
+	height: 93px;
+	top: 352px;
+	left: 609px;
+}
+
+#paint-horizontal-line-fill {
+	width: 17px;
+	top: 352px;
+	left: 609px;
+}
+
+#paint-dot-fill {
+	left: 626px;
+	top: 350px;
+}
+
+/* 11. Camera */
+
+#paint-button-camera {
+	left: 550px;
+	top: 444px;
+}
+
+#paint-vertical-line-camera {
+	height: 126px;
+	top: 318px;
+	left: 566px;
+}
+
+#paint-horizontal-line-camera {
+	width: 60px;
+	top: 318px;
+	left: 566px;
+}
+
+#paint-dot-camera {
+	left: 626px;
+	top: 315px;
+}
+
+/* 12. Select Color */
+
+#paint-button-select-color {
+	left: 363px;
+	top: 444px;
+}
+
+#paint-vertical-line-select-color-1 {
+	height: 10px;
+	top: 434px;
+	left: 379px;
+}
+
+#paint-horizontal-line-select-color-1 {
+	width: 577px;
+	top: 434px;
+	left: 91px;
+}
+
+#paint-vertical-line-select-color-2 {
+	height: 11px;
+	top: 423px;
+	left: 91px;
+}
+
+#paint-vertical-line-select-color-3 {
+	height: 11px;
+	top: 423px;
+	left: 667px;
+}
+
+/* 13. Line Size */
+
+#paint-button-select-line-size {
+	left: 200px;
+	top: 444px;
+}
+
+#paint-vertical-line-select-line-size-1 {
+	height: 148px;
+	top: 296px;
+	left: 216px;
+}
+
+#paint-horizontal-line-select-line-size-1 {
+	width: 81px;
+	top: 296px;
+	left: 136px;
+}
+
+#paint-vertical-line-select-line-size-2 {
+	height: 130px;
+	top: 225px;
+	left: 135px;
+}
+
+#paint-horizontal-line-select-line-size-2 {
+	width: 10px;
+	top: 225px;
+	left: 125px;
+}
+
+#paint-horizontal-line-select-line-size-3 {
+	width: 11px;
+	top: 355px;
+	left: 125px;
+}
+
+#paint-key {
+	width: 221px;
+	height: 442px;
+	float: left;
+	margin-left: 55px;
+	background-image: url("../images/keybackground.png");
+	background-size: 222px 442px;
+}
+
+#paint-key-header {
+	font-size: 12pt;
+	padding-top: 10px;
+	padding-left: 10px;
+	height: 31px;
+	color: #2898CD;
+}
+
+#paint-key-description {
+	color: #808080;
+	line-height: 24px;
+	padding-top: 10px;
+	font-size: 10pt;
+	margin-right: 5px;
+	margin-left: 10px;
+}
+
+#ipad-project-view-wrapper {
+	position: relative;
+}
+
+.learn-tab {
+	display: none;
+}
+
+.learn-tab-selected {
+	display: inline;
+}
+
+.ipad-project-view {
+	margin-left: 87px;
+	width: 587px;
+	float: left;
+}

@@ -1,0 +1,13 @@
+body {
+  color: #595959;
+  font-family: 'Avenir Next';
+  padding: 79px 62px 135px;
+  margin-top: 20px;
+  width: 900px;
+  height: auto;
+} 
+
+#title {
+  text-align: center;
+  font-weight: bold;
+}
