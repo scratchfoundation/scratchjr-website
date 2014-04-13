@@ -7,7 +7,12 @@ body {
   height: auto;
 } 
 
-#title {
+.title {
   text-align: center;
   font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.description {
+	margin-bottom: 20px;
 }
