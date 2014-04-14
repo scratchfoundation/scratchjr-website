@@ -1,0 +1,518 @@
+body {
+	margin-top: 80px;
+}
+
+*.contentwrap {   
+	width: 100%;	
+	height: 768px;
+ 	min-height: 100%;
+	background: url('../assets/libbkg.png');
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;	
+}
+
+*.contentwrap.scroll {
+	overflow-x: hidden; 
+	overflow-y: scroll;
+}
+
+*.contentwrap.noscroll {
+	overflow: hidden;
+}
+
+.htmlcontents { 
+	 margin: 0px auto;
+	 width: 100%;
+	 border: 0;
+	 padding: 79px 0px 135px;
+	 height: auto;
+	 min-height: 554px;
+}
+
+.htmlcontents.about {
+ 	padding: 0px 0px 135px;  
+ 	margin-bottom: 40px;  
+ 	height: auto;
+}
+
+.htmlcontents.guide { 
+	padding: 0px;
+	margin-top: 10px;  
+	height: 554px;
+}
+
+.htmlcontents.blocks {
+	padding: 0px;
+	margin-bottom: 135px; 
+  	height: auto;
+}
+
+#content-buffer {
+	color: #808080;
+	margin-left: 87px;
+	height: 44px;
+	font-size: 14px;
+}
+
+/* Guide Elements */
+
+.interface-dot {
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	background-color: #333333;
+	position: absolute;
+}
+
+.interface-vertical-line {
+	border-left: 1px solid black;
+	position: absolute;
+}
+
+.interface-horizontal-line {
+	border-top: 1px solid black;
+	position: absolute;
+}
+
+.interface-button {
+	font-family: "Lucida Grande", arial, sans-serif;
+	border-radius: 50%;
+	position: absolute;
+	border: 1px solid #808080;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.interface-button-text {
+	padding: 7px;
+}
+
+.interface-button-selected {
+	border: 1px solid #2898CD;
+	color: #2898CD;
+}
+
+/* Guide 1 - Interface Guide */
+
+/* 1. Save */
+
+#interface-button-save {
+	left: 128px;
+	top: -38px;
+}
+
+#interface-vertical-line-save {
+	height: 15px;
+	top: -5px;
+	left: 145px;
+}
+
+#interface-dot-save {
+	top: 7px;
+	left: 143px;
+}
+
+/* 2. Stage */
+
+#interface-button-stage {
+	left: 217px;
+	top: -38px;
+}
+
+#interface-vertical-line-stage-1 {
+	height: 160px;
+	top: -5px;
+	left: 233px;
+}
+
+#interface-horizontal-line-stage-1 {
+	width: 15px;
+	top: 155px;
+	left: 233px;
+}
+
+#interface-vertical-line-stage-2 {
+	height: 207px;
+	top: 43px;
+	left: 248px;
+}
+
+#interface-horizontal-line-stage-2 {
+	width: 9px;
+	top: 43px;
+	left: 248px;
+}
+
+#interface-horizontal-line-stage-3 {
+	width: 9px;
+	top: 250px;
+	left: 248px;
+}
+
+/* 3. Presentation Mode */
+
+#interface-button-presentation-mode {
+	left: 258px;
+	top: -38px;
+}
+
+#interface-vertical-line-presentation-mode {
+	height: 15px;
+	top: -5px;
+	left: 275px;
+}
+
+#interface-dot-presentation-mode {
+	top: 8px;
+	left: 273px;
+}
+
+/* 4. Grid */
+
+#interface-button-grid {
+	left: 297px;
+	top: -38px;
+}
+
+#interface-vertical-line-grid {
+	height: 13px;
+	top: -5px;
+	left: 314px;
+}
+
+#interface-dot-grid {
+	top: 8px;
+	left: 312px;
+}
+
+/* 5. Add Text */
+
+#interface-button-add-text {
+	left: 364px;
+	top: -38px;
+}
+
+#interface-vertical-line-add-text {
+	height: 12px;
+	top: -5px;
+	left: 380px;
+}
+
+#interface-dot-add-text {
+	top: 7px;
+	left: 378px;
+}
+
+/* 6. Change Background */
+
+#interface-button-change-background {
+	left: 401px;
+	top: -38px;
+}
+
+#interface-vertical-line-change-background {
+	height: 13px;
+	top: -5px;
+	left: 417px;
+}
+
+#interface-dot-change-background {
+	top: 8px;
+	left: 415px;
+}
+
+/* 7. Reset Characters */
+
+#interface-button-reset-characters {
+	left: 471px;
+	top: -38px;
+}
+
+#interface-vertical-line-reset-characters {
+	height: 11px;
+	top: -5px;
+	left: 487px;
+}
+
+#interface-dot-reset-characters {
+	top: 6px;
+	left: 485px;
+}
+
+/* 8. Green Flag */
+
+#interface-button-green-flag {
+	left: 507px;
+	top: -38px;
+}
+
+#interface-vertical-line-green-flag {
+	height: 11px;
+	top: -5px;
+	left: 524px;
+}
+
+#interface-dot-green-flag {
+	top: 6px;
+	left: 522px;
+}
+
+/* 9. Pages */
+
+#interface-button-pages {
+	left: 585px;
+	top: -38px;
+}
+
+#interface-vertical-line-pages {
+	height: 15px;
+	top: -5px;
+	left: 602px;
+}
+
+#interface-dot-pages {
+	top: 10px;
+	left: 600px;
+}
+   
+/* 10. Project Information */
+
+#interface-button-project-information {
+	left: 645px;
+	top: -38px;
+}
+
+#interface-vertical-line-project-information {
+	height: 13px;
+	top: -5px;
+	left: 662px;
+}
+
+#interface-dot-project-information {
+	top: 8px;
+	left: 660px;
+}   
+
+/* 16. Characters */
+
+#interface-button-characters {
+	left: 115px;
+	top: 448px;
+}
+
+#interface-vertical-line-characters-1 {
+	height: 8px;
+	top: 220px;
+	left: 97px;
+}
+
+#interface-vertical-line-characters-3 {
+	height: 8px;
+	top: 220px;
+	left: 226px;
+}
+
+#interface-horizontal-line-characters {
+	width: 130px;
+	top: 228px;
+	left: 97px;
+}
+
+#interface-vertical-line-characters-2 {
+	height: 220px;
+	top: 228px;
+	left: 132px;
+}
+
+/* 15. Block Categories */
+
+#interface-button-block-categories {
+	left: 180px;
+	top: 448px;
+}
+
+#interface-vertical-line-block-categories-1 {
+	height: 6px;
+	top: 304px;
+	left: 95px;
+}
+
+#interface-vertical-line-block-categories-3 {
+	height: 6px;
+	top: 304px;
+	left: 280px;
+}
+
+#interface-horizontal-line-block-categories {
+	width: 186px;
+	top: 310px;
+	left: 95px;
+}
+
+#interface-vertical-line-block-categories-2 {
+	height: 138px;
+	top: 310px;
+	left: 197px;
+}
+
+/* 14. Block Palette */
+
+#interface-button-block-palette {
+	left: 363px;
+	top: 448px;
+}
+
+#interface-vertical-line-blocks-palette-1 {
+	height: 8px;
+	top: 308px;
+	left: 294px;
+}
+
+#interface-vertical-line-blocks-palette-3 {
+	height: 8px;
+	top: 308px;
+	left: 598px;
+}
+
+#interface-horizontal-line-blocks-palette {
+	width: 305px;
+	top: 316px;
+	left: 294px;
+}
+
+#interface-vertical-line-blocks-palette-2 {
+	height: 132px;
+	top: 316px;
+	left: 380px;
+}
+
+/* 13. Programming Area */
+
+#interface-button-programming-area {
+	left: 414px;
+	top: 448px;
+}
+
+#interface-vertical-line-programming-area {
+	height: 25px;
+	top: 424px;
+	left: 430px;
+}
+
+#interface-dot-programming-area {
+	top: 420px;
+	left: 428px;
+}
+
+/* 12. Programming Script */
+
+#interface-button-programming-script {
+	left: 465px;
+	top: 448px;
+}
+
+#interface-vertical-line-programming-script-1 {
+	height: 10px;
+	top: 385px;
+	left: 400px;
+}
+
+#interface-vertical-line-programming-script-3 {
+	height: 10px;
+	top: 385px;
+	left: 566px;
+}
+
+#interface-horizontal-line-programming-script {
+	width: 167px;
+	top: 395px;
+	left: 400px;
+}
+
+#interface-vertical-line-programming-script-2 {
+	height: 52px;
+	top: 396px;
+	left: 481px;
+}
+
+/* 11. Undo Redo */
+
+#interface-button-undo-redo {
+	left: 625px;
+	top: 448px;
+}
+
+#interface-vertical-line-undo-redo-1 {
+	height: 8px;
+	top: 308px;
+	left: 612px;
+}
+
+#interface-vertical-line-undo-redo-3 {
+	height: 8px;
+	top: 308px;
+	left: 670px;
+}
+
+#interface-horizontal-line-undo-redo {
+	width: 59px;
+	top: 316px;
+	left: 612px;
+}
+
+#interface-vertical-line-undo-redo-2 {
+	height: 133px;
+	top: 316px;
+	left: 641px;
+}
+
+#interface-key {
+	width: 221px;
+	height: 442px;
+	float: left;
+	margin-left: 55px;
+	background-image: url("../images/keybackground.png");
+	background-size: 222px 442px;
+}
+
+#interface-key-header {
+	font-size: 12pt;
+	padding-top: 10px;
+	padding-left: 10px;
+	height: 31px;
+	color: #2898CD;
+}
+
+#interface-key-description {
+	color: #808080;
+	line-height: 24px;
+	padding-top: 10px;
+	padding-right: 15px;
+	font-size: 10pt;
+	margin-right: 5px;
+	margin-left: 10px;
+}
+
+#ipad-project-view-wrapper {
+	position: relative;
+}
+
+.learn-tab {
+	display: none;
+}
+
+.learn-tab-selected {
+	display: inline;
+}
+
+.ipad-project-view {
+	margin-left: 87px;
+	width: 587px;
+	float: left;
+}
+
+
+/* End Guide 3 - Block Descriptions */
