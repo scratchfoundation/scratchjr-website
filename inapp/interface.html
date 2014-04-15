@@ -157,7 +157,7 @@
       ["16 | Characters", "Select among the characters in your project \u2014 or tap the plus sign to add a new character. Once a character is selected, you can edit its scripts, tap its name to rename it, or tap the paintbrush to edit its image. To delete a character, touch and hold it. To copy a character to another page, drag it to the page thumbnail."]
     ]; 
 
-    $(document).on('click', '.interface-button', function (e) {
+    $(document).bind('touchstart', '.interface-button', function () {
         $('.interface-button').removeClass('interface-button-selected');
         $(this).addClass('interface-button-selected');
         $('#interface-key-header').text(interfaceDescriptions[parseInt($(this).text() - 1)][0]);
