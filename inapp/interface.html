@@ -164,20 +164,6 @@
         $('#interface-key-description').text(interfaceDescriptions[parseInt($(this).text() - 1)][1]);
     });
 
-    $(document).on('click', '.content-nav-item', function(e) {
-      $('.content-nav-item').removeClass('content-nav-item-selected');
-      $(this).addClass('content-nav-item-selected');
-      $('.learn-tab').removeClass('learn-tab-selected');
-      $(tabSelectors[tabTitles.indexOf($.trim($(this).text()))]).addClass('learn-tab-selected');
-      if ($('.learn-blocks').hasClass('learn-tab-selected')) {
-        $('#content-buffer').hide();
-        $('#content').css('height', 2800)
-      } else {
-        $('#content-buffer').show();
-        $('#content').css('height', 800)
-      }
-    });
-
   </script>
   </body>
 </html>
