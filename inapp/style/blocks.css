@@ -1,3 +1,7 @@
+html {
+	-webkit-user-select: none;
+}
+
 body {
 	margin-top: 109px;
 	margin-bottom: 135px;

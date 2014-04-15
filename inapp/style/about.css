@@ -1,3 +1,7 @@
+html {
+  -webkit-user-select: none;
+}
+
 body {
   color: #595959;
   font-family: 'Avenir Next';

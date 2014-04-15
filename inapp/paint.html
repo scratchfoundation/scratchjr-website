@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="src/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/paint.css">
   </head>
@@ -133,16 +132,22 @@
       ["13 | Line Width", "Change the width of the lines in the shapes you are drawing."],  
     ];
 
-    var paintKeyHeaderNode = document.getElementById('#paint-key-header');
-    var paintKeyDescriptionNode = document.getElementById('#paint-key-description');
+    var paintKeyHeaderNode = document.getElementById('paint-key-header');
+    var paintKeyDescriptionNode = document.getElementById('paint-key-description');
 
-    $(".paint-button").on('mousedown', function () {
-      descriptionId = parseInt($(this).text() - 1);
-      paintKeyHeaderNode.textContent = paintDescriptions[descriptionId][0];
-      paintKeyDescriptionNode.textContent = paintDescriptions[descriptionId][1];
-      $('.paint-button').removeClass('paint-button-selected');
-      $(this).addClass('paint-button-selected');
-    });
+    document.addEventListener('mousedown', function(e) {
+      var target = e.target;
+      if (target.className == 'paint-button-text') { 
+        descriptionId = parseInt(target.textContent - 1);
+        paintKeyHeaderNode.textContent = paintDescriptions[descriptionId][0];
+        paintKeyDescriptionNode.textContent = paintDescriptions[descriptionId][1];
+        buttons = document.getElementsByClassName('paint-button');
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove('paint-button-selected');
+        }
+        target.parentNode.className = target.parentNode.className + ' paint-button-selected';
+      }
+    }, false);
 
   </script>
   </body>
