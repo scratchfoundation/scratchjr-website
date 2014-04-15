@@ -133,11 +133,15 @@
       ["13 | Line Width", "Change the width of the lines in the shapes you are drawing."],  
     ];
 
-    $(document).bind('touchstart', '.paint-button', function () {
+    var paintKeyHeaderNode = document.getElementById('#paint-key-header');
+    var paintKeyDescriptionNode = document.getElementById('#paint-key-description');
+
+    $(".paint-button").on('mousedown', function () {
+      descriptionId = parseInt($(this).text() - 1);
+      paintKeyHeaderNode.textContent = paintDescriptions[descriptionId][0];
+      paintKeyDescriptionNode.textContent = paintDescriptions[descriptionId][1];
       $('.paint-button').removeClass('paint-button-selected');
       $(this).addClass('paint-button-selected');
-      $('#paint-key-header').text(paintDescriptions[parseInt($(this).text() - 1)][0]);
-      $('#paint-key-description').text(paintDescriptions[parseInt($(this).text() - 1)][1]);
     });
 
   </script>

@@ -157,11 +157,15 @@
       ["16 | Characters", "Select among the characters in your project \u2014 or tap the plus sign to add a new character. Once a character is selected, you can edit its scripts, tap its name to rename it, or tap the paintbrush to edit its image. To delete a character, touch and hold it. To copy a character to another page, drag it to the page thumbnail."]
     ]; 
 
-    $(document).bind('touchstart', '.interface-button', function () {
+    var interfaceKeyHeaderNode = document.getElementById('interface-key-header');
+    var interfaceKeyDescriptionNode = document.getElementById('interface-key-description');
+
+    $(".interface-button").on('mousedown', function () {
+        descriptionId = parseInt($(this).text() - 1);
+        interfaceKeyHeaderNode.textContent = interfaceDescriptions[descriptionId][0];
+        interfaceKeyDescriptionNode.textContent = interfaceDescriptions[descriptionId][1];
         $('.interface-button').removeClass('interface-button-selected');
         $(this).addClass('interface-button-selected');
-        $('#interface-key-header').text(interfaceDescriptions[parseInt($(this).text() - 1)][0]);
-        $('#interface-key-description').text(interfaceDescriptions[parseInt($(this).text() - 1)][1]);
     });
 
   </script>
