@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="text/javascript" src="src/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="src/responsiveslides.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/themes.css">
+    <link rel="stylesheet" type="text/css" href="style/responsiveslides.css">
     <link rel="stylesheet" type="text/css" href="style/site.css">
     <link rel="stylesheet" type="text/css" href="style/style.css">
-  </head>
+
+    <script>
+      $(function () {
+        $("#slider1").responsiveSlides({
+          auto: false,
+          pager: true,
+          nav: false,
+          speed: 500,
+          maxwidth: 900,
+          namespace: "centered-btns"
+        });
+      });
+
+      </script>
+    </head>
   <body>
 
     <div id="header">
@@ -51,9 +69,14 @@
       </div> <!-- end header-nav -->
     </div> <!-- end header -->
 
-    <div id="slideshow">
-      <img src="images/slide1.png" class="slide" alt="ScratchJr Slide 1" />
-    </div> <!-- end slideshow -->
+    <div id="rslides_container" class="slideshow">
+      <ul class="rslides" id="slider1">
+        <li><img src="images/slide1.png" class="slide-current" alt="ScratchJr Slide 1" /></li>
+        <li><img src="images/slide2.png" class="slide-hidden" alt="ScratchJr Slide 2" /></li>
+        <li><img src="images/slide3.png" class="slide-hidden" alt="ScratchJr Slide 3" /></li>
+        <li><img src="images/slide4.png" class="slide-hidden" alt="ScratchJr Slide 4" /></li>
+      </ul>
+    </div><!-- end slideshow -->
 
     <div id="content">
       <div id="content-text">

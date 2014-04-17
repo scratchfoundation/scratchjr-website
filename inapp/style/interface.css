@@ -17,7 +17,7 @@ body {
 
 .interface-dot {
 	height: 5px;
-	width: 5px;
+	width: 8px;
 	border-radius: 50%;
 	background-color: #333333;
 	position: absolute;
@@ -467,7 +467,6 @@ body {
 
 .ipad-project-view {
 	margin-left: 87px;
-	width: 587px;
 	float: left;
 }
 
