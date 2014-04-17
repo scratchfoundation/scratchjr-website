@@ -158,18 +158,16 @@
 
     var interfaceKeyHeaderNode = document.getElementById('interface-key-header');
     var interfaceKeyDescriptionNode = document.getElementById('interface-key-description');
+    var currentButton = document.getElementById('interface-button-save');
 
     document.addEventListener('mousedown', function(e) {
       var target = e.target;
       if (target.className == 'interface-button-text') {
         descriptionId = parseInt(target.textContent - 1);
         interfaceKeyHeaderNode.textContent = interfaceDescriptions[descriptionId][0];
-        interfaceKeyDescriptionNode.textContent = interfaceDescriptions[descriptionId][1];
-        buttons = document.getElementsByClassName('interface-button');
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove('interface-button-selected');
-        }
-        target.parentNode.className = target.parentNode.className + ' interface-button-selected';
+        currentButton.className = 'interface-button';
+        currentButton = target.parentNode;
+        currentButton.className = currentButton.className + ' interface-button-selected';
       }
     }, false);
 

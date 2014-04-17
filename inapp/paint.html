@@ -134,18 +134,16 @@
 
     var paintKeyHeaderNode = document.getElementById('paint-key-header');
     var paintKeyDescriptionNode = document.getElementById('paint-key-description');
+    var currentButton = document.getElementById('paint-button-undo');
 
     document.addEventListener('mousedown', function(e) {
       var target = e.target;
-      if (target.className == 'paint-button-text') { 
+      if (target.className == 'paint-button-text') {
         descriptionId = parseInt(target.textContent - 1);
         paintKeyHeaderNode.textContent = paintDescriptions[descriptionId][0];
-        paintKeyDescriptionNode.textContent = paintDescriptions[descriptionId][1];
-        buttons = document.getElementsByClassName('paint-button');
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove('paint-button-selected');
-        }
-        target.parentNode.className = target.parentNode.className + ' paint-button-selected';
+        currentButton.className = 'paint-button';
+        currentButton = target.parentNode;
+        currentButton.className = currentButton.className + ' paint-button-selected';
       }
     }, false);
 
