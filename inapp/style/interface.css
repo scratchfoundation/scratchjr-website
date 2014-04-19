@@ -427,9 +427,15 @@ body {
 	left: 641px;
 }
 
+#right-column {
+	display: block;
+	overflow: auto;
+	width: 276px;
+}
+
 #interface-key {
 	width: 221px;
-	height: 442px;
+	height: 290px;
 	float: left;
 	margin-left: 55px;
 	background-image: url("../images/keybackground.png");
@@ -451,6 +457,12 @@ body {
 	font-size: 10pt;
 	margin-right: 5px;
 	margin-left: 10px;
+}
+
+#video-wrapper {
+	margin-top: 27px;
+	float: left;
+	margin-left: 55px;
 }
 
 #ipad-project-view-wrapper {
