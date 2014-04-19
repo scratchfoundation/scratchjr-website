@@ -4,7 +4,14 @@
 	margin: auto;
 	display: block;
 	overflow: auto;
-	padding-top: 40px;
+}
+
+h1 {
+	margin-left: 35px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-size: 28px;
+	color: #f5a322;
 }
 
 .content-animated {
@@ -39,8 +46,8 @@
 
 .content-section {
 	padding-top: 40px;
-	margin-left: 120px;
-	margin-right: 120px;
+	margin-left: 35px;
+	margin-right: 35px;
 	clear: both;
 	overflow: auto;
 	display: block;
@@ -48,9 +55,11 @@
 }
 
 .content-section-title {
-	font-weight: 800;
-	font-size: 18px;
+	margin-bottom: 10px;
 	color: #2898CD;
+	width: 612px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .content-section-description {

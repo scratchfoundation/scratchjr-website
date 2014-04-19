@@ -6,6 +6,15 @@
     <script type="text/javascript">
       $(document).ready(function () {
         $('.expander').simpleexpand();
+
+        $('.expander').on('click', function (e) {
+          link = e.target;
+          if (link.textContent == 'See more') {
+            link.textContent = 'See less';
+          } else {
+            link.textContent = 'See more';
+          }
+        });
       });
     </script>
     <link rel="stylesheet" type="text/css" href="style/site.css">
@@ -58,6 +67,7 @@
     </div> <!-- end header -->
 
     <div id="content">
+      <h1>Teach ScratchJr</h1>
       <div class="content-section">
         <div class="content-section-title">
           Curricula
