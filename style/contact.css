@@ -1,0 +1,30 @@
+#content {
+	background-color: white;
+	width: 900px;
+	margin: auto;
+	display: block;
+	overflow: auto;
+}
+
+h1 {
+	margin-left: 35px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-size: 28px;
+	color: #f5a322;
+}
+
+#contact-links {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	margin-left: 35px;
+}
+
+a:link {
+	color: #2898CD;
+}
+
+a:visited {
+	color: #2898CD;
+}
