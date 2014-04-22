@@ -155,10 +155,10 @@
       ["10 | Project Information", "Change the title of the project and see when the project was created."],
       ["11 | Undo and Redo", "If you make a mistake, tap Undo to go back in time, reversing the last action. Tap Redo to reverse the last Undo."],
       ["12 | Programming Script", "This is where you snap blocks together to make a programming script, telling the character what to do. Tap anywhere on a script to make it run."],
-      ["13 | Programming Area", "This is where you assemble programming blocks to create scripts, telling the character what to do. To copy a block or script from one character to another, drag it onto the character thumbnail. To delete a block or script, drag it anywhere else outside the programming area."],
+      ["13 | Programming Area", "This is where you connect programming blocks to create scripts, telling the character what to do. To copy a block or script from one character to another, drag it onto the character thumbnail. To delete a block or script, drag it outside the programming area."],
       ["14 | Blocks Palette", "This is the menu of programming blocks. Drag a block into the programming area, then tap on it to see what it does."],
       ["15 | Block Categories", "Here you can select a category of programming blocks: Triggering Blocks (Yellow), Motion (Blue), Looks (Purple), Sounds (Green), Control (Orange), End Blocks (Red)."],
-      ["16 | Characters", "Select among the characters in your project \u2014 or tap the plus sign to add a new character. Once a character is selected, you can edit its scripts, tap its name to rename it, or tap the paintbrush to edit its image. To delete a character, press and hold it. To copy a character to another page, drag it to the page thumbnail."]
+      ["16 | Characters", "Select among the characters in your project \u2014 or tap the plus sign to add a new one. Once a character is selected, you can edit its scripts, tap its name to rename it, or tap the paintbrush to edit its image. To delete a character, press and hold it. To copy a character to another page, drag it to the page thumbnail."]
     ]; 
 
     var interfaceKeyHeaderNode = document.getElementById('interface-key-header');
@@ -167,9 +167,11 @@
 
     document.addEventListener('mousedown', function(e) {
       var target = e.target;
+      console.log(target);
       if (target.className == 'interface-button-text') {
         descriptionId = parseInt(target.textContent - 1);
         interfaceKeyHeaderNode.textContent = interfaceDescriptions[descriptionId][0];
+        interfaceKeyDescriptionNode.textContent = interfaceDescriptions[descriptionId][1];
         currentButton.className = 'interface-button';
         currentButton = target.parentNode;
         currentButton.className = currentButton.className + ' interface-button-selected';

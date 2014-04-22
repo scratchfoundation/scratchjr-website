@@ -435,10 +435,11 @@ body {
 
 #interface-key {
 	width: 221px;
-	height: 290px;
+	height: 305px;
 	float: left;
 	margin-left: 55px;
 	background-image: url("../images/keybackground.png");
+	background-repeat: no-repeat;
 }
 
 #interface-key-header {
@@ -451,8 +452,8 @@ body {
 
 #interface-key-description {
 	color: #808080;
-	line-height: 24px;
-	padding-top: 10px;
+	line-height: 22px;
+	padding-top: 5px;
 	padding-right: 15px;
 	font-size: 10pt;
 	margin-right: 5px;
@@ -460,7 +461,7 @@ body {
 }
 
 #video-wrapper {
-	margin-top: 27px;
+	margin-top: 12px;
 	float: left;
 	margin-left: 55px;
 }

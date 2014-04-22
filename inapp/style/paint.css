@@ -374,11 +374,11 @@ body {
 
 #paint-key {
 	width: 221px;
-	height: 442px;
+	height: 441px;
 	float: left;
 	margin-left: 55px;
-	background-image: url("../images/keybackground.png");
-	background-size: 222px 442px;
+	background-image: url("../images/keybackgroundpaint.png");
+	background-repeat: none;
 }
 
 #paint-key-header {
@@ -391,8 +391,8 @@ body {
 
 #paint-key-description {
 	color: #808080;
-	line-height: 24px;
-	padding-top: 10px;
+	line-height: 22px;
+	padding-top: 5px;
 	padding-right: 15px;
 	font-size: 10pt;
 	margin-right: 5px;

@@ -141,6 +141,7 @@
       if (target.className == 'paint-button-text') {
         descriptionId = parseInt(target.textContent - 1);
         paintKeyHeaderNode.textContent = paintDescriptions[descriptionId][0];
+        paintKeyDescriptionNode.textContent = paintDescriptions[descriptionId][1];
         currentButton.className = 'paint-button';
         currentButton = target.parentNode;
         currentButton.className = currentButton.className + ' paint-button-selected';
