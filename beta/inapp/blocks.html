@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="src/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/blocks.css">
+  </head>
+  <body>
+    <div id="content">
+      <div id="ipad-project-view-wrapper">
+        <div class="learn-tab learn-blocks">
+          <!-- Yellow Blocks -->
+          <div class="block-category-header" id="yellow-block-category-header">
+            Triggering Blocks
+          </div>
+          <div class="block-category-header-line" id="yellow-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Start on Green Flag
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/onflag.png" />
+              </div>
+              <div class="block-description">
+                Starts the script when the Green Flag is tapped.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Start on Tap
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/ontap.png" />
+              </div>
+              <div class="block-description">
+                Starts the script when you tap on the character.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Start on Touch
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/onbump.png" />
+              </div>
+              <div class="block-description">
+                Starts the script when the character is touched by another character.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Start on Message
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/messagereceive.png" />
+              </div>
+              <div class="block-description">
+                Starts the script whenever a message of the specified color is sent.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Send Message
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/messagesend.png" />
+              </div>
+              <div class="block-description">
+                Sends a message of the specified color.
+              </div>
+            </div>
+          </div>
+          <!-- Blue Blocks -->
+          <div class="block-category-header" id="blue-block-category-header">
+            Motion Blocks
+          </div>
+          <div class="block-category-header-line" id="blue-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Move Right
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/right.png" />
+              </div>
+              <div class="block-description">
+                Moves the character a specified number of grid squares to the right.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Move Left
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/left.png" />
+              </div>
+              <div class="block-description">
+                Moves the character a specified number of grid squares to the left.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Move Up
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/up.png" />
+              </div>
+              <div class="block-description">
+                Moves the character a specified number of grid squares up.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Move Down
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/down.png" />
+              </div>
+              <div class="block-description">
+                Moves the character a specified number of grid squares down.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Turn Right
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/turnright.png" />
+              </div>
+              <div class="block-description">
+                Rotates the character clockwise a specified amount. Turn 12 for a full rotation.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Turn Left
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/turnleft.png" />
+              </div>
+              <div class="block-description">
+                Rotates the character counterclockwise a specified amount. Turn 12 for a full rotation.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Hop
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/hop.png" />
+              </div>
+              <div class="block-description">
+                Moves the character up a specified number of grid squares and then down again.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Go Home
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/gohome.png" />
+              </div>
+              <div class="block-description">
+                Resets the character's location to its starting position. (To set up a new starting position, drag the character to the location).
+              </div>
+            </div>
+          </div>
+          <!-- Purple Blocks -->
+          <div class="block-category-header" id="purple-block-category-header">
+            Looks Blocks
+          </div>
+          <div class="block-category-header-line" id="purple-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Say
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/say.png" />
+              </div>
+              <div class="block-description">
+                Shows a specified message in a speech bubble above the character.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Grow
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/grow.png" />
+              </div>
+              <div class="block-description">
+                Increases the character's size.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Shrink
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/shrink.png" />
+              </div>
+              <div class="block-description">
+                Decreases the character's size.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Reset Size
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/reset.png" />
+              </div>
+              <div class="block-description">
+                Returns the character to its default size.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Hide
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/hide.png" />
+              </div>
+              <div class="block-description">
+                Fades out the character until it is invisible.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Show
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/show.png" />
+              </div>
+              <div class="block-description">
+                Fades in the character until it is fully visible.
+              </div>
+            </div>
+          </div>
+          <div class="block-category-header" id="green-block-category-header">
+            Sound Blocks
+          </div>
+          <div class="block-category-header-line" id="green-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Pop
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/pop.png" />
+              </div>
+              <div class="block-description">
+                Plays a "Pop" Sound
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Play Recorded Sound
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/playsound.png" />
+              </div>
+              <div class="block-description">
+                Plays a sound recorded by the user.
+              </div>
+            </div>
+          </div>
+          <div class="block-category-header" id="orange-block-category-header">
+            Control Flow Blocks
+          </div>
+          <div class="block-category-header-line" id="orange-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Wait
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/wait.png" />
+              </div>
+              <div class="block-description">
+                Pauses the script for a specified amount of time (in tenths of seconds).
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Stop
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/stop.png" />
+              </div>
+              <div class="block-description">
+                Stops all the characters' scripts.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Set Speed
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/speed.png" />
+              </div>
+              <div class="block-description">
+                Changes the rate at which certain blocks are run.
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Repeat
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image-repeat" src="images/repeat.png" />
+              </div>
+              <div class="block-description-repeat">
+                Runs the blocks inside a specified number of times.
+              </div>
+            </div>
+          </div>
+          <div class="block-category-header" id="red-block-category-header">
+            End Blocks
+          </div>
+          <div class="block-category-header-line" id="red-block-category-header-line"></div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                End
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/end.png" />
+              </div>
+              <div class="block-description">
+                Indicates the end of the script (but does not affect the script in any way).
+              </div>
+            </div>
+            <div class="block-wrapper-right">
+              <div class="block-title">
+                Repeat Forever
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/forever.png" />
+              </div>
+              <div class="block-description">
+                Runs the script over and over.
+              </div>
+            </div>
+          </div>
+          <div class="block-wrapper">
+            <div class="block-wrapper-left">
+              <div class="block-title">
+                Go to Page
+              </div>
+              <div class="block-image-wrapper">
+                <img class="block-image" src="images/page.png" />
+              </div>
+              <div class="block-description">
+                Change to the specified page of the project.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
