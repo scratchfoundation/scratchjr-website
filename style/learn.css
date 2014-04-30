@@ -2,11 +2,12 @@
 	background-color: white;
 	width: 900px;
 	margin: auto;
-	height: 800px;
+	height: 700px;
 }
 
 #content-nav {
 	height: 78px;
+	margin-bottom: 100px;
 }
 
 .content-nav-item {
