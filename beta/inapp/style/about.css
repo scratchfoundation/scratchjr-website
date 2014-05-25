@@ -24,7 +24,7 @@ h2 {
 .about-section-wrapper {
   display: block;
   overflow: auto;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .title {
@@ -35,5 +35,5 @@ h2 {
 
 .description {
   font-size: 15px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
