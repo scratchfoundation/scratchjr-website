@@ -1,113 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>ScratchJr - Home</title>
-    <script type="text/javascript" src="src/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="src/responsiveslides.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/themes.css">
-    <link rel="stylesheet" type="text/css" href="style/responsiveslides.css">
-    <link rel="stylesheet" type="text/css" href="style/site.css">
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+<head>
+  <title>ScratchJr - Home</title>
+  <script type="text/javascript" src="src/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="src/responsiveslides.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/themes.css">
+  <link rel="stylesheet" type="text/css" href="style/responsiveslides.css">
+  <link rel="stylesheet" type="text/css" href="style/site.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
 
-    <script>
-      $(function () {
-        $("#slider1").responsiveSlides({
-          auto: true,
-          pager: true,
-          nav: false,
-          speed: 600,
-          maxwidth: 900,
-          namespace: "centered-btns"
-        });
-      });
+  <script>
+  $(function () {
+    $("#slider1").responsiveSlides({
+      auto: true,
+      pager: true,
+      nav: false,
+      speed: 600,
+      maxwidth: 900,
+      namespace: "centered-btns",
+      navContainer: "#rslides_container"
+    });
+  });
 
-      </script>
-    </head>
-  <body>
-
-    <div id="header">
+  </script>
+</head>
+<body>
+  <div id="header">
+    <a href="index.html">
       <div id="header-logo-wrapper">
         <img src="images/scratchjrlogo.png" id="header-logo" alt="ScratchJr Logo" />
       </div> <!-- end header-logo-wrapper -->
-      <div id="header-nav">
-        <div class="header-nav-item-wrapper">
-          <a href="index.html">
-            <div class="header-nav-item header-nav-item-selected">
-              HOME
-            </div>
-          </a>
-        </div>
-        <div class="header-nav-divider-wrapper">
-          <div class="header-nav-divider-1"></div>
-        </div>
-        <div class="header-nav-item-wrapper">
-          <a href="about.html">
-            <div class="header-nav-item">
-              ABOUT
-            </div>
-          </a>
-        </div>
-        <div class="header-nav-divider-wrapper">
-          <div class="header-nav-divider-2"></div>
-        </div>
-        <div class="header-nav-item-wrapper">
-          <a href="learn.html">
-            <div class="header-nav-item">
-              LEARN
-            </div>
-          </a>
-        </div>
-        <div class="header-nav-divider-wrapper">
-          <div class="header-nav-divider-3"></div>
-        </div>
-        <div class="header-nav-item-wrapper">
-          <a href="teach.html">
-            <div class="header-nav-item">
-              TEACH
-            </div>
-          </a>
-        </div>
-      </div> <!-- end header-nav -->
-    </div> <!-- end header -->
-
-    <div id="rslides_container" class="slideshow">
-      <ul class="rslides" id="slider1">
-        <li><img src="images/slide1.png" class="slide-current" alt="ScratchJr Slide 1" /></li>
-        <li><img src="images/slide2.png" class="slide-hidden" alt="ScratchJr Slide 2" /></li>
-        <li><img src="images/slide3.png" class="slide-hidden" alt="ScratchJr Slide 3" /></li>
-        <li><img src="images/slide4.png" class="slide-hidden" alt="ScratchJr Slide 4" /></li>
-        <li><img src="images/slide5.png" class="slide-hidden" alt="ScratchJr Slide 5" /></li>
-      </ul>
-    </div><!-- end slideshow -->
-
-    <div id="content">
-      <div id="content-text">
-        <div id="content-header-first">
-          ScratchJr
-        </div> <!-- end content-header-first -->
-        <div id="content-header-second">
-          Coding for young children
-        </div> <!-- end content-header-second -->
-        <div id="content-body">
-          ScratchJr is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. As children create projects with ScratchJr, they learn important design and problem-solving skills that are foundational for later success. ScratchJr supports the development of early numeracy and literacy, providing opportunities for children to use math and language in a meaningful and motivating context.<br/><br/>
-          An iPad version of ScratchJr will be available in summer 2014. An Android version will be available later in the year.<br/><br/>
-          ScratchJr is a collaboration between the DevTech Research Group at Tufts University, the Lifelong Kindergarten Group at the MIT Media Lab, and the Playful Invention Company.
-        </div> <!-- end content-body -->
-      </div> <!-- end content-text -->
-      <div id="content-graphic">
-        <img id="content-graphic-item" src="images/homegraphic.png" />
-      </div> <!-- end content-graphic -->
-    </div> <!-- end content -->
-
-    <div id="footer">
-      <div id="footer-nav">
-        <a href="contact.html">
-          <div class="footer-nav-item">
-            CONTACT
+    </a>
+    <div id="header-nav">
+      <div class="header-nav-item-wrapper">
+        <a href="about.html">
+          <div class="header-nav-item">
+            About
           </div>
         </a>
-      </div> <!-- end footer-nav -->
-    </div> <!-- end footer -->
+      </div>
+      <div class="header-nav-item-wrapper">
+        <a href="learn.html">
+          <div class="header-nav-item">
+            Learn
+          </div>
+        </a>
+      </div>
+      <div class="header-nav-item-wrapper">
+        <a href="teach.html">
+          <div class="header-nav-item">
+            Teach
+          </div>
+        </a>
+      </div>
+      <div class="header-nav-item-wrapper">
+        <a href="#" onclick="submitForm()">
+          <div class="header-nav-item">
+            Donate
+          </div>
+        </a>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donateForm">
+          <!-- input type="hidden" name="amount" value="1234"/ -->
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="paypal@codetolearn.org">
+          <input type="hidden" name="item_name" value="ScratchJr.">
+          <input type="hidden" name="no_shipping" value="1">
+          <input type="hidden" name="return" value="http://www.scratchjr.org/">
+          <input type="hidden" name="cancel_return" value="http://www.scratchjr.org/">
+        </form>
+      </div>
+      <script type="text/javascript">
+      function submitForm()
+      {
+        document.getElementById('donateForm').submit();
+      }
+      </script>
+    </div> <!-- end header-nav -->
+  </div> <!-- end header -->
 
-  </body>
+  <div id="rslides_container" class="slideshow">
+    <ul class="rslides" id="slider1">
+      <li><img src="images/slide1.png" class="slide-current" alt="ScratchJr Slide 1" /></li>
+      <li><img src="images/slide2.png" class="slide-hidden" alt="ScratchJr Slide 2" /></li>
+      <li><img src="images/slide3.png" class="slide-hidden" alt="ScratchJr Slide 3" /></li>
+      <li><img src="images/slide4.png" class="slide-hidden" alt="ScratchJr Slide 4" /></li>
+      <li><img src="images/slide5.png" class="slide-hidden" alt="ScratchJr Slide 5" /></li>
+    </ul>
+  </div><!-- end slideshow -->
+
+  <div id="content">
+    <div id="announcement-banner">
+      ScratchJr is now available as a free iPad app! Get it from the Apple App Store!
+    </div>
+
+    <div id="content-text">
+      <div id="content-header-first">
+        ScratchJr
+      </div> <!-- end content-header-first -->
+      <div id="content-header-second">
+        Coding for young children
+      </div> <!-- end content-header-second -->
+      <div id="content-body">
+        Coding is the new literacy! With ScratchJr, young children (ages 5-7) can program their own interactive stories and games. In the process, they learn to solve problems, design projects, and express themselves creatively on the computer.
+      </div> <!-- end content-body -->
+    </div> <!-- end content-text -->
+    <div id="content-graphic">
+      <img id="content-graphic-item" src="images/homegraphic.png" />
+    </div> <!-- end content-graphic -->
+
+    <div id="discussion-container">
+      <div id="discussion-text">
+        <div id="discussion-header">
+          Join the Discussion
+        </div>
+        <div id="discussion-body">
+          We introduced ourselves. Now it's your turn. Drop us a line with feedback, report bugs &amp; glitches, or just say "hi!" </br></br>
+
+          <a href=" https://twitter.com/intent/tweet?hashtags=ScratchJr">
+            <div class="blue-button">
+              Tweet #ScratchJr
+            </div>
+          </div>
+        </a>
+
+      </div>
+      <div id="disscussion-tweets">
+        <a class="twitter-timeline" width="425" height="250" href="https://twitter.com/hashtag/ScratchJr" data-chrome="noheader nofooter" data-widget-id="486935508207947776">#ScratchJr Tweets</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>    
+    </div>
+  </div> <!-- end content -->
+
+
+  <div id="footer">
+    <span id="footer-text">
+      <strong>ScratchJr</strong> is a collaboration between the DevTech Research Group at Tufts University, the Lifelong Kindergarten Group at the MIT Media Lab, and the Playful Invention Company.
+    </span>
+    <div id="footer-nav">
+      <a href="contact.html">
+        <div class="blue-button">
+          Join Mailing List
+        </div>
+      </a>
+      &nbsp
+      <a href="contact.html">
+        <div class="blue-button">
+          Contact Us
+        </div>
+      </a>
+    </div> <!-- end footer-nav -->
+  </div> <!-- end footer -->
+
+</body>
 </html>

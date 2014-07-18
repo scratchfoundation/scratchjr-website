@@ -2,53 +2,33 @@
 	background-color: white;
 	width: 900px;
 	margin: auto;
-	height: 700px;
 }
 
-#content-nav {
-	height: 78px;
-	margin-bottom: 100px;
+.interface-guide-icon {
+	background-image: url(../images/interfaceOff.svg);
+	background-size: 100%;
 }
 
-.content-nav-item {
-	color: #DBDBDB;
+.content-nav-item-selected  > .interface-guide-icon {
+	background-image: url(../images/interfaceOn.svg);
 }
 
-.content-nav-item-selected {
-	color: #2898CD;
+.paint-guide-icon {
+	background-image: url(../images/paintOff.svg);
+	background-size: 100%;
 }
 
-.content-nav-item-left {
-	width: 299px;
-	float: left;
-	border-bottom: 1px solid #808080;
+.content-nav-item-selected  > .paint-guide-icon {
+	background-image: url(../images/paintOn.svg);
 }
 
-.content-nav-item-middle {
-	width: 299px;
-	float: left;
-	border-left: 1px solid #808080;
-	border-right: 1px solid #808080;
-	border-bottom: 1px solid #808080;
+.blocks-guide-icon {
+	background-image: url(../images/blocksOff.svg);
+	background-size: 100%;
 }
 
-.content-nav-item-right {
-	width: 300px;
-	float: left;
-	border-bottom: 1px solid #808080;
-}
-
-.content-nav-item-icon {
-	width: 77px;
-	height: 77px;
-	float: left;
-}
-
-.content-nav-item-description {
-	float: left;
-	margin-top: 28.5px;
-	margin-left: 10px;
-	font-size: 12pt;
+.content-nav-item-selected  > .blocks-guide-icon {
+	background-image: url(../images/blocksOn.svg);
 }
 
 #content-instructions {
@@ -58,6 +38,7 @@
 	height: 130px;
 	font-size: 14px;
 }
+
 
 /* Guide Elements */
 
@@ -89,6 +70,7 @@
 	height: 32px;
 	text-align: center;
 	cursor: pointer;
+	z-index: 100;
 }
 
 .interface-button-text {
@@ -283,7 +265,7 @@
 	top: 10px;
 	left: 551px;
 }
-   
+
 /* 10. Project Information */
 
 #interface-button-project-information {
@@ -514,6 +496,7 @@
 	height: 32px;
 	text-align: center;
 	cursor: pointer;
+	z-index: 100;
 }
 
 .paint-dot {
@@ -904,6 +887,24 @@
 .learn-tab-selected {
 	display: inline;
 }
+
+
+.learn-interface:after, .learn-paint:after
+ {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 75px;
+}
+
+.interface-container,
+.paint-container {
+	margin-top: 75px;
+	position: relative;
+}
+
 
 .ipad-project-view {
 	margin-left: 21px;

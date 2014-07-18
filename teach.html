@@ -1,161 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>ScratchJr - Teach</title>
-    <script src="src/jquery-1.11.0.min.js"></script>
-    <script src="src/simple-expand.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('.expander').simpleexpand();
-
-        $('.expander').on('click', function (e) {
-          link = e.target;
-          if (link.textContent == 'See more') {
-            link.textContent = 'See less';
-          } else {
-            link.textContent = 'See more';
-          }
-        });
-      });
-    </script>
-    <link rel="stylesheet" type="text/css" href="style/site.css">
-    <link rel="stylesheet" type="text/css" href="style/teach.css">
-  </head>
-  <body>
-    <div id="header">
+<head>
+  <title>ScratchJr - Teach</title>
+  <script src="src/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/site.css">
+  <link rel="stylesheet" type="text/css" href="style/teach.css">
+</head>
+<body>
+  <div id="header">
+    <a href="index.html">
       <div id="header-logo-wrapper">
         <img src="images/scratchjrlogo.png" id="header-logo" alt="ScratchJr Logo" />
       </div> <!-- end header-logo-wrapper -->
-      <div id="header-nav">
-        <div class="header-nav-item-wrapper">
-          <a href="index.html">
-            <div class="header-nav-item">
-              HOME
-            </div>
-          </a>
+    </a>
+    <div id="header-nav">
+      <div class="header-nav-item-wrapper">
+        <a href="about.html">
+          <div class="header-nav-item">
+            About
+          </div>
+        </a>
+      </div>
+      <div class="header-nav-item-wrapper">
+        <a href="learn.html">
+          <div class="header-nav-item">
+            Learn
+          </div>
+        </a>
+      </div>
+      <div class="header-nav-item-wrapper">
+        <a href="teach.html">
+          <div class="header-nav-item header-nav-item-selected">
+            Teach
+          </div>
+        </a>
+      </div>
+      <div class="header-nav-item-wrapper">
+        <a href="#" onclick="submitForm()">
+          <div class="header-nav-item">
+            Donate
+          </div>
+        </a>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donateForm">
+          <!-- input type="hidden" name="amount" value="1234"/ -->
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="paypal@codetolearn.org">
+          <input type="hidden" name="item_name" value="ScratchJr.">
+          <input type="hidden" name="no_shipping" value="1">
+          <input type="hidden" name="return" value="http://www.scratchjr.org/">
+          <input type="hidden" name="cancel_return" value="http://www.scratchjr.org/">
+        </form>
+      </div>
+      <script type="text/javascript">
+      function submitForm()
+      {
+        document.getElementById('donateForm').submit();
+      }
+      </script>
+    </div> <!-- end header-nav -->
+  </div> <!-- end header -->
+  <div id="content">
+    <div id="content-nav">
+      <div class="content-nav-item content-nav-item-selected content-nav-item-left">
+        <img class="content-nav-item-icon" src="images/activitiesguidebtn.png" />
+        <div class="content-nav-item-description">
+          Activities
         </div>
-        <div class="header-nav-divider-wrapper">
-          <div class="header-nav-divider-1"></div>
-        </div>
-        <div class="header-nav-item-wrapper">
-          <a href="about.html">
-            <div class="header-nav-item">
-              ABOUT
-            </div>
-          </a>
-        </div>
-        <div class="header-nav-divider-wrapper">
-          <div class="header-nav-divider-2"></div>
-        </div>
-        <div class="header-nav-item-wrapper">
-          <a href="learn.html">
-            <div class="header-nav-item">
-              LEARN
-            </div>
-          </a>
-        </div>
-        <div class="header-nav-divider-wrapper">
-          <div class="header-nav-divider-3"></div>
-        </div>
-        <div class="header-nav-item-wrapper">
-          <a href="teach.html">
-            <div class="header-nav-item header-nav-item-selected">
-              TEACH
-            </div>
-          </a>
-        </div>
-      </div> <!-- end header-nav -->
-    </div> <!-- end header -->
-
-    <div id="content">
-      <h1>Resources</h1>
-      <div class="content-section">
-        <div class="content-section-title">
+      </div>
+      <div class="content-nav-item content-nav-item-middle">
+        <img class="content-nav-item-icon" src="images/curriculaguidebtn.png" />
+        <div class="content-nav-item-description">
           Curricula
         </div>
-        <div class="content-section-description">
-          These curricula introduce powerful ideas from computer science that are not usually highlighted in early childhood education. For our purposes, the term "powerful idea" refers to a concept that children can learn and that will serve their critical thinking and problem solving abilities beyond the lifetime of a specific classroom technology. While these curricula were designed as tools for teaching ScratchJr for the iPad, the ultimate goal is to equip students with skills that can be applied outside of the app. Abilities like programming, expressing through technology, and user-centered design are just a few of the powerful ideas covered in our lessons.
+      </div>
+      <div class="content-nav-item content-nav-item-right">
+        <img class="content-nav-item-icon" src="images/assessmentsguidebtn.png" />
+        <div class="content-nav-item-description">
+          Assessments
         </div>
-        <div class="content-section-item">
+      </div>
+    </div>
+
+    <div class="content-section content-section-selected activities-section">
+      <div class="content-section-title">
+        Activities
+      </div>
+      <div class="content-section-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam lacus, dapibus cursus dignissim nec, congue vitae augue. In eros eros, commodo vitae urna eu, interdum venenatis metus. Quisque sapien nisi, sagittis vitae nulla eu, ornare ornare nunc. Nam felis nisi, interdum ac sem ut, elementum vulputate lectus. Sed egestas volutpat risus in lacinia. 
+      </div>
+      <div class="content-section-items-container">
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+            Example Activity 1
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
+          </div>
+          <div class="content-section-item-description">
+            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+            Example Activity 2
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
+          </div>
+          <div class="content-section-item-description">
+            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+            Example Activity 3
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
+          </div>
+          <div class="content-section-item-description">
+            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section curricula-section">
+      <div class="content-section-title">
+        Curricula
+      </div>
+      <div class="content-section-description">
+        These curricula introduce powerful ideas from computer science that are not usually highlighted in early childhood education. For our purposes, the term "powerful idea" refers to a concept that children can learn and that will serve their critical thinking and problem solving abilities beyond the lifetime of a specific classroom technology. While these curricula were designed as tools for teaching ScratchJr for the iPad, the ultimate goal is to equip students with skills that can be applied outside of the app. Abilities like programming, expressing through technology, and user-centered design are just a few of the powerful ideas covered in our lessons.
+      </div>
+      <div class="content-section-items-container">
+        <div class="content-section-full-item">
           <div class="content-section-item-title">
             Animated Genres Curriculum
           </div>
           <div class="content-section-item-thumbnail">
-            <img class="content-section-item-thumbnail-image" src="images/animatedgenresthumbnail.png"/>
+            <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
           </div>
           <div class="content-section-item-description">
-            This curriculum provides students with the opportunity to learn all of the concepts in ScratchJr and apply these concepts in their own personal creations. At the heart of the curriculum are projects based on three interactive genres of ScratchJr, collage, story and game. Leading up to each of these projects are lessons that familiarize students with programming concepts in ScratchJr.
+            This curriculum provides students with the opportunity to learn all of the concepts in ScratchJr and apply these concepts in their own personal creations. At the heart of the curriculum are projects based on three interactive genres of ScratchJr... <a href="#">Read more</a>
           </div>
-          <div class="content-section-item-link">
-            <a class="expander" data-expander-target="div.content-animated" href="#">See more</a>
+          <div class="content-section-item-age">
+            Ages 5-7 &nbsp | &nbsp  1 year
           </div>
         </div>
-        <div class="content-animated">
+        <div class="content-section-full-item">
           <div class="content-section-item-title">
-            Animated Genres Curriculum Lessons
-          </div>
-          <a href="curricula/animatedgenres/full.pdf">Download as one file</a><br/><br/>
-          <a href="curricula/animatedgenres/introduction.pdf">Introduction</a><br/>
-          <a href="curricula/animatedgenres/overview.pdf">Overview</a><br/><br/>
-          Module 1 - Making a ScratchJr Collage<br/><br/>
-          During this module, students learn how to navigate the ScratchJr iPad app and programming concepts that will help them move characters and change the looks of their characters and background. At the end of the module, students will create a ScratchJr collage project.<br/><br/>
-          <a href="curricula/animatedgenres/1.pdf">Lesson 1 - Instructions, Sequencing, and an Introduction to the ScratchJr iPad App</a><br/>
-          <a href="curricula/animatedgenres/2.pdf">Lesson 2 - Same Block Sequencing and Motion</a><br/>
-          <a href="curricula/animatedgenres/3.pdf">Lesson 3 - Start on Green Flag Block, End Block, and Choosing Characters</a><br/>
-          <a href="curricula/animatedgenres/4.pdf">Lesson 4 - Backgrounds and Review of Programming Multiple Characters</a><br/>
-          <a href="curricula/animatedgenres/collage.pdf">Collage Project</a><br/><br/>
-          Module 2 - Making a ScratchJr Story<br/><br/>
-          During this module, students will learn ScratchJr concepts that will help them define more specific behavior for their characters, and tools such as speech bubbles and pages to help them weave a narrative. At the end of the module, students will create a ScratchJr story project.<br/><br/>
-          <a href="curricula/animatedgenres/5.pdf">Lesson 5 - Speed</a><br/>
-          <a href="curricula/animatedgenres/6.pdf">Lesson 6 - Numbers and Repeating Sequences</a><br/>
-          <a href="curricula/animatedgenres/7.pdf">Lesson 7 - Speech Bubbles, Sounds, Pages and Wait</a><br/>
-          <a href="curricula/animatedgenres/story.pdf">Story Project</a><br/><br/>
-          Module 3 - Making a ScratchJr Game<br/><br/>
-          During this module, students will learn more advanced concepts in ScratchJr. Most importantly, they will discover how to program characters that interact with each other and the iPad user. At the end of the module, students will create a ScratchJr game project.<br/><br/>
-          <a href="curricula/animatedgenres/8.pdf">Lesson 8 - Start on Bump, Start on Tap, Send and Receive Messages, Stop</a><br/>
-          <a href="curricula/animatedgenres/game.pdf">Game Project</a>
-        </div>
-      </div>
-      <div class="content-section">
-        <div class="content-section-title">
-          Assessments
-        </div>
-        <div class="content-section-item">
-          <div class="content-section-item-title">
-            Assessments Guide
+            Animated Genres Curriculum
           </div>
           <div class="content-section-item-thumbnail">
-            <img class="content-section-item-thumbnail-image" src="images/assessmentsthumbnail.png"/>
+            <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
           </div>
           <div class="content-section-item-description">
-            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr project by sequencing their own programming blocks.
+            This curriculum provides students with the opportunity to learn all of the concepts in ScratchJr and apply these concepts in their own personal creations. At the heart of the curriculum are projects based on three interactive genres of ScratchJr... <a href="#">Read more</a>
           </div>
-          <div class="content-section-item-link">
-            <a class="expander" data-expander-target="div.content-assessments" href="#">See more</a>
+          <div class="content-section-item-age">
+            Ages 5-7 &nbsp | &nbsp  1 year
           </div>
-        </div>
-        <div class="content-assessments">
-          <div class="content-section-item-title">
-            Assessments Guide Files
-          </div>
-          <a href="assessments/guide.pdf">Assessments Guide</a><br/><br/>
-          This guide will outline how to assess students' understanding of instructions and sequencing in the context of the ScratchJr iPad app.<br/><br/>
-          <a href="assessments/programmingBlockCards.pdf">Programming Block Cards</a><br/><br/>
-          This handout is used for the &quot;Sequence the Blocks&quot; portion of the assessment. Teachers will need to cut out individual block sor have their students do so. Students use their &quot;Programming Block Cards&quot; to show which blocks they think are used in the project's program and put them in the order they think the blocks should be in.<br/><br/>
-          <a href="assessments/circleBlocksHandout.pdf">Circle the Blocks Handout</a><br/><br/>
-          This handout is used for the &quot;Circle the Blocks&quot; portion of the assessment. Students examine a project as it runs and circle which blocks they think are part of the project's program in the section of the &quot;Circle the Blocks Handout&quot; corresponding to that project.
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div id="footer-nav">
-        <a href="contact.html">
-          <div class="footer-nav-item">
-            CONTACT
-          </div>
-        </a>
-      </div> <!-- end footer-nav -->
-    </div> <!-- end footer -->
 
-  </body>
+    <div class="content-section assessments-section">        
+      <div class="content-section-title">
+        Assessments
+      </div>
+      <div class="content-section-description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam lacus, dapibus cursus dignissim nec, congue vitae augue. In eros eros, commodo vitae urna eu, interdum venenatis metus. Quisque sapien nisi, sagittis vitae nulla eu, ornare ornare nunc. Nam felis nisi, interdum ac sem ut, elementum vulputate lectus. Sed egestas volutpat risus in lacinia. 
+      </div>
+      <div class="content-section-items-container">
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+            Example Assessment 1
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
+          </div>
+          <div class="content-section-item-description">
+            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+            Example Assessment 2
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
+          </div>
+          <div class="content-section-item-description">
+            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>
+          </div>
+        </div>
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+            Example Assessment 3
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
+          </div>
+          <div class="content-section-item-description">
+            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div id="footer">
+    <span id="footer-text">
+      <strong>ScratchJr</strong> is a collaboration between the DevTech Research Group at Tufts University, the Lifelong Kindergarten Group at the MIT Media Lab, and the Playful Invention Company.
+    </span>
+    <div id="footer-nav">
+      <a href="contact.html">
+        <div class="blue-button">
+          Join Mailing List
+        </div>
+      </a>
+      &nbsp
+      <a href="contact.html">
+        <div class="blue-button">
+          Contact Us
+        </div>
+      </a>
+    </div> <!-- end footer-nav -->
+  </div> <!-- end footer -->
+
+
+  <script type="text/javascript">
+  var tabTitles = ["Activities", "Curricula", "Assessments"];
+  var tabSelectors = [".activities-section", ".curricula-section", ".assessments-section"];
+
+  $(document).on('click', '.content-nav-item', function(e) {
+    $('.content-nav-item').removeClass('content-nav-item-selected');
+    $(this).addClass('content-nav-item-selected');
+    $('.content-section').removeClass('content-section-selected');
+    $(tabSelectors[tabTitles.indexOf($.trim($(this).text()))]).addClass('content-section-selected');
+  });
+  </script>
+
+</body>
 </html>
