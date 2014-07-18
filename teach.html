@@ -61,19 +61,19 @@
   </div> <!-- end header -->
   <div id="content">
     <div id="content-nav">
-      <div class="content-nav-item content-nav-item-selected content-nav-item-left">
+      <div class="content-nav-item content-nav-item-selected content-nav-item-left" id="activities-section">
         <img class="content-nav-item-icon" src="images/activitiesguidebtn.png" />
         <div class="content-nav-item-description">
           Activities
         </div>
       </div>
-      <div class="content-nav-item content-nav-item-middle">
+      <div class="content-nav-item content-nav-item-middle" id="curricula-section">
         <img class="content-nav-item-icon" src="images/curriculaguidebtn.png" />
         <div class="content-nav-item-description">
           Curricula
         </div>
       </div>
-      <div class="content-nav-item content-nav-item-right">
+      <div class="content-nav-item content-nav-item-right" id="assessments-section">
         <img class="content-nav-item-icon" src="images/assessmentsguidebtn.png" />
         <div class="content-nav-item-description">
           Assessments
@@ -81,7 +81,7 @@
       </div>
     </div>
 
-    <div class="content-section content-section-selected activities-section">
+    <div class="content-section content-section-selected" id="activities-section">
       <div class="content-section-title">
         Activities
       </div>
@@ -125,7 +125,7 @@
       </div>
     </div>
 
-    <div class="content-section curricula-section">
+    <div class="content-section" id="curricula-section">
       <div class="content-section-title">
         Curricula
       </div>
@@ -164,7 +164,7 @@
       </div>
     </div>
 
-    <div class="content-section assessments-section">        
+    <div class="content-section" id="assessments-section">        
       <div class="content-section-title">
         Assessments
       </div>
@@ -230,14 +230,16 @@
 
 
   <script type="text/javascript">
-  var tabTitles = ["Activities", "Curricula", "Assessments"];
-  var tabSelectors = [".activities-section", ".curricula-section", ".assessments-section"];
-
   $(document).on('click', '.content-nav-item', function(e) {
     $('.content-nav-item').removeClass('content-nav-item-selected');
     $(this).addClass('content-nav-item-selected');
     $('.content-section').removeClass('content-section-selected');
-    $(tabSelectors[tabTitles.indexOf($.trim($(this).text()))]).addClass('content-section-selected');
+    $(".content-section#"+$(this).attr('id')).addClass('content-section-selected');
+  });
+
+  $(document).on('click', '.read-more', function(e) {
+    $('.content-section').removeClass('content-section-selected');
+    $(".content-section#"+$(this).attr('id')).addClass('content-section-selected');
   });
   </script>
 
