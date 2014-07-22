@@ -92,6 +92,7 @@ h1 {
 	clear: both;
 	width: 47.5%;
 	text-align: left;
+	vertical-align: top;
 }
 
 .content-section-half-item {
