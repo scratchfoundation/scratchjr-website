@@ -36,30 +36,16 @@
         </a>
       </div>
       <div class="header-nav-item-wrapper">
-        <a href="#" onclick="submitForm()">
+        <a href="donate.html">
           <div class="header-nav-item">
             Donate
           </div>
         </a>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donateForm">
-          <!-- input type="hidden" name="amount" value="1234"/ -->
-          <input type="hidden" name="cmd" value="_xclick">
-          <input type="hidden" name="business" value="paypal@codetolearn.org">
-          <input type="hidden" name="item_name" value="ScratchJr.">
-          <input type="hidden" name="no_shipping" value="1">
-          <input type="hidden" name="return" value="http://www.scratchjr.org/">
-          <input type="hidden" name="cancel_return" value="http://www.scratchjr.org/">
-        </form>
       </div>
-      <script type="text/javascript">
-      function submitForm()
-      {
-        document.getElementById('donateForm').submit();
-      }
-      </script>
     </div> <!-- end header-nav -->
   </div> <!-- end header -->
   <div id="content">
+    <!-- Start of Nav -->
     <div id="content-nav">
       <div class="content-nav-item content-nav-item-selected content-nav-item-left" id="activities-section">
         <img class="content-nav-item-icon" src="images/activitiesguidebtn.png" />
@@ -80,7 +66,9 @@
         </div>
       </div>
     </div>
+    <!-- End of Nav -->
 
+    <!-- Start of Activities Home Page -->
     <div class="content-section content-section-selected" id="activities-section">
       <div class="content-section-title">
         Activities
@@ -124,7 +112,9 @@
         </div>
       </div>
     </div>
+    <!-- End of Activities Home Page -->
 
+    <!-- Start of Curricula Home Page -->
     <div class="content-section" id="curricula-section">
       <div class="content-section-title">
         Curricula
@@ -141,10 +131,10 @@
             <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
           </div>
           <div class="content-section-item-description">
-            This curriculum provides students with the opportunity to learn all of the concepts in ScratchJr and apply these concepts in their own personal creations. At the heart of the curriculum are projects based on three interactive genres of ScratchJr... <a href="#">Read more</a>
+            This curriculum provides students with the opportunity to learn all of the concepts in ScratchJr and apply these concepts in their own personal creations. At the heart of the curriculum are projects based on three interactive genres of ScratchJr... <a class="read-more" id="example-curriculum" href="#">Read more</a>
           </div>
           <div class="content-section-item-age">
-            Ages 5-7 &nbsp | &nbsp  1 year
+            Ages 5-7 &nbsp; | &nbsp;  1 year
           </div>
         </div>
         <div class="content-section-full-item">
@@ -158,12 +148,14 @@
             This curriculum provides students with the opportunity to learn all of the concepts in ScratchJr and apply these concepts in their own personal creations. At the heart of the curriculum are projects based on three interactive genres of ScratchJr... <a href="#">Read more</a>
           </div>
           <div class="content-section-item-age">
-            Ages 5-7 &nbsp | &nbsp  1 year
+            Ages 5-7 &nbsp; | &nbsp;  1 year
           </div>
         </div>
       </div>
     </div>
+    <!-- End of Curricula Home Page -->
 
+    <!-- Start of Assessments Home Page -->
     <div class="content-section" id="assessments-section">        
       <div class="content-section-title">
         Assessments
@@ -180,7 +172,7 @@
             <img class="content-section-item-thumbnail-image" src="images/slide1.png"/>
           </div>
           <div class="content-section-item-description">
-            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>
+            These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>p
           </div>
         </div>
         <div class="content-section-half-item">
@@ -205,22 +197,38 @@
             These assessments may be used to determine how well students have learned to identify programming blocks in a given ScratchJr project and reverse engineer a ScratchJr... <a href="#">Read more</a>
           </div>
         </div>
-      </div>
-      
+      </div>      
     </div>
+    <!-- End of Assessments Home Page -->
+
+    <!-- Beginning of Activities Pages -->
+    <!-- End of Activities Pages -->
+
+    <!-- Beginning of Curricula Pages -->
+    <div class="content-section" id="example-curriculum">        
+      <div class="content-section-title">
+        Example Curriculum
+      </div>
+    </div>
+    <!-- End of Curricula Pages -->
+
+    <!-- Beginning of Assessments Pages -->
+    <!-- End of Assessments Pages -->
+
+
   </div>
   <div id="footer">
     <span id="footer-text">
       <strong>ScratchJr</strong> is a collaboration between the DevTech Research Group at Tufts University, the Lifelong Kindergarten Group at the MIT Media Lab, and the Playful Invention Company.
     </span>
     <div id="footer-nav">
-      <a href="contact.html">
+      <a href="https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform?usp=send_form">
         <div class="blue-button">
           Join Mailing List
         </div>
       </a>
-      &nbsp
-      <a href="contact.html">
+      &nbsp;
+      <a href="mailto:info@scratchjr.org">
         <div class="blue-button">
           Contact Us
         </div>
