@@ -122,3 +122,9 @@ img { display: block; }
 .timeline-header {
 	display: none;
 }
+
+#announcement-banner > a {
+	font-weight:bolder;
+	color: white;
+	text-decoration: none;
+}
