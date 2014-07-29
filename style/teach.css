@@ -157,10 +157,7 @@ h1 {
 	width: 57%;
 }
 
-a:link {
+a {
 	color: #2898CD;
-}
-
-a:visited {
-	color: #2898CD;
+	text-decoration: none;
 }
