@@ -88,38 +88,38 @@
 /* 1. Save */
 
 #interface-button-save {
-	left: 67px;
+	left: 134px;
 	top: -54px;
 }
 
 #interface-vertical-line-save {
 	height: 27px;
 	top: -20px;
-	left: 83px;
+	left: 150px;
 }
 
 #interface-dot-save {
 	top: 7px;
-	left: 60px;
+	left: 127px;
 }
 
 /* 2. Stage */
 
 #interface-button-stage {
-	left: 160px;
+	left: 173px;
 	top: -54px;
 }
 
 #interface-vertical-line-stage-1 {
 	height: 175px;
 	top: -20px;
-	left: 177px;
+	left: 189px;
 }
 
 #interface-horizontal-line-stage-1 {
-	width: 20px;
+	width: 8px;
 	top: 155px;
-	left: 177px;
+	left: 189px;
 }
 
 #interface-vertical-line-stage-2 {
@@ -143,19 +143,19 @@
 /* 3. Presentation Mode */
 
 #interface-button-presentation-mode {
-	left: 206px;
+	left: 210px;
 	top: -54px;
 }
 
 #interface-vertical-line-presentation-mode {
 	height: 28px;
 	top: -20px;
-	left: 223px;
+	left: 226px;
 }
 
 #interface-dot-presentation-mode {
 	top: 8px;
-	left: 200px;
+	left: 203px;
 }
 
 /* 4. Grid */
