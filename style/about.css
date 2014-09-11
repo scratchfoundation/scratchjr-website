@@ -14,6 +14,62 @@ h1 {
 	color: #f5a322;
 }
 
+.content-animated {
+	display: none;
+	clear: both;
+	padding-top: 20px;
+	color: #808080;
+	font-size: 14px;
+	line-height: 22px;
+	padding-bottom: 30px;
+}
+
+.content-tapit {
+	display: none;
+	clear: both;
+	padding-top: 20px;
+	color: #808080;
+	font-size: 14px;
+	line-height: 22px;
+	padding-bottom: 30px;
+}
+.content-section {
+	display: none;
+}
+
+.content-section-selected {
+	padding-top: 3px;
+	margin-left: 70px;
+	margin-right: 70px;
+	clear: both;
+	display: block;
+	padding-bottom: 3px;
+}
+
+.content-section-title {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: #999;
+	width: 612px;
+	font-size: 32px;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 0.5px;
+}
+
+.content-section-description {
+	padding-top: 20px;
+	color: #808080;
+	font-size: 14px;
+	line-height: 22px;
+	padding-bottom: 50px;
+	font-size: 16px;
+	line-height: 28px;
+	width: 100%;
+	text-align: center;
+
+}
+
 #video-wrapper {
 	padding-top: 40px;
 	margin-left: 120px;
