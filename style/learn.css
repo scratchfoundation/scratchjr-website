@@ -1036,4 +1036,19 @@
 	line-height: 20px;
 }
 
+.download-icon {
+  margin-right: 5px;
+  color: #2898CD;
+  font-weight: bolder;
+}
+
+#download-guide-link {
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #2898CD;
+  text-decoration: none;
+}
+
 /* End Guide 3 - Block Descriptions */
