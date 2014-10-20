@@ -39,6 +39,11 @@
 	font-size: 14px;
 }
 
+.download-guide-link {
+	position: absolute;
+	top: -80px;
+	right: 0px;
+}
 
 /* Guide Elements */
 
