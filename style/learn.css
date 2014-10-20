@@ -40,9 +40,10 @@
 }
 
 .download-guide-link {
-	position: absolute;
-	top: -80px;
-	right: 0px;
+	position: relative;
+	top: 10px;
+	left: 680px;
+	z-index: 1000;
 }
 
 /* Guide Elements */
