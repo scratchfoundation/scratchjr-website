@@ -58,11 +58,10 @@ h1 {
 }
 
 .content-section-description {
-	padding-top: 20px;
 	color: #808080;
 	font-size: 14px;
 	line-height: 22px;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 	font-size: 16px;
 	line-height: 28px;
 	width: 100%;
@@ -72,14 +71,19 @@ h1 {
 
 #video-wrapper {
 	padding-top: 40px;
-	margin-left: 120px;
-	margin-right: 120px;
+        text-align: center;
 }
 
 #content-description {
-	padding-top: 40px;
 	margin-left: 35px;
 	margin-right: 35px;
+}
+
+.content-description-highlight {
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	background-color: #efefef;
+	padding: 15px;
 }
 
 .content-description-section {
@@ -124,20 +128,20 @@ a:visited {
 }
 
 .press-icon {
-	background-image: url(../images/paintOff.svg);
+	background-image: url(../images/press_b.svg);
 	background-size: 100%;
 }
 
 .content-nav-item-selected  > .press-icon {
-	background-image: url(../images/paintOn.svg);
+	background-image: url(../images/press_o.svg);
 }
 
 .faq-icon {
-	background-image: url(../images/paintOff.svg);
+	background-image: url(../images/faq_b.svg);
 	background-size: 100%;
 }
 
 .content-nav-item-selected  > .faq-icon {
-	background-image: url(../images/paintOn.svg);
+	background-image: url(../images/faq_o.svg);
 }
 

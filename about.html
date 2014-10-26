@@ -60,7 +60,7 @@
       </a>
       <a href="#press">
         <div class="content-nav-item content-nav-item-middle" id="press-section">
-          <img class="content-nav-item-icon" src="images/pressguidebtn.png" />
+		<div class="content-nav-item-icon press-icon"> </div>
           <div class="content-nav-item-description">
             Press
           </div>
@@ -68,7 +68,7 @@
       </a>
       <a href="#troubleshooting">
         <div class="content-nav-item content-nav-item-right" id="faq-section">
-          <img class="content-nav-item-icon" src="images/faqguidebtn.png" />
+		<div class="content-nav-item-icon faq-icon"> </div>
           <div class="content-nav-item-description">
             FAQ
           </div>
@@ -164,12 +164,13 @@
         Find answers to your troubleshooting questions here.
       </div>
       <div id="content-description">
-      <div class="content-description-section">
+      <div class="content-description-section content-description-highlight">
         <div class="content-description-question">ScratchJr freezes on the spalsh screen. What can I do?</div>
 
-        <div class="content-description-answer"> Short Answer: Turn Airplane Mode to "on."</div>
-        <div class="content-description-answer"> Complete Answer: This is a proxy issue. ScratchJr does some internal communication using a localhost server. A proxy can be set up to block that. Most proxies do not do this. They allow any communication within the local net or at least within the local device. If this is blocked, it can be re-enabled by adding the following line of code to the FindProxyForURL function in the .pac file:<br/>
-        if (shExpMatch(host, "localhost")||shExpMatch(host, "127.0.0.1")) return "DIRECT";<br/>
+	<div class="content-description-answer"> <b>Short Answer:</b> Turn Airplane Mode to "on."</div>
+	<div class="content-description-answer"> <b>Complete Answer:</b> This is a proxy issue. ScratchJr does some internal communication using a localhost server. A proxy can be set up to block that. Most proxies do not do this. They allow any communication within the local net or at least within the local device. If this is blocked, it can be re-enabled by adding the following line of code to the FindProxyForURL function in the .pac file:<br/><br />
+		<code>if (shExpMatch(host, "localhost")||shExpMatch(host, "127.0.0.1")) return "DIRECT";</code>
+		<br/></br />
         You will need to get your network administrator to make this change in the way things are proxied. This should not affect the way your proxy works for other apps. If you are unable to make this change to your proxy file, you can also use Airplane Mode on individual iPads to enable ScratchJr.</div>
       </div>
 
