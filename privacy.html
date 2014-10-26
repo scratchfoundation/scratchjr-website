@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="style/site.css">
-  <link rel="stylesheet" type="text/css" href="style/donate.css">
+  <link rel="stylesheet" type="text/css" href="style/privacy.css">
 
   <title>ScratchJr - Contact</title>
 </head>
@@ -37,7 +37,7 @@
       </div>
       <div class="header-nav-item-wrapper">
         <a href="donate.html">
-          <div class="header-nav-item header-nav-item-selected">
+          <div class="header-nav-item header-nav-item">
             Donate
           </div>
         </a>
@@ -47,34 +47,9 @@
 
   <div id="content">
 
-    <h1>Donate</h1>
+    <h1>Privacy Policy</h1>
+    <p>The ScratchJr app does not collect any information about you or your use of the app.</p>
 
-    <p>If you enjoy using the free ScratchJr app, please consider making a donation to the Code-to-Learn Foundation (www.codetolearn.org), a nonprofit organization that provides ongoing support for ScratchJr. We appreciate donations of all sizes, large and small.</p>
-
-    <div class="donation-block">
-      $
-      <form style="text-align: center;" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donateForm">
-        <input type="number" name="amount" value="">
-        <input type="hidden" name="cmd" value="_xclick">
-        <input type="hidden" name="business" value="paypal@codetolearn.org">
-        <input type="hidden" name="item_name" value="ScratchJr">
-        <input type="hidden" name="no_shipping" value="1">
-        <input type="hidden" name="return" value="http://www.codetolearn.org/">
-        <input type="hidden" name="cancel_return" value="http://www.codetolearn.org/">
-      </form>
-      &nbsp;
-      <a href="#" id="donate-button" onclick="submitForm()">
-        <div  class="blue-button">
-          Donate
-        </div>
-      </a>
-      <script type="text/javascript">
-      function submitForm()
-      {
-        document.getElementById('donateForm').submit();
-      }
-      </script>
-    </div>
   </div>
   <div id="footer">
     <span id="footer-text">
