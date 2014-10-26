@@ -110,3 +110,34 @@ a:link {
 a:visited {
 	color: #2898CD;
 }
+
+/* SUBMENUS */
+
+
+.info-icon {
+	background-image: url(../images/infos_b.svg);
+	background-size: 100%;
+}
+
+.content-nav-item-selected  > .info-icon {
+	background-image: url(../images/infos_o.svg);
+}
+
+.press-icon {
+	background-image: url(../images/paintOff.svg);
+	background-size: 100%;
+}
+
+.content-nav-item-selected  > .press-icon {
+	background-image: url(../images/paintOn.svg);
+}
+
+.faq-icon {
+	background-image: url(../images/paintOff.svg);
+	background-size: 100%;
+}
+
+.content-nav-item-selected  > .faq-icon {
+	background-image: url(../images/paintOn.svg);
+}
+
