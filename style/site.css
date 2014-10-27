@@ -147,12 +147,12 @@ body {
 	line-height: 16pt;
 }
 
-#footer-links {
+.footer-links {
 	display: block;
 	text-align: center;
 }
 
-#footer-links a {
+.footer-links a {
 	text-decoration: none;
 	color: #fff;
 }
