@@ -243,6 +243,7 @@ $(function() {
 
 
   var hash = location.hash.substr(1);
+  console.log(hash);
   if (hash){
     if ($('#'+hash+'-section').length) {
       updateContent(hash+'-section');
