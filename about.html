@@ -113,7 +113,7 @@
       <div class="content-description-section">
         <div class="content-description-question">Who Created ScratchJr?</div>
 
-        <div class="content-description-answer"> ScratchJr is a collaboration between the <a href="http://ase.tufts.edu/devtech/">Developmental Technologies (DevTech) Research Group</a> at the <a href="http://ase.tufts.edu/epcd/"> Eliot-Pearson Department of Child Development</a> at <a href="http://www.tufts.edu/">Tufts University</a> (led by <a href="http://www.tufts.edu/~mbers01/">Marina Umaschi Bers</a>, with contributions from Louise Flannery, Elizabeth Kazakoff, Amanda Strawhacker, and Dylan Portelance), the <a href="http://llk.media.mit.edu/">Lifelong Kindergarten</a> group at the <a href="http://www.media.mit.edu/">MIT Media Lab</a> (led by <a href="http://web.media.mit.edu/~mres/">Mitchel Resnick<a>, with contributions from Natalie Rusk, Sayamindu Dasgupta, Champika Fernando, and Chris Graves), and the <a href="http://www.playfulinvention.com/">Playful Invention Company</a> (led by Paula Bont&aacute; and Brian Silverman, with contributions from Jack Geddes and Adrian Gabriel).</div>
+        <div class="content-description-answer"> ScratchJr is a collaboration between the <a href="http://ase.tufts.edu/devtech/">Developmental Technologies (DevTech) Research Group</a> at the <a href="http://ase.tufts.edu/epcd/"> Eliot-Pearson Department of Child Development</a> at <a href="http://www.tufts.edu/">Tufts University</a> (led by <a href="http://www.tufts.edu/~mbers01/">Marina Umaschi Bers</a>, with contributions from Louise Flannery, Elizabeth Kazakoff, Amanda Strawhacker, and Dylan Portelance), the <a href="http://llk.media.mit.edu/">Lifelong Kindergarten</a> group at the <a href="http://www.media.mit.edu/">MIT Media Lab</a> (led by <a href="http://web.media.mit.edu/~mres/">Mitchel Resnick</a>, with contributions from Tim Mickel, Champika Fernando, Natalie Rusk, Sayamindu Dasgupta, and Chris Graves), and the <a href="http://www.playfulinvention.com/">Playful Invention Company</a> (led by Paula Bont&aacute; and Brian Silverman, with contributions from Jack Geddes and Adrian Gabriel).</div>
 
         <div class="content-description-answer">View a <a href="https://tufts.webex.com/tufts/lsr.php?RCID=4bd464b15d92424e9e04647193d1c585">conversation with the creators of ScratchJr</a>, Marina Bers and Mitchel Resnick.</div>
 
@@ -167,7 +167,7 @@
       <div class="content-description-section content-description-highlight">
         <div class="content-description-question">ScratchJr freezes on the splash screen. What can I do?</div>
 
-	<div class="content-description-answer"> <b>Short Answer:</b> Go into Settings and turn Airplane Mode to "on."</div>
+	<div class="content-description-answer"> <b>Short Answer:</b> Quit the ScratchJr app. Go into Settings and turn Airplane Mode to "on." Reopen the ScratchJr app.</div>
 	<div class="content-description-answer"> <b>Complete Answer:</b> This is a proxy issue. ScratchJr does some internal communication using a localhost server. A proxy can be set up to block that. Most proxies do not do this. They allow any communication within the local net or at least within the local device. If this is blocked, it can be re-enabled by adding the following line of code to the FindProxyForURL function in the .pac file:<br/><br />
 		<code>if (shExpMatch(host, "localhost")||shExpMatch(host, "127.0.0.1")) return "DIRECT";</code>
 		<br/></br />
