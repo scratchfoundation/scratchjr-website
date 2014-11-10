@@ -169,9 +169,9 @@
 	<div class="content-description-answer"> <b>Short Answer:</b> Quit the ScratchJr app. Go into Settings and turn Airplane Mode to "on." Reopen the ScratchJr app.</div>
 	<div class="content-description-answer"> <b>Complete Answer:</b> 
 	
-		ScratchJr software does some internal communication using what’s known as a "localhost server.” Some schools use a “proxy” in their network that can block this internal server, causing ScratchJr to freeze. Turning on Airplane Mode will fix this problem, but then your iPad won’t have access to the Internet.
+		ScratchJr software does some internal communication using what's known as a "localhost server." Some schools use a "proxy" in their network that can block this internal server, causing ScratchJr to freeze. Turning on Airplane Mode will fix this problem, but then your iPad won't have access to the Internet.
 		<br /><br />
-		A better (but more complicated) solution involves adding an extra line of code to the proxy. You’ll need to ask your network administrator to help with this. To fix the problem, the network admin should add the following line of code to the FindProxyForURL function in the .pac file:<br /><br />
+		A better (but more complicated) solution involves adding an extra line of code to the proxy. You'll need to ask your network administrator to help with this. To fix the problem, the network admin should add the following line of code to the FindProxyForURL function in the .pac file:<br /><br />
 		<code>if (shExpMatch(host, "localhost")||shExpMatch(host, "127.0.0.1")) return "DIRECT";</code>
 		<br /><br />
 		This change should not affect the way your proxy works for any other apps.
