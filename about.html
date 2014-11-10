@@ -145,13 +145,12 @@
         Read what people are saying about ScratchJr.
       </div>
        <div class="content-description-answer"><a href="http://www.necn.com/news/tech/Making-the-Grade-Coding-for-Kids-272817181.html">Making the Grade: Coding for Kids </a> - New England Cable News. August 26, 2014</div>
-       <div class="content-description-answer"><a href="http://www.forbes.com/sites/jordanshapiro/2014/08/06/your-five-year-old-can-learn-to-code-with-an-ipad-app/">Your Five Year Old Can Learn To Code With An iPad App</a> - Forbes. August 6, 2014<br/>"ScratchJr introduces algorithmic thinking to young kids in a creative way... I downloaded ScratchJr and then handed the iPad to my six year old. He was instantly engaged." </div> 
+       <div class="content-description-answer"><a href="http://www.forbes.com/sites/jordanshapiro/2014/08/06/your-five-year-old-can-learn-to-code-with-an-ipad-app/">Your Five Year Old Can Learn To Code With An iPad App</a> - Forbes. August 6, 2014</div>
        <div class="content-description-answer">
         <a href="http://bostonherald.com/business/technology/2014/07/app_that_teaches_kids_to_code_is_the_future">App That Teaches Kids To Code is the Future</a> - Boston Herald. August 1, 2014</div> 
-       <div class="content-description-answer"><a href="http://www.ipadeducators.com/#!review-scratchjr/c1bpu">ScratchJr Review</a> - iPadEducators.com August 2014<br/> "With the increased focus on computer programming in the earlier years of school, ScratchJr will no doubt become a core component in the introduction of coding. Easy to use, fun to use and bursting with creative potential. An essential download." (5 out of 5 stars)</div> 
+<div class="content-description-answer"><a href="http://www.ipadeducators.com/#!review-scratchjr/c1bpu">ScratchJr Review</a> - iPadEducators.com August 2014</div>
        <div class="content-description-answer"><a href="http://www.wired.com/2014/07/finally-a-way-to-teach-coding-to-the-touchscreen-generation/">Finally, a Way to Teach Coding to the Touchscreen Generation</a> - WIRED. July 31, 2014</div>
-       <div class="content-description-answer">"I was returning from Colorado to Pittsburgh this evening. A 3-1/2 year old was throwing a very loud tantrum and his mother was frantic. A young woman nervously sat down, turned on her iPad, and opened ScratchJr... The child was mesmerized for the 2 hour flight and especially enjoyed changing colors on the characters. He loved it! So on behalf of the 200 passengers on United Airlines we thank you for this wonderful new creation."<br/>-Aileen M. Owens, M.Ed., Director of Technology and Innovation, South Fayette School District</div> 
-
+       <div class="content-description-answer"><a href="http://www.cbsnews.com/news/scratch-jr-app-teaches-kindergarteners-the-basics-of-computer-coding/">Coding for kindergarteners: App teaches kids computer basics</a> - CBS News. October 1, 2014</div>
        </div>
     <!-- End of Press Home Page -->
 
@@ -168,11 +167,16 @@
         <div class="content-description-question">ScratchJr freezes on the splash screen. What can I do?</div>
 
 	<div class="content-description-answer"> <b>Short Answer:</b> Quit the ScratchJr app. Go into Settings and turn Airplane Mode to "on." Reopen the ScratchJr app.</div>
-	<div class="content-description-answer"> <b>Complete Answer:</b> This is a proxy issue. ScratchJr does some internal communication using a localhost server. A proxy can be set up to block that. Most proxies do not do this. They allow any communication within the local net or at least within the local device. If this is blocked, it can be re-enabled by adding the following line of code to the FindProxyForURL function in the .pac file:<br/><br />
+	<div class="content-description-answer"> <b>Complete Answer:</b> 
+	
+		ScratchJr software does some internal communication using what’s known as a "localhost server.” Some schools use a “proxy” in their network that can block this internal server, causing ScratchJr to freeze. Turning on Airplane Mode will fix this problem, but then your iPad won’t have access to the Internet.
+		<br /><br />
+		A better (but more complicated) solution involves adding an extra line of code to the proxy. You’ll need to ask your network administrator to help with this. To fix the problem, the network admin should add the following line of code to the FindProxyForURL function in the .pac file:<br /><br />
 		<code>if (shExpMatch(host, "localhost")||shExpMatch(host, "127.0.0.1")) return "DIRECT";</code>
-		<br/></br />
-        You will need to get your network administrator to make this change in the way things are proxied. This should not affect the way your proxy works for other apps. If you are unable to make this change to your proxy file, you can also use Airplane Mode on individual iPads to enable ScratchJr.</div>
-      </div>
+		<br /><br />
+		This change should not affect the way your proxy works for any other apps.
+	</div>
+	</div>
 
       <div class="content-description-section">
         <div class="content-description-question">When will the Android version of ScratchJr be available?</div>
@@ -189,13 +193,17 @@
       <div class="content-description-section">
         <div class="content-description-question">How can we share ScratchJr projects across multiple iPads?</div>
 
-        <div class="content-description-answer">Sharing or exporting projects is not a supported feature in the current version of ScratchJr, but we hope to include it in future versions of the app. Those interested can <a href="https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform">join our e-list</a> to receive news about upcoming ScratchJr features and release dates. For now, we have heard from users that creating a video with your phone to record the iPad screen is a good alternative for sharing a project.</div>
+	<div class="content-description-answer">Sharing or exporting projects is not a supported feature in the current version of ScratchJr, but we hope to include it in future versions of the app. Those interested can <a href="https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform">join our e-list</a> to receive news about upcoming ScratchJr features and release dates. 
+	</div>
       </div>
 
       <div class="content-description-section">
         <div class="content-description-question">Will ScratchJr be available in other languages?</div>
 
-        <div class="content-description-answer">We do not currently have a translation team for the app. We hope to include translations in a future version, and we are keeping track of volunteer translators. For those interested in being a volunteer translator, please email info@scratchjr.org with your name and your translation language</div>
+	<div class="content-description-answer">
+		We hope to include translations in a future version of ScratchJr. If you're interested in volunteering to help with translations, please email <a href="mailto:info@scratchjr.org">info@scratchjr.org</a> with your name and the language you can help with.
+		
+	</div>
       </div>
 
        </div>
