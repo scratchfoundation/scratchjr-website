@@ -117,6 +117,9 @@ a:visited {
 
 /* SUBMENUS */
 
+.content-nav-item {
+  width: 24.9% !important;
+}
 
 .info-icon {
 	background-image: url(../images/infos_b.svg);
@@ -134,6 +137,15 @@ a:visited {
 
 .content-nav-item-selected  > .press-icon {
 	background-image: url(../images/press_o.svg);
+}
+
+.videos-icon {
+	background-image: url(../images/videos_b.svg);
+	background-size: 100%;
+}
+
+.content-nav-item-selected  > .videos-icon {
+	background-image: url(../images/videos_o.svg);
 }
 
 .faq-icon {
