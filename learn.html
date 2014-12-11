@@ -38,8 +38,7 @@
       <div class="header-nav-item-wrapper">
         <a href="donate.html">
           <div class="header-nav-item">
-            Donate
-          </div>
+            Donate          </div>
         </a>
       </div>
     </div> <!-- end header-nav -->
@@ -48,7 +47,7 @@
   <div id="content">
     <div id="content-nav">
       <a href="#">
-        <div class="content-nav-item content-nav-item-selected content-nav-item-left">
+        <div class="content-nav-item content-nav-item-selected content-nav-item-left" id="interface-section">
           <div class="content-nav-item-icon interface-guide-icon"/> </div>
           <div class="content-nav-item-description">
             Interface Guide
@@ -56,7 +55,7 @@
         </div>
       </a>
       <a href="#">
-        <div class="content-nav-item content-nav-item-middle">
+        <div class="content-nav-item content-nav-item-middle" id="paint-section">
           <div class="content-nav-item-icon paint-guide-icon"/> </div>
           <div class="content-nav-item-description">
             Paint Editor Guide
@@ -64,11 +63,19 @@
         </div>
       </a>
       <a href="#">
-        <div class="content-nav-item content-nav-item-right">
+        <div class="content-nav-item content-nav-item-middle" id="blocks-section">
           <div class="content-nav-item-icon blocks-guide-icon"/> </div>
           <div class="content-nav-item-description">
             Block Descriptions
           </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="content-nav-item content-nav-item-right" id="videos-section">
+		<div class="content-nav-item-icon videos-icon"> </div>
+          <div class="content-nav-item-description">
+	  Videos
+	  </div>
         </div>
       </a>
     </div>
@@ -679,6 +686,60 @@
         </div>
       </div>
     </div>
+
+    <!-- Start of Learn-Videos  Page -->
+    <div class="learn-tab learn-videos">
+      <div class="videos-container">
+      <div class="content-section-items-container">
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+	    Making, Renaming, and Deleting Projects
+          </div>
+          <div class="content-section-item-thumbnail">
+	    <iframe width="342" height="192" src="http://www.youtube.com/embed/RXXDUxqBzBI?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="content-section-item-description">
+	    Learn how to make a new project, rename an existing project, and delete a project.
+          </div>
+        </div>
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+	    Character Animation using the ScratchJr Blocks
+          </div>
+          <div class="content-section-item-thumbnail">
+            <iframe width="342" height="192" src="http://www.youtube.com/embed/JoHpVzltafU?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="content-section-item-description">
+	    Make a simple script by connecting blocks together.
+          </div>
+        </div>
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+            Multiple Characters
+          </div>
+          <div class="content-section-item-thumbnail">
+	    <iframe width="342" height="192" src="http://www.youtube.com/embed/4qLVKpImrws?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="content-section-item-description">
+	    Learn how to add characters to your project.
+          </div>
+        </div>
+        <div class="content-section-half-item">
+          <div class="content-section-item-title">
+            Trigger Blocks
+          </div>
+          <div class="content-section-item-thumbnail">
+            <iframe width="342" height="192" src="http://www.youtube.com/embed/123AdwR_JxI?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="content-section-item-description">
+	    Use trigger blocks to specify when a script should run.
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- End of Learn-Videos Home Page -->
+
   </div>
   <div id="footer">
     <span id="footer-text">
@@ -701,9 +762,9 @@
   </div> <!-- end footer -->
   <script type="text/javascript">
 
-  var tabTitles = ["Interface Guide", "Paint Editor Guide", "Block Descriptions"];
+  var tabTitles = ["Interface Guide", "Paint Editor Guide", "Block Descriptions", "Videos"];
 
-  var tabSelectors = [".learn-interface", ".learn-paint", ".learn-blocks"];
+  var tabSelectors = [".learn-interface", ".learn-paint", ".learn-blocks", ".learn-videos"];
 
   var interfaceDescriptions = [
   ["1 | Save", "Save the current project and exit to the Home page."],
