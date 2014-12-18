@@ -40,15 +40,17 @@
 	background-image: url(../images/videos_o.svg);
 }
 
-.content-nav-item {
-  width: 24.9%;
+#interface-section {
+  width: 24%;
 }
-
-#videos-section {
-  width: 22% !important;
+#paint-section {
+  width: 25.8%;
 }
 #blocks-section {
-  width: 27.8% !important;
+  width: 27.8%;
+}
+#videos-section {
+  width: 21%;
 }
 
 #videos-section .content-nav-item-description {
