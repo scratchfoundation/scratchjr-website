@@ -65,6 +65,14 @@ img { display: block; }
 	line-height: 22pt;
 }
 
+#store-badges {
+	margin-left: 0px;
+}
+#store-badges img {
+	float: left;
+	margin: 10px 30px 10px 0;
+}
+
 #announcement-banner {
 	text-align: center;
 	background-color: #f5a322;
