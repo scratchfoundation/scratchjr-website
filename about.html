@@ -187,9 +187,12 @@
       </div>
 
       <div class="content-description-section">
-        <div class="content-description-question">How can we share ScratchJr projects across multiple iPads?</div>
+        <div class="content-description-question">Can I share a ScratchJr project from one tablet to another?</div>
 
-	<div class="content-description-answer">Sharing or exporting projects is not a supported feature in the current version of ScratchJr, but we hope to include it in future versions of the app. Those interested can <a href="https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform">join our e-list</a> to receive news about upcoming ScratchJr features and release dates.
+	<div class="content-description-answer">
+    If you are running ScratchJr version 1.0.3 or greater on the iPad, you can share projects via email or AirDrop. To access the sharing options, go to the Project Information page by tapping on the yellow button in the top-right corner of the ScratchJr editor.
+    <br /><br />
+    Project sharing will become available on Android tablets later in 2015.
 	</div>
       </div>
 
@@ -205,16 +208,11 @@
       <div class="content-description-section">
         <div class="content-description-question">ScratchJr freezes on the splash screen. What can I do?</div>
 
-	<div class="content-description-answer"> <b>Short Answer:</b> Quit the ScratchJr app. Go into Settings and turn Airplane Mode to "on." Reopen the ScratchJr app.</div>
-	<div class="content-description-answer"> <b>Complete Answer:</b>
-
-		ScratchJr software does some internal communication using what's known as a "localhost server." Some schools use a "proxy" in their network that can block this internal server, causing ScratchJr to freeze. Turning on Airplane Mode will fix this problem, but then your iPad won't have access to the Internet.
-		<br /><br />
-		A better (but more complicated) solution involves adding an extra line of code to the proxy. You'll need to ask your network administrator to help with this. To fix the problem, the network admin should add the following line of code to the FindProxyForURL function in the .pac file:<br /><br />
-		<code>if (shExpMatch(host, "localhost")||shExpMatch(host, "127.0.0.1")) return "DIRECT";</code>
-		<br /><br />
-		This change should not affect the way your proxy works for any other apps.
-	</div>
+	<div class="content-description-answer">
+    The problem that caused the freeze has been fixed in recent versions of ScratchJr. Please upgrade your version of ScratchJr to 1.0.2 or higher.
+    <br /><br />
+    If you cannot upgrade at this time, contact us for details of a workaround.
+    </div>
 	</div>
 
        </div>
