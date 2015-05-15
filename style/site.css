@@ -159,44 +159,85 @@ body {
 
 #footer-social {
 	display: inline-block;
+	margin-top: 20px;
 }
 
-ul.social-list {
-	list-style: none;
-	margin: 0 30px 0 0;
-	padding-left: 10.7em;
+/*
+** social media icons for scratchJr from IcoMoon.io
+*/
+@font-face {
+	font-family: 'scratchjr-icons';
+	src:url('../fonts/scratchjr-icons.eot?-fdpk63');
+	src:url('../fonts/scratchjr-icons.eot?#iefix-fdpk63') format('embedded-opentype'),
+		url('../fonts/scratchjr-icons.woff?-fdpk63') format('woff'),
+		url('../fonts/scratchjr-icons.ttf?-fdpk63') format('truetype'),
+		url('../fonts/scratchjr-icons.svg?-fdpk63#scratchjr-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-.social-list li {
-	display: inline-block;
-	line-height: 1.6666;
-	margin-bottom: 0px;
-  margin-bottom: 0rem;
-	margin-right: .5em;
+[class^="sjr-icon-"], [class*=" sjr-icon-"] {
+	font-family: 'scratchjr-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.social-link {
+#social-links {
+	margin-left: 173px;
+}
+
+#social-links .social-link {
 	display: block;
-	overflow: hidden;
-	text-indent: 100%;
-	width: 36px;
-	height: 36px;
-	background: 0 0 no-repeat url(../images/social-icons.png) transparent;
-	background-size: 400%;
-	-moz-transition: none;
-  -o-transition: none;
-  -webkit-transition: none;
-  transition: none;
+	float: left;
+	margin-right: 18px;
+	text-decoration: none;
+	color: #ffffff;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
 }
-.social-link_twitter {
-	background-position: 0 0;
+.social-link:visited {
+	color: #ffffff;
 }
-.social-link_twitter:hover, .social-link_twitter:focus {
-	background-position: 0 -36px;
+.sjr-icon-twitter:before {
+	content: "\ea91";
+	background-color: #55acee;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	font-size: 1.1em;
+	line-height: 1.75em;
 }
-.social-link_facebook {
-	background-position: -72px 0;
+.sjr-icon-twitter:hover:before {
+	background-color: #F79331;
 }
-.social-link_facebook:hover, .social-link_facebook:focus {
-	background-position: -72px -36px;
+.sjr-icon-twitter span {
+	display: none;
+}
+
+.sjr-icon-facebook:before {
+	content: "\ea8c";
+	background-color: #3b5998;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+.sjr-icon-facebook:hover:before {
+	background-color: #F79331;
+}
+.sjr-icon-facebook span {
+	display: none;
 }
