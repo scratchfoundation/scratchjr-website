@@ -159,6 +159,7 @@ body {
 
 #footer-social {
 	display: inline-block;
+	margin-top: 20px;
 }
 
 /*
@@ -193,7 +194,7 @@ body {
 	margin-left: 173px;
 }
 
-.social-link {
+#social-links .social-link {
 	display: block;
 	float: left;
 	margin-right: 18px;
@@ -204,7 +205,9 @@ body {
 	height: 30px;
 	border-radius: 50%;
 }
-
+.social-link:visited {
+	color: #ffffff;
+}
 .sjr-icon-twitter:before {
 	content: "\ea91";
 	background-color: #55acee;
