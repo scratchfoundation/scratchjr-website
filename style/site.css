@@ -4,6 +4,22 @@ body {
 	background-color: #3099C9;
 }
 
+a:link {
+	color: #2898CD;
+}
+
+a:visited {
+	color: #2898CD;
+}
+
+h1 {
+	margin-left: 35px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-size: 28px;
+	color: #f5a322;
+}
+
 #header {
 	width: 900px;
 	height: 58px;

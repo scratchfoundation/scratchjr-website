@@ -43,12 +43,5 @@ p {
 
 #donate-button {
 	display: inline-block;
-	vertical-align: bottom;	
-}
-a:link {
-	color: #2898CD;
-}
-
-a:visited {
-	color: #2898CD;
+	vertical-align: bottom;
 }

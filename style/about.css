@@ -1,78 +1,4 @@
-#content {
-	background-color: white;
-	width: 900px;
-	margin: auto;
-	display: block;
-	overflow: auto;
-}
 
-h1 {
-	margin-left: 35px;
-	margin-top: 20px;
-	margin-bottom: 0px;
-	font-size: 28px;
-	color: #f5a322;
-}
-
-.content-animated {
-	display: none;
-	clear: both;
-	padding-top: 20px;
-	color: #808080;
-	font-size: 14px;
-	line-height: 22px;
-	padding-bottom: 30px;
-}
-
-.content-tapit {
-	display: none;
-	clear: both;
-	padding-top: 20px;
-	color: #808080;
-	font-size: 14px;
-	line-height: 22px;
-	padding-bottom: 30px;
-}
-.content-section {
-	display: none;
-}
-
-.content-section-selected {
-	padding-top: 3px;
-	margin-left: 70px;
-	margin-right: 70px;
-	clear: both;
-	display: block;
-	padding-bottom: 3px;
-}
-
-.content-section-title {
-	margin-top: 20px;
-	margin-bottom: 10px;
-	color: #999;
-	width: 612px;
-	font-size: 32px;
-	width: 100%;
-	text-align: center;
-	letter-spacing: 0.5px;
-}
-
-.content-section-description {
-	color: #808080;
-	font-size: 14px;
-	line-height: 22px;
-	padding-bottom: 20px;
-	font-size: 16px;
-	line-height: 28px;
-	width: 100%;
-	text-align: center;
-
-}
-
-.content-section-items-container{
-	text-align: justify;
-	width: 100%;
-}
 
 .content-section-half-item {
 	display: inline-block;
@@ -155,14 +81,6 @@ h1 {
 	font-size: 15px;
 }
 
-a:link {
-	color: #2898CD;
-}
-
-a:visited {
-	color: #2898CD;
-}
-
 /* SUBMENUS */
 
 .content-nav-item {
@@ -204,4 +122,3 @@ a:visited {
 .content-nav-item-selected  > .faq-icon {
 	background-image: url(../images/faq_o.svg);
 }
-

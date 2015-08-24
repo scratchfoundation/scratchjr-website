@@ -4,6 +4,7 @@
   <title>ScratchJr - Learn</title>
   <script src="src/jquery-1.11.0.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style/site.css">
+  <link rel="stylesheet" type="text/css" href="style/content.css">
   <link rel="stylesheet" type="text/css" href="style/learn.css">
 </head>
 <body>
@@ -46,7 +47,7 @@
 
   <div id="content">
     <div id="content-nav">
-      <a href="#">
+      <a href="#interface">
         <div class="content-nav-item content-nav-item-selected content-nav-item-left" id="interface-section">
           <div class="content-nav-item-icon interface-guide-icon"/> </div>
           <div class="content-nav-item-description">
@@ -54,7 +55,7 @@
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="#paint">
         <div class="content-nav-item content-nav-item-middle" id="paint-section">
           <div class="content-nav-item-icon paint-guide-icon"/> </div>
           <div class="content-nav-item-description">
@@ -62,7 +63,7 @@
           </div>
         </div>
       </a>
-      <a href="#">
+      <a href="#blocks">
         <div class="content-nav-item content-nav-item-middle" id="blocks-section">
           <div class="content-nav-item-icon blocks-guide-icon"/> </div>
           <div class="content-nav-item-description">
@@ -70,19 +71,16 @@
           </div>
         </div>
       </a>
-      <a href="#">
-        <div class="content-nav-item content-nav-item-right" id="videos-section">
+      <a href="#tips">
+        <div class="content-nav-item content-nav-item-right" id="tips-section">
 		<div class="content-nav-item-icon videos-icon"> </div>
           <div class="content-nav-item-description">
-	  Videos
+	  Tips
 	  </div>
         </div>
       </a>
     </div>
-<!--      <div id="content-instructions">
-        Click on a number for more information
-      </div>
-      -->
+
     <div id="ipad-project-view-wrapper">
       <div class="learn-tab learn-tab-selected learn-interface">
       <a href="pdfs/scratchjr-interface-guide.pdf" class="download-guide-link"><span class="download-icon">&#x2193;</span>Download guide as pdf</a>
@@ -317,6 +315,7 @@
           </div>
         </div>
       </div>
+      <!-- Start of blocks content -->
       <div class="learn-tab learn-blocks">
       <a href="pdfs/block_descriptions.pdf" class="download-guide-link"><span class="download-icon">&#x2193;</span>Download guide as pdf</a>
         <!-- Yellow Blocks -->
@@ -685,12 +684,23 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Start of Learn-Videos  Page -->
-    <div class="learn-tab learn-videos">
-      <div class="videos-container">
+
+    <!-- Start of Learn-Tips  Page -->
+    <div class="learn-tab learn-tips">
+      <div class="tips-container">
       <div class="content-section-items-container">
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Making, Renaming, and Deleting Projects
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/tips/managing-projects.jpg"/>
+          </div>
+          <div class="content-section-item-description">
+            Learn how to make a new project, rename an existing project, and delete a project.  <a class="read-more" id="manage-projects" href="#manage-projects">View video</a>
+          </div>
+        </div>
         <div class="content-section-half-item">
           <div class="content-section-item-title">
 	    Making, Renaming, and Deleting Projects
@@ -738,7 +748,21 @@
       </div>
       </div>
     </div>
-    <!-- End of Learn-Videos Home Page -->
+    <!-- End of Learn-Tips Home Page -->
+    </div>
+
+    <!-- Beginning of Tips Pages -->
+    <!-- beginning of project management tips -->
+    <div class="content-section" id="manage-projects">
+      <div class="content-section-title">
+        Making, Renaming, and Deleting Projects
+      </div>
+      <div id="video-wrapper">
+        <iframe width="640" height="480" src="https://www.youtube.com/embed/RXXDUxqBzBI?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!-- end of project management tips -->
+    <!-- End of Tips Pages -->
 
   </div>
   <div id="footer">
@@ -768,9 +792,9 @@
   </div> <!-- end footer -->
   <script type="text/javascript">
 
-  var tabTitles = ["Interface Guide", "Paint Editor Guide", "Block Descriptions", "Videos"];
+  var tabTitles = ["Interface Guide", "Paint Editor Guide", "Block Descriptions", "Tips"];
 
-  var tabSelectors = [".learn-interface", ".learn-paint", ".learn-blocks", ".learn-videos"];
+  var tabSelectors = [".learn-interface", ".learn-paint", ".learn-blocks", ".learn-tips"];
 
   var interfaceDescriptions = [
   ["1 | Save", "Save the current project and exit to the Home page."],
@@ -827,12 +851,61 @@
 
     $('.learn-tab').removeClass('learn-tab-selected');
     $(tabSelectors[tabTitles.indexOf($.trim($(this).text()))]).addClass('learn-tab-selected');
-    if ($('.learn-blocks').hasClass('learn-tab-selected')) {
-      $('#content-instructions').hide();
-    } else {
-      $('#content-instructions').show();
+  });
+
+
+
+
+  $(function() {
+
+    $(".content-section-item-thumbnail-image").wrap(function() {
+      return $(this).parent().siblings().find($(".read-more")).clone().text("");
+    } );
+
+    $(".content-section-item-title").wrapInner(function() {
+      return $(this).siblings().find($(".read-more")).clone().text("");
+    } );
+
+
+
+
+
+    var hash = location.hash.substr(1);
+    if (hash){
+      if ($('#'+hash+'-section').length) {
+        updateContent(hash+'-section');
+        updateCategory(hash+'-section');
+      } else {
+        updateContent(hash);
+        var category = $(".read-more#"+hash).closest($(".content-section")).attr('id');
+        updateCategory(category);
+      }
     }
   });
+
+
+  $(document).on('click', '.content-nav-item', function(e) {
+    updateContent($(this).attr('id'));
+    updateCategory($(this).attr('id'));
+  });
+
+  $(document).on('click', '.read-more', function(e) {
+    updateContent($(this).attr('id'));
+  });
+
+  function updateContent(hash) {
+    if($(".content-section#"+hash).length)  {
+      $('.content-section').removeClass('content-section-selected');
+      $(".content-section#"+hash).addClass('content-section-selected');
+    }
+  }
+  function updateCategory(hash) {
+    if($(".content-nav-item#"+hash).length)  {
+      $('.content-nav-item').removeClass('content-nav-item-selected');
+      $(".content-nav-item#"+hash).addClass('content-nav-item-selected');
+    }
+
+  }
 
   </script>
 </body>
