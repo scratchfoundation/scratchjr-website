@@ -35,20 +35,20 @@
 	background-image: url(../images/videos_o.svg);
 }
 
-#interface-section {
+#interface-nav {
   width: 24%;
 }
-#paint-section {
+#paint-nav {
   width: 25.8%;
 }
-#blocks-section {
+#blocks-nav {
   width: 27.8%;
 }
-#tips-section {
+#tips-nav {
   width: 21%;
 }
 
-#tips-section .content-nav-item-description {
+#tips-nav .content-nav-item-description {
 	width: 40%;
 }
 .content-nav-item-description {
@@ -68,6 +68,49 @@
 }
 
 /* Guide Elements */
+
+.content-section-selected.learn-interface,
+.content-section-selected.learn-paint,
+.content-section-selected.learn-blocks {
+	margin: 0;
+	display: inline;
+}
+
+#ipad-project-view-wrapper {
+	position: relative;
+}
+
+.learn-tab {
+	display: none;
+}
+
+.learn-tab-selected {
+	display: inline;
+}
+
+
+.learn-interface:after, .learn-paint:after
+ {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 75px;
+}
+
+.interface-container,
+.paint-container {
+	margin-top: 75px;
+	position: relative;
+}
+
+
+.ipad-project-view {
+	margin-left: 21px;
+	width: 629px;
+	float: left;
+}
 
 .interface-dot {
 	height: 5px;
@@ -903,41 +946,6 @@
 
 /* End Guide 2 - Paint Editor Guide */
 
-#ipad-project-view-wrapper {
-	position: relative;
-}
-
-.learn-tab {
-	display: none;
-}
-
-.learn-tab-selected {
-	display: inline;
-}
-
-
-.learn-interface:after, .learn-paint:after
- {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 75px;
-}
-
-.interface-container,
-.paint-container {
-	margin-top: 75px;
-	position: relative;
-}
-
-
-.ipad-project-view {
-	margin-left: 21px;
-	width: 629px;
-	float: left;
-}
 
 /* Guide 3 - Block Descriptions */
 

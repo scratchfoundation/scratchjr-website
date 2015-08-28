@@ -48,7 +48,7 @@
   <div id="content">
     <div id="content-nav">
       <a href="#interface">
-        <div class="content-nav-item content-nav-item-selected content-nav-item-left" id="interface-section">
+        <div class="content-nav-item content-nav-item-selected content-nav-item-left" id="interface-nav">
           <div class="content-nav-item-icon interface-guide-icon"/> </div>
           <div class="content-nav-item-description">
             Interface Guide
@@ -56,7 +56,7 @@
         </div>
       </a>
       <a href="#paint">
-        <div class="content-nav-item content-nav-item-middle" id="paint-section">
+        <div class="content-nav-item content-nav-item-middle" id="paint-nav">
           <div class="content-nav-item-icon paint-guide-icon"/> </div>
           <div class="content-nav-item-description">
             Paint Editor Guide
@@ -64,7 +64,7 @@
         </div>
       </a>
       <a href="#blocks">
-        <div class="content-nav-item content-nav-item-middle" id="blocks-section">
+        <div class="content-nav-item content-nav-item-middle" id="blocks-nav">
           <div class="content-nav-item-icon blocks-guide-icon"/> </div>
           <div class="content-nav-item-description">
             Block Descriptions
@@ -72,17 +72,17 @@
         </div>
       </a>
       <a href="#tips">
-        <div class="content-nav-item content-nav-item-right" id="tips-section">
-		<div class="content-nav-item-icon videos-icon"> </div>
+        <div class="content-nav-item content-nav-item-right" id="tips-nav">
+		      <div class="content-nav-item-icon videos-icon"> </div>
           <div class="content-nav-item-description">
-	  Tips
-	  </div>
+        	  Tips
+        	</div>
         </div>
       </a>
     </div>
 
-    <div id="ipad-project-view-wrapper">
-      <div class="learn-tab learn-tab-selected learn-interface">
+    <!-- Start of Interface Guide Section -->
+    <div class="content-section content-section-selected learn-interface" id="interface-section">
       <a href="pdfs/scratchjr-interface-guide.pdf" class="download-guide-link"><span class="download-icon">&#x2193;</span>Download guide as pdf</a>
         <div class="interface-container">
           <!-- 1. Save -->
@@ -208,8 +208,10 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="learn-tab learn-paint">
+    </div>
+    <!-- End of Interface Guide Section -->
+    <!-- Start of Paint-editor Guide Section -->
+    <div class="content-section learn-paint" id="paint-section">
       <a href="pdfs/paint_editor_guide.pdf" class="download-guide-link"><span class="download-icon">&#x2193;</span>Download guide as pdf</a>
         <div class="paint-container">
           <!-- 1. Undo -->
@@ -314,381 +316,387 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- Start of blocks content -->
-      <div class="learn-tab learn-blocks">
+    </div>
+    <!-- End of Paint-editor Guide Section -->
+    <!-- Start of Blocks Guide Section -->
+    <div class="content-section learn-blocks" id="blocks-section">
       <a href="pdfs/block_descriptions.pdf" class="download-guide-link"><span class="download-icon">&#x2193;</span>Download guide as pdf</a>
-        <!-- Yellow Blocks -->
-        <div class="block-category-header" id="yellow-block-category-header">
-          Triggering Blocks
-        </div>
-        <div class="block-category-header-line" id="yellow-block-category-header-line"></div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Start on Green Flag
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/onflag.png" />
-            </div>
-            <div class="block-description">
-              Starts the script when the Green Flag is tapped.
-            </div>
+      <!-- Yellow Blocks -->
+      <div class="block-category-header" id="yellow-block-category-header">
+        Triggering Blocks
+      </div>
+      <div class="block-category-header-line" id="yellow-block-category-header-line"></div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Start on Green Flag
           </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Start on Tap
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/ontap.png" />
-            </div>
-            <div class="block-description">
-              Starts the script when you tap on the character.
-            </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/onflag.png" />
+          </div>
+          <div class="block-description">
+            Starts the script when the Green Flag is tapped.
           </div>
         </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Start on Bump
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/onbump.png" />
-            </div>
-            <div class="block-description">
-              Starts the script when the character is touched by another character.
-            </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Start on Tap
           </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Start on Message
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/messagereceive.png" />
-            </div>
-            <div class="block-description">
-              Starts the script whenever a message of the specified color is sent.
-            </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/ontap.png" />
           </div>
-        </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Send Message
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/messagesend.png" />
-            </div>
-            <div class="block-description">
-              Sends a message of the specified color.
-            </div>
-          </div>
-        </div>
-        <!-- Blue Blocks -->
-        <div class="block-category-header" id="blue-block-category-header">
-          Motion Blocks
-        </div>
-        <div class="block-category-header-line" id="blue-block-category-header-line"></div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Move Right
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/right.png" />
-            </div>
-            <div class="block-description">
-              Moves the character a specified number of grid squares to the right.
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Move Left
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/left.png" />
-            </div>
-            <div class="block-description">
-              Moves the character a specified number of grid squares to the left.
-            </div>
-          </div>
-        </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Move Up
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/up.png" />
-            </div>
-            <div class="block-description">
-              Moves the character a specified number of grid squares up.
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Move Down
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/down.png" />
-            </div>
-            <div class="block-description">
-              Moves the character a specified number of grid squares down.
-            </div>
-          </div>
-        </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Turn Right
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/turnright.png" />
-            </div>
-            <div class="block-description">
-              Rotates the character clockwise a specified amount. Turn 12 for a full rotation.
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Turn Left
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/turnleft.png" />
-            </div>
-            <div class="block-description">
-              Rotates the character counterclockwise a specified amount. Turn 12 for a full rotation.
-            </div>
-          </div>
-        </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Hop
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/hop.png" />
-            </div>
-            <div class="block-description">
-              Moves the character up a specified number of grid squares and then down again.
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Go Home
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/gohome.png" />
-            </div>
-            <div class="block-description">
-              Resets the character's location to its starting position. (To set a new starting position, drag the character to the location).
-            </div>
-          </div>
-        </div>
-        <!-- Purple Blocks -->
-        <div class="block-category-header" id="purple-block-category-header">
-          Looks Blocks
-        </div>
-        <div class="block-category-header-line" id="purple-block-category-header-line"></div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Say
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/say.png" />
-            </div>
-            <div class="block-description">
-              Shows a specified message in a speech bubble above the character.
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Grow
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/grow.png" />
-            </div>
-            <div class="block-description">
-              Increases the character's size.
-            </div>
-          </div>
-        </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Shrink
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/shrink.png" />
-            </div>
-            <div class="block-description">
-              Decreases the character's size.
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Reset Size
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/reset.png" />
-            </div>
-            <div class="block-description">
-              Returns the character to its default size.
-            </div>
-          </div>
-        </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Hide
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/hide.png" />
-            </div>
-            <div class="block-description">
-              Fades out the character until it is invisible.
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Show
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/show.png" />
-            </div>
-            <div class="block-description">
-              Fades in the character until it is fully visible.
-            </div>
-          </div>
-        </div>
-        <div class="block-category-header" id="green-block-category-header">
-          Sound Blocks
-        </div>
-        <div class="block-category-header-line" id="green-block-category-header-line"></div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Pop
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/pop.png" />
-            </div>
-            <div class="block-description">
-              Plays a "Pop" Sound
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Play Recorded Sound
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/playsound.png" />
-            </div>
-            <div class="block-description">
-              Plays a sound recorded by the user.
-            </div>
-          </div>
-        </div>
-        <div class="block-category-header" id="orange-block-category-header">
-          Control Blocks
-        </div>
-        <div class="block-category-header-line" id="orange-block-category-header-line"></div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Wait
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/wait.png" />
-            </div>
-            <div class="block-description">
-              Pauses the script for a specified amount of time (in tenths of seconds).
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Stop
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/stop.png" />
-            </div>
-            <div class="block-description">
-              Stops all the characters' scripts.
-            </div>
-          </div>
-        </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Set Speed
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/speed.png" />
-            </div>
-            <div class="block-description">
-              Changes the rate at which certain blocks are run.
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Repeat
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image-repeat" src="images/repeat.png" />
-            </div>
-            <div class="block-description-repeat">
-              Runs the blocks inside a specified number of times.
-            </div>
-          </div>
-        </div>
-        <div class="block-category-header" id="red-block-category-header">
-          End Blocks
-        </div>
-        <div class="block-category-header-line" id="red-block-category-header-line"></div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              End
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/end.png" />
-            </div>
-            <div class="block-description">
-              Indicates the end of the script (but does not affect the script in any way).
-            </div>
-          </div>
-          <div class="block-wrapper-right">
-            <div class="block-title">
-              Repeat Forever
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/forever.png" />
-            </div>
-            <div class="block-description">
-              Runs the script over and over.
-            </div>
-          </div>
-        </div>
-        <div class="block-wrapper">
-          <div class="block-wrapper-left">
-            <div class="block-title">
-              Go to Page
-            </div>
-            <div class="block-image-wrapper">
-              <img class="block-image" src="images/page.png" />
-            </div>
-            <div class="block-description">
-              Changes to the specified page of the project.
-            </div>
+          <div class="block-description">
+            Starts the script when you tap on the character.
           </div>
         </div>
       </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Start on Bump
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/onbump.png" />
+          </div>
+          <div class="block-description">
+            Starts the script when the character is touched by another character.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Start on Message
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/messagereceive.png" />
+          </div>
+          <div class="block-description">
+            Starts the script whenever a message of the specified color is sent.
+          </div>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Send Message
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/messagesend.png" />
+          </div>
+          <div class="block-description">
+            Sends a message of the specified color.
+          </div>
+        </div>
+      </div>
+      <!-- Blue Blocks -->
+      <div class="block-category-header" id="blue-block-category-header">
+        Motion Blocks
+      </div>
+      <div class="block-category-header-line" id="blue-block-category-header-line"></div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Move Right
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/right.png" />
+          </div>
+          <div class="block-description">
+            Moves the character a specified number of grid squares to the right.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Move Left
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/left.png" />
+          </div>
+          <div class="block-description">
+            Moves the character a specified number of grid squares to the left.
+          </div>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Move Up
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/up.png" />
+          </div>
+          <div class="block-description">
+            Moves the character a specified number of grid squares up.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Move Down
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/down.png" />
+          </div>
+          <div class="block-description">
+            Moves the character a specified number of grid squares down.
+          </div>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Turn Right
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/turnright.png" />
+          </div>
+          <div class="block-description">
+            Rotates the character clockwise a specified amount. Turn 12 for a full rotation.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Turn Left
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/turnleft.png" />
+          </div>
+          <div class="block-description">
+            Rotates the character counterclockwise a specified amount. Turn 12 for a full rotation.
+          </div>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Hop
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/hop.png" />
+          </div>
+          <div class="block-description">
+            Moves the character up a specified number of grid squares and then down again.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Go Home
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/gohome.png" />
+          </div>
+          <div class="block-description">
+            Resets the character's location to its starting position. (To set a new starting position, drag the character to the location).
+          </div>
+        </div>
+      </div>
+      <!-- Purple Blocks -->
+      <div class="block-category-header" id="purple-block-category-header">
+        Looks Blocks
+      </div>
+      <div class="block-category-header-line" id="purple-block-category-header-line"></div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Say
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/say.png" />
+          </div>
+          <div class="block-description">
+            Shows a specified message in a speech bubble above the character.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Grow
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/grow.png" />
+          </div>
+          <div class="block-description">
+            Increases the character's size.
+          </div>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Shrink
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/shrink.png" />
+          </div>
+          <div class="block-description">
+            Decreases the character's size.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Reset Size
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/reset.png" />
+          </div>
+          <div class="block-description">
+            Returns the character to its default size.
+          </div>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Hide
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/hide.png" />
+          </div>
+          <div class="block-description">
+            Fades out the character until it is invisible.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Show
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/show.png" />
+          </div>
+          <div class="block-description">
+            Fades in the character until it is fully visible.
+          </div>
+        </div>
+      </div>
+      <div class="block-category-header" id="green-block-category-header">
+        Sound Blocks
+      </div>
+      <div class="block-category-header-line" id="green-block-category-header-line"></div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Pop
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/pop.png" />
+          </div>
+          <div class="block-description">
+            Plays a "Pop" Sound
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Play Recorded Sound
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/playsound.png" />
+          </div>
+          <div class="block-description">
+            Plays a sound recorded by the user.
+          </div>
+        </div>
+      </div>
+      <div class="block-category-header" id="orange-block-category-header">
+        Control Blocks
+      </div>
+      <div class="block-category-header-line" id="orange-block-category-header-line"></div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Wait
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/wait.png" />
+          </div>
+          <div class="block-description">
+            Pauses the script for a specified amount of time (in tenths of seconds).
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Stop
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/stop.png" />
+          </div>
+          <div class="block-description">
+            Stops all the characters' scripts.
+          </div>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Set Speed
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/speed.png" />
+          </div>
+          <div class="block-description">
+            Changes the rate at which certain blocks are run.
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Repeat
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image-repeat" src="images/repeat.png" />
+          </div>
+          <div class="block-description-repeat">
+            Runs the blocks inside a specified number of times.
+          </div>
+        </div>
+      </div>
+      <div class="block-category-header" id="red-block-category-header">
+        End Blocks
+      </div>
+      <div class="block-category-header-line" id="red-block-category-header-line"></div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            End
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/end.png" />
+          </div>
+          <div class="block-description">
+            Indicates the end of the script (but does not affect the script in any way).
+          </div>
+        </div>
+        <div class="block-wrapper-right">
+          <div class="block-title">
+            Repeat Forever
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/forever.png" />
+          </div>
+          <div class="block-description">
+            Runs the script over and over.
+          </div>
+        </div>
+      </div>
+      <div class="block-wrapper">
+        <div class="block-wrapper-left">
+          <div class="block-title">
+            Go to Page
+          </div>
+          <div class="block-image-wrapper">
+            <img class="block-image" src="images/page.png" />
+          </div>
+          <div class="block-description">
+            Changes to the specified page of the project.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Blocks Guide Section -->
 
-
-    <!-- Start of Learn-Tips  Page -->
-    <div class="learn-tab learn-tips">
-      <div class="tips-container">
+    <!-- Start of Learn-Tips Page -->
+    <div class="content-section learn-tips" id="tips-section">
+      <div class="content-section-title">
+        Tips &amp; Hints
+      </div>
+      <div class="content-section-description">
+        Tips and hints that you might find useful as you explore ScratchJr. For answers to more general questions about ScratchJr, see the <a href="about.html#faq">Frequently Asked Questions</a>.
+      </div>
       <div class="content-section-items-container">
         <div class="content-section-full-item">
           <div class="content-section-item-title">
@@ -698,67 +706,173 @@
             <img class="content-section-item-thumbnail-image" src="images/tips/managing-projects.jpg"/>
           </div>
           <div class="content-section-item-description">
-            Learn how to make a new project, rename an existing project, and delete a project.  <a class="read-more" id="manage-projects" href="#manage-projects">View video</a>
+            Learn how to make a new project, rename an existing project, and delete a project.  <a class="read-more" id="manage-projects" href="#manage-projects">See more</a>
           </div>
         </div>
-        <div class="content-section-half-item">
+        <div class="content-section-full-item">
           <div class="content-section-item-title">
-	    Making, Renaming, and Deleting Projects
+	           Character Animation using the ScratchJr Blocks
           </div>
           <div class="content-section-item-thumbnail">
-	    <iframe width="342" height="192" src="http://www.youtube.com/embed/RXXDUxqBzBI?rel=0" frameborder="0" allowfullscreen></iframe>
+            <img class="content-section-item-thumbnail-image" src="images/tips/character-animation.jpg"/>
           </div>
           <div class="content-section-item-description">
-	    Learn how to make a new project, rename an existing project, and delete a project.
+	           Make a simple script by connecting blocks together. <a class="read-more" id="character-animation" href="#character-animation">See more</a>
           </div>
         </div>
-        <div class="content-section-half-item">
-          <div class="content-section-item-title">
-	    Character Animation using the ScratchJr Blocks
-          </div>
-          <div class="content-section-item-thumbnail">
-            <iframe width="342" height="192" src="http://www.youtube.com/embed/JoHpVzltafU?rel=0" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="content-section-item-description">
-	    Make a simple script by connecting blocks together.
-          </div>
-        </div>
-        <div class="content-section-half-item">
+        <div class="content-section-full-item">
           <div class="content-section-item-title">
             Multiple Characters
           </div>
           <div class="content-section-item-thumbnail">
-	    <iframe width="342" height="192" src="http://www.youtube.com/embed/4qLVKpImrws?rel=0" frameborder="0" allowfullscreen></iframe>
+            <img class="content-section-item-thumbnail-image" src="images/tips/multi-character.jpg"/>
           </div>
           <div class="content-section-item-description">
-	    Learn how to add characters to your project.
+	           Learn how to add characters to your project. <a class="read-more" id="multi-character" href="#multi-character">See more</a>
           </div>
         </div>
-        <div class="content-section-half-item">
+        <div class="content-section-full-item">
           <div class="content-section-item-title">
             Trigger Blocks
           </div>
           <div class="content-section-item-thumbnail">
-            <iframe width="342" height="192" src="http://www.youtube.com/embed/123AdwR_JxI?rel=0" frameborder="0" allowfullscreen></iframe>
+            <img class="content-section-item-thumbnail-image" src="images/tips/triggers.jpg"/>
           </div>
           <div class="content-section-item-description">
-	    Use trigger blocks to specify when a script should run.
+	           Use trigger blocks to specify when a script should run. <a class="read-more" id="trigger-blocks" href="#trigger-blocks">See more</a>
+          </div>
+        </div>
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Sharing ScratchJr Projects
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/tips/share.png"/>
+          </div>
+          <div class="content-section-item-description">
+	           You can share projects by email. On iPads you can also share project by AirDrop.  <a class="read-more" id="share-projects" href="#share-projects">Read more</a>
+          </div>
+        </div>
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Sample Projects
+          </div>
+          <div class="content-section-item-thumbnail">
+            <img class="content-section-item-thumbnail-image" src="images/tips/sample-projects.png"/>
+          </div>
+          <div class="content-section-item-description">
+	           The Sample Projects library is a collection of eight pre-made projects that use a range of blocks and features to show you the variety of projects you can make with ScratchJr. <a class="read-more" id="share-projects" href="#share-projects">Read more</a>
+          </div>
+        </div>
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Character List Scrolling
+          </div>
+          <div class="content-section-item-thumbnail">
+          </div>
+          <div class="content-section-item-description">
+	           If there's a scroll bar in the Character List on the left of the Stage it means you that you have more characters in your project than fit in the list on the screen. You can scroll through this list of characters by swiping up or down on the list, but not on the scroll bar. The order of the characters doesn't matter for any of the action in the project.
+          </div>
+        </div>
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Copying Characters
+          </div>
+          <div class="content-section-item-thumbnail">
+          </div>
+          <div class="content-section-item-description">
+	           To copy a character and its scripts, you can drag the character from the list of characters on the left over to the list of pages on the right.
+             This will work for copying characters to the same page and to other pages. The scripts and sounds will copy along with the character, but then the scripts are separate, so when you change the scripts or sounds of one of the copies, it won't affect the other existing copies of the character.
+          </div>
+        </div>
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Copying Scripts
+          </div>
+          <div class="content-section-item-thumbnail">
+          </div>
+          <div class="content-section-item-description">
+	           You can copy a script (set of blocks) from one character to another in the same project.  <a class="read-more" id="copy-scripts" href="#copy-scripts">Read more</a>
+          </div>
+        </div>
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Multi-page projects
+          </div>
+          <div class="content-section-item-thumbnail">
+          </div>
+          <div class="content-section-item-description">
+	           Projects can have up to four pages with their own characters and scripts.  <a class="read-more" id="pages" href="#pages">Read more</a>
+          </div>
+        </div>
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Moving Backwards
+          </div>
+          <div class="content-section-item-thumbnail">
+          </div>
+          <div class="content-section-item-description">
+	           You can make a character move backwards by giving your motion blocks negative numbers. If you want to make your character face the opposite direction without moving forward or backward, add a motion block with a zero and tap on it.
+          </div>
+        </div>
+        <div class="content-section-full-item">
+          <div class="content-section-item-title">
+            Device settings
+          </div>
+          <div class="content-section-item-thumbnail">
+          </div>
+          <div class="content-section-item-description">
+	           If ScratchJr can't record sounds or take a picture with the camera, it might be that you didn't give ScratchJr access to the camera or microphone when you first downloaded the app. You can change this by going to Settings/Privacy/Camera on your device. If the ScratchJr toggle is off, turn it on. Do the same for the microphone, under Settings/Privacy/Microphone.
           </div>
         </div>
       </div>
-      </div>
     </div>
     <!-- End of Learn-Tips Home Page -->
-    </div>
 
     <!-- Beginning of Tips Pages -->
     <!-- beginning of project management tips -->
-    <div class="content-section" id="manage-projects">
+    <div class="content-section content-subpage" id="manage-projects-section">
       <div class="content-section-title">
         Making, Renaming, and Deleting Projects
       </div>
-      <div id="video-wrapper">
+      <div class="content-section-description">
+        Watch the video to learn how to make a new project, rename an existing project, and delete a project.
+      </div>
+      <div class="content-section-video">
         <iframe width="640" height="480" src="https://www.youtube.com/embed/RXXDUxqBzBI?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="content-section content-subpage" id="character-animation-section">
+      <div class="content-section-title">
+        Character Animation using the ScratchJr Blocks
+      </div>
+      <div class="content-section-description">
+        See how to make a simple script by connecting blocks together.
+      </div>
+      <div class="content-section-video">
+        <iframe width="640" height="480" src="https://www.youtube.com/embed/JoHpVzltafU?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="content-section content-subpage" id="multi-character-section">
+      <div class="content-section-title">
+        Multiple Characters
+      </div>
+      <div class="content-section-description">
+        See how to add characters to your project.
+      </div>
+      <div class="content-section-video">
+        <iframe width="640" height="480" src="https://www.youtube.com/embed/4qLVKpImrws?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="content-section content-subpage" id="trigger-blocks-section">
+      <div class="content-section-title">
+        Trigger Blocks
+      </div>
+      <div class="content-section-description">
+        See how to use trigger blocks to specify when a script should run.
+      </div>
+      <div class="content-section-video">
+        <iframe width="640" height="480" src="https://www.youtube.com/embed/123AdwR_JxItri?rel=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
     <!-- end of project management tips -->
@@ -844,69 +958,7 @@
     $('#paint-key-description').text(paintDescriptions[parseInt($(this).text() - 1)][1]);
   });
 
-  $(document).on('click', '.content-nav-item', function(e) {
-    $('.content-nav-item').removeClass('content-nav-item-selected');
-    $(this).addClass('content-nav-item-selected');
-    //$(this).children("img").attr('src', 'images/icon_trace.gif');
-
-    $('.learn-tab').removeClass('learn-tab-selected');
-    $(tabSelectors[tabTitles.indexOf($.trim($(this).text()))]).addClass('learn-tab-selected');
-  });
-
-
-
-
-  $(function() {
-
-    $(".content-section-item-thumbnail-image").wrap(function() {
-      return $(this).parent().siblings().find($(".read-more")).clone().text("");
-    } );
-
-    $(".content-section-item-title").wrapInner(function() {
-      return $(this).siblings().find($(".read-more")).clone().text("");
-    } );
-
-
-
-
-
-    var hash = location.hash.substr(1);
-    if (hash){
-      if ($('#'+hash+'-section').length) {
-        updateContent(hash+'-section');
-        updateCategory(hash+'-section');
-      } else {
-        updateContent(hash);
-        var category = $(".read-more#"+hash).closest($(".content-section")).attr('id');
-        updateCategory(category);
-      }
-    }
-  });
-
-
-  $(document).on('click', '.content-nav-item', function(e) {
-    updateContent($(this).attr('id'));
-    updateCategory($(this).attr('id'));
-  });
-
-  $(document).on('click', '.read-more', function(e) {
-    updateContent($(this).attr('id'));
-  });
-
-  function updateContent(hash) {
-    if($(".content-section#"+hash).length)  {
-      $('.content-section').removeClass('content-section-selected');
-      $(".content-section#"+hash).addClass('content-section-selected');
-    }
-  }
-  function updateCategory(hash) {
-    if($(".content-nav-item#"+hash).length)  {
-      $('.content-nav-item').removeClass('content-nav-item-selected');
-      $(".content-nav-item#"+hash).addClass('content-nav-item-selected');
-    }
-
-  }
-
   </script>
+  <script src="src/content-nav.js"></script>
 </body>
 </html>

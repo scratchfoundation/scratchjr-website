@@ -108,6 +108,10 @@
 	width: 57%;
 }
 
+.content-section-video {
+	padding-top: 40px;
+  text-align: center;
+}
 .videos-container {
 	padding-top: 3px;
 	margin-left: 70px;
