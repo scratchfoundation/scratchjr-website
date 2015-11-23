@@ -68,6 +68,9 @@
 	width: 100%;
 }
 
+.content-section-image {
+	max-width: 100%;
+}
 /* content-section defaults */
 .content-section-item-title {
 	padding-bottom: 10px;
