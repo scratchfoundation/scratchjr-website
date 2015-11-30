@@ -1,0 +1,125 @@
+/* Common styles for content across all pages - load before the individual pages css */
+#content {
+	background-color: white;
+	width: 900px;
+	margin: auto;
+	display: block;
+	overflow: auto;
+}
+
+.content-section {
+	display: none;
+}
+
+.content-section-selected {
+	padding-top: 3px;
+	margin-left: 70px;
+	margin-right: 70px;
+	clear: both;
+	display: block;
+	padding-bottom: 3px;
+}
+
+.content-section-title {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: #999;
+	font-size: 32px;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 0.5px;
+}
+
+.content-section-description {
+	color: #808080;
+	padding-bottom: 20px;
+	font-size: 16px;
+	line-height: 28px;
+	width: 100%;
+	text-align: center;
+}
+
+.content-section-items-container{
+	text-align: justify;
+	width: 100%;
+}
+
+.content-section-items-container:after {
+	display:inline-block;
+	width:100%;
+	content:'';
+	height: 0;
+}
+
+.content-section-half-item,
+.content-section-full-item {
+	display: inline-block;
+	padding-bottom: 30px;
+	clear: both;
+	text-align: left;
+	vertical-align: top;
+}
+
+.content-section-half-item {
+	width: 45%;
+}
+
+.content-section-full-item {
+	width: 100%;
+}
+
+.content-section-image {
+	max-width: 100%;
+}
+/* content-section defaults */
+.content-section-item-title {
+	padding-bottom: 10px;
+	font-weight: 900;
+	color: #2898cd;
+	width: 60%;
+	display: inline-block;
+}
+
+.content-section-item-thumbnail {
+	width:100%;
+}
+
+.content-section-item-thumbnail-image {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.content-section-item-description {
+	width: 100%;
+	color: #808080;
+	font-size: 14px;
+	line-height: 22px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	display: inline-block;
+}
+
+/* override styles for content-section-full-item */
+.content-section-full-item  > .content-section-item-thumbnail {
+	width:37%;
+	float:left;
+}
+.content-section-full-item  > .content-section-item-title,
+.content-section-full-item  > .content-section-item-description,
+.content-section-full-item  > .content-section-item-age{
+	margin-left:  20px;
+	width: 57%;
+}
+
+.content-section-video {
+	padding-top: 40px;
+  text-align: center;
+}
+.videos-container {
+	padding-top: 3px;
+	margin-left: 70px;
+	margin-right: 70px;
+	display: block;
+	clear: both;
+	padding-bottom: 3px;
+}
