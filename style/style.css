@@ -64,6 +64,29 @@ img { display: block; }
 	font-size: 14pt;
 	line-height: 22pt;
 }
+/* Index page News */
+.content-news {
+	background-color: white;
+	width: 90%;
+	float: left;
+}
+
+.content-news-header {
+	color: #7f7f7f;
+	font-size: 28px;
+	margin-top: 24px;
+	margin-left: 40px;
+}
+
+.content-news-body {
+	font-family: "Lucida Grande", arial, sans-serif;
+	margin-top: 20px;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	color: #808080;
+	font-size: 14pt;
+	line-height: 22pt;
+}
 
 #store-badges {
 	margin-left: 0px;
