@@ -13,8 +13,14 @@ h1 {
 	font-size: 28px;
 	color: #f5a322;
 }
-
-p {
+h2 {
+	margin-left: 35px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-size: 24px;
+	color: #999;
+}
+p,ul {
 	margin-left: 35px;
 	margin-right: 35px;
 	color: #808080;
