@@ -18,17 +18,21 @@
     );
 
     // exec commands
-    if (htmlspecialchars($_GET["token"]) != "Doyd3diR0woD9as7Git2dEf4e") {
-      header('HTTP/1.0 403 Forbidden');
-      $output = 'Wrong token</p>';
-    } else {
+    if (($_SERVER['SERVER_NAME'] == 'staging.scratchjr.org' &&
+        htmlspecialchars($_GET["token"]) == "Doyd3diR0woD9as7Git2dEf4e") ||
+        ($_SERVER['SERVER_NAME'] == 'scratchjr.org' &&
+         htmlspecialchars($_GET["token"]) == "Doyd3diR0woD9as7Git2dEf4e")) {
 
-      $output = '';
+      $output = $_SERVER['SERVER_NAME'] . '</p>';
       foreach($commands AS $command){
           $tmp = shell_exec($command);
           $output .= "<span style=\"color: #6BE234;\">\$</span><span style=\"color: #729FCF;\">{$command}\n</span><br />";
           $output .= htmlentities(trim($tmp)) . "\n<br /><br />";
       }
+    } else {
+      header('HTTP/1.0 403 Forbidden');
+      $output = $_SERVER['SERVER_NAME'] . ': Wrong token</p>';
+
     }
 ?>
 
