@@ -1071,28 +1071,19 @@
   ["12 | Color", "Select a new color to use for drawing and filling in shapes."],
   ["13 | Line Width", "Change the width of the lines in the shapes you are drawing."],
   ];
-  
-  Transifex.live.onReady(function() {
-    interfaceDescriptions = $.map(interfaceDescriptions, function( desc ){
-      return ([Transifex.live.translateText(desc[0]), Transifex.live.translateText(desc[0])]);
-    });
-    painDescriptions = $.map(painDescriptions, function( desc ){
-      return ([Transifex.live.translateText(desc[0]), Transifex.live.translateText(desc[0])]);
-    });
-  });
 
   $(document).on('click', '.interface-button', function (e) {
     $('.interface-button').removeClass('interface-button-selected');
     $(this).addClass('interface-button-selected');
-    $('#interface-key-header').text(interfaceDescriptions[parseInt($(this).text() - 1)][0]);
-    $('#interface-key-description').text(interfaceDescriptions[parseInt($(this).text() - 1)][1]);
+    $('#interface-key-header').text(Transifex.live.translateText(interfaceDescriptions[parseInt($(this).text() - 1)][0]));
+    $('#interface-key-description').text(Transifex.live.translateText(interfaceDescriptions[parseInt($(this).text() - 1)][1]));
   });
 
   $(document).on('click', '.paint-button', function (e) {
     $('.paint-button').removeClass('paint-button-selected');
     $(this).addClass('paint-button-selected');
-    $('#paint-key-header').text(paintDescriptions[parseInt($(this).text() - 1)][0]);
-    $('#paint-key-description').text(paintDescriptions[parseInt($(this).text() - 1)][1]);
+    $('#paint-key-header').text(Transifex.live.translateText(paintDescriptions[parseInt($(this).text() - 1)][0]));
+    $('#paint-key-description').text(Transifex.live.translateText(paintDescriptions[parseInt($(this).text() - 1)][1]));
   });
 
   </script>
