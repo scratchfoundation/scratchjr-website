@@ -9,5 +9,5 @@ To Do:
 
 
 Testing/Staging:
-- Added deploy.php to pick up changes
+- Added deploy.php to pick up changes (test)
 
