@@ -10,5 +10,4 @@ To Do:
 
 Testing/Staging:
 - Added deploy.php to pick up changes
-  - testing deploy
 
