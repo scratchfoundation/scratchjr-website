@@ -35,17 +35,8 @@
 	background-image: url(../images/videos_o.svg);
 }
 
-#interface-nav {
-  width: 24%;
-}
-#paint-nav {
-  width: 25.8%;
-}
-#blocks-nav {
-  width: 27.8%;
-}
-#tips-nav {
-  width: 21%;
+.content-nav-item {
+	width: 24.9%;
 }
 
 #tips-nav .content-nav-item-description {
@@ -53,9 +44,9 @@
 }
 .content-nav-item-description {
 	float: left;
-	line-height: 25px;
+	line-height: 20px;
 	margin-left: 15px;
-	font-size: 14pt;
+	font-size: 12pt;
 	width: 47%;
 	margin-top: 25px;
 }
@@ -539,7 +530,7 @@
 	font-size: 12pt;
 	padding-top: 10px;
 	padding-left: 10px;
-	height: 31px;
+	padding-bottom: 13px;
 	color: #2898CD;
 	background-color: #e5e5e5;
 }
@@ -930,7 +921,7 @@
 	font-size: 12pt;
 	padding-top: 10px;
 	padding-left: 10px;
-	height: 31px;
+	padding-bottom: 13px;
 	color: #2898CD;
 	background-color: #e5e5e5;
 }

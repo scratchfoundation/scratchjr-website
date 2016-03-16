@@ -83,8 +83,11 @@
 
 /* SUBMENUS */
 
+#info-section.content-nav-item {
+	width: 25.9%;
+}
 .content-nav-item {
-  width: 24.9% !important;
+  width: 23.9%;
 }
 
 .info-icon {
