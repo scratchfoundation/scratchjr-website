@@ -1,0 +1,17 @@
+[
+	{
+		"pattern": "/",
+		"view": "index",
+		"title": "Home"
+	},
+	{
+		"pattern": "/about",
+		"view": "about",
+		"title": "About"
+	},
+	{
+		"pattern": "/learn",
+		"view": "learn",
+		"title": "Learn"
+	}
+]

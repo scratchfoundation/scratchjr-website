@@ -1,8 +1,18 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
 
+var routes = require('./server/routes.json');
+
+// Prepare all entry points
+var entry = {
+    main: './src/main.jsx'
+};
+routes.forEach(function (route) {
+    entry[route.view] = './src/views/' + route.view + '/' + route.view + '.jsx';
+});
+
 module.exports = {
-	entry: './src/main.jsx',
+	entry: entry,
 	externals: {
         'react': 'React',
         'react/addons': 'React',
@@ -21,6 +31,10 @@ module.exports = {
 				query: {
                     presets: ['es2015', 'react']
                 }
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style!css!autoprefixer-loader?browsers=last 3 versions!sass'
             },
             {
             	test: /\.json$/,
