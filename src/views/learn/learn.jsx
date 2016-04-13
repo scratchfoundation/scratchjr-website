@@ -1,11 +1,68 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var NavBar = require('../../components/navbar.jsx');
+
 require('./learn.scss');
 
 var Learn = React.createClass({
 	type: 'Learn',
   componentDidMount: function() {
+
+    // ~~~~ content-nav.js ~~~~~
+
+    $(function() {
+      // add read-more link to related item thumbnail image and title
+      $(".content-section-item-thumbnail-image").wrap(function() {
+        return $(this).parent().siblings().find($(".read-more")).clone().text("");
+      } );
+      $(".content-section-item-title").wrapInner(function() {
+        return $(this).siblings().find($(".read-more")).clone().text("");
+      } );
+
+      // load the correct content based on URL if there is a #hash
+      var hash = location.hash.substr(1);
+      if (hash){
+        if ($('#'+hash+'-section').length) {
+          updateContent(hash+'-section');
+          updateCategory(hash+'-nav');
+        } else {
+          updateContent(hash);
+          var category = $(".read-more#"+hash).closest($(".content-section")).attr('id').replace("section", "nav");
+          updateCategory(category);
+        }
+      }
+    });
+
+    $(document).on('click', '.content-nav-item', function(e) {
+      updateContent($(this).attr('id').replace('nav', 'section'));
+      updateCategory($(this).attr('id'));
+    });
+
+    $(document).on('click', '.read-more', function(e) {
+      updateContent($(this).attr('id')+"-section");
+    });
+
+    function updateContent(sectionId) {
+      var section = $("#"+sectionId);
+      if(section.length)  {
+        $('.content-section').removeClass('content-section-selected');
+        section.addClass('content-section-selected');
+        if($(".content-section-selected.content-subpage").length) {
+          $('html,body').scrollTop($("#content").offset().top);
+        }
+      }
+    }
+
+    function updateCategory(navId) {
+      if($("#"+navId).length)  {
+        $('.content-nav-item').removeClass('content-nav-item-selected');
+        $("#"+navId).addClass('content-nav-item-selected');
+      }
+
+    }
+
+    // ~~~~~~~~~~~~~~~~~~~
 
     var tabTitles = ["Interface Guide", "Paint Editor Guide", "Block Descriptions", "Tips"];
 
@@ -62,44 +119,7 @@ var Learn = React.createClass({
 	render: function() {
 		return (
 			<div>
-        <div id="header">
-          <a href="index.html">
-            <div id="header-logo-wrapper">
-              <img src="images/scratchjrlogo.png" id="header-logo" alt="ScratchJr Logo" />
-            </div> {/* end header-logo-wrapper */}
-          </a>
-          <div id="header-nav">
-            <div className="header-nav-item-wrapper">
-              <a href="about.html">
-                <div className="header-nav-item">
-                  About
-                </div>
-              </a>
-            </div>
-            <div className="header-nav-item-wrapper">
-              <a href="learn.html">
-                <div className="header-nav-item header-nav-item-selected">
-                  Learn
-                </div>
-              </a>
-            </div>
-            <div className="header-nav-item-wrapper">
-              <a href="teach.html">
-                <div className="header-nav-item">
-                  Teach
-                </div>
-              </a>
-            </div>
-            <div className="header-nav-item-wrapper">
-              <a href="donate.html">
-                <div className="header-nav-item">
-                  Donate          
-                </div>
-              </a>
-            </div>
-          </div> {/* end header-nav */}
-        </div> {/* end header */}
-
+        <NavBar />
         <div id="content">
           <div id="content-nav">
             <a href="#interface">

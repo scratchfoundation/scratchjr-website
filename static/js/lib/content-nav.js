@@ -38,7 +38,6 @@ $(document).on('click', '.read-more', function(e) {
 
 function updateContent(sectionId) {
   var section = $("#"+sectionId);
-  console.log(section);
   if(section.length)  {
     $('.content-section').removeClass('content-section-selected');
     section.addClass('content-section-selected');
