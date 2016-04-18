@@ -11,8 +11,12 @@ var app = express();
 
 // Bind routes
 for (var routeId in routes) {
-	var route = routes[routeId];
-	app.get(route.pattern, handler(route));
+	(function(route) {
+		app.get(route.pattern, handler(route));
+		app.get(route.pattern + '.html', function (req, res) {
+			res.redirect(route.pattern);
+		});
+	})(routes[routeId]);
 }
 
 var compiler = webpack(require('../webpack.config.js'));
