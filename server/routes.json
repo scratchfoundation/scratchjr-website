@@ -13,5 +13,25 @@
 		"pattern": "/learn",
 		"view": "learn",
 		"title": "Learn"
+	},
+	{
+		"pattern": "/teach",
+		"view": "teach",
+		"title": "Teach"
+	},
+	{
+		"pattern": "/donate",
+		"view": "donate",
+		"title": "Donate"
+	},
+	{
+		"pattern": "/privacy",
+		"view": "privacy",
+		"title": "Privacy"
+	},
+	{
+		"pattern": "/hoc",
+		"view": "hoc",
+		"title": "Hour of Code"
 	}
 ]

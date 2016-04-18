@@ -1,7 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var NavBar = require('../../components/navbar.jsx');
+var NavBar = require('../../components/navbar/navbar.jsx');
+var Footer = require('../../components/footer/footer.jsx');
 
 var Index = React.createClass({
 	type: 'Index',
@@ -70,7 +71,7 @@ var Index = React.createClass({
               ScratchJr is available on <a href="http://www.amazon.com/Scratch-Foundation-ScratchJr/dp/B01AKGTD2E" target="_blank">Amazon</a>. Now, kids can create interactive stories and games on Kindle!
             </div>
             <div className="content-news-body">
-              Newly released by <a href="https://www.nostarch.com/scratchjr" target="_blank">No Starch Press</a>, <a href="about.html#faq">The Official ScratchJr Book</a>The Official ScratchJr Book is now available in paperback or ebook format!
+              Newly released by <a href="https://www.nostarch.com/scratchjr" target="_blank">No Starch Press</a>, <a href="about#faq">The Official ScratchJr Book</a>The Official ScratchJr Book is now available in paperback or ebook format!
             </div>
           </div>
 
@@ -95,32 +96,7 @@ var Index = React.createClass({
             </div>
           </div>
         </div> {/* end content */}
-
-
-        <div id="footer">
-          <span id="footer-text">
-            <strong>ScratchJr</strong> is a collaboration between the DevTech Research Group at Tufts University, the Lifelong Kindergarten Group at the MIT Media Lab, and the Playful Invention Company.
-          </span>
-          <div id="footer-social">
-            <div id="social-links">
-              <a className="social-link sjr-icon-twitter" href="https://twitter.com/ScratchJr" title="Follow us on Twitter" target="_blank"><span>Twitter</span></a>
-              <a className="social-link sjr-icon-facebook" href="https://www.facebook.com/scratchjr" title="Like us on Facebook" target="_blank"><span>Facebook</span></a>
-            </div>
-            <div id="footer-nav">
-              <a href="https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform?usp=send_form">
-                <div className="blue-button">
-                  Join Mailing List
-                </div>
-              </a>
-              &nbsp;
-              <a href="mailto:info@scratchjr.org">
-                <div className="blue-button">
-                  Contact Us
-                </div>
-              </a>
-            </div> {/* end footer-nav */}
-          </div> {/* end footer-social */}
-        </div> {/* end footer */}
+        <Footer />
       </div>
     );
   }
