@@ -120,7 +120,7 @@ var Learn = React.createClass({
 	render: function() {
 		return (
 			<div>
-        <NavBar />
+        <NavBar selected="learn"/>
         <div id="content">
           <div id="content-nav">
             <a href="#interface">

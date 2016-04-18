@@ -14,7 +14,7 @@ var Donate = React.createClass({
 	render: function() {
 		return (
 			<div>
-        <NavBar />
+        <NavBar selected="donate"/>
         <div id="content">
 
           <h1>Donate</h1>

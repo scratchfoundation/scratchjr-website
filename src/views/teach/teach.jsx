@@ -69,7 +69,7 @@ var Teach = React.createClass({
 	render: function() {
 		return (
       <div>
-        <NavBar />
+        <NavBar selected="teach"/>
   			<div id="content">
           {/* Start of Nav */}
           <div id="content-nav">

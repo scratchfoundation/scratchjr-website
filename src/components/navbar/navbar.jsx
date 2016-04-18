@@ -1,6 +1,14 @@
 import React from 'react';
 
+var classNames = require('classnames');
+
 var NavBar = React.createClass({
+	generateHeaderClasses: function(section) {
+		return classNames({
+			"header-nav-item": true,
+			'header-nav-item-selected': this.props.selected == section
+		});
+	},
 	render: function() {
 		return (
 			<div id="header">
@@ -12,28 +20,28 @@ var NavBar = React.createClass({
 		    <div id="header-nav">
 		      <div className="header-nav-item-wrapper">
 		        <a href="about">
-		          <div className="header-nav-item">
+		          <div className={this.generateHeaderClasses("about")}>
 		            About
 		          </div>
 		        </a>
 		      </div>
 		      <div className="header-nav-item-wrapper">
 		        <a href="learn">
-		          <div className="header-nav-item">
+		          <div className={this.generateHeaderClasses("learn")}>
 		            Learn
 		          </div>
 		        </a>
 		      </div>
 		      <div className="header-nav-item-wrapper">
 		        <a href="teach">
-		          <div className="header-nav-item">
+		          <div className={this.generateHeaderClasses("teach")}>
 		            Teach
 		          </div>
 		        </a>
 		      </div>
 		      <div className="header-nav-item-wrapper">
 		        <a href="donate">
-		          <div className="header-nav-item">
+		          <div className={this.generateHeaderClasses("donate")}>
 		            Donate
 		          </div>
 		        </a>

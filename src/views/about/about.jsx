@@ -62,7 +62,7 @@ var About = React.createClass({
 	render: function() {
 		return (
       <div>
-        <NavBar />
+        <NavBar selected="about"/>
         <div id="content">
           {/* <h1>About ScratchJr</h1> */}
           {/* Start of Nav */}
