@@ -33,5 +33,10 @@
 		"pattern": "/hoc",
 		"view": "hoc",
 		"title": "Hour of Code"
+	},
+	{
+		"pattern": "/eula",
+		"view": "eula",
+		"title": "Terms and Conditions"
 	}
 ]
