@@ -12,10 +12,6 @@ var Learn = React.createClass({
 	type: 'Learn',
   componentDidMount: function() {
 
-    var tabTitles = ["Interface Guide", "Paint Editor Guide", "Block Descriptions", "Tips"];
-
-    var tabSelectors = [".learn-interface", ".learn-paint", ".learn-blocks", ".learn-tips"];
-
     var interfaceDescriptions = [
     ["1 | Save", "Save the current project and exit to the Home page."],
     ["2 | Stage", "This is where the action takes place in the project. To delete a character, press and hold it."],
