@@ -1,9 +1,17 @@
 import React from 'react';
 
+var classNames = require('classnames');
+
 var InterfaceSection = React.createClass({
     render: function() {
         return (
-            <div className="content-section content-section-selected learn-interface" id="interface-section">
+            <div 
+                className={classNames(
+                    "content-section", 
+                    "learn-interface", 
+                    {"content-section-selected": this.props.sectionIndex == this.props.activeSectionIndex}
+                )} 
+                id="interface-section">
                 <a href="pdfs/scratchjr-interface-guide.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
                 <div className="interface-container">
                     {/* 1. Save */}

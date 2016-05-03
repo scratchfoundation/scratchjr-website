@@ -4,14 +4,15 @@ var ReactDOM = require('react-dom');
 var NavBar = require('../../components/navbar/navbar.jsx');
 var Footer = require('../../components/footer/footer.jsx');
 
+var Tabber = require('../../components/tabber/tabber.jsx');
 var Tab = require('../../components/tab/tab.jsx');
+var TabNav = require('../../components/tabnav/tabnav.jsx');
+var TabSectionNav = require('../../components/tabsectionnav/tabsectionnav.jsx');
 
 var InterfaceSection = require('../../components/tab-sections/learn-sections/interface.jsx');
 var PaintSection = require('../../components/tab-sections/learn-sections/paint.jsx');
 var BlocksSection = require('../../components/tab-sections/learn-sections/blocks.jsx');
 var TipsSection = require('../../components/tab-sections/learn-sections/tips.jsx');
-
-require('../../../static/js/lib/content-nav.js');
 
 require('./learn.scss');
 
@@ -71,18 +72,22 @@ var Learn = React.createClass({
 		return (
 			<div>
         <NavBar selected="learn"/>
-        <div id="content">
-          <div id="content-nav">
-            <Tab tabId="interface" title="Interface Guide" iconClass="interface-guide-icon" location="left" />
-            <Tab tabId="paint" title="Paint Editor Guide" iconClass="paint-guide-icon" location="middle" />
-            <Tab tabId="blocks" title="Block Descriptions" iconClass="blocks-guide-icon" location="middle" />
-            <Tab tabId="tips" title="Tips &amp; Hints" iconClass="videos-icon" location="right" />
-          </div>
-          <InterfaceSection />
-          <PaintSection />
-          <BlocksSection />
-          <TipsSection />
-        </div>
+        
+        <Tabber>
+          <TabNav>
+            <Tab tabId="interface" title="Interface Guide" iconClass="interface-guide-icon" />
+            <Tab tabId="paint" title="Paint Editor Guide" iconClass="paint-guide-icon" />
+            <Tab tabId="blocks" title="Block Descriptions" iconClass="blocks-guide-icon" />
+            <Tab tabId="tips" title="Tips &amp; Hints" iconClass="videos-icon" />
+          </TabNav>
+          <TabSectionNav>
+            <InterfaceSection />
+            <PaintSection />
+            <BlocksSection />
+            <TipsSection />
+          </TabSectionNav>
+        </Tabber>
+
         <Footer />
       </div>
 		);

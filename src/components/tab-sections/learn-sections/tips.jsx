@@ -1,10 +1,18 @@
 import React from 'react';
 
+var classNames = require('classnames');
+
 var TipsSection = React.createClass({
     render: function() {
         return (
             <div>
-                <div className="content-section learn-tips" id="tips-section">
+                <div
+                    className={classNames(
+                        "content-section", 
+                        "learn-tips", 
+                        {"content-section-selected": this.props.sectionIndex == this.props.activeSectionIndex}
+                    )}
+                    id="tips-section">
                     <div className="content-section-title">
                         Tips &amp; Hints
                     </div>

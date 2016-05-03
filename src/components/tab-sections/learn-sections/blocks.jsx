@@ -1,9 +1,17 @@
 import React from 'react';
 
+var classNames = require('classnames');
+
 var BlocksSection = React.createClass({
     render: function() {
         return (
-            <div className="content-section learn-blocks" id="blocks-section">
+            <div 
+                className={classNames(
+                    "content-section", 
+                    "learn-blocks", 
+                    {"content-section-selected": this.props.sectionIndex == this.props.activeSectionIndex}
+                )}
+                id="blocks-section">
                 <a href="pdfs/block_descriptions.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
                 {/* Yellow Blocks */}
                 <div className="block-category-header" id="yellow-block-category-header">

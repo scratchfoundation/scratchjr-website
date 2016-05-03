@@ -1,9 +1,17 @@
 import React from 'react';
 
+var classNames = require('classnames');
+
 var PaintSection = React.createClass({
     render: function() {
         return (
-            <div className="content-section learn-paint" id="paint-section">
+            <div 
+                className={classNames(
+                    "content-section", 
+                    "learn-paint", 
+                    {"content-section-selected": this.props.sectionIndex == this.props.activeSectionIndex}
+                )}
+                id="paint-section">
                 <a href="pdfs/paint_editor_guide.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
                 <div className="paint-container">
                     {/* 1. Undo */}
