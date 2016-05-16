@@ -14,7 +14,7 @@ var TipsSection = React.createClass({
           className={classNames(
             "content-section", 
             "learn-tips", 
-            {"content-section-selected": this.props.sectionIndex == this.props.activeSectionIndex}
+            {"content-section-selected": (this.props.sectionIndex == this.props.activeSectionIndex) && !this.props.activeSubsection }
           )}
           id="tips-section">
           <div className="content-section-title">
@@ -30,6 +30,7 @@ var TipsSection = React.createClass({
               description="Learn how to make a new project, rename an existing project, and delete a project.  "
               id="manage-projects"
               linkText="Watch video"
+              clickSubsection={this.props.clickSubsection}
             />
             <GenericSectionItem
               title="Character Animation using the ScratchJr Blocks"
@@ -37,6 +38,7 @@ var TipsSection = React.createClass({
               description="Make a simple script by connecting blocks together. "
               id="character-animation"
               linkText="Watch video"
+              clickSubsection={this.props.clickSubsection}
             />
             <GenericSectionItem
               title="Multiple Characters"
@@ -44,6 +46,7 @@ var TipsSection = React.createClass({
               description="Learn how to add characters to your project. "
               id="multi-character"
               linkText="Watch video"
+              clickSubsection={this.props.clickSubsection}
             />
             <GenericSectionItem
               title="Trigger Blocks"
@@ -51,6 +54,7 @@ var TipsSection = React.createClass({
               description="Use trigger blocks to specify when a script should run. "
               id="trigger-blocks"
               linkText="Watch video"
+              clickSubsection={this.props.clickSubsection}
             />
             <GenericSectionItem
               title="Sharing ScratchJr Projects"
@@ -58,6 +62,7 @@ var TipsSection = React.createClass({
               description="You can share projects by email. On iPads you can also share project by AirDrop.  "
               id="share-projects"
               linkText="Read more"
+              clickSubsection={this.props.clickSubsection}
             />
             <GenericSectionItem
               title="Sample Projects"
@@ -65,6 +70,7 @@ var TipsSection = React.createClass({
               description="The Sample Projects library is a collection of eight pre-made projects that use a range of blocks and features to show you the variety of projects you can make with ScratchJr. "
               id="sample-projects"
               linkText="Read more"
+              clickSubsection={this.props.clickSubsection}
             />
             <GenericSectionItem
               title="Character List Scrolling"
@@ -83,6 +89,7 @@ var TipsSection = React.createClass({
               description="You can copy a script (set of blocks) from one character to another in the same project.  "
               id="copy-scripts"
               linkText="Read more"
+              clickSubsection={this.props.clickSubsection}
             />
             <GenericSectionItem
               title="Multi-page projects"
@@ -90,6 +97,7 @@ var TipsSection = React.createClass({
               description="Projects can have up to four pages with their own characters and scripts.  "
               id="pages"
               linkText="Read more"
+              clickSubsection={this.props.clickSubsection}
             />
             <GenericSectionItem
               title="Moving Backwards"
@@ -101,30 +109,35 @@ var TipsSection = React.createClass({
         
         <GenericSectionVideo
           id="manage-projects-section"
+          activeSubsection={this.props.activeSubsection}
           title="Making, Renaming, and Deleting Projects"
           description="Watch the video to learn how to make a new project, rename an existing project, and delete a project."
           videoSrc="https://www.youtube.com/embed/RXXDUxqBzBI?rel=0"
         />
         <GenericSectionVideo
           id="character-animation-section"
+          activeSubsection={this.props.activeSubsection}
           title="Character Animation using the ScratchJr Blocks"
           description="See how to make a simple script by connecting blocks together."
           videoSrc="https://www.youtube.com/embed/JoHpVzltafU?rel=0"
         />
         <GenericSectionVideo
           id="multi-character-section"
+          activeSubsection={this.props.activeSubsection}
           title="Multiple Characters"
           description="See how to add characters to your project."
           videoSrc="https://www.youtube.com/embed/4qLVKpImrws?rel=0"
         />
         <GenericSectionVideo
           id="trigger-blocks-section"
+          activeSubsection={this.props.activeSubsection}
           title="Trigger Blocks"
           description="See how to use trigger blocks to specify when a script should run."
           videoSrc="https://www.youtube.com/embed/123AdwR_JxI?rel=0"
         />
         <GenericSection
           id="share-projects-section"
+          activeSubsection={this.props.activeSubsection}
           title="Sharing ScratchJr Projects"
           description="You can share your ScratchJr projects in one of two ways: by email or by AirDrop.">
           <div className="content-section-item-description">
@@ -200,6 +213,7 @@ var TipsSection = React.createClass({
         </GenericSection>
         <GenericSection
           id="sample-projects-section"
+          activeSubsection={this.props.activeSubsection}
           title="Sample Projects Library"
           description="The Sample Projects Library is a collection of eight pre-made ScratchJr projects that use a range of blocks and features to show you the variety of projects you can make with ScratchJr. You can run these projects to see how they work, and you can change the blocks around to see what effect it has on the action.">
           <div className="content-section-item-description">
@@ -214,6 +228,7 @@ var TipsSection = React.createClass({
         </GenericSection>
         <GenericSection
           id="copy-scripts-section"
+          activeSubsection={this.props.activeSubsection}
           title="Copying Scripts">
           <div className="content-section-item-description">
             You can copy a script from one character to another by dragging the script from the programming area to the character in the list on the left.
@@ -228,6 +243,7 @@ var TipsSection = React.createClass({
         </GenericSection>
         <GenericSection
           id="pages-section"
+          activeSubsection={this.props.activeSubsection}
           title="Multiple pages">
           <div className="content-section-item-description">
             You can have up to four pages in a project. When you have more than one page connected by Go To Page blocks, you can get your scripts to run automatically by starting all the scripts with a Green Flag. Then, when the Go To Page block turns to a page, any scripts on that page with a Green Flag will run.

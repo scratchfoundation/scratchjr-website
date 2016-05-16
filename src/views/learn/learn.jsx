@@ -78,7 +78,7 @@ var Learn = React.createClass({
             <Tab tabId="interface" title="Interface Guide" iconClass="interface-guide-icon" />
             <Tab tabId="paint" title="Paint Editor Guide" iconClass="paint-guide-icon" />
             <Tab tabId="blocks" title="Block Descriptions" iconClass="blocks-guide-icon" />
-            <Tab tabId="tips" title="Tips &amp; Hints" iconClass="videos-icon" />
+            <Tab tabId="tips" title="Tips &amp; Hints" iconClass="videos-icon" subsections={['manage-projects', 'character-animation', 'multi-character', 'trigger-blocks', 'share-projects', 'sample-projects', 'copy-scripts', 'pages']}/>
           </TabNav>
           <TabSectionNav>
             <InterfaceSection />

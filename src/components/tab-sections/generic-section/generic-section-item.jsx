@@ -17,9 +17,7 @@ var GenericSectionItem = React.createClass({
       var offset = document.querySelector('#content').offsetTop;
       window.scrollTo(0, offset)
     }
-    // if($(".content-section-selected.content-subpage").length) {
-    //   $('html,body').scrollTop($("#content").offset().top);
-    // }
+    this.props.clickSubsection(this.props.id);
   },
   render: function() {
     var description;
