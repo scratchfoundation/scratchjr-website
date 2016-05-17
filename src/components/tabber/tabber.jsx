@@ -16,7 +16,7 @@ var Tabber = React.createClass({
     var initialIndex = 0;
     var activeSubsection = null;
     if (hash) {
-      if (tabs[hash]) {
+      if (hash in tabs) {
         initialIndex = tabOrder[hash]; // set initial index of tabber corresponding to URL hash
       } else {
         for (var tab in tabs) { 

@@ -21,7 +21,17 @@ var GenericSectionItem = React.createClass({
   },
   render: function() {
     var description;
-    if (this.props.linkText) {
+    // Use Case 1: linking to static content (i.e. PDF) 
+    if (this.props.href) {
+      description = 
+        <div className="content-section-item-description">
+          {this.props.description}
+          <a className="read-more" href={this.props.href}>
+            {this.props.linkText}
+          </a>
+        </div>;
+    // Use Case 2: link that changes the display content section
+    } else if (this.props.linkText) {
       description = 
         <div className="content-section-item-description">
           {this.props.description}
@@ -29,6 +39,7 @@ var GenericSectionItem = React.createClass({
             {this.props.linkText}
           </a>
         </div>;
+    // Use Case 3: no links, just text description
     } else {
       description = 
         <div className="content-section-item-description">
@@ -36,7 +47,7 @@ var GenericSectionItem = React.createClass({
         </div>;
     }
     return (
-      <div className="content-section-full-item">
+      <div className="content-section-full-item" key={this.props.id}>
         <div className="content-section-item-title">
           {this.props.title}
         </div>
