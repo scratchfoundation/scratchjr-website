@@ -20,9 +20,12 @@ var GenericSectionItem = React.createClass({
     this.props.clickSubsection(this.props.id);
   },
   render: function() {
+    var href;
+    var clickHandler;
     var description;
     // Use Case 1: linking to static content (i.e. PDF) 
     if (this.props.href) {
+      href = this.props.href;
       description = 
         <div className="content-section-item-description">
           {this.props.description}
@@ -32,10 +35,12 @@ var GenericSectionItem = React.createClass({
         </div>;
     // Use Case 2: link that changes the display content section
     } else if (this.props.linkText) {
+      href = "#" + this.props.id;
+      clickHandler = this.handleClick;
       description = 
         <div className="content-section-item-description">
           {this.props.description}
-          <a className="read-more" id={this.props.id} href={"#"+this.props.id} onClick={this.handleClick}>
+          <a className="read-more" id={this.props.id} href={"#" + this.props.id} onClick={this.handleClick}>
             {this.props.linkText}
           </a>
         </div>;
@@ -49,10 +54,14 @@ var GenericSectionItem = React.createClass({
     return (
       <div className="content-section-full-item" key={this.props.id}>
         <div className="content-section-item-title">
-          {this.props.title}
+          <a className="read-more" id={this.props.id} href={href} onClick={clickHandler}>
+            {this.props.title}
+          </a>
         </div>
         <div className="content-section-item-thumbnail">
-          <img className="content-section-item-thumbnail-image" src={this.props.thumbSrc}/>
+          <a className="read-more" id={this.props.id} href={href} onClick={clickHandler}>
+            <img className="content-section-item-thumbnail-image" src={this.props.thumbSrc}/>
+          </a>
         </div>
         {description}
       </div>
