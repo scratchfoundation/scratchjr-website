@@ -8,7 +8,7 @@ var path = require('path');
 function Handler (route) {
 
     // Render template
-    var location = path.resolve(__dirname, './template.html');
+    var location = path.resolve(__dirname, '../src/template.html');
     var template = fs.readFileSync(location, 'utf8');
     var output = mustache.render(template, route);
 

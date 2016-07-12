@@ -1,7 +1,7 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
 
-var routes = require('./server/routes.json');
+var routes = require('./src/routes.json');
 
 // Prepare all entry points
 var entry = {};
