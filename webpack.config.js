@@ -11,11 +11,6 @@ routes.forEach(function (route) {
 
 module.exports = {
 	entry: entry,
-	externals: {
-        'react': 'React',
-        'react/addons': 'React',
-        'react-dom': 'ReactDOM',
-    },
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: 'js/[name].bundle.js'
@@ -32,11 +27,15 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: 'style!css!autoprefixer-loader?browsers=last 3 versions!sass'
+                loader: 'style!css!postcss-loader!sass'
             },
             {
             	test: /\.json$/,
 	            loader: 'json-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css!postcss-loader'
             },
             {
             	test: /\.less$/,

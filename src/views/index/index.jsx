@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Timeline = require('react-twitter-widgets').Timeline;
 
 var NavBar = require('../../components/navbar/navbar.jsx');
 var Footer = require('../../components/footer/footer.jsx');
@@ -18,9 +19,6 @@ var Index = React.createClass({
 	      navContainer: "#rslides_container"
 	    });
 		});
-  },
-  renderTwitterFeed: function(d,s,id) {
-    {var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}};
   },
   render: function() {
     return (
@@ -91,8 +89,10 @@ var Index = React.createClass({
               </div>
             </div>
             <div id="disscussion-tweets">
-              <a className="twitter-timeline" width="425" height="250" href="https://twitter.com/ScratchJr" data-widget-id="618881920324079616" data-chrome="noheader nofooter">Tweets by @ScratchJr</a>
-              {this.renderTwitterFeed(document,"script","twitter-wjs")};
+							<Timeline
+								widgetId={'618881920324079616'}
+								options={{username: 'ScratchJr', width: '425', height: '250', chrome: 'noheader nofooter'}}
+							/>
             </div>
           </div>
         </div> {/* end content */}

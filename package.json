@@ -44,6 +44,9 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "express": "^4.13.4",
-    "mustache": "^2.2.1"
+    "mustache": "^2.2.1",
+    "react": "15.1.0",
+    "react-dom": "15.0.1",
+    "react-twitter-widgets": "0.2.4"
   }
 }
