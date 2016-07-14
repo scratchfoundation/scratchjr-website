@@ -5,12 +5,13 @@ var classNames = require('classnames');
 var GenericSection = React.createClass({
   render: function() {
     return (
-      <div 
+      <div
         className={classNames(
           "content-section",
           "content-subpage",
           {"content-section-selected": this.props.id == (this.props.activeSubsection + '-section')}
-        )} 
+        )}
+        key={this.props.id}
         id={this.props.id}>
         <div className="content-section-title">
           {this.props.title}

@@ -3,36 +3,16 @@ var ReactDOM = require('react-dom');
 var Timeline = require('react-twitter-widgets').Timeline;
 
 var NavBar = require('../../components/navbar/navbar.jsx');
+var Carousel = require('../../components/carousel/carousel.jsx');
 var Footer = require('../../components/footer/footer.jsx');
 
 var Index = React.createClass({
 	type: 'Index',
-	componentDidMount: function() {
-		$(function () {
-	    $("#slider1").responsiveSlides({
-	      auto: true,
-	      pager: true,
-	      nav: false,
-	      speed: 600,
-	      maxwidth: 900,
-	      namespace: "centered-btns",
-	      navContainer: "#rslides_container"
-	    });
-		});
-  },
   render: function() {
     return (
       <div>
         <NavBar />
-        <div id="rslides_container" className="slideshow">
-          <ul className="rslides" id="slider1">
-            <li><img src="images/slide1.png" className="slide-current" alt="ScratchJr Slide 1" /></li>
-            <li><img src="images/slide2.png" className="slide-hidden" alt="ScratchJr Slide 2" /></li>
-            <li><img src="images/slide3.png" className="slide-hidden" alt="ScratchJr Slide 3" /></li>
-            <li><img src="images/slide4.png" className="slide-hidden" alt="ScratchJr Slide 4" /></li>
-            <li><img src="images/slide5.png" className="slide-hidden" alt="ScratchJr Slide 5" /></li>
-          </ul>
-        </div>{/* end slideshow */}
+				<Carousel />
 
         <div id="content">
           <div id="announcement-banner">

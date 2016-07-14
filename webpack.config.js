@@ -38,6 +38,10 @@ module.exports = {
                 loader: 'style!css!postcss-loader'
             },
             {
+                test: /\.(png|jpg|gif|eot|svg|ttf|woff)$/,
+                loader: 'url-loader'
+            },
+            {
             	test: /\.less$/,
 	   			loader: 'style!css!less'
             }
