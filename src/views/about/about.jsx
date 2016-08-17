@@ -1,47 +1,64 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react'
+import {render} from 'react-dom'
+import {Router, Route, browserHistory, IndexRedirect, IndexRoute} from 'react-router'
+import NavBar from '../../components/navbar/navbar.jsx'
+import Footer from '../../components/footer/footer.jsx'
+import TabNav from '../../components/tabnav/tabnav.jsx'
 
-var NavBar = require('../../components/navbar/navbar.jsx');
-var Footer = require('../../components/footer/footer.jsx');
-
-var Tabber = require('../../components/tabber/tabber.jsx');
-var Tab = require('../../components/tab/tab.jsx');
-var TabNav = require('../../components/tabnav/tabnav.jsx');
-var TabSectionNav = require('../../components/tabsectionnav/tabsectionnav.jsx');
-
-var InfoSection = require('../../components/tab-sections/about-sections/info.jsx');
-var PressSection = require('../../components/tab-sections/about-sections/press.jsx');
-var FAQSection = require('../../components/tab-sections/about-sections/faq.jsx');
-var VideosSection = require('../../components/tab-sections/about-sections/videos.jsx');
+import InfoSection from './info.jsx'
+import PressSection from './press.jsx'
+import FAQSection from './faq.jsx'
+import VideosSection from './videos.jsx'
 
 require('./about.scss');
 
 var About = React.createClass({
-	type: 'About',
-	render: function() {
-		return (
-      <div>
-        <NavBar selected="about"/>
+    type: 'About',
+    render: function() {
+        var tabs = [
+            {
+                url: "/about/info",
+                text: "Info",
+                section: "info",
+                indexLink: false
+            }, {
+                url: "/about/press",
+                text: "Press",
+                section: "press",
+                indexLink: false
+            }, {
+                url: "/about/faq",
+                text: "FAQ",
+                section: "faq",
+                indexLink: false
+            }, {
+                url: "/about/videos",
+                text: "Videos",
+                section: "videos",
+                indexLink: false
+            }
 
-        <Tabber>
-          <TabNav>
-            <Tab tabId="info" title="Info" iconClass="info-icon" />
-            <Tab tabId="press" title="Press" iconClass="press-icon"/>
-            <Tab tabId="faq" title="FAQ" iconClass="faq-icon" />
-            <Tab tabId="videos" title="Videos" iconClass="videos-icon" />
-          </TabNav>
-          <TabSectionNav>
-            <InfoSection />
-            <PressSection />
-            <FAQSection />
-            <VideosSection />
-          </TabSectionNav>
-        </Tabber>
-  
-        <Footer />
-      </div>
-		);
-	}
+        ];
+        return (
+            <div>
+                <NavBar selected="about"/>
+                <div id="content">
+                    <TabNav items={tabs}/> {this.props.children}
+                </div>
+                <Footer/>
+            </div>
+        );
+    }
 });
 
-ReactDOM.render(<About />, document.getElementById('app'));
+render((
+    <Router history={browserHistory}>
+        <Route path="/about" component={About}>
+            <Route path="info" component={InfoSection}/>
+            <Route path="press" component={PressSection}/>
+            <Route path="faq" component={FAQSection}/>
+            <Route path="videos" component={VideosSection}/>
+						<IndexRedirect to="info"/>
+        </Route>
+    </Router>
+), document.getElementById('app'));

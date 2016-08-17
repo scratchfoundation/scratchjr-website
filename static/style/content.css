@@ -7,11 +7,9 @@
 	overflow: auto;
 }
 
-.content-section {
-	display: none;
-}
+/* TODO: Content section should simply be the  'selected' style. selected style is unnedded */
 
-.content-section-selected {
+.content-section {
 	padding-top: 3px;
 	margin-left: 70px;
 	margin-right: 70px;

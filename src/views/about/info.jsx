@@ -1,16 +1,9 @@
 import React from 'react';
 
-var classNames = require('classnames');
-
 var InfoSection = React.createClass({
   render: function() {
     return (
-      <div 
-        className={classNames(
-          "content-section", 
-          {"content-section-selected": this.props.sectionIndex == this.props.activeSectionIndex}
-        )}
-        id="info-section">
+      <div className="content-section" id="info-section">
         <div className="content-section-title">
           About ScratchJr
         </div>

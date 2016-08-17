@@ -1,46 +1,3 @@
-.content-section-half-item {
-	display: inline-block;
-	padding-bottom: 30px;
-	clear: both;
-	width: 45%;
-	text-align: left;
-	vertical-align: top;
-}
-
-.content-section-items-container:after {
-	display:inline-block;
-	width:100%;
-	content:'';
-	height: 0;
-}
-
-.content-section-item-title {
-	padding-bottom: 10px;
-	font-weight: 900;
-	color: #2898cd;
-	width: 60%;
-	display: inline-block;
-}
-
-.content-section-item-thumbnail {
-	width:100%;
-}
-
-.content-section-item-thumbnail-image {
-	width: 100%;
-	border-radius: 20px;
-}
-
-.content-section-item-description {
-	width: 100%;
-	color: #808080;
-	font-size: 14px;
-	line-height: 22px;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	display: inline-block;
-}
-
 #video-wrapper {
 	padding-top: 40px;
         text-align: center;
@@ -90,7 +47,7 @@
 	background-size: 100%;
 }
 
-.content-nav-item-selected  > .info-icon {
+.content-nav-item-selected  .info-icon {
 	background-image: url(/images/infos_o.svg);
 }
 
@@ -99,7 +56,7 @@
 	background-size: 100%;
 }
 
-.content-nav-item-selected  > .press-icon {
+.content-nav-item-selected  .press-icon {
 	background-image: url(/images/press_o.svg);
 }
 
@@ -108,7 +65,7 @@
 	background-size: 100%;
 }
 
-.content-nav-item-selected  > .videos-icon {
+.content-nav-item-selected  .videos-icon {
 	background-image: url(/images/videos_o.svg);
 }
 
@@ -117,6 +74,6 @@
 	background-size: 100%;
 }
 
-.content-nav-item-selected  > .faq-icon {
+.content-nav-item-selected  .faq-icon {
 	background-image: url(/images/faq_o.svg);
 }

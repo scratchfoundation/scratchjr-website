@@ -1,16 +1,9 @@
 import React from 'react';
 
-var classNames = require('classnames');
-
 var FAQSection = React.createClass({
   render: function() {
     return (
-      <div 
-        className={classNames(
-          "content-section", 
-          {"content-section-selected": this.props.sectionIndex == this.props.activeSectionIndex}
-        )}
-        id="faq-section">
+      <div className="content-section" id="faq-section">
         <div className="content-section-title">
           Frequently Asked Questions
         </div>
@@ -25,7 +18,7 @@ var FAQSection = React.createClass({
 
           <div className="content-description-section">
             <div className="content-description-question">Is there a book for ScratchJr?</div>
-            <div className="content-description-answer"><a href="https://www.nostarch.com/scratchjr" target="_blank"><img src="images/scratchjr-book.png" width="100" height="auto" style={{"float":"right"}}/></a>Yes, there is a guide to ScratchJr. Written by app creators Professor Marina Umaschi Bers and Mitchel Resnick of the Lifelong Kindergarten Group at the MIT Media Lab, this new book is an easy-to-use, hands on resource for parents and educators alike to teach children how to code with ScratchJr. Read an <a href="https://medium.com/scratchfoundation-blog/helping-young-children-experiment-explore-and-express-themselves-with-code-69a450d42005#.9fq210a4q" target="_blank">excerpt of the book</a>. You can buy your copy through <a href="https://www.nostarch.com/scratchjr" target="_blank">No Starch Press</a>!</div>
+          <div className="content-description-answer"><a href="https://www.nostarch.com/scratchjr" target="_blank"><img src="/images/scratchjr-book.png" width="100" height="auto" style={{"float":"right"}}/></a>Yes, there is a guide to ScratchJr. Written by app creators Professor Marina Umaschi Bers and Mitchel Resnick of the Lifelong Kindergarten Group at the MIT Media Lab, this new book is an easy-to-use, hands on resource for parents and educators alike to teach children how to code with ScratchJr. Read an <a href="https://medium.com/scratchfoundation-blog/helping-young-children-experiment-explore-and-express-themselves-with-code-69a450d42005#.9fq210a4q" target="_blank">excerpt of the book</a>. You can buy your copy through <a href="https://www.nostarch.com/scratchjr" target="_blank">No Starch Press</a>!</div>
           </div>
 
           <div className="content-description-section">

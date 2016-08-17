@@ -74,6 +74,9 @@ h1 {
 	cursor:pointer;
 }
 
+#content-nav a:last-child .content-nav-item {
+	border-right: none;
+}
 .content-nav-item-selected {
 	color: #2898CD;
 }
@@ -97,10 +100,6 @@ h1 {
 	z-index: 1;
 }
 
-
-.content-nav-item-right{
-	border-right: none;
-}
 
 .content-nav-item-icon {
 	width: 77px;

@@ -10,7 +10,11 @@ require('./carousel.scss');
  */
 var Carousel = React.createClass({
     type: 'Carousel',
+    propTypes: {
+      items: React.PropTypes.array
+    },
     render: function () {
+      /* TODO: allow override of default settings */
         var settings = {
           dots: true,
           arrows: false,
@@ -21,16 +25,10 @@ var Carousel = React.createClass({
           speed: 500,
           cssEase: 'linear'
         };
-        var images= [
-          {id:'s1', url:'images/slide1.png'},
-          {id:'s2', url:'images/slide2.png'},
-          {id:'s3', url:'images/slide3.png'},
-          {id:'s4', url:'images/slide4.png'},
-          {id:'s5', url:'images/slide5.png'},
-          ];
+
         return (
           <Slider {... settings}>
-              {images.map((item, i) => { return (<div key={item.id} ><img src={item.url} /></div>) })}
+              {this.props.items.map((item) => { return (<div key={item.id} ><img src={item.url} /></div>) })}
           </Slider>
         );
     }
