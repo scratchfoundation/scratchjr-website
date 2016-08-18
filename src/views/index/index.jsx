@@ -1,33 +1,21 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Timeline = require('react-twitter-widgets').Timeline;
+import React from 'react';
+import {render} from 'react-dom';
+import {Timeline} from 'react-twitter-widgets';
+import NavBar from '../../components/navbar/navbar.jsx';
+import Footer from '../../components/footer/footer.jsx';
+import Carousel from '../../components/carousel/carousel.jsx';
 
-var NavBar = require('../../components/navbar/navbar.jsx');
-var Carousel = require('../../components/carousel/carousel.jsx');
-var Footer = require('../../components/footer/footer.jsx');
-
-require('./index.scss');
+import './index.scss';
 
 var Index = React.createClass({
     type: 'Index',
-    render: function() {
+    render: function () {
         var images = [
-            {
-                id: 's1',
-                url: 'images/slide1.png'
-            }, {
-                id: 's2',
-                url: 'images/slide2.png'
-            }, {
-                id: 's3',
-                url: 'images/slide3.png'
-            }, {
-                id: 's4',
-                url: 'images/slide4.png'
-            }, {
-                id: 's5',
-                url: 'images/slide5.png'
-            }
+            '/images/slide1.png',
+            '/images/slide2.png',
+            '/images/slide3.png',
+            '/images/slide4.png',
+            '/images/slide5.png'
         ];
         return (
             <div>
@@ -36,11 +24,10 @@ var Index = React.createClass({
 
                 <div id="content">
                     <div id="announcement-banner">
-                        ScratchJr is available as a free app for
-                        <a href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">iPads</a>
-                        and
-                        <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">Android</a>
-                        tablets.
+                        ScratchJr is available as a free app
+                        for <a href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
+                        iPads</a> and <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
+                        Android</a> tablets.
                     </div>
 
                     <div id="content-text">
@@ -53,13 +40,21 @@ var Index = React.createClass({
                         </div>
                         {/* end content-header-second */}
                         <div id="content-body">
-                            Coding is the new literacy! With ScratchJr, young children (ages 5-7) can program their own interactive stories and games. In the process, they learn to solve problems, design projects, and express themselves creatively on the computer.
+                            Coding is the new literacy! With ScratchJr, young children (ages 5-7)
+                            can program their own interactive stories and games. In the process,
+                            they learn to solve problems, design projects, and express themselves
+                            creatively on the computer.
                             <div id="store-badges">
                                 <a href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
-                                    <img alt="Download on the App Store" src="images/Apple_appstore.svg"/>
+                                    <img alt="Download on the App Store" src="/images/Apple_appstore.svg"/>
                                 </a>
                                 <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
-                                    <img alt="Get it on Google Play" src="images/GooglePlay.svg" width="135px" height="40px"/>
+                                    <img
+                                        alt="Get it on Google Play"
+                                        src="/images/GooglePlay.svg"
+                                        width="135px"
+                                        height="40px"
+                                    />
                                 </a>
                             </div>
                             {/* end store-badges */}
@@ -68,7 +63,7 @@ var Index = React.createClass({
                     </div>
                     {/* end content-text */}
                     <div id="content-graphic">
-                        <img id="content-graphic-item" src="images/homegraphic.png"/>
+                        <img id="content-graphic-item" src="/images/homegraphic.png"/>
                     </div>
                     {/* end content-graphic */}
                     <div className="content-news">
@@ -76,13 +71,16 @@ var Index = React.createClass({
                             News
                         </div>
                         <div className="content-news-body">
-                            ScratchJr is available on
-                            <a href="http://www.amazon.com/Scratch-Foundation-ScratchJr/dp/B01AKGTD2E" target="_blank">Amazon</a>. Now, kids can create interactive stories and games on Kindle!
+                            ScratchJr is available on <a
+                            href="http://www.amazon.com/Scratch-Foundation-ScratchJr/dp/B01AKGTD2E"
+                            target="_blank">
+                            Amazon</a>. Now, kids can create interactive stories and games on Kindle!
                         </div>
                         <div className="content-news-body">
-                            Newly released by
-                            <a href="https://www.nostarch.com/scratchjr" target="_blank">No Starch Press</a>,
-                            <a href="about#faq">The Official ScratchJr Book</a>The Official ScratchJr Book is now available in paperback or ebook format!
+                            Newly released by <a href="https://www.nostarch.com/scratchjr" target="_blank">
+                            No Starch Press</a>, <a href="/about/faq">
+                            The Official ScratchJr Book</a>. The Official ScratchJr Book is now available
+                            in paperback or ebook format!
                         </div>
                     </div>
 
@@ -92,9 +90,9 @@ var Index = React.createClass({
                                 Join the Discussion
                             </div>
                             <div id="discussion-body">
-                                We introduced ourselves. Now it's your turn. Drop us a line with feedback, report bugs &amp; glitches, or just say "hi!"
+                                We introduced ourselves. Now it's your turn. Drop us a line
+                                with feedback, report bugs &amp; glitches, or just say "hi!"
                                 <br></br>
-
                                 <a href=" https://twitter.com/intent/tweet?screen_name=ScratchJr">
                                     <div className="blue-button">
                                         Tweet @ScratchJr
@@ -119,5 +117,5 @@ var Index = React.createClass({
     }
 });
 
-ReactDOM.render(
+render(
     <Index/>, document.getElementById('app'));

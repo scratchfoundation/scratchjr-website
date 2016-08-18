@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router'
+require('./tabnav.scss')
 
 var TabNav = React.createClass({
     type: 'TabNav',

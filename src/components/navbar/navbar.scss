@@ -1,0 +1,38 @@
+#header {
+	width: 900px;
+	height: 58px;
+	margin: auto;
+}
+
+#header-logo {
+	margin-top: 5.5px;
+	margin-bottom: 5.5px;
+	margin-left: 28px;
+	height: 47px;
+	width: 163px;
+	float: left;
+}
+
+#header-nav {
+	float: right;
+	position: relative;
+}
+
+.header-nav-item-wrapper {
+	float: left;
+}
+
+.header-nav-item {
+	font-family: "Lucida Grande", arial, sans-serif;
+	letter-spacing: 1px;
+	color: white;
+	float: left;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 23px;
+	height: 35px;
+}
+
+.header-nav-item-selected {
+	background-color: #0A7199;
+}

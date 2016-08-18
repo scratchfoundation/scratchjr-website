@@ -28,7 +28,7 @@ var Footer = React.createClass({
             </a>
           </div>
         </div>
-        <div className="footer-links"><a href="privacy">Privacy Policy</a></div>
+        <div className="footer-links"><a href="/privacy">Privacy Policy</a></div>
       </div>
     );
   }

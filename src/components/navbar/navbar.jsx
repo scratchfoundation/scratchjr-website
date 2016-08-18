@@ -1,6 +1,6 @@
 import React from 'react';
-
-var classNames = require('classnames');
+import classNames  from 'classnames';
+import './navbar.scss';
 
 var NavBar = React.createClass({
 	generateHeaderClasses: function(section) {
