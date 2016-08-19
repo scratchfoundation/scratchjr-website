@@ -1,16 +1,9 @@
 import React from 'react';
 
-var PressItem = React.createClass({
-    type: 'PressItem',
-    propTypes: {
-        title: React.PropTypes.string.isRequired,
-        url: React.PropTypes.string.isRequired,
-        source: React.PropTypes.string.isRequired,
-        dateString: React.PropTypes.string.isRequired
-    },
-    render: function () {
+export default class PressItem extends React.Component {
+    render () {
         return (
-            <div className="content-description-answer">
+            <div className='content-description-answer'>
                 <a href={this.props.url}>
                     {this.props.title}
                 </a>&nbsp;-&nbsp;
@@ -18,6 +11,10 @@ var PressItem = React.createClass({
             </div>
         );
     }
-});
-
-module.exports = PressItem;
+}
+PressItem.propTypes = {
+    title: React.PropTypes.string.isRequired,
+    url: React.PropTypes.string.isRequired,
+    source: React.PropTypes.string.isRequired,
+    dateString: React.PropTypes.string.isRequired
+};

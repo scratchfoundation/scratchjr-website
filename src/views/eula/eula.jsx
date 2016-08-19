@@ -5,28 +5,27 @@ import Footer from '../../components/footer/footer.jsx';
 
 import './eula.scss';
 
-var Eula = React.createClass({
-    type: 'Eula',
-    render: function () {
+export default class Eula extends React.Component {
+    render () {
         return (
             <div>
                 <NavBar/>
-                <div id="content">
-                    <div className="content-section">
+                <div id='content'>
+                    <div className='content-section'>
                         <h1>END USER LICENSE AGREEMENT</h1>
                         <p>
-                            This End User License Agreement ("Agreement") applies to the ScratchJr Application developed collaboratively by the Massachusetts Institute of Technology ("MIT") and the Trustees of Tufts College ("Tufts University" or "Tufts"), collectively the Licensors ("Licensors"), which is licensed, not sold, to the End User for use in accordance with the terms and conditions herein.
+                            This End User License Agreement ('Agreement') applies to the ScratchJr Application developed collaboratively by the Massachusetts Institute of Technology ('MIT') and the Trustees of Tufts College ('Tufts University' or 'Tufts'), collectively the Licensors ('Licensors'), which is licensed, not sold, to the End User for use in accordance with the terms and conditions herein.
                         </p>
                         <h2>I. DEFINITIONS</h2>
                         <p>
-                            END USER. An End-User is either (i) an individual ("Individual"), (ii) an Individual Qualified Educational Institution; or (iii) a Corporation. An "Individual" means a person acquiring the Application for personal use, not for redistribution. An "Individual Qualified Educational Institution" means an organization acquiring the Application for its own internal use for faculty, staff and students including (a) a public or private entity, the primary mission of which is directly involved in, or in support of, instruction rather than research, and that is a bona fide, educational institution organized and operated solely for pre-K-12 educational purposes; (b) a division or department of a public or private institution of higher learning; or (c) a public or private entity, the primary mission of which is directly involved in, or in support of instruction, organized solely for in-service teacher education. A Corporation is any entity or organization other than an Individual Qualified Educational Institution that acquires the Application for organizational use.
+                            END USER. An End-User is either (i) an individual ('Individual'), (ii) an Individual Qualified Educational Institution; or (iii) a Corporation. An 'Individual' means a person acquiring the Application for personal use, not for redistribution. An 'Individual Qualified Educational Institution' means an organization acquiring the Application for its own internal use for faculty, staff and students including (a) a public or private entity, the primary mission of which is directly involved in, or in support of, instruction rather than research, and that is a bona fide, educational institution organized and operated solely for pre-K-12 educational purposes; (b) a division or department of a public or private institution of higher learning; or (c) a public or private entity, the primary mission of which is directly involved in, or in support of instruction, organized solely for in-service teacher education. A Corporation is any entity or organization other than an Individual Qualified Educational Institution that acquires the Application for organizational use.
                         </p>
                         <p>
-                            APPLICATION. "Application," as used in this Agreement, includes the ScratchJr Application, its underlying source code and all upgrades made thereto. The Licensors are not obligated to provide upgrades under this Agreement.
+                            APPLICATION. 'Application,' as used in this Agreement, includes the ScratchJr Application, its underlying source code and all upgrades made thereto. The Licensors are not obligated to provide upgrades under this Agreement.
                         </p>
                         <h2>II. SCOPE OF LICENSE</h2>
                         <p>
-                            LICENSE GRANT. This Agreement grants to End User a restricted, revocable, nonexclusive, nontransferable, and non-assignable license (the "License") to use the Application on an Android device that the End User owns or controls. This Agreement shall govern upgrades to the Application that repair, replace or enhance the original product.
+                            LICENSE GRANT. This Agreement grants to End User a restricted, revocable, nonexclusive, nontransferable, and non-assignable license (the 'License') to use the Application on an Android device that the End User owns or controls. This Agreement shall govern upgrades to the Application that repair, replace or enhance the original product.
                         </p>
                         <p>
                             End User shall not: (i) Distribute the Application, including making it available over a network where it could be used by multiple devices at the same time; (ii) Transfer, rent, lease, lend, sell, redistribute, or sublicense the Application; (iii) Copy, decompile, reverse engineer, disassemble, attempt to derive the source code, modify, or create derivative works of the Application; (iv) Ship, transfer, export into any country, or use the Application in any manner prohibited by the United States Export Administration Act or any other export laws, restrictions, or regulations; (v) Export or re-export the Application into any United States embargoed countries or to anyone on the United States Treasury Department list of Specially Designated Nationals or the United States Department of Commerce Denied Person's List or Entity List; (vi) Be located in any country or named on any list designated in (5) above; or (vii) Use the Application in any manner prohibited by law. Any attempt to breach the foregoing shall be deemed a material breach of this Agreement and is subject to damages. The Licensors reserve the right, in their discretion, to terminate the License at any time, and to change, suspend, remove, or disable access to the Application.
@@ -36,14 +35,14 @@ var Eula = React.createClass({
                         </p>
                         <h2>III. INTELLECTUAL PROPERTY</h2>
                         <p>
-                            RESERVATION OF RIGHTS. The software, content, visual interfaces, interactive features, information, graphics, design, compilation, computer code and all other elements of the Application (the "ScratchJr Materials"), are protected by copyright, trade dress, patent, and trademark laws of the United States and other jurisdictions, international conventions, and all other relevant intellectual property and proprietary rights, and applicable laws. All ScratchJr Materials, including intellectual property rights therein and thereto, are the property of the Licensors. The Licensors reserve all rights not expressly granted in this Agreement. End User shall not acquire any right, title or interest to the ScratchJr Materials, whether by implication, estoppel, or otherwise, except for the limited rights set forth in this Agreement. To the extent this Agreement authorizes End User to make copies of the Application, End User shall ensure that any such copies contain the same copyright and proprietary notices that appear in the copy of the Application the End User downloaded. Nothing in this Agreement grants any copyrights, trademark rights, patent rights, trade secret protection, or other intellectual property rights to End User.
+                            RESERVATION OF RIGHTS. The software, content, visual interfaces, interactive features, information, graphics, design, compilation, computer code and all other elements of the Application (the 'ScratchJr Materials'), are protected by copyright, trade dress, patent, and trademark laws of the United States and other jurisdictions, international conventions, and all other relevant intellectual property and proprietary rights, and applicable laws. All ScratchJr Materials, including intellectual property rights therein and thereto, are the property of the Licensors. The Licensors reserve all rights not expressly granted in this Agreement. End User shall not acquire any right, title or interest to the ScratchJr Materials, whether by implication, estoppel, or otherwise, except for the limited rights set forth in this Agreement. To the extent this Agreement authorizes End User to make copies of the Application, End User shall ensure that any such copies contain the same copyright and proprietary notices that appear in the copy of the Application the End User downloaded. Nothing in this Agreement grants any copyrights, trademark rights, patent rights, trade secret protection, or other intellectual property rights to End User.
                         </p>
                         <p>
                             In the event that a third party claims that the Application infringes that third party's intellectual property rights, the Licensors will be solely responsible for the investigation, defense, settlement, and discharge of any such intellectual property infringement claim, provided that End User promptly notifies the Licensors in writing of any such claim and Licensors are permitted to control fully the defense and any settlement of such claim. End User shall cooperate with Licensors in the defense of such claim. End User shall not undertake any action in response to any infringement or alleged infringement of the Application that would be prejudicial to any defense that Licensors may have to the same. Notwithstanding the foregoing, such indemnity shall not apply if the alleged infringement results from use of the Application in conjunction with any other software, the combination of the Application with equipment not approved by Licensor, or unlicensed activities, including, without limitation, unauthorized modification of the Application.
                         </p>
                         <h2>IV. DISCLAIMER OF WARRANTY</h2>
                         <p>
-                            THE APPLICATION IS PROVIDED FREE OF CHARGE AND "AS IS," WITHOUT WARRANTIES OF ANY KIND, EXPLICIT OR IMPLICIT. WARRANTIES DISCLAIMED INCLUDE BUT ARE NOT LIMITED TO THOSE REGARDING FREEDOM FROM DEFECTS, FREEDOM FROM VIRUSES, THE ABILITY TO OPERATE CONTINUOUSLY, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SATISFACTORY QUALITY, AND NON-INTERFERENCE. THE END USER BEARS THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE APPLICATION. LICENSORS DO NOT WARRANT OR REPRESENT THAT THE USE OF THE APPLICATION WILL NOT INFRINGE ANY PATENTS, COPYRIGHTS, TRADEMARKS, OR OTHER RIGHTS OF THIRD PARTIES OR THAT DEFECTS IN THE APPLICATION WILL BE CORRECTED. LICENSORS SHALL NOT BE LIABLE FOR ANY LIABILITY OR DAMAGES WITH RESPECT TO ANY CLAIM BY THE END USER OR ANY THIRD PARTY ARISING FROM THE LICENSE GRANTED OR USE OF THE APPLICATION. THE END USER SHALL BEAR THE ENTIRE COST OF ANY SERVICES AND REPAIRS TO THE APPLICATION. THIS DISCLAIMER OF WARRANTY IS AN ESSENTIAL PART OF THIS AGREEMENT. NO ORAL OR WRITTEN INFORMATION OR ADVICE PROVIDED BY LICENSORS OR THE APPLICATION PROVIDER SHALL CREATE A WARRANTY. NO USE OF THE APPLICATION IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER.
+                            THE APPLICATION IS PROVIDED FREE OF CHARGE AND 'AS IS,' WITHOUT WARRANTIES OF ANY KIND, EXPLICIT OR IMPLICIT. WARRANTIES DISCLAIMED INCLUDE BUT ARE NOT LIMITED TO THOSE REGARDING FREEDOM FROM DEFECTS, FREEDOM FROM VIRUSES, THE ABILITY TO OPERATE CONTINUOUSLY, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SATISFACTORY QUALITY, AND NON-INTERFERENCE. THE END USER BEARS THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE APPLICATION. LICENSORS DO NOT WARRANT OR REPRESENT THAT THE USE OF THE APPLICATION WILL NOT INFRINGE ANY PATENTS, COPYRIGHTS, TRADEMARKS, OR OTHER RIGHTS OF THIRD PARTIES OR THAT DEFECTS IN THE APPLICATION WILL BE CORRECTED. LICENSORS SHALL NOT BE LIABLE FOR ANY LIABILITY OR DAMAGES WITH RESPECT TO ANY CLAIM BY THE END USER OR ANY THIRD PARTY ARISING FROM THE LICENSE GRANTED OR USE OF THE APPLICATION. THE END USER SHALL BEAR THE ENTIRE COST OF ANY SERVICES AND REPAIRS TO THE APPLICATION. THIS DISCLAIMER OF WARRANTY IS AN ESSENTIAL PART OF THIS AGREEMENT. NO ORAL OR WRITTEN INFORMATION OR ADVICE PROVIDED BY LICENSORS OR THE APPLICATION PROVIDER SHALL CREATE A WARRANTY. NO USE OF THE APPLICATION IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER.
                         </p>
                         <h2>V. LIMITATION OF LIABILITY</h2>
                         <p>
@@ -62,7 +61,7 @@ var Eula = React.createClass({
                         </p>
                         <h2>VIII. COMMERCIAL ITEMS</h2>
                         <p>
-                            NOTICE TO U.S. GOVERNMENT END USERS. The Application and related documentation are "Commercial Items," as that term is defined in 48 C.F.R. ¤ 2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation," as such terms are used in 48 C.F.R. ¤ 12.212 or 48 C.F.R. ¤ 227.7202, as applicable. The Application is being licensed to U.S. Government End Users (a) only as Commercial Items and (b) with only those rights as are granted to all other End Users pursuant to the terms and conditions herein.
+                            NOTICE TO U.S. GOVERNMENT END USERS. The Application and related documentation are 'Commercial Items,' as that term is defined in 48 C.F.R. ¤ 2.101, consisting of 'Commercial Computer Software' and 'Commercial Computer Software Documentation,' as such terms are used in 48 C.F.R. ¤ 12.212 or 48 C.F.R. ¤ 227.7202, as applicable. The Application is being licensed to U.S. Government End Users (a) only as Commercial Items and (b) with only those rights as are granted to all other End Users pursuant to the terms and conditions herein.
                         </p>
                         <h2>IX. TERMINATION</h2>
                         <p>
@@ -83,7 +82,7 @@ var Eula = React.createClass({
                         </p>
                         <h2>XI. EMBARGOES AND RESTRICTIONS</h2>
                         <p>
-                            End User hereby represents and warrants that End User (i) is not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country; and (ii) is not listed on any U.S. Government list of prohibited or restricted parties.
+                            End User hereby represents and warrants that End User (i) is not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a 'terrorist supporting' country; and (ii) is not listed on any U.S. Government list of prohibited or restricted parties.
                         </p>
                         <p>
                             If the Licensors provide a translation of the English language version of this Agreement, the translation is provided solely for convenience, and the English version shall prevail.
@@ -97,7 +96,8 @@ var Eula = React.createClass({
             </div>
         );
     }
-});
+}
 
 render(
-    <Eula/>, document.getElementById('app'));
+    <Eula/>,
+    document.getElementById('app'));

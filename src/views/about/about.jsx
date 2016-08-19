@@ -10,11 +10,10 @@ import PressSection from './press.jsx';
 import FAQSection from './faq.jsx';
 import VideosSection from './videos.jsx';
 
-require('./about.scss');
+import './about.scss';
 
-var About = React.createClass({
-    type: 'About',
-    render: function () {
+export default class About extends React.Component {
+    render () {
         var tabs = [
             {
                 url: '/about/info',
@@ -50,7 +49,7 @@ var About = React.createClass({
             </div>
         );
     }
-});
+}
 
 render((
     <Router history={browserHistory}>

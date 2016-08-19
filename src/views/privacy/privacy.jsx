@@ -5,13 +5,12 @@ import Footer from '../../components/footer/footer.jsx';
 
 import './privacy.scss';
 
-var Privacy = React.createClass({
-    type: 'Privacy',
-    render: function () {
+export default class Privacy extends React.Component {
+    render () {
         return (
             <div>
                 <NavBar/>
-                <div id="content">
+                <div id='content'>
                     <h1>Privacy Policy</h1>
                     <p>
                         We created ScratchJr so that children can create their own
@@ -20,13 +19,13 @@ var Privacy = React.createClass({
                         parents. We wrote this privacy policy to explain what
                         information we collect, how we use it, and what we're doing
                         to keep it safe. If you have any questions regarding this
-                        privacy policy, you can <a href="mailto:info@scratchjr.org">
+                        privacy policy, you can <a href='mailto:info@scratchjr.org'>
                         contact us</a>.
                     </p>
                     <h2>What information does ScratchJr collect?</h2>
                     <p>
                         We collect some data on where you click and which parts of
-                        the app you use. This "click data" (collected through a
+                        the app you use. This 'click data' (collected through a
                         tool called Google Analytics) helps us figure out ways
                         to improve the app. We also collect information about
                         your geographic location (using IP address and network
@@ -38,7 +37,7 @@ var Privacy = React.createClass({
                         does not collect any personal identifying information about you.
                     </p>
                     <p>
-                        Google Analytics acquires information by installing a "cookie"
+                        Google Analytics acquires information by installing a 'cookie'
                          on your device. Cookies are small bits of information that
                          are stored on your device, without any personally
                          identifiable information.
@@ -86,7 +85,9 @@ var Privacy = React.createClass({
             </div>
         );
     }
-});
+}
 
 render(
-    <Privacy/>, document.getElementById('app'));
+    <Privacy/>,
+    document.getElementById('app')
+);
