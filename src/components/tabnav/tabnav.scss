@@ -12,11 +12,12 @@
 	cursor:pointer;
 }
 
+.content-nav-item-selected > .content-nav-item {
+	color: #2898CD;
+}
+
 #content-nav a:last-child .content-nav-item {
 	border-right: none;
-}
-.content-nav-item-selected {
-	color: #2898CD;
 }
 
 .content-nav-item-selected .content-nav-item:before, .content-nav-item-selected .content-nav-item:after {
@@ -37,7 +38,6 @@
 	border-top: 10px solid #FFF;
 	z-index: 1;
 }
-
 
 .content-nav-item-icon {
 	width: 77px;

@@ -1,0 +1,15 @@
+[
+["1 | Undo", "Reverses the most recent change."],
+["2 | Redo", "Reverses the most recent Undo."],
+["3 | Shape", "Choose a shape to draw: line, circle/ellipse, rectangle, or triangle."],
+["4 | Character Name", "Edit the name of the character."],
+["5 | Cut", "After selecting the Cut tool, you can tap a character or shape to remove it from the canvas."],
+["6 | Duplicate", "After selecting the Duplicate tool, you can tap a character or shape to create a copy of it."],
+["7 | Rotate", "After selecting the Rotate tool, you can rotate a character or shape around its center."],
+["8 | Drag", "After selecting the Drag tool, you can drag a character or shape on the canvas. If you tap on a shape, you can then edit the shape by dragging the dots that appear."],
+["9 | Save", "Save changes and leave the Paint Editor."],
+["10 | Fill", "After selecting the Fill tool, you can tap any section of a character or shape to fill it with the currently selected color."],
+["11 | Camera", "After selecting the Camera tool, you can tap any section of a character or shape, and then tap the camera button to fill the section with a new photo taken with the camera."],
+["12 | Color", "Select a new color to use for drawing and filling in shapes."],
+["13 | Line Width", "Change the width of the lines in the shapes you are drawing."],
+]

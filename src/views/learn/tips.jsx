@@ -2,9 +2,9 @@ import React from 'react';
 
 var classNames = require('classnames');
 
-var GenericSectionItem = require('../../../components/tab-sections/generic-section/generic-section-item.jsx');
-var GenericSection = require('../../../components/tab-sections/generic-section/generic-section.jsx').generic;
-var GenericSectionVideo = require('../../../components/tab-sections/generic-section/generic-section.jsx').video;
+var GenericSectionItem = require('../../components/tab-sections/generic-section/generic-section-item.jsx');
+var GenericSection = require('../../components/tab-sections/generic-section/generic-section.jsx').generic;
+var GenericSectionVideo = require('../../components/tab-sections/generic-section/generic-section.jsx').video;
 
 var TipsSection = React.createClass({
   render: function() {
@@ -12,8 +12,8 @@ var TipsSection = React.createClass({
       <div>
         <div
           className={classNames(
-            "content-section", 
-            "learn-tips", 
+            "content-section",
+            "learn-tips",
             {"content-section-selected": (this.props.sectionIndex == this.props.activeSectionIndex) && !this.props.activeSubsection }
           )}
           id="tips-section">
@@ -106,7 +106,7 @@ var TipsSection = React.createClass({
             />
           </div>
         </div>
-        
+
         <GenericSectionVideo
           id="manage-projects-section"
           activeSubsection={this.props.activeSubsection}

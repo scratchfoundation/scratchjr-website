@@ -1,0 +1,155 @@
+{
+    "triggerBlocks": [
+        {
+            "title": "Start on Green Flag",
+            "image": "/images/onflag.png",
+            "description": "Starts the script when the Green Flag is tapped."
+        },
+        {
+            "title": "Start on Tap",
+            "image": "/images/ontap.png",
+            "description": "Starts the script when you tap on the character."
+        },
+        {
+            "title": "Start on Bump",
+            "image": "/images/onbump.png",
+            "description": "Starts the script when the character is touched by another character."
+        },
+        {
+            "title": "Start on Message",
+            "image": "/images/messagereceive.png",
+            "description": "Starts the script whenever a message of the specified color is sent."
+        },
+        {
+            "title": "Send Message",
+            "image": "/images/messagesend.png",
+            "description": "Sends a message of the specified color."
+        }
+    ],
+    "motionBlocks": [
+        {
+            "title": "Move Right",
+            "image": "/images/right.png",
+            "description": "Moves the character a specified number of grid squares to the right."
+        },
+        {
+            "title": "Move Left",
+            "image": "/images/left.png",
+            "description": "Moves the character a specified number of grid squares to the left."
+        },
+        {
+            "title": "Move Up",
+            "image": "/images/up.png",
+            "description": "Moves the character a specified number of grid squares up."
+        },
+        {
+            "title": "Move Down",
+            "image": "/images/down.png",
+            "description": "Moves the character a specified number of grid squares down."
+        },
+        {
+            "title": "Turn Right",
+            "image": "/images/turnright.png",
+            "description": "Rotates the character clockwise a specified amount. Turn 12 for a full rotation."
+        },
+        {
+            "title": "Turn Left",
+            "image": "/images/turnleft.png",
+            "description": "Rotates the character counterclockwise a specified amount. Turn 12 for a full rotation."
+        },
+        {
+            "title": "Hop",
+            "image": "/images/hop.png",
+            "description": "Moves the character up a specified number of grid squares and then down again."
+        },
+        {
+            "title": "Go Home",
+            "image": "/images/gohome.png",
+            "description": "Resets the character's location to its starting position. (To set a new starting position, drag the character to the location)."
+        }
+    ],
+    "looksBlocks": [
+        {
+            "title": "Say",
+            "image": "/images/say.png",
+            "description": "Shows a specified message in a speech bubble above the character."
+        },
+        {
+            "title": "Grow",
+            "image": "/images/grow.png",
+            "description": "Increases the character's size."
+        },
+        {
+            "title": "Shrink",
+            "image": "/images/shrink.png",
+            "description": "Decreases the character's size."
+        },
+        {
+            "title": "Reset Size",
+            "image": "/images/reset.png",
+            "description": "Returns the character to its default size."
+        },
+        {
+            "title": "Hide",
+            "image": "/images/hide.png",
+            "description": "Fades out the character until it is invisible."
+        },
+        {
+            "title": "Show",
+            "image": "/images/show.png",
+            "description": "Fades in the character until it is fully visible."
+        }
+    ],
+    "soundBlocks": [
+        {
+            "title": "Pop",
+            "image": "/images/pop.png",
+            "description": "Plays a 'Pop' Sound"
+        },
+        {
+            "title": "Play Recorded Sound",
+            "image": "/images/playsound.png",
+            "description": "Plays a sound recorded by the user."
+        }
+    ],
+    "controlBlocks": [
+        {
+            "title": "Wait",
+            "image": "/images/wait.png",
+            "description": "Pauses the script for a specified amount of time (in tenths of seconds)."
+        },
+        {
+            "title": "Stop",
+            "image": "/images/stop.png",
+            "description": "Stops all the characters' scripts."
+        },
+        {
+            "title": "Set Speed",
+            "image": "/images/speed.png",
+            "description": "Changes the rate at which certain blocks are run."
+        },
+        {
+            "title": "Repeat",
+            "image": "/images/repeat.png",
+            "imageClass": "block-image-repeat",
+            "description": "Runs the blocks inside a specified number of times."
+        }
+    ],
+    "endBlocks": [
+        {
+            "title": "End",
+            "image": "/images/end.png",
+            "description": "Indicates the end of the script (but does not affect the script in any way)."
+        },
+        {
+            "title": "Repeat Forever",
+            "image": "/images/forever.png",
+            "description": "Runs the script over and over."
+        },
+        {
+            "title": "Go to Page",
+            "image": "/images/page.png",
+            "description": "Changes to the specified page of the project."
+        }
+    ]
+}

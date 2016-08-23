@@ -10,12 +10,12 @@
 		"title": "About"
 	},
 	{
-		"pattern": "/learn",
+		"pattern": "/learn(/*)?",
 		"view": "learn",
 		"title": "Learn"
 	},
 	{
-		"pattern": "/teach",
+		"pattern": "/teach(/*)?",
 		"view": "teach",
 		"title": "Teach"
 	},
