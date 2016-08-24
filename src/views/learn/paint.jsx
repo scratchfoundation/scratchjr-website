@@ -1,124 +1,189 @@
 import React from 'react';
+import GuideButton from '../../components/guidebutton/guidebutton.jsx';
+import GuideKey from '../../components/guidekey/guidekey.jsx';
 
-var classNames = require('classnames');
+import paintKey from './paint.json';
+import './paint.scss';
 
-var PaintSection = React.createClass({
-    render: function() {
+export default class PaintSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            // default to first key item
+            currentIndex: 0
+        };
+    }
+    changeHandler (i) {
+        this.setState({currentIndex: i});
+    }
+    render () {
         return (
-            <div 
-                className={classNames(
-                    "content-section", 
-                    "learn-paint", 
-                    {"content-section-selected": this.props.sectionIndex == this.props.activeSectionIndex}
-                )}
-                id="paint-section">
-                <a href="pdfs/paint_editor_guide.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
+            <div className="content-section learn-paint" id="paint-section">
+                <a href="/pdfs/paint_editor_guide.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
                 <div className="paint-container">
+                    <img className="ipad-project-view" src="/images/learnpaint.png" />
                     {/* 1. Undo */}
-                    <div className="paint-button paint-button-selected" id="paint-button-undo">
-                        <div className="paint-button-text">1</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-undo"></div>
-                    <div className="paint-dot" id="paint-dot-undo"></div>
+                    <GuideButton
+                        name='paint-button-undo'
+                        index={0}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-undo"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-undo"}
+                        ]}
+                        selected={this.state.currentIndex == 0}
+                    />
                     {/* 2. Redo */}
-                    <div className="paint-button" id="paint-button-redo">
-                        <div className="paint-button-text">2</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-redo"></div>
-                    <div className="paint-dot" id="paint-dot-redo"></div>
+                    <GuideButton
+                        name='paint-button-redo'
+                        index={1}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-redo"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-redo"}
+                        ]}
+                        selected={this.state.currentIndex == 1}
+                    />
                     {/* 3. Select Shape */}
-                    <div className="paint-button" id="paint-button-select-shape">
-                        <div className="paint-button-text">3</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-select-shape-1"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-select-shape-1"></div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-select-shape-2"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-select-shape-2"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-select-shape-3"></div>
+                    <GuideButton
+                        name='paint-button-select-shape'
+                        index={2}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-select-shape-1"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-select-shape-1"},
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-select-shape-2"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-select-shape-2"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-select-shape-3"}
+                        ]}
+                        selected={this.state.currentIndex == 2}
+                    />
                     {/* 4. Character Name */}
-                    <div className="paint-button" id="paint-button-character-name">
-                        <div className="paint-button-text">4</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-character-name"></div>
-                    <div className="paint-dot" id="paint-dot-character-name"></div>
+                    <GuideButton
+                        name='paint-button-character-name'
+                        index={3}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-character-name"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-character-name"}
+                        ]}
+                        selected={this.state.currentIndex == 3}
+                    />
                     {/* 5. Cut */}
-                    <div className="paint-button" id="paint-button-cut">
-                        <div className="paint-button-text">5</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-cut"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-cut"></div>
-                    <div className="paint-dot" id="paint-dot-cut"></div>
-                    <img className="ipad-project-view" src="images/learnpaint.png" />
+                    <GuideButton
+                        name='paint-button-cut'
+                        index={4}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-cut"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-cut"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-cut"}
+                        ]}
+                        selected={this.state.currentIndex == 4}
+                    />
                     {/* 6. Duplicate */}
-                    <div className="paint-button" id="paint-button-duplicate">
-                        <div className="paint-button-text">6</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-duplicate"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-duplicate"></div>
-                    <div className="paint-dot" id="paint-dot-duplicate"></div>
+                    <GuideButton
+                        name='paint-button-duplicate'
+                        index={5}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-duplicate"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-duplicate"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-duplicate"}
+                        ]}
+                        selected={this.state.currentIndex == 5}
+                    />
                     {/* 7. Rotate */}
-                    <div className="paint-button" id="paint-button-rotate">
-                        <div className="paint-button-text">7</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-rotate"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-rotate"></div>
-                    <div className="paint-dot" id="paint-dot-rotate"></div>
+                    <GuideButton
+                        name='paint-button-rotate'
+                        index={6}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-rotate"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-rotate"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-rotate"}
+                        ]}
+                        selected={this.state.currentIndex == 6}
+                    />
                     {/* 8. Drag */}
-                    <div className="paint-button" id="paint-button-drag">
-                        <div className="paint-button-text">8</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-drag"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-drag"></div>
-                    <div className="paint-dot" id="paint-dot-drag"></div>
+                    <GuideButton
+                        name='paint-button-drag'
+                        index={7}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-drag"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-drag"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-drag"}
+                        ]}
+                        selected={this.state.currentIndex == 7}
+                    />
                     {/* 9. Save */}
-                    <div className="paint-button" id="paint-button-save">
-                        <div className="paint-button-text">9</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-save"></div>
-                    <div className="paint-dot" id="paint-dot-save"></div>
+                    <GuideButton
+                        name='paint-button-save'
+                        index={8}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-save"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-save"}
+                        ]}
+                        selected={this.state.currentIndex == 8}
+                    />
                     {/* 10. Fill */}
-                    <div className="paint-button" id="paint-button-fill">
-                        <div className="paint-button-text">10</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-fill"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-fill"></div>
-                    <div className="paint-dot" id="paint-dot-fill"></div>
+                    <GuideButton
+                        name='paint-button-fill'
+                        index={9}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-fill"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-fill"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-fill"}
+                        ]}
+                        selected={this.state.currentIndex == 9}
+                    />
                     {/* 11. Camera */}
-                    <div className="paint-button" id="paint-button-camera">
-                        <div className="paint-button-text">11</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-camera"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-camera"></div>
-                    <div className="paint-dot" id="paint-dot-camera"></div>
+                    <GuideButton
+                        name='paint-button-camera'
+                        index={10}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-camera"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-camera"},
+                            {"lineClass":"guide-dot", "lineId": "paint-dot-camera"}
+                        ]}
+                        selected={this.state.currentIndex == 10}
+                    />
                     {/* 12. Select Color */}
-                    <div className="paint-button" id="paint-button-select-color">
-                        <div className="paint-button-text">12</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-select-color-1"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-select-color-1"></div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-select-color-2"></div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-select-color-3"></div>
+                    <GuideButton
+                        name='paint-button-select-color'
+                        index={11}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-select-color-1"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-select-color-1"},
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-select-color-2"},
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-select-color-3"}
+                        ]}
+                        selected={this.state.currentIndex == 11}
+                    />
                     {/* 13. Select Line Size */}
-                    <div className="paint-button" id="paint-button-select-line-size">
-                        <div className="paint-button-text">13</div>
-                    </div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-select-line-size-1"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-select-line-size-1"></div>
-                    <div className="paint-vertical-line" id="paint-vertical-line-select-line-size-2"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-select-line-size-2"></div>
-                    <div className="paint-horizontal-line" id="paint-horizontal-line-select-line-size-3"></div>
-                    <div id="paint-key" className="txlive-dynamic">
-                        <div id="paint-key-header">
-                            1 | Undo
-                        </div>
-                        <div id="paint-key-description">
-                            Reverses the most recent change.
-                        </div>
+                    <GuideButton
+                        name='paint-button-select-line-size'
+                        index={12}
+                        clickHandler={this.changeHandler.bind(this)}
+                        lines={[
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-select-line-size-1"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-select-line-size-1"},
+                            {"lineClass":"guide-vertical-line", "lineId": "paint-vertical-line-select-line-size-2"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-select-line-size-2"},
+                            {"lineClass":"guide-horizontal-line", "lineId": "paint-horizontal-line-select-line-size-3"}
+                        ]}
+                        selected={this.state.currentIndex == 12}
+                    />
+                    <div id="right-column">
+                        <GuideKey id={this.state.currentIndex + 1} {...paintKey[this.state.currentIndex]} />
                     </div>
                 </div>
             </div>
         );
     }
-});
-
-module.exports = PaintSection;
+}

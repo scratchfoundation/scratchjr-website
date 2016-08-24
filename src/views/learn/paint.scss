@@ -1,0 +1,319 @@
+/* Guide 2 - Paint Editor Guide */
+
+/* 1. Undo */
+
+#paint-button-undo {
+	left: 32px;
+	top: -54px;
+}
+
+#paint-vertical-line-undo {
+	height: 27px;
+	top: -20px;
+	left: 49px;
+}
+
+#paint-dot-undo {
+	left: 47px;
+}
+
+/* 2. Redo */
+
+#paint-button-redo {
+	left: 83px;
+	top: -54px;
+}
+
+#paint-vertical-line-redo {
+	height: 27px;
+	top: -20px;
+	left: 100px;
+}
+
+#paint-dot-redo {
+	left: 98px;
+}
+
+/* 3. Select Shape */
+
+#paint-button-select-shape {
+	left: 130px;
+	top: -54px;
+}
+
+#paint-vertical-line-select-shape-1 {
+	height: 160px;
+	top: -20px;
+	left: 146px;
+}
+
+#paint-horizontal-line-select-shape-1 {
+	width: 75px;
+	top: 140px;
+	left: 72px;
+}
+
+#paint-vertical-line-select-shape-2 {
+	height: 145px;
+	top: 70px;
+	left: 72px;
+}
+
+#paint-horizontal-line-select-shape-2 {
+	width: 10px;
+	top: 70px;
+	left: 62px;
+}
+
+#paint-horizontal-line-select-shape-3 {
+	width: 11px;
+	top: 215px;
+	left: 62px;
+}
+
+/* 4. Character Name */
+
+#paint-button-character-name {
+	left: 323px;
+	top: -54px;
+}
+
+#paint-vertical-line-character-name {
+	height: 27px;
+	top: -20px;
+	left: 340px;
+}
+
+#paint-dot-character-name {
+	left: 338px;
+}
+
+/* 5. Cut */
+
+#paint-button-cut {
+	left: 406px;
+	top: -54px;
+}
+
+#paint-vertical-line-cut {
+	height: 306px;
+	top: -20px;
+	left: 422px;
+}
+
+#paint-horizontal-line-cut {
+	width: 180px;
+	top: 286px;
+	left: 422px;
+}
+
+#paint-dot-cut {
+	left: 602px;
+	top: 284px;
+}
+
+/* 6. Duplicate */
+
+#paint-button-duplicate {
+	left: 486px;
+	top: -54px;
+}
+
+#paint-vertical-line-duplicate {
+	height: 271px;
+	top: -20px;
+	left: 502px;
+}
+
+#paint-horizontal-line-duplicate {
+	width: 100px;
+	top: 251px;
+	left: 502px;
+}
+
+#paint-dot-duplicate {
+	left: 602px;
+	top: 249px;
+}
+
+/* 7. Rotate */
+
+#paint-button-rotate {
+	left: 526px;
+	top: -54px;
+}
+
+#paint-vertical-line-rotate {
+	height: 222px;
+	top: -20px;
+	left: 542px;
+}
+
+#paint-horizontal-line-rotate {
+	width: 60px;
+	top: 202px;
+	left: 542px;
+}
+
+#paint-dot-rotate {
+	left: 602px;
+	top: 200px;
+}
+
+/* 8. Drag */
+
+#paint-button-drag {
+	left: 566px;
+	top: -54px;
+}
+
+#paint-vertical-line-drag {
+	height: 185px;
+	top: -20px;
+	left: 582px;
+}
+
+#paint-horizontal-line-drag {
+	width: 22px;
+	top: 164px;
+	left: 582px;
+}
+
+#paint-dot-drag {
+	left: 602px;
+	top: 162px;
+}
+
+/* 9. Save */
+
+#paint-button-save {
+	left: 608px;
+	top: -54px;
+}
+
+#paint-vertical-line-save {
+	height: 27px;
+	top: -20px;
+	left: 625px;
+}
+
+#paint-dot-save {
+	top: 7px;
+	left: 623px;
+}
+
+/* 10. Fill */
+
+#paint-button-fill {
+	left: 575px;
+	top: 497px;
+}
+
+#paint-vertical-line-fill {
+	height: 121px;
+	top: 377px;
+	left: 591px;
+}
+
+#paint-horizontal-line-fill {
+	width: 13px;
+	top: 377px;
+	left: 591px;
+}
+
+#paint-dot-fill {
+	left: 602px;
+	top: 375px;
+}
+
+/* 11. Camera */
+
+#paint-button-camera {
+	left: 535px;
+	top: 497px;
+}
+
+#paint-vertical-line-camera {
+	height: 160px;
+	top: 338px;
+	left: 551px;
+}
+
+#paint-horizontal-line-camera {
+	width: 52px;
+	top: 338px;
+	left: 551px;
+}
+
+#paint-dot-camera {
+	left: 602px;
+	top: 336px;
+}
+
+/* 12. Select Color */
+
+#paint-button-select-color {
+	left: 319px;
+	top: 497px;
+}
+
+#paint-vertical-line-select-color-1 {
+	height: 32px;
+	top: 466px;
+	left: 335px;
+}
+
+#paint-horizontal-line-select-color-1 {
+	width: 614px;
+	top: 466px;
+	left: 27px;
+}
+
+#paint-vertical-line-select-color-2 {
+	height: 11px;
+	top: 455px;
+	left: 27px;
+}
+
+#paint-vertical-line-select-color-3 {
+	height: 11px;
+	top: 455px;
+	left: 640px;
+}
+
+/* 13. Line Size */
+
+#paint-button-select-line-size {
+	left: 135px;
+	top: 497px;
+}
+
+#paint-vertical-line-select-line-size-1 {
+	height: 187px;
+	top: 310px;
+	left: 151px;
+}
+
+#paint-horizontal-line-select-line-size-1 {
+	width: 79px;
+	top: 310px;
+	left: 73px;
+}
+
+#paint-vertical-line-select-line-size-2 {
+	height: 145px;
+	top: 240px;
+	left: 73px;
+}
+
+#paint-horizontal-line-select-line-size-2 {
+	width: 10px;
+	top: 240px;
+	left: 63px;
+}
+
+#paint-horizontal-line-select-line-size-3 {
+	width: 11px;
+	top: 385px;
+	left: 63px;
+}

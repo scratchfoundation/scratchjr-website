@@ -1,0 +1,40 @@
+.guide-button {
+	font-family: "Lucida Grande", arial, sans-serif;
+	border-radius: 50%;
+	position: absolute;
+	border: 1px solid #808080;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.guide-button-text {
+	padding: 7px;
+}
+
+.guide-button-selected {
+	border: 1px solid #2898CD;
+	background-color: #2898CD;
+	color: white;
+}
+
+.guide-dot {
+	height: 5px;
+	width: 5px;
+    top: 7px;
+	border-radius: 50%;
+	background-color: #333333;
+	position: absolute;
+}
+
+.guide-vertical-line {
+	border-left: 1px solid black;
+	position: absolute;
+}
+
+.guide-horizontal-line {
+	border-top: 1px solid black;
+	position: absolute;
+}
