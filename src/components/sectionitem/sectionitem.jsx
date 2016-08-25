@@ -42,7 +42,9 @@ export class LinkedSectionItem extends React.Component {
             </Link>
             <div className='content-section-item-description'>
               {this.props.description}
-              <Link to={this.props.linkURL}>{this.props.linkText}</Link>
+              &nbsp;<Link to={this.props.linkURL}>
+                  {this.props.linkText}
+              </Link>
             </div>
           </div>
         );
@@ -86,4 +88,25 @@ StaticLinkSectionItem.propTypes = {
     description: React.PropTypes.string.isRequired,
     linkURL: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string.isRequired
+};
+
+export class Section extends React.Component {
+    render () {
+        return (
+            <div className="content-section content-subpage" id={this.props.id}>
+              <div className="content-section-title">
+                {this.props.title}
+              </div>
+              <div className="content-section-description">
+                {this.props.description}
+              </div>
+              {this.props.children}
+            </div>
+        );
+    }
+}
+Section.propTypes = {
+    id: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired,
+    description: React.PropTypes.string.isRequired
 };
