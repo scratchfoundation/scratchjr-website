@@ -21,11 +21,7 @@ export default class HourOfCode extends React.Component {
                             <StaticLinkSectionItem
                                 format='full'
                                 title='Can I Make the Sun Set?'
-                                thumbnail={
-                                    <img
-                                        className = 'content-section-item-thumbnail-image'
-                                        src = '/images/activitycards/card06-sun.png' />
-                                }
+                                thumbnail='/images/activitycards/card06-sun.png'
                                 description=
                                     'Students will get an introduction to programming by making a sun set over a city
                                     landscape! [Ages 5 - 9. Programming, Storytelling, Mathematics,Creativity] '
@@ -35,11 +31,7 @@ export default class HourOfCode extends React.Component {
                             <StaticLinkSectionItem
                                 format='full'
                                 title='Can I Make a Spooky Forest?'
-                                thumbnail={
-                                    <img
-                                        className = 'content-section-item-thumbnail-image'
-                                        src = '/images/activitycards/card05-forest.png' />
-                                }
+                                thumbnail='/images/activitycards/card05-forest.png'
                                 description=
                                     'Students will learn more features of ScratchJr by creating a spooky
                                     forest with multiple characters! [Ages 5 - 9. Art, Storytelling, Sequence] '
@@ -49,11 +41,7 @@ export default class HourOfCode extends React.Component {
                             <StaticLinkSectionItem
                                 format='full'
                                 title='Can I Make My Characters Greet Each Other?'
-                                thumbnail={
-                                    <img
-                                        className = 'content-section-item-thumbnail-image'
-                                        src = '/images/activitycards/card08-greet.png' />
-                                }
+                                thumbnail='/images/activitycards/card08-greet.png'
                                 description=
                                     'Students will learn advanced features of the ScratchJr app when
                                     they make a dog and kitten meet each other and exchange hellos! [Ages 5 - 9.

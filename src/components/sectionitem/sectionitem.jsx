@@ -4,13 +4,20 @@ import './sectionitem.scss';
 
 export class SectionItem extends React.Component {
     render () {
+        var thumb;
+        console.log ("type = " + typeof(this.props.thumbnail))
+        if (typeof this.props.thumbnail == 'string') {
+            thumb = <img className = 'content-section-item-thumbnail-image' src = {this.props.thumbnail} />
+        } else {
+            thumb = this.props.thumbnail
+        }
         return (
             <div className={'content-section-' + this.props.format + '-item'}>
                 <div className='content-section-item-title'>
                     {this.props.title}
                 </div>
                 <div className='content-section-item-thumbnail'>
-                    {this.props.thumbnail}
+                    {thumb}
                 </div>
                 <div className='content-section-item-description'>
                     {this.props.description}
@@ -22,12 +29,19 @@ export class SectionItem extends React.Component {
 SectionItem.propTypes = {
     title: React.PropTypes.string.isRequired,
     format: React.PropTypes.oneOf(['full', 'half']).isRequired,
-    thumbnail: React.PropTypes.object.isRequired,
+    thumbnail: React.PropTypes.oneOfType([React.PropTypes.object,React.PropTypes.string]).isRequired,
     description: React.PropTypes.string.isRequired
 };
 
 export class LinkedSectionItem extends React.Component {
     render () {
+        var thumb;
+        console.log ("type = " + typeof(this.props.thumbnail))
+        if (typeof this.props.thumbnail == 'string') {
+            thumb = <img className = 'content-section-item-thumbnail-image' src = {this.props.thumbnail} />
+        } else {
+            thumb = this.props.thumbnail
+        }
         return (
           <div className={'content-section-' + this.props.format + '-item'}>
             <Link to={this.props.linkURL}>
@@ -37,7 +51,7 @@ export class LinkedSectionItem extends React.Component {
             </Link>
             <Link to={this.props.linkURL}>
             <div className='content-section-item-thumbnail'>
-              {this.props.thumbnail}
+              {thumb}
             </div>
             </Link>
             <div className='content-section-item-description'>
@@ -53,7 +67,7 @@ export class LinkedSectionItem extends React.Component {
 LinkedSectionItem.propTypes = {
     title: React.PropTypes.string.isRequired,
     format: React.PropTypes.oneOf(['full', 'half']).isRequired,
-    thumbnail: React.PropTypes.object.isRequired,
+    thumbnail: React.PropTypes.oneOfType([React.PropTypes.object,React.PropTypes.string]).isRequired,
     description: React.PropTypes.string.isRequired,
     linkURL: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string.isRequired
@@ -61,6 +75,13 @@ LinkedSectionItem.propTypes = {
 
 export class StaticLinkSectionItem extends React.Component {
     render () {
+        var thumb;
+        console.log ("type = " + typeof(this.props.thumbnail))
+        if (typeof this.props.thumbnail == 'string') {
+            thumb = <img className = 'content-section-item-thumbnail-image' src = {this.props.thumbnail} />
+        } else {
+            thumb = this.props.thumbnail
+        }
         return (
           <div className={'content-section-' + this.props.format + '-item'}>
             <a href={this.props.linkURL} target='_blank'>
@@ -70,12 +91,11 @@ export class StaticLinkSectionItem extends React.Component {
             </a>
             <a href={this.props.linkURL} target='_blank'>
             <div className='content-section-item-thumbnail'>
-              {this.props.thumbnail}
+              {thumb}
             </div>
             </a>
             <div className='content-section-item-description'>
-                {this.props.description}
-                <a href={this.props.linkURL} target='_blank'>{this.props.linkText}</a>
+                {this.props.description} <a href={this.props.linkURL} target='_blank'>{this.props.linkText}</a>
             </div>
           </div>
         );
@@ -84,7 +104,7 @@ export class StaticLinkSectionItem extends React.Component {
 StaticLinkSectionItem.propTypes = {
     title: React.PropTypes.string.isRequired,
     format: React.PropTypes.oneOf(['full', 'half']).isRequired,
-    thumbnail: React.PropTypes.object.isRequired,
+    thumbnail: React.PropTypes.oneOfType([React.PropTypes.object,React.PropTypes.string]).isRequired,
     description: React.PropTypes.string.isRequired,
     linkURL: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string.isRequired
