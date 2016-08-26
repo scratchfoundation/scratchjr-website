@@ -122,7 +122,7 @@ export default class InterfaceSection extends React.Component {
                         index={8}
                         clickHandler={this.changeHandler.bind(this)}
                         lines={[
-                            {"lineClass": "guide-vertical-line", "lineId": "interface-vertical-line-"},
+                            {"lineClass": "guide-vertical-line", "lineId": "interface-vertical-line-pages"},
                             {"lineClass": "guide-dot", "lineId": "interface-dot-pages"}
                         ]}
                         selected={this.state.currentIndex == 8}
