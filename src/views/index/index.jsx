@@ -8,7 +8,7 @@ import Carousel from '../../components/carousel/carousel.jsx';
 import './index.scss';
 
 export default class Index extends React.Component {
-    render () {
+    render() {
         var images = [
             '/images/slide1.png',
             '/images/slide2.png',
@@ -23,9 +23,10 @@ export default class Index extends React.Component {
 
                 <div id='content'>
                     <div id='announcement-banner'>
-                        ScratchJr is available as a free app
-                        for <a href='https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8'>
-                        iPads</a> and <a href='https://play.google.com/store/apps/details?id=org.scratchjr.android'>
+                        ScratchJr is available as a free app for <a
+                        href='https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8'>
+                        iPads</a> and <a
+                        href='https://play.google.com/store/apps/details?id=org.scratchjr.android'>
                         Android</a> tablets.
                     </div>
 
@@ -39,10 +40,10 @@ export default class Index extends React.Component {
                         </div>
                         {/* end content-header-second */}
                         <div id='content-body'>
-                            Coding is the new literacy! With ScratchJr, young children (ages 5-7)
-                            can program their own interactive stories and games. In the process,
-                            they learn to solve problems, design projects, and express themselves
-                            creatively on the computer.
+                            Coding is the new literacy! With ScratchJr, young children (ages 5-7) can
+                            program their own interactive stories and games. In the process, they learn to
+                            solve problems, design projects, and express themselves creatively on the
+                            computer.
                             <div id='store-badges'>
                                 <a href='https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8'>
                                     <img alt='Download on the App Store' src='/images/Apple_appstore.svg'/>
@@ -50,10 +51,18 @@ export default class Index extends React.Component {
                                 <a href='https://play.google.com/store/apps/details?id=org.scratchjr.android'>
                                     <img
                                         alt='Get it on Google Play'
-                                        src='/images/GooglePlay.svg'
-                                        width='135px'
-                                        height='40px'
-                                    />
+                                        src='/images/GooglePlay.svg' />
+                                </a>
+                                <a
+                                    href='https://chrome.google.com/webstore/detail/scratchjr/oipimoeophamdcmjcfameoojlbhbgjda'>
+                                    <img
+                                        alt='Download on the Chrome Web Store'
+                                        src='/images/ChromeWebStore_Badge.svg'/>
+                                </a>
+                                <a href='https://www.amazon.com/gp/product/B01AKGTD2E'>
+                                    <img
+                                        alt='Get it on Amazon'
+                                        src='/images/amazon-underground-app-us-black.svg'/>
                                 </a>
                             </div>
                             {/* end store-badges */}
@@ -70,16 +79,16 @@ export default class Index extends React.Component {
                             News
                         </div>
                         <div className='content-news-body'>
-                            ScratchJr is available on <a
-                            href='http://www.amazon.com/Scratch-Foundation-ScratchJr/dp/B01AKGTD2E'
-                            target='_blank'>
-                            Amazon</a>. Now, kids can create interactive stories and games on Kindle!
+                            ScratchJr is now available in Spanish for <a href='https://play.google.com/store/apps/details?id=org.scratchjr.android'>
+                                Android
+                            </a> and <a
+                            href='https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8'>
+                                iOS
+                            </a> tablets!
                         </div>
                         <div className='content-news-body'>
-                            Newly released by <a href='https://www.nostarch.com/scratchjr' target='_blank'>
-                            No Starch Press</a>, <a href='/about/faq'>
-                            The Official ScratchJr Book</a>. The Official ScratchJr Book is now available
-                            in paperback or ebook format!
+                            No Starch Press has re-released <a href='https://www.nostarch.com/scratchjr' target='_blank'>
+                                The Official ScratchJr Book</a> in Spanish paperback and ebook format!
                         </div>
                     </div>
 
@@ -89,8 +98,8 @@ export default class Index extends React.Component {
                                 Join the Discussion
                             </div>
                             <div id='discussion-body'>
-                                We introduced ourselves. Now it's your turn. Drop us a line
-                                with feedback, report bugs &amp; glitches, or just say 'hi!'
+                                We introduced ourselves. Now it's your turn. Drop us a line with feedback,
+                                report bugs &amp; glitches, or just say 'hi!'
                                 <br></br>
                                 <a href=' https://twitter.com/intent/tweet?screen_name=ScratchJr'>
                                     <div className='blue-button'>
@@ -100,7 +109,9 @@ export default class Index extends React.Component {
                             </div>
                         </div>
                         <div id='disscussion-tweets'>
-                            <Timeline widgetId={'618881920324079616'} options={{
+                            <Timeline
+                                widgetId={'618881920324079616'}
+                                options={{
                                 username: 'ScratchJr',
                                 width: '425',
                                 height: '250',
@@ -117,6 +128,4 @@ export default class Index extends React.Component {
 }
 
 render(
-    <Index/>,
-    document.getElementById('app')
-);
+    <Index/>, document.getElementById('app'));

@@ -29,7 +29,8 @@ export default class Footer extends React.Component {
                         </a>
                     </div>
                     <div id='footer-nav'>
-                        <a href='https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform?usp=send_form'>
+                        <a
+                            href='https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform?usp=send_form'>
                             <div className='blue-button'>
                                 Join Mailing List
                             </div>

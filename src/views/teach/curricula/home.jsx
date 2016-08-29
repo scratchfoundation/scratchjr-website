@@ -43,9 +43,9 @@ export default class HomeSection extends React.Component {
                         linkText='Read more'
                         linkURL='/teach/curricula/playground'/>
                     <LinkedSectionItem
-                        title='Reinforcing the Common Core Curriculum'
+                        title='Reinforcing Literacy and Math Curriculum'
                         format='full'
-                        thumbnail='/images/commoncore/project1.png'
+                        thumbnail='/images/literacymath/project1.png'
                         description='These curricular modules describe ScratchJr projects that reinforce the Common Core Standards. They could serve as games programmed by older ScratchJr students to be played by younger ScratchJr students... '
                         linkURL='/teach/curricula/literacy-math'
                         linkText='Read more'/>

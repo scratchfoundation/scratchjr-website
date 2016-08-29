@@ -19,7 +19,7 @@ export default class PaintSection extends React.Component {
     render () {
         return (
             <div className="content-section learn-paint" id="paint-section">
-                <a href="/pdfs/paint_editor_guide.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
+                <a href="/pdfs/paint-editor-guide.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
                 <div className="paint-container">
                     <img className="ipad-project-view" src="/images/learnpaint.png" />
                     {/* 1. Undo */}

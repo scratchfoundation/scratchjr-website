@@ -8,7 +8,7 @@ export default class BlocksSection extends React.Component {
             <div
                 className="content-section learn-blocks"
                 id="blocks-section">
-                <a href="pdfs/block_descriptions.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
+                <a href="/pdfs/block-descriptions.pdf" className="download-guide-link"><span className="download-icon">&#x2193;</span>Download guide as pdf</a>
                 {/* Yellow Blocks */}
                 <div className="block-category-header" id="yellow-block-category-header">
                     Triggering Blocks

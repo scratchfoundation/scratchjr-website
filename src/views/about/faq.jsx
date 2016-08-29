@@ -79,7 +79,7 @@ export default class FAQSection extends React.Component {
                             of ScratchJr, it will not allow it to be installed. If you believe that your tablet
                             does meet the minimum requirements (7-inch tablet) running Android 4.2 or greater,
                             and you are willing to side-load the apk, you can download and install a copy of
-                            the <a href='http://scratch-downloads.s3.amazonaws.com/jr/ScratchJr-1.1.apk'>
+                            the <a href='http://scratch-downloads.s3.amazonaws.com/jr/ScratchJr-1.2.1.apk'>
                             current version of ScratchJr APK</a>. <br /><br />
                             Please note that this version will not automatically update when there are new
                             versions available. We recommend that you sign up for the ScratchJr mailing list
@@ -108,8 +108,7 @@ export default class FAQSection extends React.Component {
                         <div className='content-description-answer'>
                             If ScratchJr can't record sounds or take a picture with the camera, it might be
                             that you didn't give ScratchJr access to the camera or microphone when you first
-                            downloaded the app. You can change this by going to
-                            <em>Settings > Privacy > Camera</em> on your device.
+                            downloaded the app. You can change this by going to <em>Settings > Privacy > Camera</em> on your device.
                             If the ScratchJr toggle is off, turn it on. Do the same for the microphone,
                             under <em>Settings > Privacy > Microphone</em>
                         </div>
@@ -120,8 +119,9 @@ export default class FAQSection extends React.Component {
                             Will ScratchJr be available in other languages?
                         </div>
                         <div className='content-description-answer'>
-                            The next version of ScratchJr will support Spanish, and we hope to include
-                            translation to other languages in future versions of ScratchJr. If you're
+                            ScratchJr version 1.2 (released April 2016) supports both
+                            English and Spanish, and we hope to include translation to other
+                            languages in future versions of ScratchJr. If you're
                             interested in volunteering to help with translations, please email <a
                             href='mailto:info@scratchjr.org'>info@scratchjr.org</a> with your
                             name and the language you can help with.
@@ -129,7 +129,7 @@ export default class FAQSection extends React.Component {
                     </div>
 
                     <div className='content-description-section'>
-                        <em className='content-description-answer'>Last updated: March 9, 2016</em>
+                        <em className='content-description-answer'>Last updated: April 21, 2016</em>
                     </div>
                 </div>
             </div>
