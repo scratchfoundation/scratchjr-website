@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {Router, Route, browserHistory, IndexRedirect, IndexRoute} from 'react-router';
+import { Router, Route, browserHistory, IndexRedirect, IndexRoute, applyRouterMiddleware } from 'react-router';
+import { useScroll } from 'react-router-scroll';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import TabNav from '../../components/tabnav/tabnav.jsx';
@@ -48,7 +49,7 @@ export default class Teach extends React.Component {
 }
 
 render((
-    <Router history={browserHistory}>
+    <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
         <Route path='/teach' component={Teach}>
             <Route path='activities' component={ActivitiesSection}/>
             <Route path='curricula' component={CurriculaSection}>
