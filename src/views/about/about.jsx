@@ -4,6 +4,7 @@ import {Router, Route, browserHistory, IndexRedirect} from 'react-router';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import TabNav from '../../components/tabnav/tabnav.jsx';
+import PageNotFound from '../../components/pagenotfound/pagenotfound.jsx';
 
 import InfoSection from './info.jsx';
 import PressSection from './press.jsx';
@@ -59,6 +60,7 @@ render((
             <Route path='faq' component={FAQSection}/>
             <Route path='videos' component={VideosSection}/>
             <IndexRedirect to='info'/>
+            <Route path="*" component={PageNotFound}/>
         </Route>
     </Router>
 ), document.getElementById('app'));

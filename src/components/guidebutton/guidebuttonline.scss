@@ -1,0 +1,18 @@
+.guide-dot {
+	height: 5px;
+	width: 5px;
+    top: 7px;
+	border-radius: 50%;
+	background-color: #333333;
+	position: absolute;
+}
+
+.guide-vertical-line {
+	border-left: 1px solid black;
+	position: absolute;
+}
+
+.guide-horizontal-line {
+	border-top: 1px solid black;
+	position: absolute;
+}

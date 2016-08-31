@@ -8,7 +8,7 @@ import Carousel from '../../components/carousel/carousel.jsx';
 import './index.scss';
 
 export default class Index extends React.Component {
-    render() {
+    render () {
         var images = [
             '/images/slide1.png',
             '/images/slide2.png',
