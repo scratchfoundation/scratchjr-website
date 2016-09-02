@@ -36,4 +36,8 @@ lint:
 
 # ------------------------------------
 
+test:
+	@make lint
+	@make build
+
 .PHONY: build clean deploy webpack stop start lint
