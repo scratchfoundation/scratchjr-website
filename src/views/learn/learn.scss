@@ -1,62 +1,72 @@
+$category-header: #fff;
+$category-yellow: #f4e025;
+$category-blue: #4a8ce3;
+$category-green: #48cc7e;
+$category-purple: #cd7cd1;
+$category-orange: #ffb254;
+$category-red: #ea2424;
+$text-color: #808080;
+$link-blue: #2898cd;
+
 /* Sub-Menus */
 .content-nav-item {
-  width: 24.9% !important;
+    width: 24.9% !important;
 }
 
 .interface-icon {
-	background-image: url(/images/interface_b.svg);
-	background-size: 100%;
+    background-image: url("/images/interface_b.svg");
+    background-size: 100%;
 }
 
 .content-nav-item-selected  .interface-icon {
-	background-image: url(/images/interface_o.svg);
+    background-image: url("/images/interface_o.svg");
 }
 
 .paint-icon {
-	background-image: url(/images/paint_b.svg);
-	background-size: 100%;
+    background-image: url("/images/paint_b.svg");
+    background-size: 100%;
 }
 
 .content-nav-item-selected  .paint-icon {
-	background-image: url(/images/paint_o.svg);
+    background-image: url("/images/paint_o.svg");
 }
 
 .blocks-icon {
-	background-image: url(/images/blocks_b.svg);
-	background-size: 100%;
+    background-image: url("/images/blocks_b.svg");
+    background-size: 100%;
 }
 
 .content-nav-item-selected  .blocks-icon {
-	background-image: url(/images/blocks_o.svg);
+    background-image: url("/images/blocks_o.svg");
 }
 
 .tips-icon {
-	background-image: url(/images/videos_b.svg);
-	background-size: 100%;
+    background-image: url("/images/videos_b.svg");
+    background-size: 100%;
 }
 
 .content-nav-item-selected  .tips-icon {
-	background-image: url(/images/videos_o.svg);
+    background-image: url("/images/videos_o.svg");
 }
 
 
 #tips-nav .content-nav-item-description {
-	width: 40%;
+    width: 40%;
 }
 .content-nav-item-description {
-	float: left;
-	line-height: 20px;
-	margin-left: 15px;
-	font-size: 12pt;
-	width: 47%;
-	margin-top: 25px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 15px;
+    width: 47%;
+    line-height: 20px;
+    font-size: 12pt;
 }
 
 .download-guide-link {
-	position: relative;
-	top: 10px;
-	left: 680px;
-	z-index: 1000;
+    position: relative;
+    top: 10px;
+    left: 680px;
+    z-index: 1000;
 }
 
 /* Guide Elements */
@@ -64,191 +74,191 @@
 .content-section.learn-interface,
 .content-section.learn-paint,
 .content-section.learn-blocks {
-	margin: 0;
-	display: inline;
+    display: inline;
+    margin: 0;
 }
 
 #ipad-project-view-wrapper {
-	position: relative;
+    position: relative;
 }
 
 .learn-tab {
-	display: none;
+    display: none;
 }
 
 .learn-tab-selected {
-	display: inline;
+    display: inline;
 }
 
 
-.learn-interface:after, .learn-paint:after
- {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 75px;
+.learn-interface:after, .learn-paint:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 75px;
+    line-height: 0;
+    content: ".";
 }
 
 .interface-container,
 .paint-container {
-	margin-top: 75px;
-	position: relative;
+    position: relative;
+    margin-top: 75px;
 }
 
 
 .ipad-project-view {
-	margin-left: 21px;
-	width: 629px;
-	float: left;
+    float: left;
+    margin-left: 21px;
+    width: 629px;
 }
 
 /* Guide 3 - Block Descriptions */
 
 #blocks-section {
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
 }
 
 .block-category-header {
-	color: white;
-	text-transform: uppercase;
-	padding-left: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-left: 24px;
-	width: 30%;
-	margin-top: 20px;
+    margin-top: 20px;
+    margin-left: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    width: 30%;
+    text-transform: uppercase;
+    color: $category-header;
 }
 
 #yellow-block-category-header {
-	background-color: #F4E025;
+    background-color: $category-yellow;
 }
 
 #blue-block-category-header {
-	background-color: #4A8CE3;
+    background-color: $category-blue;
 }
 
 #purple-block-category-header {
-	background-color: #CD7CD1;
+    background-color: $category-purple;
 }
 
 #green-block-category-header {
-	background-color: #48CC7E;
+    background-color: $category-green;
 }
 
 #orange-block-category-header {
-	background-color: #FFB254;
+    background-color: $category-orange;
 }
 
 #red-block-category-header {
-	background-color: #EA2424;
+    background-color: $category-red;
 }
 
 .block-category-header-line {
-	margin-left: 24px;
-	margin-right: 24px;
-	height: 2px;
+    margin-right: 24px;
+    margin-left: 24px;
+    height: 2px;
 }
 
 #yellow-block-category-header-line {
-	background-color: #F4E025;
+    background-color: $category-yellow;
 }
 
 #blue-block-category-header-line {
-	background-color: #4A8CE3;
+    background-color: $category-blue;
 }
 
 #purple-block-category-header-line {
-	background-color: #CD7CD1;
+    background-color: $category-purple;
 }
 
 #green-block-category-header-line {
-	background-color: #48CC7E;
+    background-color: $category-green;
 }
 
 #orange-block-category-header-line {
-	background-color: #FFB254;
+    background-color: $category-orange;
 }
 
 #red-block-category-header-line {
-	background-color: #EA2424;
+    background-color: $category-red;
 }
 
-
 .block-wrapper {
-	margin-top: 18px;
-	margin-left: 3%;
-	margin-right: 3%;
-	height: 140px;
-	color: #808080;
     float: left;
-	width: 40%;
-	padding-bottom: 10px;
+    margin-top: 18px;
+    margin-right: 3%;
+    margin-left: 3%;
+    padding-bottom: 10px;
+    width: 40%;
+    height: 140px;
+    color: $text-color;
 }
 
 .blocks-category-container > .block-wrapper:nth-child(even) {
     margin-left: 11%;
 }
+
 .blocks-category-container:after {
-	content: "";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 5px;
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 5px;
+    line-height: 0;
+    content: "";
 }
+
 .block-image-wrapper {
-	float: left;
+    float: left;
 }
 
 .block-title {
-	border-bottom: solid 1px #808080;
-	padding-bottom: 10px;
+    border-bottom: solid 1px $text-color;
+    padding-bottom: 10px;
 }
 
 .block-image {
-	margin-top: 20px;
-	margin-left: 10px;
-	width: 75px;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 75px;
 }
 
 .block-image-repeat {
-	margin-top: 20px;
-	margin-left: 10px;
-	width: 140px;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 140px;
 }
 
 .block-description {
-	float: right;
-	margin-top: 20px;
-	width: 55%;
-	font-size: 12px;
-	line-height: 20px;
+    float: right;
+    margin-top: 20px;
+    width: 55%;
+    line-height: 20px;
+    font-size: 12px;
 }
 
 .block-description-repeat {
-	float: right;
-	margin-top: 20px;
-	width: 145px;
-	font-size: 12px;
-	line-height: 20px;
+    float: right;
+    margin-top: 20px;
+    width: 145px;
+    line-height: 20px;
+    font-size: 12px;
 }
 
 .download-icon {
-  margin-right: 5px;
-  color: #2898CD;
-  font-weight: bolder;
+    margin-right: 5px;
+    color: $link-blue;
+    font-weight: bolder;
 }
 
 #download-guide-link {
-  float: right;
-  margin-right: 20px;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #2898CD;
-  text-decoration: none;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: $link-blue;
+    font-size: 14px;
 }
 
 /* End Guide 3 - Block Descriptions */

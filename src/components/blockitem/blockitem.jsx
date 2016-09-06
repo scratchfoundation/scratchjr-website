@@ -24,4 +24,4 @@ BlockItem.propTypes = {
     imageClass: React.PropTypes.string,
     description: React.PropTypes.string.isRequired
 };
-BlockItem.defaultProps = {imageClass: "block-image"}
+BlockItem.defaultProps = {imageClass: 'block-image'};

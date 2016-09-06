@@ -5,7 +5,7 @@ export default class GuideButtonLine extends React.Component {
     render () {
         var lineClass = 'guide-vertical-line';
         if (this.props.type == 'dot') {
-            lineClass = 'guide-dot'
+            lineClass = 'guide-dot';
         } else if (this.props.type == 'horizontal') {
             lineClass = 'guide-horizontal-line';
         }

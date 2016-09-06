@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './guidebutton.scss';
 
 export default class GuideButton extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
@@ -31,6 +31,7 @@ GuideButton.propTypes = {
     index: React.PropTypes.number.isRequired,
     clickHandler: React.PropTypes.func.isRequired,
     lines: React.PropTypes.array,
-    selected: React.PropTypes.bool
+    selected: React.PropTypes.bool,
+    children: React.PropTypes.node
 };
-GuideButton.defaultProps = {selected: false}
+GuideButton.defaultProps = {selected: false};

@@ -41,8 +41,8 @@ export default class About extends React.Component {
         ];
         return (
             <div>
-                <NavBar selected='about'/>
-                <div id='content'>
+                <NavBar selected="about"/>
+                <div id="content">
                     <TabNav items={tabs}/>
                     {this.props.children}
                 </div>
@@ -51,15 +51,18 @@ export default class About extends React.Component {
         );
     }
 }
+About.propTypes = {
+    children: React.PropTypes.node
+};
 
 render((
     <Router history={browserHistory}>
-        <Route path='/about' component={About}>
-            <Route path='info' component={InfoSection}/>
-            <Route path='press' component={PressSection}/>
-            <Route path='faq' component={FAQSection}/>
-            <Route path='videos' component={VideosSection}/>
-            <IndexRedirect to='info'/>
+        <Route path="/about" component={About}>
+            <Route path="info" component={InfoSection}/>
+            <Route path="press" component={PressSection}/>
+            <Route path="faq" component={FAQSection}/>
+            <Route path="videos" component={VideosSection}/>
+            <IndexRedirect to="info"/>
             <Route path="*" component={PageNotFound}/>
         </Route>
     </Router>

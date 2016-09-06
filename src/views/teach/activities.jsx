@@ -17,21 +17,21 @@ export default class ActivitiesSection extends React.Component {
                 </div>
                 <div className="content-section-items-container">
                     <StaticLinkSectionItem
-                        title='Introduction'
-                        format='full'
-                        thumbnail='/images/activitycards/intro.png'
+                        title="Introduction"
+                        format="full"
+                        thumbnail="/images/activitycards/intro.png"
                         description="Watch this video for a brief introduction to ScratchJr's interface..."
-                        linkURL='https://www.youtube.com/watch?v=ciWPaEgscr0&feature=youtu.be'
-                        linkText='See more'/>
+                        linkURL="https://www.youtube.com/watch?v=ciWPaEgscr0&feature=youtu.be"
+                        linkText="See more"/>
                 </div>
                 <div className="content-section-items-container">
                     {activities.map((activity, index) => {
                         return (
                             <StaticLinkSectionItem
                                 key={index}
-                                format='half'
+                                format="half"
                                 {...activity}
-                                linkText='Read more' />
+                                linkText="Read more" />
                         );
                     })}
 

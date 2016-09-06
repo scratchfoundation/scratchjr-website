@@ -10,7 +10,7 @@ export default class Privacy extends React.Component {
         return (
             <div>
                 <NavBar/>
-                <div id='content'>
+                <div id="content">
                     <h1>Privacy Policy</h1>
                     <p>
                         We created ScratchJr so that children can create their own
@@ -19,7 +19,7 @@ export default class Privacy extends React.Component {
                         parents. We wrote this privacy policy to explain what
                         information we collect, how we use it, and what we're doing
                         to keep it safe. If you have any questions regarding this
-                        privacy policy, you can <a href='mailto:info@scratchjr.org'>
+                        privacy policy, you can <a href="mailto:info@scratchjr.org">
                         contact us</a>.
                     </p>
                     <h2>What information does ScratchJr collect?</h2>

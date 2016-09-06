@@ -1,24 +1,39 @@
-/* override slick defaults */
+// override slick defaults
+$color: #fff;
+$active-color: #f5a322;
+
 .slick-slider {
-    margin-bottom: 0;
-    width: 900px;
-    margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    width: 900px;
+
     img {
         width: 900px;
         height: 507px;
     }
 }
+
 .slick-dots {
-    z-index: 100;
     top: 425px;
-    li button:before {
-        color: white;
-        opacity: 0.33;
-        font-size: 15px;
+    z-index: 100;
+
+    li button {
+
+        &::before {
+            opacity: .33;
+            color: $color;
+            font-size: 15px;
+        }
     }
-    li.slick-active button:before {
-        opacity: 0.85;
-        color: #f5a322;
+
+    li.slick-active {
+
+        button {
+            &::before {
+                opacity: .85;
+                color: $active-color;
+            }
+        }
     }
 }

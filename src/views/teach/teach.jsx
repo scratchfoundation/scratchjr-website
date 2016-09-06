@@ -5,6 +5,7 @@ import { useScroll } from 'react-router-scroll';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import TabNav from '../../components/tabnav/tabnav.jsx';
+import PageNotFound from '../../components/pagenotfound/pagenotfound.jsx';
 
 import ActivitiesSection from './activities.jsx';
 import CurriculaSection from './curricula.jsx';
@@ -16,7 +17,7 @@ import AssessmentsSection from './assessments.jsx';
 import './teach.scss';
 
 export default class Teach extends React.Component {
-    render() {
+    render () {
         var tabs = [
             {
                 url: '/teach/activities',
@@ -38,7 +39,7 @@ export default class Teach extends React.Component {
         return (
             <div>
                 <NavBar selected="teach"/>
-                <div id='content'>
+                <div id="content">
                     <TabNav items={tabs}/>
                     {this.props.children}
                 </div>
@@ -47,19 +48,23 @@ export default class Teach extends React.Component {
         );
     }
 }
+Teach.propTypes = {
+    children: React.PropTypes.node
+};
 
 render((
     <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
-        <Route path='/teach' component={Teach}>
-            <Route path='activities' component={ActivitiesSection}/>
-            <Route path='curricula' component={CurriculaSection}>
+        <Route path="/teach" component={Teach}>
+            <Route path="activities" component={ActivitiesSection}/>
+            <Route path="curricula" component={CurriculaSection}>
                 <IndexRoute component={CurriculaHomeSection}/>
-                <Route path='animated-genres' component={AnimatedGenresSection} />
-                <Route path='playground' component={PlaygroundSection} />
-                <Route path='literacy-math' component={LitMathSection} />
+                <Route path="animated-genres" component={AnimatedGenresSection} />
+                <Route path="playground" component={PlaygroundSection} />
+                <Route path="literacy-math" component={LitMathSection} />
             </Route>
-            <Route path='assessments' component={AssessmentsSection}/>
-            <IndexRedirect to='activities'/>
+            <Route path="assessments" component={AssessmentsSection}/>
+            <IndexRedirect to="activities"/>
+            <Route path="*" component={PageNotFound}/>
         </Route>
     </Router>
 ), document.getElementById('app'));

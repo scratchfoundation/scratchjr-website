@@ -1,54 +1,68 @@
+$title-color: #2898cd;
+$description-color: #808080;
+
 /* content-section defaults */
 .content-section-item-title {
-    padding-bottom: 10px;
-    font-weight: 900;
-    color: #2898cd;
-    width: 60%;
     display: inline-block;
+    padding-bottom: 10px;
+    width: 60%;
+    line-height: 18px;
+    color: $title-color;
+    font-size: 16px;
+    font-weight: 900;
 }
+
 .content-section-item-thumbnail {
     width: 100%;
 }
+
 .content-section-item-thumbnail-image {
-    width: 100%;
     border-radius: 20px;
-}
-.content-section-item-description {
     width: 100%;
-    color: #808080;
-    font-size: 14px;
-    line-height: 22px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    display: inline-block;
 }
+
+.content-section-item-description {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    line-height: 22px;
+    color: $description-color;
+    font-size: 14px;
+}
+
 .content-section-full-item,
 .content-section-half-item {
     display: inline-block;
-    padding-bottom: 30px;
     clear: both;
-    text-align: left;
+    padding-bottom: 30px;
     vertical-align: top;
+    text-align: left;
 }
+
 .content-section-full-item {
     width: 100%;
 }
+
 .content-section-half-item {
     display: inline-block;
-    padding-bottom: 30px;
     clear: both;
+    padding-bottom: 30px;
     width: 45%;
-    text-align: left;
     vertical-align: top;
+    text-align: left;
 }
+
 .content-section-items-container > .content-section-half-item:nth-child(even) {
     margin-left: 10%;
 }
+
 /* override styles for content-section-full-item */
 .content-section-full-item .content-section-item-thumbnail {
-    width: 37%;
     float: left;
+    width: 37%;
 }
+
 .content-section-full-item .content-section-item-age,
 .content-section-full-item .content-section-item-description,
 .content-section-full-item .content-section-item-title {

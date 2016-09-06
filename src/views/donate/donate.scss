@@ -1,18 +1,20 @@
+$text-color: #808080;
+
 p {
-	margin-left: 35px;
-	margin-right: 35px;
-	color: #808080;
-	line-height: 22px;
-	font-size: 15px;
+    margin-right: 35px;
+    margin-left: 35px;
+    line-height: 22px;
+    color: $text-color;
+    font-size: 15px;
 }
 
 .donation-block {
-	text-align: center;
-	display: block;
-	margin-bottom: 20px;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 #donate-button {
-	display: inline-block;
-	vertical-align: bottom;
+    display: inline-block;
+    vertical-align: bottom;
 }

@@ -1,21 +1,25 @@
+$button-border: #808080;
+$button-selected: #2898cd;
+$selected-text: #fff;
+
 .guide-button {
-	font-family: "Lucida Grande", arial, sans-serif;
-	border-radius: 50%;
-	position: absolute;
-	border: 1px solid #808080;
-	width: 32px;
-	height: 32px;
-	text-align: center;
-	cursor: pointer;
-	z-index: 100;
+    position: absolute;
+    z-index: 100;
+    border: 1px solid $button-border;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    font-family: "Lucida Grande", arial, sans-serif;
 }
 
 .guide-button-text {
-	padding: 7px;
+    padding: 7px;
 }
 
 .guide-button-selected {
-	border: 1px solid #2898CD;
-	background-color: #2898CD;
-	color: white;
+    border: 1px solid $button-selected;
+    background-color: $button-selected;
+    color: $selected-text;
 }

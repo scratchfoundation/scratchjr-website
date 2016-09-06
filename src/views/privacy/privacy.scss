@@ -1,14 +1,19 @@
+$link-blue: #2898cd;
+$text-color: #808080;
+
 h2 {
-	margin-left: 35px;
-	margin-top: 10px;
-	margin-bottom: 0px;
-	font-size: 24px;
-	color: #2898cd;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 35px;
+    color: $link-blue;
+    font-size: 24px;
 }
-p,ul {
-	margin-left: 35px;
-	margin-right: 35px;
-	color: #808080;
-	line-height: 22px;
-	font-size: 15px;
+
+p,
+ul {
+    margin-right: 35px;
+    margin-left: 35px;
+    line-height: 22px;
+    color: $text-color;
+    font-size: 15px;
 }

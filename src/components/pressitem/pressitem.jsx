@@ -3,7 +3,7 @@ import React from 'react';
 export default class PressItem extends React.Component {
     render () {
         return (
-            <div className='content-description-answer'>
+            <div className="content-description-answer">
                 <a href={this.props.url}>
                     {this.props.title}
                 </a>&nbsp;-&nbsp;

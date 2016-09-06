@@ -2,7 +2,7 @@ import React from 'react';
 import {StaticLinkSectionItem, LinkedSectionItem} from '../../../components/sectionitem/sectionitem.jsx';
 
 export default class HomeSection extends React.Component {
-    render() {
+    render () {
         return (
             <div className='content-section' id='curricula-section'>
                 <div className='content-section-title'>
@@ -25,30 +25,40 @@ export default class HomeSection extends React.Component {
                         title='Printable Block Images'
                         format='full'
                         thumbnail='/images/rightandleft.png'
-                        description='You can print high quality images of the ScratchJr blocks for classroom instruction... '
                         linkURL='/pdfs/blocks.pdf'
-                        linkText='Download PDF'/>
+                        linkText='Download PDF'>
+                        You can print high quality images of the ScratchJr blocks for classroom instruction...
+                    </StaticLinkSectionItem>
                     <LinkedSectionItem
                         title='Animated Genres Curriculum'
                         format='full'
                         thumbnail='/images/slide1.png'
-                        description='This curriculum provides students with the opportunity to learn all of the concepts in ScratchJr and apply these concepts in their own personal creations. At the heart of the curriculum are three types of interactive projects that can be made with ScratchJr... '
                         linkURL='/teach/curricula/animated-genres'
-                        linkText='Read more'/>
+                        linkText='Read more'>
+                        This curriculum provides students with the opportunity to learn
+                        all of the concepts in ScratchJr and apply these concepts in
+                        their own personal creations. At the heart of the curriculum are
+                        three types of interactive projects that can be made with ScratchJr...
+                    </LinkedSectionItem>
                     <LinkedSectionItem
                         title='Playground Games Curriculum'
                         format='full'
                         thumbnail='/images/playground/playground.png'
-                        description='In the eight lessons of this curriculum, children learn how to use ScratchJr as they re-create familiar playground games. ... '
                         linkText='Read more'
-                        linkURL='/teach/curricula/playground'/>
+                        linkURL='/teach/curricula/playground'>
+                        In the eight lessons of this curriculum, children learn how to use
+                        ScratchJr as they re-create familiar playground games...
+                    </LinkedSectionItem>
                     <LinkedSectionItem
                         title='Reinforcing Literacy and Math Curriculum'
                         format='full'
                         thumbnail='/images/literacymath/project1.png'
-                        description='These curricular modules describe ScratchJr projects that reinforce the Common Core Standards. They could serve as games programmed by older ScratchJr students to be played by younger ScratchJr students... '
                         linkURL='/teach/curricula/literacy-math'
-                        linkText='Read more'/>
+                        linkText='Read more'>
+                        These curricular modules describe ScratchJr projects that reinforce
+                        the Common Core Standards. They could serve as games programmed
+                        by older ScratchJr students to be played by younger ScratchJr students...
+                    </LinkedSectionItem>
                 </div>
             </div>
 

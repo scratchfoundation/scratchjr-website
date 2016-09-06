@@ -1,55 +1,62 @@
+$tabnav-border: #ddd;
+$nav-item: #a6a6a6;
+$nav-item-selected: #2898cd;
+$selected-notch: rgba(0, 0, 0, .5);
+$white: #fff;
+
 #content-nav {
-	height: 100px;
+    height: 100px;
 }
 
 .content-nav-item {
-	color: #a6a6a6;
-	width: 33.23%;
-	float: left;
-	border-bottom: 1px solid #DDD;
-	border-right: 1px solid #DDD;
-	position: relative;
-	cursor:pointer;
+    position: relative;
+    float: left;
+    border-right: 1px solid $tabnav-border;
+    border-bottom: 1px solid $tabnav-border;
+    cursor: pointer;
+    width: 33.23%;
+    color: $nav-item;
 }
 
 .content-nav-item-selected > .content-nav-item {
-	color: #2898CD;
+    color: $nav-item-selected;
 }
 
 #content-nav a:last-child .content-nav-item {
-	border-right: none;
+    border-right: none;
 }
 
-.content-nav-item-selected .content-nav-item:before, .content-nav-item-selected .content-nav-item:after {
-	content: "";
-	position: absolute;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	top: 100%;
-	left: 145px;
+.content-nav-item-selected .content-nav-item::before, .content-nav-item-selected .content-nav-item::after {
+
+    position: absolute;
+    top: 100%;
+    left: 145px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    content: "";
 }
 
 .content-nav-item-selected .content-nav-item:before {
-	border-top: 10px solid #DDD;
-	border-top: 10px solid rgba(0, 0, 0, 0.5);
+    border-top: 10px solid $tabnav-border;
+    border-top: 10px solid $selected-notch;
 }
 
 .content-nav-item-selected .content-nav-item:after{
-	border-top: 10px solid #FFF;
-	z-index: 1;
+    z-index: 1;
+    border-top: 10px solid $white;
 }
 
 .content-nav-item-icon {
-	width: 77px;
-	height: 77px;
-	float: left;
-	margin-left: 20px;
-	margin-top: 11px;
+    float: left;
+    margin-top: 11px;
+    margin-left: 20px;
+    width: 77px;
+    height: 77px;
 }
 
 .content-nav-item-description {
-	float: left;
-	line-height: 100px;
-	margin-left: 20px;
-	font-size: 14pt;
+    float: left;
+    margin-left: 20px;
+    line-height: 100px;
+    font-size: 14pt;
 }
