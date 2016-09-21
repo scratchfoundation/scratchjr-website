@@ -6,11 +6,11 @@ var routes = require('./src/routes.json');
 
 // Prepare all entry points
 var entry = {
-    common: [
-        // Vendor
-        'react',
-        'react-dom'
-    ]
+    // common: [
+    //     // Vendor
+    //     'react',
+    //     'react-dom'
+    // ]
 };
 routes.forEach(function (route) {
     if (!route.redirect) {
