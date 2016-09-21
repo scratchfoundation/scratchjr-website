@@ -1,0 +1,66 @@
+body {
+	margin: 0;
+	font-family: "Lucida Grande", arial, sans-serif;
+	background-color: #3099C9;
+}
+
+a:link {
+	color: #2898CD;
+}
+
+a:visited {
+	color: #2898CD;
+}
+
+h1 {
+	margin-left: 35px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-size: 28px;
+	color: #f5a322;
+}
+
+img { display: block; }
+
+.content-section {
+	min-height: 450px;
+}
+
+.blue-button {
+	color: #fff;
+	background-color: #3099C9;
+	font-size: 11pt;
+	display: inline-block;
+	border-radius: 5px;
+	border-bottom: solid 3px;
+	border-color: #227da9;
+	padding: 7px 12px;
+}
+
+/*
+** social media icons for scratchJr from IcoMoon.io
+*/
+@font-face {
+	font-family: 'scratchjr-icons';
+	src:url('../fonts/scratchjr-icons.eot?-fdpk63');
+	src:url('../fonts/scratchjr-icons.eot?#iefix-fdpk63') format('embedded-opentype'),
+		url('../fonts/scratchjr-icons.woff?-fdpk63') format('woff'),
+		url('../fonts/scratchjr-icons.ttf?-fdpk63') format('truetype'),
+		url('../fonts/scratchjr-icons.svg?-fdpk63#scratchjr-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="sjr-icon-"], [class*=" sjr-icon-"] {
+	font-family: 'scratchjr-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

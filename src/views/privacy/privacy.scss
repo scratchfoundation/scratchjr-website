@@ -1,0 +1,19 @@
+$link-blue: #2898cd;
+$text-color: #808080;
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 35px;
+    color: $link-blue;
+    font-size: 24px;
+}
+
+p,
+ul {
+    margin-right: 35px;
+    margin-left: 35px;
+    line-height: 22px;
+    color: $text-color;
+    font-size: 15px;
+}

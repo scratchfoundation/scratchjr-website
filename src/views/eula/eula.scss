@@ -1,0 +1,18 @@
+$text-color: #808080;
+$h2-color: #2898cd;
+
+p {
+    margin-right: 35px;
+    margin-left: 35px;
+    line-height: 22px;
+    color: $text-color;
+    font-size: 15px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 35px;
+    color: $h2-color;
+    font-size: 24px;
+}

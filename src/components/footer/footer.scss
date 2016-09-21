@@ -1,0 +1,110 @@
+$footer-background: #f6f6f6;
+$footer-foreground: #333;
+$link-color: #fff;
+$twitter-color: #55acee;
+$facebook-color: #3b5998;
+$social-active: #f79331;
+
+#footer {
+    margin: auto;
+    margin-bottom: 100px;
+    background-color: $footer-background;
+    width: 900px;
+    height: 115px;
+    color: $footer-foreground;
+}
+
+#footer-nav {
+    display: inline-block;
+    margin-right: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+#footer-nav > a {
+    display: inline-block;
+}
+
+#footer-text {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 55%;
+    line-height: 16pt;
+    font-size: 10pt;
+}
+
+.footer-links {
+    display: block;
+    text-align: center;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: $link-color;
+}
+
+#footer-social {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#social-links {
+    margin-left: 173px;
+}
+
+#social-links .social-link {
+    display: block;
+    float: left;
+    margin-right: 18px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: $link-color;
+}
+
+.social-link:visited {
+    color: $link-color;
+}
+
+.sjr-icon-twitter:before {
+    display: block;
+    border-radius: 50%;
+    background-color: $twitter-color;
+    width: 30px;
+    height: 30px;
+    line-height: 1.75em;
+    font-size: 1.1em;
+    content: "\ea91";
+}
+
+.sjr-icon-twitter:hover::before {
+    background-color: $social-active;
+}
+
+.sjr-icon-twitter span {
+    display: none;
+}
+
+.sjr-icon-facebook:before {
+    display: block;
+    border-radius: 50%;
+    background-color: $facebook-color;
+    width: 30px;
+    height: 30px;
+    line-height: 1.4em;
+    font-size: 1.2em;
+    content: "\ea8c";
+}
+
+.sjr-icon-facebook:hover:before {
+    background-color: $social-active;
+}
+
+.sjr-icon-facebook span {
+    display: none;
+}
