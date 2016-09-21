@@ -1,0 +1,39 @@
+// override slick defaults
+$color: #fff;
+$active-color: #f5a322;
+
+.slick-slider {
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    width: 900px;
+
+    img {
+        width: 900px;
+        height: 507px;
+    }
+}
+
+.slick-dots {
+    top: 425px;
+    z-index: 100;
+
+    li button {
+
+        &::before {
+            opacity: .33;
+            color: $color;
+            font-size: 15px;
+        }
+    }
+
+    li.slick-active {
+
+        button {
+            &::before {
+                opacity: .85;
+                color: $active-color;
+            }
+        }
+    }
+}

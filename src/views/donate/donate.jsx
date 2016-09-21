@@ -1,38 +1,43 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import {render} from 'react-dom';
+import NavBar from '../../components/navbar/navbar.jsx';
+import Footer from '../../components/footer/footer.jsx';
 
-var NavBar = require('../../components/navbar/navbar.jsx');
-var Footer = require('../../components/footer/footer.jsx');
+import './donate.scss';
 
-require('./donate.scss');
+export default class Donate extends React.Component {
+    render () {
+        return (
+            <div>
+                <NavBar selected="donate"/>
+                <div id="content">
+                    <div className="content-section">
 
-var Donate = React.createClass({
-	type: 'Donate',
-	componentDidMount: function() {
+                        <h1>Donate</h1>
 
-	},
-	render: function() {
-		return (
-			<div>
-        <NavBar selected="donate"/>
-        <div id="content">
+                        <p>
+                            If you enjoy using the free ScratchJr app, please consider
+                            making a donation to the Scratch Foundation (
+                            <a href="http://www.scratchfoundation.org/">www.scratchfoundation.org</a>),
+                            a nonprofit organization that provides ongoing support for ScratchJr.
+                            We appreciate donations of all sizes, large and small.
+                        </p>
 
-          <h1>Donate</h1>
+                        <div className="donation-block">
+                            <a href="https://secure.donationpay.org/scratchfoundation/" id="donate-button">
+                                <div className="blue-button">
+                                    Donate
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <Footer/>
+            </div>
+        );
+    }
+}
 
-          <p>If you enjoy using the free ScratchJr app, please consider making a donation to the Scratch Foundation (<a href="http://www.scratchfoundation.org/">www.scratchfoundation.org</a>), a nonprofit organization that provides ongoing support for ScratchJr. We appreciate donations of all sizes, large and small.</p>
-
-          <div className="donation-block">
-            <a href="https://secure.donationpay.org/scratchfoundation/" id="donate-button" >
-              <div  className="blue-button">
-                Donate
-              </div>
-            </a>
-          </div>
-        </div>
-        <Footer />
-			</div>
-		)
-	}
-});
-
-ReactDOM.render(<Donate />, document.getElementById('app'));
+render(
+    <Donate/>,
+    document.getElementById('app'));

@@ -1,0 +1,65 @@
+[{
+        "title": "Save",
+        "description": "Save the current project and exit to the Home page."
+    },
+    {
+        "title": "Stage",
+        "description": "This is where the action takes place in the project. To delete a character, press and hold it."
+    },
+    {
+        "title": "Presentation Mode",
+        "description": "Expand the stage to the full screen."
+    },
+    {
+        "title": "Grid",
+        "description": "Toggle on (and off) the x-y coordinate grid."
+    },
+    {
+        "title": "Change Background",
+        "description": "Select or create a background image for the stage."
+    },
+    {
+        "title": "Add Text",
+        "description": "Write titles and labels on the stage."
+    },
+    {
+        "title": "Reset Characters",
+        "description": "Reset all characters to their starting positions on the stage. (Drag characters to set up new starting positions.)"
+    },
+    {
+        "title": "Green Flag",
+        "description": "Start all programming scripts that begin with a \"Start on Green Flag\" block by tapping here."
+    },
+    {
+        "title": "Pages",
+        "description": "Select among the pages in your project \u2014 or tap the plus sign to add a new page. Each page has its own set of characters and a background. To delete a page, press and hold it. To reorder pages, drag them to new positions."
+    },
+    {
+        "title": "Project Information",
+        "description": "Change the title of the project, see when the project was created, and share the project (if supported by your device)."
+    },
+    {
+        "title": "Undo and Redo",
+        "description": "If you make a mistake, tap Undo to go back in time, reversing the last action. Tap Redo to reverse the last Undo."
+    },
+    {
+        "title": "Programming Script",
+        "description": "Snap blocks together to make a programming script, telling the character what to do. Tap anywhere on a script to make it run. To delete a block or script, drag it outside the programming area. To copy a block or script from one character to another, drag it onto the character's thumbnail."
+    },
+    {
+        "title": "Programming Area",
+        "description": "This is where you connect programming blocks to create scripts, telling the character what to do."
+    },
+    {
+        "title": "Blocks Palette",
+        "description": "This is the menu of programming blocks. Drag a block into the programming area, then tap on it to see what it does."
+    },
+    {
+        "title": "Block Categories",
+        "description": "This is where you can select a category of programming blocks: Triggering Blocks (Yellow), Motion (Blue), Looks (Purple), Sounds (Green), Control (Orange), End Blocks (Red)."
+    },
+    {
+        "title": "Characters",
+        "description": "Select among the characters in your project \u2014 or tap the plus sign to add a new one. Once a character is selected, you can edit its scripts, tap its name to rename it, or tap the paintbrush to edit its image. To delete a character, press and hold it. To copy a character to another page, drag it to the page thumbnail."
+    }
+]

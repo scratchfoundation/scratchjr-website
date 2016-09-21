@@ -1,56 +1,70 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import {render} from 'react-dom';
+import { Router, Route, browserHistory, IndexRedirect, IndexRoute, applyRouterMiddleware } from 'react-router';
+import { useScroll } from 'react-router-scroll';
+import NavBar from '../../components/navbar/navbar.jsx';
+import Footer from '../../components/footer/footer.jsx';
+import TabNav from '../../components/tabnav/tabnav.jsx';
+import PageNotFound from '../../components/pagenotfound/pagenotfound.jsx';
 
-var NavBar = require('../../components/navbar/navbar.jsx');
-var Footer = require('../../components/footer/footer.jsx');
+import ActivitiesSection from './activities.jsx';
+import CurriculaSection from './curricula.jsx';
+import CurriculaHomeSection from './curricula/home.jsx';
+import AnimatedGenresSection from './curricula/animatedgenres.jsx';
+import PlaygroundSection from './curricula/playground.jsx';
+import LitMathSection from './curricula/litmath.jsx';
+import AssessmentsSection from './assessments.jsx';
+import './teach.scss';
 
-var Tabber = require('../../components/tabber/tabber.jsx');
-var Tab = require('../../components/tab/tab.jsx');
-var TabNav = require('../../components/tabnav/tabnav.jsx');
-var TabSectionNav = require('../../components/tabsectionnav/tabsectionnav.jsx');
+export default class Teach extends React.Component {
+    render () {
+        var tabs = [
+            {
+                url: '/teach/activities',
+                text: 'Activities',
+                section: 'activities',
+                indexLink: false
+            }, {
+                url: '/teach/curricula',
+                text: 'Curricula',
+                section: 'curricula',
+                indexLink: false
+            }, {
+                url: '/teach/assessments',
+                text: 'Assessments',
+                section: 'assessments',
+                indexLink: false
+            }
+        ];
+        return (
+            <div>
+                <NavBar selected="teach"/>
+                <div id="content">
+                    <TabNav items={tabs}/>
+                    {this.props.children}
+                </div>
+                <Footer/>
+            </div>
+        );
+    }
+}
+Teach.propTypes = {
+    children: React.PropTypes.node
+};
 
-var ActivitiesSection = require('../../components/tab-sections/teach-sections/activities.jsx');
-var CurriculaSection = require('../../components/tab-sections/teach-sections/curricula.jsx');
-var AssessmentsSection = require('../../components/tab-sections/teach-sections/assessments.jsx');
-
-require('./teach.scss');
-
-var Teach = React.createClass({
-	type: 'Teach',
-	render: function() {
-		return (
-      <div>
-        <NavBar selected="teach"/>
-
-        <Tabber>
-          <TabNav>
-            <Tab tabId="activities" title="Activities" iconClass="activities-icon" />
-            <Tab tabId="curricula" title="Curricula" iconClass="curricula-icon" subsections={['animated-genres', 'playground-curriculum', 'common-core-curriculum']} />
-            <Tab tabId="assessments" title="Assessments" iconClass="assessment-icon" />
-          </TabNav>
-          <TabSectionNav>
-            <ActivitiesSection />
-            <CurriculaSection />
-            <AssessmentsSection />
-          </TabSectionNav>
-        </Tabber>
-
-        {/* Beginning of Activities Pages */}
-        <div className="content-section" id="scratchjr-cards">
-          <div className="content-section-title">
-            ScratchJr Cards
-          </div>
-          {/* put scratch card html here */}
-        </div>
-        {/* End of Activities Pages */}
-
-        {/* Beginning of Assessments Pages */}
-        {/* End of Assessments Pages */}
-
-        <Footer />
-      </div>
-		);
-	}
-});
-
-ReactDOM.render(<Teach />, document.getElementById('app'));
+render((
+    <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
+        <Route path="/teach" component={Teach}>
+            <Route path="activities" component={ActivitiesSection}/>
+            <Route path="curricula" component={CurriculaSection}>
+                <IndexRoute component={CurriculaHomeSection}/>
+                <Route path="animated-genres" component={AnimatedGenresSection} />
+                <Route path="playground" component={PlaygroundSection} />
+                <Route path="literacy-math" component={LitMathSection} />
+            </Route>
+            <Route path="assessments" component={AssessmentsSection}/>
+            <IndexRedirect to="activities"/>
+            <Route path="*" component={PageNotFound}/>
+        </Route>
+    </Router>
+), document.getElementById('app'));

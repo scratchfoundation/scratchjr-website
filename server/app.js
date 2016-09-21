@@ -1,25 +1,25 @@
 var express = require('express');
-var path = require('path');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpack = require('webpack');
 
+var compiler = webpack(require('../webpack.config.js'));
 var handler = require('./handler');
-var routes = require('./routes.json');
+var routes = require('../src/routes.json');
 
 // Create server
-var app = express();
+var app = express ();
 
 // Bind routes
 for (var routeId in routes) {
-	(function(route) {
-		app.get(route.pattern, handler(route));
-		app.get(route.pattern + '.html', function (req, res) {
-			res.redirect(route.pattern);
-		});
-	})(routes[routeId]);
+    (function (route) {
+        app.get(route.pattern, handler(route));
+        app.get(route.pattern + '.html', function (req, res) {
+            res.redirect(route.pattern);
+        });
+    })(routes[routeId]);
 }
 
-var compiler = webpack(require('../webpack.config.js'));
+
 app.use(webpackDevMiddleware(compiler, {
     headers: {
         'X-From-Webpack': true
@@ -27,7 +27,6 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 
 var port = 8333;
-app.listen(port, function() {
-	process.stdout.write("Listening on port " + port);
+app.listen(port, function () {
+    process.stdout.write('Listening on port ' + port);
 });
-

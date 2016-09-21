@@ -1,27 +1,28 @@
-/* SUBMENUS */
+// Submenus
+
 .activities-icon {
-	background-image: url(/images/activities_b.svg);
-	background-size: 100%;
+    background-image: url("/images/activities_b.svg");
+    background-size: 100%;
 }
 
-.content-nav-item-selected  > .activities-icon {
-	background-image: url(/images/activities_o.svg);
+.content-nav-item-selected .activities-icon {
+    background-image: url("/images/activities_o.svg");
 }
 
 .curricula-icon {
-	background-image: url(/images/curricula_b.svg);
-	background-size: 100%;
+    background-image: url("/images/curricula_b.svg");
+    background-size: 100%;
 }
 
-.content-nav-item-selected  > .curricula-icon {
-	background-image: url(/images/curricula_o.svg);
+.content-nav-item-selected .curricula-icon {
+    background-image: url("/images/curricula_o.svg");
 }
 
-.assessment-icon {
-	background-image: url(/images/assessment_b.svg);
-	background-size: 100%;
+.assessments-icon {
+    background-image: url("/images/assessment_b.svg");
+    background-size: 100%;
 }
 
-.content-nav-item-selected  > .assessment-icon {
-	background-image: url(/images/assessment_o.svg);
+.content-nav-item-selected .assessments-icon {
+    background-image: url("/images/assessment_o.svg");
 }
