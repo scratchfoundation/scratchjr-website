@@ -13,9 +13,6 @@ var app = express ();
 for (var routeId in routes) {
     (function (route) {
         app.get(route.pattern, handler(route));
-        app.get(route.pattern + '.html', function (req, res) {
-            res.redirect(route.pattern);
-        });
     })(routes[routeId]);
 }
 

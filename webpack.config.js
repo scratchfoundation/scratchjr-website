@@ -1,12 +1,21 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
 var routes = require('./src/routes.json');
 
 // Prepare all entry points
-var entry = {};
+var entry = {
+    common: [
+        // Vendor
+        'react',
+        'react-dom'
+    ]
+};
 routes.forEach(function (route) {
-    entry[route.view] = './src/views/' + route.view + '/' + route.view + '.jsx';
+    if (!route.redirect) {
+        entry[route.name] = './src/views/' + route.name + '/' + route.name + '.jsx';
+    }
 });
 
 module.exports = {
@@ -44,5 +53,14 @@ module.exports = {
         new CopyWebpackPlugin([{
             from: 'static'
         }])
-    ]
+    ].concat(routes
+        .filter(function (route) {return !route.redirect;})
+        .map(function (route) {
+            return new HtmlWebpackPlugin(Object.assign({}, require('./src/template-config.js'), {
+                title: route.title,
+                filename: route.name + '.html',
+                route: route
+            }));
+        })
+    )
 };

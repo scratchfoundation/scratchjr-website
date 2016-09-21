@@ -1,42 +1,42 @@
 [
 	{
 		"pattern": "/",
-		"view": "index",
+		"name": "index",
 		"title": "Home"
 	},
 	{
 		"pattern": "/about(/*)?",
-		"view": "about",
+		"name": "about",
 		"title": "About"
 	},
 	{
 		"pattern": "/learn(/*)?",
-		"view": "learn",
+		"name": "learn",
 		"title": "Learn"
 	},
 	{
 		"pattern": "/teach(/*)?",
-		"view": "teach",
+		"name": "teach",
 		"title": "Teach"
 	},
 	{
 		"pattern": "/donate",
-		"view": "donate",
+		"name": "donate",
 		"title": "Donate"
 	},
 	{
 		"pattern": "/privacy",
-		"view": "privacy",
+		"name": "privacy",
 		"title": "Privacy"
 	},
 	{
 		"pattern": "/hoc",
-		"view": "hoc",
+		"name": "hoc",
 		"title": "Hour of Code"
 	},
 	{
 		"pattern": "/eula",
-		"view": "eula",
+		"name": "eula",
 		"title": "Terms and Conditions"
 	}
 ]
