@@ -4,3 +4,21 @@ node_js:
 cache:
   directories:
   - node_modules
+env:
+  global:
+  - S3_BUCKET_NAME=scratchjr-www-staging
+  - FASTLY_ACTIVATE_CHANGES=true
+deploy:
+  provider: s3
+  on:
+    all_branches: true
+    repo: LLK/scratchjr-website
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: $S3_BUCKET_NAME
+  skip_cleanup: true
+  acl: public_read
+  cache_control: "maxage=86400, s-maxage=31536000 no-transform"
+  local_dir: build
+after_deploy:
+- make sync-fastly

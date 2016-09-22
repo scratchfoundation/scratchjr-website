@@ -1,41 +1,41 @@
 [
 	{
-		"pattern": "/",
+		"pattern": "^/$",
 		"name": "index",
 		"title": "Home"
 	},
 	{
-		"pattern": "/about(/*)?",
+		"pattern": "^/about(/.+)*/?",
 		"name": "about",
 		"title": "About"
 	},
 	{
-		"pattern": "/learn(/*)?",
+		"pattern": "^/learn(/.+)*/?",
 		"name": "learn",
 		"title": "Learn"
 	},
 	{
-		"pattern": "/teach(/*)?",
+		"pattern": "^/teach(/.+)*/?",
 		"name": "teach",
 		"title": "Teach"
 	},
 	{
-		"pattern": "/donate",
+		"pattern": "^/donate/?$",
 		"name": "donate",
 		"title": "Donate"
 	},
 	{
-		"pattern": "/privacy",
+		"pattern": "^/privacy/?$",
 		"name": "privacy",
 		"title": "Privacy"
 	},
 	{
-		"pattern": "/hoc",
+		"pattern": "^/hoc/?$",
 		"name": "hoc",
 		"title": "Hour of Code"
 	},
 	{
-		"pattern": "/eula",
+		"pattern": "^/eula/?$",
 		"name": "eula",
 		"title": "Terms and Conditions"
 	}
