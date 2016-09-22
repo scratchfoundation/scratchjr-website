@@ -24,7 +24,7 @@ webpack:
 # ------------------------------------
 
 start:
-	$(NODE) ./server/app.js
+	$(NODE) ./dev-server/index.js
 
 # ------------------------------------
 
