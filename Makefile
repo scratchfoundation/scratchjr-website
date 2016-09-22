@@ -14,9 +14,8 @@ clean:
 	rm -rf ./build
 	mkdir -p build
 
-
-deploy:
-	echo "Go run deploy script on Jenkins"
+sync-fastly:
+	$(NODE) ./bin/configure-fastly.js
 
 webpack:
 	$(WEBPACK) --bail
@@ -40,4 +39,4 @@ test:
 	@make lint
 	@make build
 
-.PHONY: build clean deploy webpack stop start lint
+.PHONY: build clean sync-fastly webpack stop start lint

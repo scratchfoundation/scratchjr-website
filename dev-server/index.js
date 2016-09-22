@@ -12,7 +12,7 @@ var app = express ();
 // Bind routes
 for (var routeId in routes) {
     (function (route) {
-        app.get(route.pattern, handler(route));
+        app.get(new RegExp(route.pattern), handler(route));
     })(routes[routeId]);
 }
 
