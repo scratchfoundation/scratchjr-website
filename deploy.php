@@ -18,7 +18,7 @@
     );
 
     // exec commands
-    if (($_SERVER['SERVER_NAME'] == 'staging.scratchjr.org' &&
+    if (($_SERVER['SERVER_NAME'] == 'preview.scratchjr.org' &&
         htmlspecialchars($_GET["token"]) == "Doyd3diR0woD9as7Git2dEf4e") ||
         ($_SERVER['SERVER_NAME'] == 'scratchjr.org' &&
          htmlspecialchars($_GET["token"]) == "Doyd3diR0woD9as7Git2dEf4e")) {
@@ -51,4 +51,3 @@
 </div>
 </body>
 </html>
-
