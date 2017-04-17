@@ -19,7 +19,7 @@ export default class VideosSection extends React.Component {
                             <iframe
                                 width="342"
                                 height="192"
-                                src="http://www.youtube.com/embed/mZAawCvDlBM?rel=0"
+                                src="//www.youtube.com/embed/mZAawCvDlBM?rel=0"
                                 frameBorder="0"
                                 allowFullScreen >
                             </iframe>
@@ -36,7 +36,7 @@ export default class VideosSection extends React.Component {
                             <iframe
                                 width="342"
                                 height="192"
-                                src="http://www.youtube.com/embed/owAA_IjdVUM?rel=0"
+                                src="//www.youtube.com/embed/owAA_IjdVUM?rel=0"
                                 frameBorder="0"
                                 allowFullScreen>
                             </iframe>

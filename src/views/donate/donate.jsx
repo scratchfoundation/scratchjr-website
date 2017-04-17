@@ -18,7 +18,7 @@ export default class Donate extends React.Component {
                         <p>
                             If you enjoy using the free ScratchJr app, please consider
                             making a donation to the Scratch Foundation (
-                            <a href="http://www.scratchfoundation.org/">www.scratchfoundation.org</a>),
+                            <a href="//www.scratchfoundation.org/">www.scratchfoundation.org</a>),
                             a nonprofit organization that provides ongoing support for ScratchJr.
                             We appreciate donations of all sizes, large and small.
                         </p>

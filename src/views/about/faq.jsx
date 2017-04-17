@@ -79,7 +79,7 @@ export default class FAQSection extends React.Component {
                             of ScratchJr, it will not allow it to be installed. If you believe that your tablet
                             does meet the minimum requirements (7-inch tablet) running Android 4.2 or greater,
                             and you are willing to side-load the apk, you can download and install a copy of
-                            the <a href="http://scratch-downloads.s3.amazonaws.com/jr/ScratchJr-1.2.1.apk">
+                            the <a href="//scratch-downloads.s3.amazonaws.com/jr/ScratchJr-1.2.3.apk">
                             current version of ScratchJr APK</a>. <br /><br />
                             Please note that this version will not automatically update when there are new
                             versions available. We recommend that you sign up for the ScratchJr mailing list
