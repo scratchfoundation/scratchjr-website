@@ -116,11 +116,7 @@ export default class ShareSection extends React.Component {
                 </div>
                 <div className="content-section-item-description">
                     If AirDrop isn't available on your iPad (earlier than 4th
-                        generation or iOS 7), you'll see this message:<br/>
-                    <img
-                        src="/images/tips/share-airdrop4.png"
-                        className="content-section-image"
-                        alt="AirDropunavailable dialog"/>
+                        generation or iOS 7), you'll see the message "No share actions available."<br/>
                 </div>
                 <div className="content-section-item-description">
                     If the recipient iPad doesn't have ScratchJr installed,
