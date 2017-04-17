@@ -22,7 +22,7 @@ export default class HourOfCode extends React.Component {
                                 format="full"
                                 title="Can I Make the Sun Set?"
                                 thumbnail="/images/activitycards/card06-sun.png"
-                                linkURL="https://drive.google.com/file/d/0B_kqMacZctDuTG5CdEhoR2o3M0E/view"
+                                linkURL="/pdfs/hoc/ScratchJr-Sunset.pdf"
                                 linkText="See more">
                                 Students will get an introduction to programming by making a sun set over a city
                                 landscape! <em>Ages 5 - 9. Programming, Storytelling, Mathematics,Creativity</em>
@@ -32,7 +32,7 @@ export default class HourOfCode extends React.Component {
                                 format="full"
                                 title="Can I Make a Spooky Forest?"
                                 thumbnail="/images/activitycards/card05-forest.png"
-                                linkURL="https://drive.google.com/file/d/0B_kqMacZctDuWDRtLXQwRWp4ZGc/view"
+                                linkURL="/pdfs/hoc/ScratchJr-Spooky-Forest.pdf"
                                 linkText="See more">
                                 Students will learn more features of ScratchJr by creating a spooky
                                 forest with multiple characters! <em>Ages 5 - 9. Art, Storytelling, Sequence</em>
@@ -42,7 +42,7 @@ export default class HourOfCode extends React.Component {
                                 format="full"
                                 title="Can I Make My Characters Greet Each Other?"
                                 thumbnail="/images/activitycards/card08-greet.png"
-                                linkURL="https://drive.google.com/file/d/0B_kqMacZctDuNVg0QTJaWUR6WVE/view"
+                                linkURL="/pdfs/hoc/ScratchJr-Meet-and-Greet.pdf"
                                 linkText="See more">
                                 Students will learn advanced features of the ScratchJr app when
                                 they make a dog and kitten meet each other and exchange hellos! <em>
