@@ -120,12 +120,12 @@ export default class FAQSection extends React.Component {
                             Will ScratchJr be available in other languages?
                         </div>
                         <div className="content-description-answer">
-                            ScratchJr version 1.2 (released April 2016) supports both
-                            English and Spanish, and we hope to include translation to other
-                            languages in future versions of ScratchJr. If you're
-                            interested in volunteering to help with translations, please email <a
-                            href="mailto:info@scratchjr.org">info@scratchjr.org</a> with your
-                            name and the language you can help with.
+                            ScratchJr version 1.2.2+ (released September 2016) supports six languages
+                            in addition to English, and we hope to include translation to other
+                            languages in future versions of ScratchJr. If you're interested in
+                            volunteering to help with translations, please fill out
+                            the <a href="https://docs.google.com/a/media.mit.edu/forms/d/e/1FAIpQLSeskFZM3X6R9y7tsm51e6urAEhi5yW2fpBhnQea2yKwmqmWhw/viewform">translator
+                            application form</a>, and we will contact you with details.
                         </div>
                     </div>
 
