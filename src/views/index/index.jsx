@@ -79,18 +79,11 @@ export default class Index extends React.Component {
                             News
                         </div>
                         <div className="content-news-body">
-                            ScratchJr is now available in Spanish f
-                            or <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
-                                Android
-                            </a> and <a
-                            href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
-                                iOS
-                            </a> tablets!
+                            ScratchJr was named one of the <a href="http://www.slj.com/2016/12/reviews/best-of/top-10-tech-2016/">Top
+                            10 Tech</a> by School Library Journal.
                         </div>
                         <div className="content-news-body">
-                            No Starch Press has
-                            re-released <a href="https://www.nostarch.com/scratchjr" target="_blank">
-                            The Official ScratchJr Book</a> in Spanish paperback and ebook format!
+                            ScratchJr is now available in more languages!
                         </div>
                     </div>
 
