@@ -35,6 +35,15 @@
 	text-align: center;
 }
 
+.content-section-info {
+	color: #808080;
+	padding-bottom: 20px;
+	font-size: 14px;
+	line-height: 22px;
+	width: 100%;
+	text-align: left;
+}
+
 .content-section-items-container{
 	width: 100%;
 }

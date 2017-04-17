@@ -23,11 +23,7 @@ export default class Index extends React.Component {
 
                 <div id="content">
                     <div id="announcement-banner">
-                        ScratchJr is available as a free app for <a
-                        href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
-                        iPads</a> and <a
-                        href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
-                        Android</a> tablets.
+                        ScratchJr is available as a free app.
                     </div>
 
                     <div id="content-text">
