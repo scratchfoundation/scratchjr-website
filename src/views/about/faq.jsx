@@ -15,9 +15,13 @@ export default class FAQSection extends React.Component {
                         <div className="content-description-question">Will ScratchJr run on my iPad or tablet?</div>
                         <div className="content-description-answer">
                             ScratchJr runs on both iPads and Android tablets. It will run on any iPad 2 or later,
-                            including all iPad minis, with iOS 7.0 or later installed. It also runs on any
+                            including all iPad minis, with iOS 7.0 or later installed.
+                            Note that newer versions of ScratchJr will only run on
+                            iOS 8+. It also runs on any
                             Android tablet, 7-inches or larger, that are running Android 4.2 (Jelly Bean MR1)
-                            or higher. It does not need web-access to run.
+                            or higher. It does not need web-access to run.<br/>
+                            We recommend iPads running iOS 9 or greater and Android tablets
+                            running Android 5 (Kit Kat) or higher.
                         </div>
                     </div>
 
@@ -56,7 +60,9 @@ export default class FAQSection extends React.Component {
                             This version was built from the Android version. We have had to remove some features,
                             such as sharing, due to differences between Android and Chrome OS. We are providing
                             this application <b>AS IS</b>. If you run into problems, please do let us know, but
-                            we cannot promise that we will fix bugs in this version.
+                            we cannot promise that we will fix bugs in this version.<br />
+                            If you have a Chromebook that can install Android apps from the
+                            Play store, we recommend that you install that version.
                         </div>
                     </div>
 
@@ -92,12 +98,10 @@ export default class FAQSection extends React.Component {
                             Can I share a ScratchJr project from one tablet to another?
                         </div>
                         <div className="content-description-answer">
-                            If you are running ScratchJr version 1.0.3 or greater on the iPad, you can share
-                            projects via email or AirDrop. To access the sharing options, go to the Project
+                            If you are running ScratchJr version 1.1 or greater, you can share
+                            projects via email or AirDrop (iPads). To access the sharing options, go to the Project
                             Information page by tapping on the yellow button in the top-right corner of the
                             ScratchJr editor.
-                            <br /><br />
-                            Project sharing will become available on Android tablets in version 1.1.
                         </div>
                     </div>
 
@@ -130,7 +134,7 @@ export default class FAQSection extends React.Component {
                     </div>
 
                     <div className="content-description-section">
-                        <em className="content-description-answer">Last updated: April 21, 2016</em>
+                        <em className="content-description-answer">Last updated: April, 2017</em>
                     </div>
                 </div>
             </div>
