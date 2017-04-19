@@ -85,6 +85,12 @@ export default class Index extends React.Component {
                             News
                         </div>
                         <div className="content-news-body">
+                            Check out some tips for <a
+                                href="https://medium.com/scratchfoundation-blog/scratch-day-for-younger-children-4eba6d07cefc"
+                            >
+                            hosting a Scratch Day event for younger children</a> with ScratchJr.
+                        </div>
+                        <div className="content-news-body">
                             ScratchJr was named one of the <a href="http://www.slj.com/2016/12/reviews/best-of/top-10-tech-2016/">Top
                             10 Tech</a> by School Library Journal.
                         </div>

@@ -38,7 +38,7 @@ export default class InfoSection extends React.Component {
                         </div>
                         <div className="content-description-answer">
                             ScratchJr was inspired by the popular Scratch programming language
-                            (<a href="//scratch.mit.edu">scratch.mit.edu</a>), used by millions
+                            (<a href="https://scratch.mit.edu">scratch.mit.edu</a>), used by millions
                             of young people (ages 8 and up) around the world. In creating ScratchJr, we
                             redesigned the interface and programming language to make them developmentally
                             appropriate for younger children, carefully designing features to match young
@@ -47,7 +47,8 @@ export default class InfoSection extends React.Component {
 
                         <div className="content-description-answer">
                             ScratchJr is available as a free app for both iPad and Android tablets. For
-                            more information about ScratchJr, see https://scratchjr.org.
+                            more information about ScratchJr,
+                            see <a href="https://scratchjr.org">scratchjr.org</a>.
                         </div>
                     </div>
 
