@@ -148,6 +148,17 @@ export default class FAQSection extends React.Component {
                     </div>
 
                     <div className="content-description-section">
+                        <div className="content-description-question">
+                            Where does ScratchJr store my Projects?
+                        </div>
+                        <div className="content-description-answer">
+                            ScratchJr saves project data in an internal database stored locally on your
+                            device. ScratchJr is not currently set up for shared installation, so all users
+                            of a device share the same project database.
+                        </div>
+                    </div>
+
+                    <div className="content-description-section">
                         <em className="content-description-answer">Last updated: April, 2017</em>
                     </div>
                 </div>
