@@ -4,13 +4,16 @@ import './info.scss';
 export default class InfoSection extends React.Component {
     render () {
         return (
-            <div className="content-section" id="info-section">
+            <div
+                className="content-section"
+                id="info-section"
+            >
                 <div className="content-section-title">
                     About ScratchJr
                 </div>
                 <div className="content-section-description">
                     This is background information about ScratchJr. You can find answers to
-                    troubleshooting questions in the 'FAQ' section.
+                    troubleshooting questions in the &apos;FAQ&apos; section.
                 </div>
 
                 <div id="video-wrapper">
@@ -19,8 +22,8 @@ export default class InfoSection extends React.Component {
                         width="640"
                         height="360"
                         frameBorder="0"
-                        allowFullScreen>
-                    </iframe>
+                        allowFullScreen
+                    />
                 </div>
                 <div id="content-description">
                     <div className="content-description-section">
@@ -39,7 +42,7 @@ export default class InfoSection extends React.Component {
                             of young people (ages 8 and up) around the world. In creating ScratchJr, we
                             redesigned the interface and programming language to make them developmentally
                             appropriate for younger children, carefully designing features to match young
-                            children's cognitive, personal, social, and emotional development.
+                            children&apos;s cognitive, personal, social, and emotional development.
                         </div>
 
                         <div className="content-description-answer">
@@ -63,7 +66,7 @@ export default class InfoSection extends React.Component {
                             sequencing skills that are foundational for later academic success. They also
                             use math and language in a meaningful and motivating context, supporting the
                             development of early-childhood numeracy and literacy. With ScratchJr, children
-                            aren't just learning to code, they are coding to learn.
+                            aren&apos;t just learning to code, they are coding to learn.
                         </div>
                     </div>
 
@@ -72,7 +75,8 @@ export default class InfoSection extends React.Component {
                         <div className="content-description-answer">
                             ScratchJr is a collaboration between the <a href="//ase.tufts.edu/devtech/">
                             Developmental Technologies (DevTech) Research Group</a> at the <a
-                            href="//ase.tufts.edu/epcshd/">Eliot-Pearson Department of Child Study
+                                href="//ase.tufts.edu/epcshd/"
+                            >Eliot-Pearson Department of Child Study
                             and Human Development</a> at <a href="//www.tufts.edu/">Tufts University</a> (led
                             by <a href="//www.tufts.edu/~mbers01/">Marina Umaschi Bers</a>, with
                             contributions from Amanda Strawhacker, Claire Caine, Louise Flannery, Elizabeth

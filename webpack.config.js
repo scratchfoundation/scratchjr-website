@@ -3,6 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
 var routes = require('./src/routes.json');
+var TemplateConfig = require('./src/template-config.js');
 
 // Prepare all entry points
 var entry = {
@@ -54,9 +55,11 @@ module.exports = {
             from: 'static'
         }])
     ].concat(routes
-        .filter(function (route) {return !route.redirect;})
+        .filter(function (route) {
+            return !route.redirect;
+        })
         .map(function (route) {
-            return new HtmlWebpackPlugin(Object.assign({}, require('./src/template-config.js'), {
+            return new HtmlWebpackPlugin(Object.assign({}, TemplateConfig, {
                 title: route.title,
                 filename: route.name + '.html',
                 route: route

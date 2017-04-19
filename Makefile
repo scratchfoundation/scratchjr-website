@@ -28,7 +28,7 @@ start:
 # ------------------------------------
 
 lint:
-	$(ESLINT) . --ext .js,.jsx,.json
+	$(ESLINT) . --ext .js,.jsx
 	$(SASSLINT) ./src/*.scss
 	$(SASSLINT) ./src/**/*.scss
 

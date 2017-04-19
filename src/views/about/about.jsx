@@ -15,7 +15,7 @@ import './about.scss';
 
 export default class About extends React.Component {
     render () {
-        var tabs = [
+        const tabs = [
             {
                 url: '/about/info',
                 text: 'Info',
@@ -41,12 +41,12 @@ export default class About extends React.Component {
         ];
         return (
             <div>
-                <NavBar selected="about"/>
+                <NavBar selected="about" />
                 <div id="content">
-                    <TabNav items={tabs}/>
+                    <TabNav items={tabs} />
                     {this.props.children}
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
@@ -57,13 +57,31 @@ About.propTypes = {
 
 render((
     <Router history={browserHistory}>
-        <Route path="/about" component={About}>
-            <Route path="info" component={InfoSection}/>
-            <Route path="press" component={PressSection}/>
-            <Route path="faq" component={FAQSection}/>
-            <Route path="videos" component={VideosSection}/>
-            <IndexRedirect to="info"/>
-            <Route path="*" component={PageNotFound}/>
+        <Route
+            component={About}
+            path="/about"
+        >
+            <Route
+                component={InfoSection}
+                path="info"
+            />
+            <Route
+                component={PressSection}
+                path="press"
+            />
+            <Route
+                component={FAQSection}
+                path="faq"
+            />
+            <Route
+                component={VideosSection}
+                path="videos"
+            />
+            <IndexRedirect to="info" />
+            <Route
+                component={PageNotFound}
+                path="*"
+            />
         </Route>
     </Router>
 ), document.getElementById('app'));

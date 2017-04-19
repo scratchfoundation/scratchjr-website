@@ -10,7 +10,7 @@ export default class NavBar extends React.Component {
     generateHeaderClasses (section) {
         return classNames({
             'header-nav-item': true,
-            'header-nav-item-selected': this.props.selected == section
+            'header-nav-item-selected': this.props.selected === section
         });
     }
     render () {
@@ -18,7 +18,11 @@ export default class NavBar extends React.Component {
             <div id="header">
                 <a href="/">
                     <div id="header-logo-wrapper">
-                        <img src="/images/scratchjrlogo.png" id="header-logo" alt="ScratchJr Logo"/>
+                        <img
+                            alt="ScratchJr Logo"
+                            id="header-logo"
+                            src="/images/scratchjrlogo.png"
+                        />
                     </div>
                 </a>
                 <div id="header-nav">

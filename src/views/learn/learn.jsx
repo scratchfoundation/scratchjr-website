@@ -32,7 +32,7 @@ import './learn.scss';
 
 export default class Learn extends React.Component {
     render () {
-        var tabs = [
+        const tabs = [
             {
                 url: '/learn/interface',
                 text: 'Interface Guide',
@@ -58,11 +58,11 @@ export default class Learn extends React.Component {
         ];
         return (
             <div>
-                <NavBar selected="learn"/>
+                <NavBar selected="learn" />
                 <div id="content">
-                    <TabNav items={tabs}/> {this.props.children}
+                    <TabNav items={tabs} /> {this.props.children}
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
@@ -72,24 +72,69 @@ Learn.propTypes = {
 };
 
 render((
-    <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
-        <Route path="/learn" component={Learn}>
-            <Route path="interface" component={InterfaceSection}/>
-            <Route path="paint" component={PaintSection}/>
-            <Route path="blocks" component={BlocksSection}/>
-            <Route path="tips" component={TipsSection}>
-                <IndexRoute component={TipsHome}/>
-                <Route path="manage-projects" component={ManageSection}/>
-                <Route path="character-animation" component={AnimationSection}/>
-                <Route path="multi-character" component={MultiCharacterSection}/>
-                <Route path="trigger-blocks" component={TriggersSection}/>
-                <Route path="share-projects" component={ShareSection}/>
-                <Route path="sample-projects" component={SamplesSection}/>
-                <Route path="copy-scripts" component={CopyScriptSection}/>
-                <Route path="pages" component={PagesSection}/>
+    <Router
+        history={browserHistory}
+        render={applyRouterMiddleware(useScroll())}
+    >
+        <Route
+            component={Learn}
+            path="/learn"
+        >
+            <Route
+                component={InterfaceSection}
+                path="interface"
+            />
+            <Route
+                component={PaintSection}
+                path="paint"
+            />
+            <Route
+                component={BlocksSection}
+                path="blocks"
+            />
+            <Route
+                component={TipsSection}
+                path="tips"
+            >
+                <IndexRoute component={TipsHome} />
+                <Route
+                    component={ManageSection}
+                    path="manage-projects"
+                />
+                <Route
+                    component={AnimationSection}
+                    path="character-animation"
+                />
+                <Route
+                    component={MultiCharacterSection}
+                    path="multi-character"
+                />
+                <Route
+                    component={TriggersSection}
+                    path="trigger-blocks"
+                />
+                <Route
+                    component={ShareSection}
+                    path="share-projects"
+                />
+                <Route
+                    component={SamplesSection}
+                    path="sample-projects"
+                />
+                <Route
+                    component={CopyScriptSection}
+                    path="copy-scripts"
+                />
+                <Route
+                    component={PagesSection}
+                    path="pages"
+                />
             </Route>
-            <IndexRedirect to="interface"/>
-            <Route path="*" component={PageNotFound}/>
+            <IndexRedirect to="interface" />
+            <Route
+                component={PageNotFound}
+                path="*"
+            />
         </Route>
     </Router>
 ), document.getElementById('app'));

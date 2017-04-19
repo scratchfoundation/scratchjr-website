@@ -3,7 +3,10 @@ import React from 'react';
 export default class FAQSection extends React.Component {
     render () {
         return (
-            <div className="content-section" id="faq-section">
+            <div
+                className="content-section"
+                id="faq-section"
+            >
                 <div className="content-section-title">
                     Frequently Asked Questions
                 </div>
@@ -19,7 +22,7 @@ export default class FAQSection extends React.Component {
                             Note that newer versions of ScratchJr will only run on
                             iOS 8+. It also runs on any
                             Android tablet, 7-inches or larger, that are running Android 4.2 (Jelly Bean MR1)
-                            or higher. It does not need web-access to run.<br/>
+                            or higher. It does not need web-access to run.<br />
                             We recommend iPads running iOS 9 or greater and Android tablets
                             running Android 5 (Kit Kat) or higher.
                         </div>
@@ -28,12 +31,16 @@ export default class FAQSection extends React.Component {
                     <div className="content-description-section">
                         <div className="content-description-question">Is there a book for ScratchJr?</div>
                         <div className="content-description-answer">
-                            <a href="https://www.nostarch.com/scratchjr" target="_blank">
+                            <a
+                                href="https://www.nostarch.com/scratchjr"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >
                                 <img
                                     src="/images/scratchjr-book.png"
                                     width="100"
                                     height="auto"
-                                    style={{'float':'right'}}
+                                    style={{float: 'right'}}
                                 />
                             </a>
                             Yes, there is a guide to ScratchJr. Written by app creators Professor Marina
@@ -42,10 +49,15 @@ export default class FAQSection extends React.Component {
                             educators alike to teach children how to code with ScratchJr. Read
                             an <a
                                 href="https://medium.com/scratchfoundation-blog/helping-young-children-experiment-explore-and-express-themselves-with-code-69a450d42005#.9fq210a4q"
-                                target="_blank">
-                                excerpt of the book</a>.
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >excerpt of the book</a>.
                             You can buy your copy
-                            through <a href="https://www.nostarch.com/scratchjr" target="_blank">No Starch Press</a>!
+                            through <a
+                                href="https://www.nostarch.com/scratchjr"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                            >No Starch Press</a>!
                         </div>
                     </div>
 
@@ -53,9 +65,11 @@ export default class FAQSection extends React.Component {
                         <div className="content-description-question">Will ScratchJr run on my Chromebook?</div>
                         <div className="content-description-answer">
                             In March 2016 a version was released for Chromebooks. You can find <a
-                            href="https://chrome.google.com/webstore/detail/scratchjr/oipimoeophamdcmjcfameoojlbhbgjda">
+                                href="https://chrome.google.com/webstore/detail/scratchjr/oipimoeophamdcmjcfameoojlbhbgjda"
+                            >
                             ScratchJr</a> in the <a
-                            href="https://chrome.google.com/webstore/detail/scratchjr/oipimoeophamdcmjcfameoojlbhbgjda">
+                                href="https://chrome.google.com/webstore/detail/scratchjr/oipimoeophamdcmjcfameoojlbhbgjda"
+                            >
                             Chrome Web Store</a>.<br />
                             This version was built from the Android version. We have had to remove some features,
                             such as sharing, due to differences between Android and Chrome OS. We are providing
@@ -81,7 +95,7 @@ export default class FAQSection extends React.Component {
                             but Google Play still says that my device is incompatible.
                         </div>
                         <div className="content-description-answer">
-                            If Google Play doesn't recognize your tablet as meeting the minimum requirements
+                            If Google Play doesn&apos;t recognize your tablet as meeting the minimum requirements
                             of ScratchJr, it will not allow it to be installed. If you believe that your tablet
                             does meet the minimum requirements (7-inch tablet) running Android 4.2 or greater,
                             and you are willing to side-load the apk, you can download and install a copy of
@@ -107,15 +121,15 @@ export default class FAQSection extends React.Component {
 
                     <div className="content-description-section">
                         <div className="content-description-question">
-                            Why can't ScratchJr record a sound or take a  picture
+                            Why can&apos;t ScratchJr record a sound or take a  picture
                         </div>
                         <div className="content-description-answer">
-                            If ScratchJr can't record sounds or take a picture with the camera, it might be
-                            that you didn't give ScratchJr access to the camera or microphone when you first
+                            If ScratchJr can&apos;t record sounds or take a picture with the camera, it might be
+                            that you didn&apos;t give ScratchJr access to the camera or microphone when you first
                             downloaded the app. You can change this by going
-                            to <em>Settings > Privacy > Camera</em> on your device.
+                            to <em>Settings &gt; Privacy &gt; Camera</em> on your device.
                             If the ScratchJr toggle is off, turn it on. Do the same for the microphone,
-                            under <em>Settings > Privacy > Microphone</em>
+                            under <em>Settings &gt; Privacy &gt; Microphone</em>
                         </div>
                     </div>
 
@@ -126,7 +140,7 @@ export default class FAQSection extends React.Component {
                         <div className="content-description-answer">
                             ScratchJr version 1.2.2+ (released September 2016) supports six languages
                             in addition to English, and we hope to include translation to other
-                            languages in future versions of ScratchJr. If you're interested in
+                            languages in future versions of ScratchJr. If you&apos;re interested in
                             volunteering to help with translations, please fill out
                             the <a href="https://docs.google.com/a/media.mit.edu/forms/d/e/1FAIpQLSeskFZM3X6R9y7tsm51e6urAEhi5yW2fpBhnQea2yKwmqmWhw/viewform">translator
                             application form</a>, and we will contact you with details.

@@ -8,7 +8,10 @@ export default class BlockItem extends React.Component {
                     {this.props.title}
                 </div>
                 <div className="block-image-wrapper">
-                    <img className={this.props.imageClass} src={this.props.image} />
+                    <img
+                        className={this.props.imageClass}
+                        src={this.props.image}
+                    />
                 </div>
                 <div className="block-description">
                     {this.props.description}

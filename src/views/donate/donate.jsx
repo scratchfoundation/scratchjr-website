@@ -9,7 +9,7 @@ export default class Donate extends React.Component {
     render () {
         return (
             <div>
-                <NavBar selected="donate"/>
+                <NavBar selected="donate" />
                 <div id="content">
                     <div className="content-section">
 
@@ -24,7 +24,10 @@ export default class Donate extends React.Component {
                         </p>
 
                         <div className="donation-block">
-                            <a href="https://secure.donationpay.org/scratchfoundation/" id="donate-button">
+                            <a
+                                href="https://secure.donationpay.org/scratchfoundation/"
+                                id="donate-button"
+                            >
                                 <div className="blue-button">
                                     Donate
                                 </div>
@@ -32,12 +35,12 @@ export default class Donate extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
 }
 
 render(
-    <Donate/>,
+    <Donate />,
     document.getElementById('app'));

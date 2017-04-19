@@ -1,7 +1,8 @@
 import React from 'react';
+import {Link} from 'react-router';
 import './sectionitem.scss';
 
-export class SectionItem extends React.Component {
+export class LinkedSectionItem extends React.Component {
     render () {
         let thumb;
         if (typeof this.props.thumbnail === 'string') {
@@ -14,23 +15,32 @@ export class SectionItem extends React.Component {
         }
         return (
             <div className={`content-section-${this.props.format}-item`}>
-                <div className="content-section-item-title">
-                    {this.props.title}
-                </div>
-                <div className="content-section-item-thumbnail">
-                    {thumb}
-                </div>
+                <Link to={this.props.linkURL}>
+                    <div className="content-section-item-title">
+                        {this.props.title}
+                    </div>
+                </Link>
+                <Link to={this.props.linkURL}>
+                    <div className="content-section-item-thumbnail">
+                        {thumb}
+                    </div>
+                </Link>
                 <div className="content-section-item-description">
                     {this.props.description || this.props.children}
+                    <Link to={this.props.linkURL}>
+                        {this.props.linkText}
+                    </Link>
                 </div>
             </div>
         );
     }
 }
-SectionItem.propTypes = {
+LinkedSectionItem.propTypes = {
     title: React.PropTypes.string.isRequired,
     format: React.PropTypes.oneOf(['full', 'half']).isRequired,
     thumbnail: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.string]).isRequired,
     description: React.PropTypes.string,
+    linkURL: React.PropTypes.string.isRequired,
+    linkText: React.PropTypes.string.isRequired,
     children: React.PropTypes.node
 };

@@ -9,7 +9,7 @@ export default class Privacy extends React.Component {
     render () {
         return (
             <div>
-                <NavBar/>
+                <NavBar />
                 <div id="content">
                     <h1>Privacy Policy</h1>
                     <p>
@@ -17,7 +17,7 @@ export default class Privacy extends React.Component {
                         interactive stories and games. We understand how important
                         privacy is to our community, especially children and their
                         parents. We wrote this privacy policy to explain what
-                        information we collect, how we use it, and what we're doing
+                        information we collect, how we use it, and what we&apos;re doing
                         to keep it safe. If you have any questions regarding this
                         privacy policy, you can <a href="mailto:info@scratchjr.org">
                         contact us</a>.
@@ -25,7 +25,7 @@ export default class Privacy extends React.Component {
                     <h2>What information does ScratchJr collect?</h2>
                     <p>
                         We collect some data on where you click and which parts of
-                        the app you use. This 'click data' (collected through a
+                        the app you use. This &apos;click data&apos; (collected through a
                         tool called Google Analytics) helps us figure out ways
                         to improve the app. We also collect information about
                         your geographic location (using IP address and network
@@ -37,7 +37,7 @@ export default class Privacy extends React.Component {
                         does not collect any personal identifying information about you.
                     </p>
                     <p>
-                        Google Analytics acquires information by installing a 'cookie'
+                        Google Analytics acquires information by installing a &apos;cookie&apos;
                          on your device. Cookies are small bits of information that
                          are stored on your device, without any personally
                          identifiable information.
@@ -81,13 +81,13 @@ export default class Privacy extends React.Component {
                         </li>
                     </ul>
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
 }
 
 render(
-    <Privacy/>,
+    <Privacy />,
     document.getElementById('app')
 );

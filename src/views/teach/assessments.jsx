@@ -1,15 +1,17 @@
 import React from 'react';
-import {Section, StaticLinkSectionItem} from '../../components/sectionitem/sectionitem.jsx';
+import {Section} from '../../components/sectionitem/section.jsx';
+import {StaticLinkSectionItem} from '../../components/sectionitem/staticlinksectionitem.jsx';
 
 export default class AssessmentsSection extends React.Component {
     render () {
-        return(
+        return (
             <Section
                 id="assessments-section"
-                title="Assessments">
+                title="Assessments"
+            >
                 <div className="content-section-description">
                     These assessments provide different ways to help determine the depth of
-                    students' understanding of the relationship between the programming
+                    students&apos; understanding of the relationship between the programming
                     blocks and their associated behaviors.
                 </div>
                 <StaticLinkSectionItem
@@ -17,13 +19,20 @@ export default class AssessmentsSection extends React.Component {
                     format="full"
                     thumbnail="/images/assessments/circle-the-blocks.png"
                     linkURL="//youtu.be/l9d9L9hc2o4?list=PLsXbKpJZTa6P2bt7GpZTAZuvZT1cmFKa5"
-                    linkText="See more">
-                    This <a href="//youtu.be/l9d9L9hc2o4?list=PLsXbKpJZTa6P2bt7GpZTAZuvZT1cmFKa5"
-                    target="_blank">YouTube playlist</a> includes videos of full-screen ScratchJr programs,
+                    linkText="See more"
+                >
+                    This <a
+                        href="//youtu.be/l9d9L9hc2o4?list=PLsXbKpJZTa6P2bt7GpZTAZuvZT1cmFKa5"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >YouTube playlist</a> includes videos of full-screen ScratchJr programs,
                     and accompanying directions for how to assess students in the classroom
                     on their understanding of programming concepts. Students can record
-                    their answer on this <a href="/assessments/solve-it-answer-sheet.pdf"
-                    target="_blank">answer sheet</a>...
+                    their answer on this <a
+                        href="/assessments/solve-it-answer-sheet.pdf"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >answer sheet</a>...
                 </StaticLinkSectionItem>
                 <div className="content-section-info">
                     The videos aim to assess students using 4 different methods:
@@ -47,8 +56,11 @@ export default class AssessmentsSection extends React.Component {
                         the code for the program. While watching, they should think
                         in their head which ScratchJr blocks would make the character
                         move the way it did. Then, students cut out blocks from
-                        their <a href="/assessments/block-labels.png" target="_blank">
-                        block sheet</a> and arrange them in the order that best matches
+                        their <a
+                            href="/assessments/block-labels.png"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >block sheet</a> and arrange them in the order that best matches
                         what they saw.</li>
                     </ul>
                 </div>
@@ -57,12 +69,13 @@ export default class AssessmentsSection extends React.Component {
                     format="full"
                     thumbnail="/images/assessments/reverse-engineer.png"
                     linkURL="/assessments/reverse-engineer-and-labels.pdf"
-                    linkText="Read more">
+                    linkText="Read more"
+                >
                     In this more in-depth assessment, students can build on the
                     Reverse Engineering Solve-It activities they did with the
                     YouTube videos. This assessment can be off-screen, if you are
                     able to project videos on a projector. Students view a full-screen
-                    ScratchJr project without seeing the code for the characters'
+                    ScratchJr project without seeing the code for the characters&apos;
                     programs. They then reconstruct the scripts of the project
                     using pre-printed blocks, provided at the end of the document...
                 </StaticLinkSectionItem>
