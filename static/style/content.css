@@ -35,6 +35,12 @@
 	text-align: center;
 }
 
+/* don't have bullets on centered (description) lists */
+.content-section-description ul {
+    list-style: none;
+    padding: 0;
+}
+
 .content-section-info {
 	color: #808080;
 	padding-bottom: 20px;

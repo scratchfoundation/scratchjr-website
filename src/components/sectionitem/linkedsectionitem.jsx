@@ -28,7 +28,7 @@ export class LinkedSectionItem extends React.Component {
                     </div>
                 </Link>
                 <div className="content-section-item-description">
-                    {this.props.description || this.props.children}
+                    {this.props.description || this.props.children}{' '}
                     <Link to={this.props.linkURL}>
                         {this.props.linkText}
                     </Link>

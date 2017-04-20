@@ -33,7 +33,7 @@ export class StaticLinkSectionItem extends React.Component {
                     </div>
                 </a>
                 <div className="content-section-item-description">
-                    {this.props.description || this.props.children}
+                    {this.props.description || this.props.children}{' '}
                     <a
                         href={this.props.linkURL}
                         rel="noopener noreferrer"

@@ -14,6 +14,8 @@ import AnimatedGenresSection from './curricula/animatedgenres.jsx';
 import PlaygroundSection from './curricula/playground.jsx';
 import LitMathSection from './curricula/litmath.jsx';
 import AssessmentsSection from './assessments.jsx';
+import AssessmentsHomeSection from './assessments/home.jsx';
+import SolveitSection from './assessments/solveit.jsx';
 import './teach.scss';
 
 export default class Teach extends React.Component {
@@ -86,7 +88,13 @@ render((
             <Route
                 component={AssessmentsSection}
                 path="assessments"
-            />
+            >
+                <IndexRoute component={AssessmentsHomeSection} />
+                <Route
+                    component={SolveitSection}
+                    path="solveit"
+                />
+            </Route>
             <IndexRedirect to="activities" />
             <Route
                 component={PageNotFound}
