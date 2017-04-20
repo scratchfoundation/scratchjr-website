@@ -23,7 +23,7 @@ export default class PressSection extends React.Component {
                         source={article.source}
                         dateString={article.dateString}
                     />
-                    ))}
+                ))}
             </div>
         );
     }

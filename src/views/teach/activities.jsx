@@ -19,9 +19,6 @@ export default class ActivitiesSection extends React.Component {
                     in any order you&apos;d like!
                 </div>
                 <div className="content-section-items-container">
-                    sdjfljsdf
-                </div>
-                <div className="content-section-items-container">
                     {activities.map((activity, index) => (
                         <StaticLinkSectionItem
                             key={index}

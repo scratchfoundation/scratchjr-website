@@ -27,5 +27,6 @@ module.exports = {
     og_image_height: 367,
 
     // Analytics & Monitoring
-    ga_tracker: process.env.GA_TRACKER || '' // eslint-disable-line  no-undef
+    /* global process:false */
+    ga_tracker: process.env.GA_TRACKER || ''
 };

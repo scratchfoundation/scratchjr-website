@@ -6,10 +6,12 @@ export class LinkedSectionItem extends React.Component {
     render () {
         let thumb;
         if (typeof this.props.thumbnail === 'string') {
-            thumb = (<img
-                className="content-section-item-thumbnail-image"
-                src={this.props.thumbnail}
-            />);
+            thumb = (
+                <img
+                    className="content-section-item-thumbnail-image"
+                    src={this.props.thumbnail}
+                />
+            );
         } else {
             thumb = this.props.thumbnail;
         }

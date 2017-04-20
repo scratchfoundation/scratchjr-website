@@ -21,9 +21,11 @@ export default class Carousel extends React.Component {
         };
         return (
             <Slider {... settings}>
-                {this.props.items.map((item, index) => (
-                    <div key={index}><img src={item} /></div>
-                    ))}
+                {
+                    this.props.items.map((item, index) => (
+                        <div key={index}><img src={item} /></div>
+                    ))
+                }
             </Slider>
         );
     }
