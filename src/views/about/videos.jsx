@@ -4,7 +4,10 @@ import {SectionItem} from '../../components/sectionitem/sectionitem.jsx';
 export default class VideosSection extends React.Component {
     render () {
         return (
-            <div className="content-section" id="videos-section">
+            <div
+                className="content-section"
+                id="videos-section"
+            >
                 <div className="content-section-title">
                     Videos
                 </div>
@@ -19,10 +22,10 @@ export default class VideosSection extends React.Component {
                             <iframe
                                 width="342"
                                 height="192"
-                                src="http://www.youtube.com/embed/mZAawCvDlBM?rel=0"
+                                src="//www.youtube.com/embed/mZAawCvDlBM?rel=0"
                                 frameBorder="0"
-                                allowFullScreen >
-                            </iframe>
+                                allowFullScreen
+                            />
                         }
                         description="Project leaders Marina Bers and Mitch
                         Resnick demonstrate how to create a simple project,
@@ -36,10 +39,10 @@ export default class VideosSection extends React.Component {
                             <iframe
                                 width="342"
                                 height="192"
-                                src="http://www.youtube.com/embed/owAA_IjdVUM?rel=0"
+                                src="//www.youtube.com/embed/owAA_IjdVUM?rel=0"
                                 frameBorder="0"
-                                allowFullScreen>
-                            </iframe>
+                                allowFullScreen
+                            />
                         }
                         description="Project leaders Marina Bers and Mitch Resnick
                         respond to questions about the initial release of ScratchJr,
@@ -54,8 +57,8 @@ export default class VideosSection extends React.Component {
                                 width="342"
                                 height="214"
                                 frameBorder="0"
-                                allowFullScreen >
-                            </iframe>
+                                allowFullScreen
+                            />
                         }
                         description="Research Coordinator Amanda Strawhacker explores pedagogy
                         around young children's programming languages, and presents affordances

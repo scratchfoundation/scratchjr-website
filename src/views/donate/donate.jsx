@@ -9,7 +9,7 @@ export default class Donate extends React.Component {
     render () {
         return (
             <div>
-                <NavBar selected="donate"/>
+                <NavBar selected="donate" />
                 <div id="content">
                     <div className="content-section">
 
@@ -18,13 +18,16 @@ export default class Donate extends React.Component {
                         <p>
                             If you enjoy using the free ScratchJr app, please consider
                             making a donation to the Scratch Foundation (
-                            <a href="http://www.scratchfoundation.org/">www.scratchfoundation.org</a>),
+                            <a href="//www.scratchfoundation.org/">www.scratchfoundation.org</a>),
                             a nonprofit organization that provides ongoing support for ScratchJr.
                             We appreciate donations of all sizes, large and small.
                         </p>
 
                         <div className="donation-block">
-                            <a href="https://secure.donationpay.org/scratchfoundation/" id="donate-button">
+                            <a
+                                href="https://secure.donationpay.org/scratchfoundation/"
+                                id="donate-button"
+                            >
                                 <div className="blue-button">
                                     Donate
                                 </div>
@@ -32,12 +35,12 @@ export default class Donate extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
 }
 
 render(
-    <Donate/>,
+    <Donate />,
     document.getElementById('app'));

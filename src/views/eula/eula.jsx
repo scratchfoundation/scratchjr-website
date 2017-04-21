@@ -9,23 +9,27 @@ export default class Eula extends React.Component {
     render () {
         return (
             <div>
-                <NavBar/>
+                <NavBar />
                 <div id="content">
                     <div className="content-section">
                         <h1>END USER LICENSE AGREEMENT</h1>
                         <p>
-                            This End User License Agreement ('Agreement') applies to the ScratchJr Application
-                            developed collaboratively by the Massachusetts Institute of Technology ('MIT') and the
-                            Trustees of Tufts College ('Tufts University' or 'Tufts'), collectively the Licensors
-                            ('Licensors'), which is licensed, not sold, to the End User for use in accordance with
+                            This End User License Agreement (&apos;Agreement&apos;) applies to the ScratchJr Application
+                            developed collaboratively by the
+                            Massachusetts Institute of Technology (&apos;MIT&apos;) and the
+                            Trustees of Tufts College (&apos;Tufts University&apos;
+                            or &apos;Tufts&apos;), collectively the Licensors
+                            (&apos;Licensors&apos;), which is licensed, not sold,
+                            to the End User for use in accordance with
                             the terms and conditions herein.
                         </p>
                         <h2>I. DEFINITIONS</h2>
                         <p>
-                            END USER. An End-User is either (i) an individual ('Individual'), (ii) an Individual
-                            Qualified Educational Institution; or (iii) a Corporation. An 'Individual' means a
+                            END USER. An End-User is either (i) an individual
+                            (&apos;Individual&apos;), (ii) an Individual
+                            Qualified Educational Institution; or (iii) a Corporation. An &apos;Individual&apos; means a
                             person acquiring the Application for personal use, not for redistribution. An
-                            'Individual Qualified Educational Institution' means an organization acquiring the
+                            &apos;Individual Qualified Educational Institution&apos; means an organization acquiring the
                             Application for its own internal use for faculty, staff and students including (a) a
                             public or private entity, the primary mission of which is directly involved in, or in
                             support of, instruction rather than research, and that is a bona fide, educational
@@ -37,14 +41,15 @@ export default class Eula extends React.Component {
                             Educational Institution that acquires the Application for organizational use.
                         </p>
                         <p>
-                            APPLICATION. 'Application,' as used in this Agreement, includes the ScratchJr
+                            APPLICATION. &apos;Application,&apos; as used in this Agreement, includes the ScratchJr
                             Application, its underlying source code and all upgrades made thereto. The Licensors
                             are not obligated to provide upgrades under this Agreement.
                         </p>
                         <h2>II. SCOPE OF LICENSE</h2>
                         <p>
                             LICENSE GRANT. This Agreement grants to End User a restricted, revocable,
-                            nonexclusive, nontransferable, and non-assignable license (the 'License') to use the
+                            nonexclusive, nontransferable, and non-assignable license
+                            (the &apos;License&apos;) to use the
                             Application on an Android device that the End User owns or controls. This Agreement
                             shall govern upgrades to the Application that repair, replace or enhance the original
                             product.
@@ -59,7 +64,7 @@ export default class Eula extends React.Component {
                             Administration Act or any other export laws, restrictions, or regulations; (v) Export
                             or re-export the Application into any United States embargoed countries or to anyone
                             on the United States Treasury Department list of Specially Designated Nationals or the
-                            United States Department of Commerce Denied Person's List or Entity List; (vi) Be
+                            United States Department of Commerce Denied Person&apos;s List or Entity List; (vi) Be
                             located in any country or named on any list designated in (5) above; or (vii) Use the
                             Application in any manner prohibited by law. Any attempt to breach the foregoing shall
                             be deemed a material breach of this Agreement and is subject to damages. The Licensors
@@ -68,18 +73,19 @@ export default class Eula extends React.Component {
                         </p>
                         <p>
                             If the Application enables access to third-party programs or websites, the End User
-                            may be required to accept the third party's additional terms. Licensors are not
+                            may be required to accept the third party&apos;s additional terms. Licensors are not
                             responsible for examining or evaluating the content, accuracy, completeness,
                             timeliness, validity, legality, decency, quality, or other aspect of any third-party
                             program or website. End User agrees to use third-party products and service at End
-                            User's sole risk. Licensors shall not be liable to the End User for harms arising from
-                            End User's access to or use of third-party products, services or content.
+                            User&apos;s sole risk. Licensors shall not be liable to the End User for harms arising from
+                            End User&apos;s access to or use of third-party products, services or content.
                         </p>
                         <h2>III. INTELLECTUAL PROPERTY</h2>
                         <p>
                             RESERVATION OF RIGHTS. The software, content, visual interfaces, interactive features,
                             information, graphics, design, compilation, computer code and all other elements of
-                            the Application (the 'ScratchJr Materials'), are protected by copyright, trade dress,
+                            the Application (the &apos;ScratchJr Materials&apos;),
+                            are protected by copyright, trade dress,
                             patent, and trademark laws of the United States and other jurisdictions, international
                             conventions, and all other relevant intellectual property and proprietary rights, and
                             applicable laws. All ScratchJr Materials, including intellectual property rights
@@ -95,7 +101,7 @@ export default class Eula extends React.Component {
                         </p>
                         <p>
                             In the event that a third party claims that the Application infringes that third
-                            party's intellectual property rights, the Licensors will be solely responsible for the
+                            party&apos;s intellectual property rights, the Licensors will be solely responsible for the
                             investigation, defense, settlement, and discharge of any such intellectual property
                             infringement claim, provided that End User promptly notifies the Licensors in writing
                             of any such claim and Licensors are permitted to control fully the defense and any
@@ -110,7 +116,7 @@ export default class Eula extends React.Component {
                         </p>
                         <h2>IV. DISCLAIMER OF WARRANTY</h2>
                         <p>
-                            THE APPLICATION IS PROVIDED FREE OF CHARGE AND 'AS IS,' WITHOUT WARRANTIES OF ANY
+                            THE APPLICATION IS PROVIDED FREE OF CHARGE AND &apos;AS IS,&apos; WITHOUT WARRANTIES OF ANY
                             KIND, EXPLICIT OR IMPLICIT. WARRANTIES DISCLAIMED INCLUDE BUT ARE NOT LIMITED TO THOSE
                             REGARDING FREEDOM FROM DEFECTS, FREEDOM FROM VIRUSES, THE ABILITY TO OPERATE
                             CONTINUOUSLY, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, SATISFACTORY QUALITY,
@@ -136,7 +142,7 @@ export default class Eula extends React.Component {
                             POSSIBILITY THEREOF, AND REGARDLESS OF THE LEGAL OR EQUITABLE THEORY, WHETHER IN
                             CONTRACT, TORT OR OTHERWISE, UPON WHICH THE CLAIM IS BASED. THE END USER IS LIABLE FOR
                             ALL DAMAGES WITHOUT LIMITATION THAT ARE CAUSED BY ABUSE OF THE APPLICATION. THE END
-                            USER HAS NO RIGHT TO CLAIM ANY INDEMNIFICATION BASED ON THE END USER'S USE OF THE
+                            USER HAS NO RIGHT TO CLAIM ANY INDEMNIFICATION BASED ON THE END USER&apos;S USE OF THE
                             APPLICATION.
                         </p>
                         <h2>VI. CONTENT</h2>
@@ -157,8 +163,8 @@ export default class Eula extends React.Component {
                         <p>
                             To the maximum extent permitted by law, End User agrees to defend, indemnify and hold
                             Licensors harmless from any and all claims, suits, losses, liability, costs or
-                            expenses, including but not limited to reasonable attorneys' fees, arising from or
-                            incurred as a result of End User's use of the Application or any breach by End User of
+                            expenses, including but not limited to reasonable attorneys&apos; fees, arising from or
+                            incurred as a result of End User&apos;s use of the Application or any breach by End User of
                             this Agreement.
                         </p>
                         <h2>VII. CONSENT TO USE DATA</h2>
@@ -171,8 +177,9 @@ export default class Eula extends React.Component {
                         <h2>VIII. COMMERCIAL ITEMS</h2>
                         <p>
                             NOTICE TO U.S. GOVERNMENT END USERS. The Application and related documentation are
-                            'Commercial Items,' as that term is defined in 48 C.F.R. ¤ 2.101, consisting of
-                            'Commercial Computer Software' and 'Commercial Computer Software Documentation,' as
+                            &apos;Commercial Items,&apos; as that term is defined in 48 C.F.R. ¤ 2.101, consisting of
+                            &apos;Commercial Computer Software&apos; and &apos;Commercial
+                            Computer Software Documentation,&apos; as
                             such terms are used in 48 C.F.R. ¤ 12.212 or 48 C.F.R. ¤ 227.7202, as applicable. The
                             Application is being licensed to U.S. Government End Users (a) only as Commercial
                             Items and (b) with only those rights as are granted to all other End Users pursuant to
@@ -180,7 +187,7 @@ export default class Eula extends React.Component {
                         </p>
                         <h2>IX. TERMINATION</h2>
                         <p>
-                            This Agreement is effective until terminated. End User's rights under this Agreement
+                            This Agreement is effective until terminated. End User&apos;s rights under this Agreement
                             will terminate automatically without notice if End User fails to comply with any of
                             the terms herein. Upon termination End User shall cease all use of the Application and
                             shall destroy all copies of the Application, including related documentation.
@@ -216,7 +223,7 @@ export default class Eula extends React.Component {
                         <p>
                             End User hereby represents and warrants that End User (i) is not located in a country
                             that is subject to a U.S. Government embargo, or that has been designated by the U.S.
-                            Government as a 'terrorist supporting' country; and (ii) is not listed on any U.S.
+                            Government as a &apos;terrorist supporting&apos; country; and (ii) is not listed on any U.S.
                             Government list of prohibited or restricted parties.
                         </p>
                         <p>
@@ -234,12 +241,12 @@ export default class Eula extends React.Component {
                         </p>
                     </div>
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
 }
 
 render(
-    <Eula/>,
+    <Eula />,
     document.getElementById('app'));

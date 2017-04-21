@@ -9,7 +9,7 @@ import './carousel.scss';
  */
 export default class Carousel extends React.Component {
     render () {
-        var settings = {
+        const settings = {
             dots: true,
             arrows: false,
             infinite: true,
@@ -21,15 +21,17 @@ export default class Carousel extends React.Component {
         };
         return (
             <Slider {... settings}>
-                {this.props.items.map((item, index) => {
-                    return (
-                        <div key={index}><img src={item}/></div>
-                    );
-                })}
+                {
+                    this.props.items.map((item, index) => (
+                        <div key={index}><img src={item} /></div>
+                    ))
+                }
             </Slider>
         );
     }
 }
 Carousel.propTypes = {
-    items: React.PropTypes.array
+    items: React.PropTypes.arrayOf(
+        React.PropTypes.string
+    )
 };

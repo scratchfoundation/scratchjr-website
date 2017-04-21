@@ -1,20 +1,21 @@
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
-var routes = require('./src/routes.json');
+const routes = require('./src/routes.json');
+const TemplateConfig = require('./src/template-config.js');
 
 // Prepare all entry points
-var entry = {
+const entry = {
     // common: [
     //     // Vendor
     //     'react',
     //     'react-dom'
     // ]
 };
-routes.forEach(function (route) {
+routes.forEach(route => {
     if (!route.redirect) {
-        entry[route.name] = './src/views/' + route.name + '/' + route.name + '.jsx';
+        entry[route.name] = `./src/views/${route.name}/${route.name}.jsx`;
     }
 });
 
@@ -54,13 +55,11 @@ module.exports = {
             from: 'static'
         }])
     ].concat(routes
-        .filter(function (route) {return !route.redirect;})
-        .map(function (route) {
-            return new HtmlWebpackPlugin(Object.assign({}, require('./src/template-config.js'), {
-                title: route.title,
-                filename: route.name + '.html',
-                route: route
-            }));
-        })
+        .filter(route => !route.redirect)
+        .map(route => new HtmlWebpackPlugin(Object.assign({}, TemplateConfig, {
+            title: route.title,
+            filename: `${route.name}.html`,
+            route: route
+        })))
     )
 };

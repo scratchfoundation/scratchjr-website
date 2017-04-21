@@ -1,10 +1,14 @@
 import React from 'react';
-import {LinkedSectionItem, SectionItem} from '../../../components/sectionitem/sectionitem.jsx';
+import {SectionItem} from '../../../components/sectionitem/sectionitem.jsx';
+import {LinkedSectionItem} from '../../../components/sectionitem/linkedsectionitem.jsx';
 
 export default class TipsHome extends React.Component {
     render () {
         return (
-            <div className="content-section learn-tips" id="tips-section">
+            <div
+                className="content-section learn-tips"
+                id="tips-section"
+            >
                 <div className="content-section-title">
                     Tips &amp; Hints
                 </div>
@@ -19,7 +23,8 @@ export default class TipsHome extends React.Component {
                         format="full"
                         thumbnail="/images/tips/managing-projects.jpg"
                         linkURL="/learn/tips/manage-projects"
-                        linkText="Watch video">
+                        linkText="Watch video"
+                    >
                         Learn how to make a new project, rename an existing project, and delete a project.
                     </LinkedSectionItem>
                     <LinkedSectionItem
@@ -59,7 +64,8 @@ export default class TipsHome extends React.Component {
                         format="full"
                         thumbnail="/images/tips/sample-projects.png"
                         linkURL="/learn/tips/sample-projects"
-                        linkText="Read more">
+                        linkText="Read more"
+                    >
                         The Sample Projects library is a collection of
                         eight pre-made projects that use a range of blocks and
                         features to show you the variety of projects you can make
@@ -68,34 +74,37 @@ export default class TipsHome extends React.Component {
                     <SectionItem
                         title="Character List Scrolling"
                         format="full"
-                        thumbnail="/images/tips/character-list.png">
-                        If there's a scroll bar in the Character List
+                        thumbnail="/images/tips/character-list.png"
+                    >
+                        If there&apos;s a scroll bar in the Character List
                         on the left of the Stage it means you that you have more
                         characters in your project than fit in the list on the screen.
                         You can scroll through this list of characters by swiping
                         up or down on the list, but not on the scroll bar. The order
-                        of the characters doesn't matter for any of the action in the project
+                        of the characters doesn&apos;t matter for any of the action in the project
                     </SectionItem>
                     <SectionItem
                         title="Copying Characters"
                         format="full"
-                        thumbnail="/images/tips/copy-character.png">
+                        thumbnail="/images/tips/copy-character.png"
+                    >
                         To copy a character and its scripts, you can
                         drag the character from the list of characters on the left
                         over to the list of pages on the right. This will work for
                         copying characters to the same page and to other pages.
                         The scripts and sounds will copy along with the character,
                         but then the scripts are separate, so when you change the
-                        scripts or sounds of one of the copies, it won't affect the
+                        scripts or sounds of one of the copies, it won&apos;t affect the
                         other existing copies of the character.
                     </SectionItem>
                     <LinkedSectionItem
                         title="Copying Scripts"
                         format="full"
                         thumbnail="/images/tips/copy-script.png"
-                        description=''
+                        description=""
                         linkURL="/learn/tips/copy-scripts"
-                        linkText="Read more">
+                        linkText="Read more"
+                    >
                         You can copy a script (set of blocks) from one character to another in the same project.
                     </LinkedSectionItem>
                     <LinkedSectionItem
@@ -109,7 +118,8 @@ export default class TipsHome extends React.Component {
                     <SectionItem
                         title="Moving Backwards"
                         format="full"
-                        thumbnail="/images/tips/backwards-thumb.png">
+                        thumbnail="/images/tips/backwards-thumb.png"
+                    >
                         You can make a character move backwards by giving
                         your motion blocks negative numbers. If you want to make your
                         character face the opposite direction without moving forward or

@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { Router, Route, browserHistory, IndexRedirect, IndexRoute, applyRouterMiddleware } from 'react-router';
-import { useScroll } from 'react-router-scroll';
+import {Router, Route, browserHistory, IndexRedirect, IndexRoute, applyRouterMiddleware} from 'react-router';
+import {useScroll} from 'react-router-scroll';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import TabNav from '../../components/tabnav/tabnav.jsx';
@@ -14,11 +14,13 @@ import AnimatedGenresSection from './curricula/animatedgenres.jsx';
 import PlaygroundSection from './curricula/playground.jsx';
 import LitMathSection from './curricula/litmath.jsx';
 import AssessmentsSection from './assessments.jsx';
+import AssessmentsHomeSection from './assessments/home.jsx';
+import SolveitSection from './assessments/solveit.jsx';
 import './teach.scss';
 
 export default class Teach extends React.Component {
     render () {
-        var tabs = [
+        const tabs = [
             {
                 url: '/teach/activities',
                 text: 'Activities',
@@ -38,12 +40,12 @@ export default class Teach extends React.Component {
         ];
         return (
             <div>
-                <NavBar selected="teach"/>
+                <NavBar selected="teach" />
                 <div id="content">
-                    <TabNav items={tabs}/>
+                    <TabNav items={tabs} />
                     {this.props.children}
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
@@ -53,18 +55,51 @@ Teach.propTypes = {
 };
 
 render((
-    <Router history={browserHistory} render={applyRouterMiddleware(useScroll())}>
-        <Route path="/teach" component={Teach}>
-            <Route path="activities" component={ActivitiesSection}/>
-            <Route path="curricula" component={CurriculaSection}>
-                <IndexRoute component={CurriculaHomeSection}/>
-                <Route path="animated-genres" component={AnimatedGenresSection} />
-                <Route path="playground" component={PlaygroundSection} />
-                <Route path="literacy-math" component={LitMathSection} />
+    <Router
+        history={browserHistory}
+        render={applyRouterMiddleware(useScroll())}
+    >
+        <Route
+            component={Teach}
+            path="/teach"
+        >
+            <Route
+                component={ActivitiesSection}
+                path="activities"
+            />
+            <Route
+                component={CurriculaSection}
+                path="curricula"
+            >
+                <IndexRoute component={CurriculaHomeSection} />
+                <Route
+                    component={AnimatedGenresSection}
+                    path="animated-genres"
+                />
+                <Route
+                    component={PlaygroundSection}
+                    path="playground"
+                />
+                <Route
+                    component={LitMathSection}
+                    path="literacy-math"
+                />
             </Route>
-            <Route path="assessments" component={AssessmentsSection}/>
-            <IndexRedirect to="activities"/>
-            <Route path="*" component={PageNotFound}/>
+            <Route
+                component={AssessmentsSection}
+                path="assessments"
+            >
+                <IndexRoute component={AssessmentsHomeSection} />
+                <Route
+                    component={SolveitSection}
+                    path="solveit"
+                />
+            </Route>
+            <IndexRedirect to="activities" />
+            <Route
+                component={PageNotFound}
+                path="*"
+            />
         </Route>
     </Router>
 ), document.getElementById('app'));

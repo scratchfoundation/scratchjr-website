@@ -9,7 +9,7 @@ import './index.scss';
 
 export default class Index extends React.Component {
     render () {
-        var images = [
+        const images = [
             '/images/slide1.png',
             '/images/slide2.png',
             '/images/slide3.png',
@@ -18,16 +18,12 @@ export default class Index extends React.Component {
         ];
         return (
             <div>
-                <NavBar/>
-                <Carousel items={images}/>
+                <NavBar />
+                <Carousel items={images} />
 
                 <div id="content">
                     <div id="announcement-banner">
-                        ScratchJr is available as a free app for <a
-                        href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
-                        iPads</a> and <a
-                        href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
-                        Android</a> tablets.
+                        ScratchJr is available as a free app.
                     </div>
 
                     <div id="content-text">
@@ -46,23 +42,30 @@ export default class Index extends React.Component {
                             computer.
                             <div id="store-badges">
                                 <a href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
-                                    <img alt="Download on the App Store" src="/images/Apple_appstore.svg"/>
+                                    <img
+                                        alt="Download on the App Store"
+                                        src="/images/Apple_appstore.svg"
+                                    />
                                 </a>
                                 <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
                                     <img
                                         alt="Get it on Google Play"
-                                        src="/images/GooglePlay.svg" />
+                                        src="/images/GooglePlay.svg"
+                                    />
                                 </a>
                                 <a
-                                    href="https://chrome.google.com/webstore/detail/scratchjr/oipimoeophamdcmjcfameoojlbhbgjda">
+                                    href="https://chrome.google.com/webstore/detail/scratchjr/oipimoeophamdcmjcfameoojlbhbgjda"
+                                >
                                     <img
                                         alt="Download on the Chrome Web Store"
-                                        src="/images/ChromeWebStore_Badge.svg"/>
+                                        src="/images/ChromeWebStore_Badge.svg"
+                                    />
                                 </a>
                                 <a href="https://www.amazon.com/gp/product/B01AKGTD2E">
                                     <img
                                         alt="Get it on Amazon"
-                                        src="/images/amazon-underground-app-us-black.svg"/>
+                                        src="/images/amazon-underground-app-us-black.svg"
+                                    />
                                 </a>
                             </div>
                             {/* end store-badges */}
@@ -71,7 +74,10 @@ export default class Index extends React.Component {
                     </div>
                     {/* end content-text */}
                     <div id="content-graphic">
-                        <img id="content-graphic-item" src="/images/homegraphic.png"/>
+                        <img
+                            id="content-graphic-item"
+                            src="/images/homegraphic.png"
+                        />
                     </div>
                     {/* end content-graphic */}
                     <div className="content-news">
@@ -79,18 +85,17 @@ export default class Index extends React.Component {
                             News
                         </div>
                         <div className="content-news-body">
-                            ScratchJr is now available in Spanish f
-                            or <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
-                                Android
-                            </a> and <a
-                            href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
-                                iOS
-                            </a> tablets!
+                            Check out some tips for <a
+                                href="https://medium.com/scratchfoundation-blog/scratch-day-for-younger-children-4eba6d07cefc"
+                            >
+                            hosting a Scratch Day event for younger children</a> with ScratchJr.
                         </div>
                         <div className="content-news-body">
-                            No Starch Press has
-                            re-released <a href="https://www.nostarch.com/scratchjr" target="_blank">
-                            The Official ScratchJr Book</a> in Spanish paperback and ebook format!
+                            ScratchJr was named one of the <a href="http://www.slj.com/2016/12/reviews/best-of/top-10-tech-2016/">Top
+                            10 Tech</a> by School Library Journal.
+                        </div>
+                        <div className="content-news-body">
+                            ScratchJr is now available in more languages!
                         </div>
                     </div>
 
@@ -100,9 +105,9 @@ export default class Index extends React.Component {
                                 Join the Discussion
                             </div>
                             <div id="discussion-body">
-                                We introduced ourselves. Now it's your turn. Drop us a line with feedback,
-                                report bugs &amp; glitches, or just say 'hi!'
-                                <br></br>
+                                We introduced ourselves. Now it&apos;s your turn. Drop us a line with feedback,
+                                report bugs &amp; glitches, or just say &apos;hi!&apos;
+                                <br />
                                 <a href=" https://twitter.com/intent/tweet?screen_name=ScratchJr">
                                     <div className="blue-button">
                                         Tweet @ScratchJr
@@ -124,11 +129,11 @@ export default class Index extends React.Component {
                     </div>
                 </div>
                 {/* end content */}
-                <Footer/>
+                <Footer />
             </div>
         );
     }
 }
 
 render(
-    <Index/>, document.getElementById('app'));
+    <Index />, document.getElementById('app'));

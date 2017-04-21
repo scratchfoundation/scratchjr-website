@@ -6,7 +6,7 @@ export default class GuideKey extends React.Component {
         return (
             <div id="guide-key">
                 <div id="key-header">
-                    {this.props.id + ' | ' + this.props.title}
+                    {`${this.props.id} | ${this.props.title}`}
                 </div>
                 <div id="key-description">
                     {this.props.description}

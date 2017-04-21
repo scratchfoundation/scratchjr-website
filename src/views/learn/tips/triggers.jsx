@@ -1,5 +1,5 @@
 import React from 'react';
-import {Section} from '../../../components/sectionitem/sectionitem.jsx';
+import {Section} from '../../../components/sectionitem/section.jsx';
 
 export default class TriggersSection extends React.Component {
     render () {
@@ -7,14 +7,16 @@ export default class TriggersSection extends React.Component {
             <Section
                 id="trigger-blocks-section"
                 title="Trigger Blocks"
-                description="See how to use trigger blocks to specify when a script should run.">
+                description="See how to use trigger blocks to specify when a script should run."
+            >
                 <div className="content-section-video">
-                  <iframe
-                      width="640"
-                      height="480"
-                      src="https://www.youtube.com/embed/123AdwR_JxI?rel=0"
-                      frameBorder="0"
-                      allowFullScreen></iframe>
+                    <iframe
+                        width="640"
+                        height="480"
+                        src="https://www.youtube.com/embed/123AdwR_JxI?rel=0"
+                        frameBorder="0"
+                        allowFullScreen
+                    />
                 </div>
             </Section>
         );

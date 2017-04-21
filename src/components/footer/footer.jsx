@@ -16,21 +16,26 @@ export default class Footer extends React.Component {
                         <a
                             className="social-link sjr-icon-twitter"
                             href="https://twitter.com/ScratchJr"
+                            rel="noopener noreferrer"
+                            target="_blank"
                             title="Follow us on Twitter"
-                            target="_blank">
+                        >
                             <span>Twitter</span>
                         </a>
                         <a
                             className="social-link sjr-icon-facebook"
                             href="https://www.facebook.com/scratchjr"
+                            rel="noopener noreferrer"
+                            target="_blank"
                             title="Like us on Facebook"
-                            target="_blank">
+                        >
                             <span>Facebook</span>
                         </a>
                     </div>
                     <div id="footer-nav">
                         <a
-                            href="https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform?usp=send_form">
+                            href="https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform?usp=send_form"
+                        >
                             <div className="blue-button">
                                 Join Mailing List
                             </div>
