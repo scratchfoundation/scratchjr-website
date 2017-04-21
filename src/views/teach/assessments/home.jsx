@@ -1,13 +1,15 @@
 import React from 'react';
 import {StaticLinkSectionItem} from '../../../components/sectionitem/staticlinksectionitem.jsx';
 import {LinkedSectionItem} from '../../../components/sectionitem/linkedsectionitem.jsx';
+import TxDiv from '../../../components/transifex/txdiv.jsx';
 
 export default class AssessmentsHome extends React.Component {
     render () {
         return (
-            <div
+            <TxDiv
                 className="content-section teach-assessment"
                 id="assessments-section"
+                txContent="translate_urls"
             >
                 <div className="content-section-title">
                     Assessments
@@ -44,7 +46,7 @@ export default class AssessmentsHome extends React.Component {
                     programs. They then reconstruct the scripts of the project
                     using pre-printed blocks, provided at the end of the document...
                 </StaticLinkSectionItem>
-            </div>
+            </TxDiv>
         );
     }
 }

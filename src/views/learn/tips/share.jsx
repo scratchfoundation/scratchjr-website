@@ -1,5 +1,6 @@
 import React from 'react';
 import {Section} from '../../../components/sectionitem/section.jsx';
+import TxDiv from '../../../components/transifex/txdiv.jsx';
 
 export default class ShareSection extends React.Component {
     render () {
@@ -7,9 +8,13 @@ export default class ShareSection extends React.Component {
             <Section
                 id="share-projects-section"
                 title="Sharing ScratchJr Projects"
+                translateUrls
                 description="You can share your ScratchJr projects in one of two ways: by email or by AirDrop."
             >
-                <div className="content-section-item-description">
+                <TxDiv
+                    className="content-section-item-description"
+                    txContent="notranslate_urls"
+                >
                     When the project you want to share is open, tap the yellow tab
                     in the top-right corner to go to the Project Information screen.
                     <img
@@ -17,7 +22,7 @@ export default class ShareSection extends React.Component {
                         className="content-section-image"
                         src="/images/tips/top-bar.png"
                     />
-                </div>
+                </TxDiv>
                 <div className="content-section-item-description">
                     Then select your sharing method: <em>Share by Email</em> or <em>Share
                     by AirDrop</em>. Regardless of which method you use

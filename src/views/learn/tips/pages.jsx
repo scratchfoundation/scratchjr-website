@@ -7,6 +7,7 @@ export default class PagesSection extends React.Component {
             <Section
                 id="pages-section"
                 title="Multiple pages"
+                translateUrls
                 description=""
             >
                 <div className="content-section-item-description">

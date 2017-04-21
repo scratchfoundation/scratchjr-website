@@ -1,9 +1,11 @@
 import React from 'react';
 import './sectionitem.scss';
+import TxDiv from '../transifex/txdiv.jsx';
 
 export class StaticLinkSectionItem extends React.Component {
     render () {
         let thumb;
+        const txContent = this.props.translateUrls ? 'translate_urls' : '';
         if (typeof this.props.thumbnail === 'string') {
             thumb = (<img
                 className="content-section-item-thumbnail-image"
@@ -13,7 +15,10 @@ export class StaticLinkSectionItem extends React.Component {
             thumb = this.props.thumbnail;
         }
         return (
-            <div className={`content-section-${this.props.format}-item`}>
+            <TxDiv
+                className={`content-section-${this.props.format}-item`}
+                txContent={txContent}
+            >
                 <a
                     href={this.props.linkURL}
                     rel="noopener noreferrer"
@@ -42,7 +47,7 @@ export class StaticLinkSectionItem extends React.Component {
                         {this.props.linkText}
                     </a>
                 </div>
-            </div>
+            </TxDiv>
         );
     }
 }
@@ -53,5 +58,6 @@ StaticLinkSectionItem.propTypes = {
     description: React.PropTypes.string,
     linkURL: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string.isRequired,
+    translateUrls: React.PropTypes.bool,
     children: React.PropTypes.node
 };

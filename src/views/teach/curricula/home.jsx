@@ -31,6 +31,7 @@ export default class HomeSection extends React.Component {
                         thumbnail="/images/rightandleft.png"
                         linkURL="/pdfs/blocks.pdf"
                         linkText="Download PDF"
+                        translateUrls
                     >
                         You can print high quality images of the ScratchJr blocks for classroom instruction...
                     </StaticLinkSectionItem>

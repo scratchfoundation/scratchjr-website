@@ -7,6 +7,7 @@ export default class SamplesSection extends React.Component {
             <Section
                 id="sample-projects-section"
                 title="Sample Projects Library"
+                translateUrls
                 description="The Sample Projects Library is a collection of
                     eight pre-made ScratchJr projects that use a range of blocks
                     and features to show you the variety of projects you can make
