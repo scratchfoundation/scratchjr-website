@@ -2,6 +2,7 @@ import React from 'react';
 import GuideButton from '../../components/guidebutton/guidebutton.jsx';
 import GuideButtonLine from '../../components/guidebutton/guidebuttonline.jsx';
 import GuideKey from '../../components/guidekey/guidekey.jsx';
+import TxSpan from '../../components/transifex/txspan.jsx';
 
 import interfaceKey from './interface.json';
 import './interface.scss';
@@ -23,12 +24,16 @@ export default class InterfaceSection extends React.Component {
                 className="content-section learn-interface"
                 id="interface-section"
             >
-                <a
+                <TxSpan
                     className="download-guide-link"
-                    href="/pdfs/scratchjr-interface-guide.pdf"
+                    txContent="translate_urls block"
                 >
-                    <span className="download-icon">&#x2193;</span>Download guide as pdf
-                </a>
+                    <a
+                        href="/pdfs/scratchjr-interface-guide.pdf"
+                    >
+                        <span className="download-icon">&#x2193;</span>Download guide as pdf
+                    </a>
+                </TxSpan>
                 <div className="interface-container">
                     <img
                         className="ipad-project-view"

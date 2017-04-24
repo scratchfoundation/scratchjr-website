@@ -1,6 +1,7 @@
 import React from 'react';
 import BlockItem from '../../components/blockitem/blockitem.jsx';
 import blocks from './blocks.json';
+import TxSpan from '../../components/transifex/txspan.jsx';
 
 export default class BlocksSection extends React.Component {
     render () {
@@ -9,11 +10,16 @@ export default class BlocksSection extends React.Component {
                 className="content-section learn-blocks"
                 id="blocks-section"
             >
-                <a
+                <TxSpan
                     className="download-guide-link"
-                    href="/pdfs/block-descriptions.pdf"
+                    txContent="translate_urls block"
                 >
-                    <span className="download-icon">&#x2193;</span>Download guide as pdf</a>
+                    <a
+                        href="/pdfs/block-descriptions.pdf"
+                    >
+                        <span className="download-icon">&#x2193;</span>Download guide as pdf
+                    </a>
+                </TxSpan>
                 {/* Yellow Blocks */}
                 <div
                     className="block-category-header"

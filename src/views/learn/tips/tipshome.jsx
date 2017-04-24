@@ -58,6 +58,7 @@ export default class TipsHome extends React.Component {
                         description="You can share projects by email. On iPads you can also share project by AirDrop."
                         linkURL="/learn/tips/share-projects"
                         linkText="Read more"
+                        translateUrls
                     />
                     <LinkedSectionItem
                         title="Sample Projects"
@@ -65,6 +66,7 @@ export default class TipsHome extends React.Component {
                         thumbnail="/images/tips/sample-projects.png"
                         linkURL="/learn/tips/sample-projects"
                         linkText="Read more"
+                        translateUrls
                     >
                         The Sample Projects library is a collection of
                         eight pre-made projects that use a range of blocks and

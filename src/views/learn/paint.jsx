@@ -2,6 +2,7 @@ import React from 'react';
 import GuideButton from '../../components/guidebutton/guidebutton.jsx';
 import GuideButtonLine from '../../components/guidebutton/guidebuttonline.jsx';
 import GuideKey from '../../components/guidekey/guidekey.jsx';
+import TxSpan from '../../components/transifex/txspan.jsx';
 
 import paintKey from './paint.json';
 import './paint.scss';
@@ -23,12 +24,16 @@ export default class PaintSection extends React.Component {
                 className="content-section learn-paint"
                 id="paint-section"
             >
-                <a
-                    href="/pdfs/paint-editor-guide.pdf"
+                <TxSpan
                     className="download-guide-link"
+                    txContent="translate_urls block"
                 >
-                    <span className="download-icon">&#x2193;</span>Download guide as pdf
-                </a>
+                    <a
+                        href="/pdfs/paint-editor-guide.pdf"
+                    >
+                        <span className="download-icon">&#x2193;</span>Download guide as pdf
+                    </a>
+                </TxSpan>
                 <div className="paint-container">
                     <img
                         className="ipad-project-view"

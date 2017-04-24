@@ -7,6 +7,7 @@ export default class CopyScriptSection extends React.Component {
             <Section
                 id="copy-scripts-section"
                 title="Copying Scripts"
+                translateUrls
                 description=""
             >
                 <div className="content-section-item-description">

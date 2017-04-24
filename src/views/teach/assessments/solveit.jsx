@@ -7,6 +7,7 @@ export default class SolveitSection extends React.Component {
             <Section
                 id="solveit-section"
                 title="ScratchJr Solve-Its"
+                translateUrls
             >
                 <div className="content-section-description">
                     Assess students&apos; understanding of the relationship between the programming

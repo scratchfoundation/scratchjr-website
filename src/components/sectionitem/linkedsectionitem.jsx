@@ -1,10 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router';
 import './sectionitem.scss';
+import TxDiv from '../transifex/txdiv.jsx';
 
 export class LinkedSectionItem extends React.Component {
     render () {
         let thumb;
+        const txContent = this.props.translateUrls ? 'translate_urls' : '';
         if (typeof this.props.thumbnail === 'string') {
             thumb = (
                 <img
@@ -23,9 +25,12 @@ export class LinkedSectionItem extends React.Component {
                     </div>
                 </Link>
                 <Link to={this.props.linkURL}>
-                    <div className="content-section-item-thumbnail">
+                    <TxDiv
+                        className="content-section-item-thumbnail"
+                        txContent={txContent}
+                    >
                         {thumb}
-                    </div>
+                    </TxDiv>
                 </Link>
                 <div className="content-section-item-description">
                     {this.props.description || this.props.children}{' '}
@@ -44,5 +49,9 @@ LinkedSectionItem.propTypes = {
     description: React.PropTypes.string,
     linkURL: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string.isRequired,
+    translateUrls: React.PropTypes.bool,
     children: React.PropTypes.node
+};
+LinkedSectionItem.defaultProps = {
+    translateUrls: false
 };
