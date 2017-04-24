@@ -8,6 +8,7 @@ export default class AnimatedGenres extends React.Component {
                 id="animated-genres-section"
                 title="Animated Genres Curriculum"
                 description=""
+                translateUrls
             >
                 <div className="content-section-item-title">
                     <a href="/curricula/animatedgenres/full.pdf">Download all lessons as one file</a>

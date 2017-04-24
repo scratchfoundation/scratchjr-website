@@ -14,16 +14,24 @@ export default class ActivitiesSection extends React.Component {
                 <div className="content-section-title">
                     Activities
                 </div>
-                <TxDiv
-                    txContent="translate_urls"
-                    className="content-section-description"
-                >
+                <div className="content-section-description">
                     Each of these activities gives you a quick way to learn how
                     to do new things with ScratchJr. They are listed here in
                     order of simplest to hardest, but feel free to play around
                     in any order you&apos;d like!
-                </TxDiv>
-                <div className="content-section-items-container">
+                </div>
+                <TxDiv
+                    className="content-section-items-container"
+                    txContent="translate_urls"
+                >
+                    <StaticLinkSectionItem
+                        title="Introduction"
+                        format="full"
+                        thumbnail="/images/activitycards/intro.png"
+                        description="Watch this video for a brief introduction to ScratchJr's interface..."
+                        linkText="See more"
+                        linkURL="https://www.youtube.com/watch?v=ciWPaEgscr0&feature=youtu.be"
+                    />
                     {activities.map((activity, index) => (
                         <StaticLinkSectionItem
                             key={index}
@@ -33,7 +41,7 @@ export default class ActivitiesSection extends React.Component {
                         />
                         ))}
 
-                </div>
+                </TxDiv>
             </div>
 
         );
