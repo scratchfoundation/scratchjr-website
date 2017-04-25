@@ -32,6 +32,11 @@ export default class ActivitiesSection extends React.Component {
                         linkText="See more"
                         linkURL="https://www.youtube.com/watch?v=ciWPaEgscr0&feature=youtu.be"
                     />
+                </TxDiv>
+                <TxDiv
+                    className="content-section-items-container"
+                    txContent="translate_urls"
+                >
                     {activities.map((activity, index) => (
                         <StaticLinkSectionItem
                             key={index}
