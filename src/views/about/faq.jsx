@@ -44,7 +44,8 @@ export default class FAQSection extends React.Component {
                                 />
                             </a>
                             Yes, there is a guide to ScratchJr. Written by app creators Professor Marina
-                            Umaschi Bers and Mitchel Resnick of the Lifelong Kindergarten Group at the MIT
+                            Umaschi Bers of the DevTech Research Group at Tufts University
+                            and Mitchel Resnick of the Lifelong Kindergarten Group at the MIT
                             Media Lab, this new book is an easy-to-use, hands on resource for parents and
                             educators alike to teach children how to code with ScratchJr. Read
                             an <a
@@ -121,7 +122,7 @@ export default class FAQSection extends React.Component {
 
                     <div className="content-description-section">
                         <div className="content-description-question">
-                            Why can&apos;t ScratchJr record a sound or take a  picture
+                            Why can&apos;t ScratchJr record a sound or take a  picture?
                         </div>
                         <div className="content-description-answer">
                             If ScratchJr can&apos;t record sounds or take a picture with the camera, it might be

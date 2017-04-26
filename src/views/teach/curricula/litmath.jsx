@@ -11,6 +11,7 @@ export default class LiteracyMath extends React.Component {
                 title="Reinforcing Literacy and Math Curriculum"
                 description="These curricular modules describe ScratchJr projects
                 that reinforce literacy and math standards."
+                translateUrls
             >
                 <div className="content-section-items-container">
                     {activities.map((activity, index) => (

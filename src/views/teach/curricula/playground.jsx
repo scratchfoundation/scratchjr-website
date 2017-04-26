@@ -9,6 +9,7 @@ export default class Playground extends React.Component {
             <Section
                 id="playground-curriculum-section"
                 title="Playground Curriculum"
+                translateUrls
             >
                 <div className="content-section-description">
                     This curriculum provides an introduction to ScratchJr by re-creating
