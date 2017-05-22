@@ -6,19 +6,38 @@ cache:
   - node_modules
 env:
   global:
-  - S3_BUCKET_NAME=scratchjr-www-staging
   - FASTLY_ACTIVATE_CHANGES=true
+  - FASTLY_SERVICE_ID_NAME=FASTLY_SERVICE_ID_$TRAVIS_BRANCH
+  - FASTLY_SERVICE_ID=${!FASTLY_SERVICE_ID_NAME}
+  - S3_BUCKET_NAME_master=scratchjr-www-production
+  - S3_BUCKET_NAME_STAGING=scratchjr-www-staging
+  - S3_BUCKET_NAME_VAR=S3_BUCKET_NAME_$TRAVIS_BRANCH
+  - S3_BUCKET_NAME=${!S3_BUCKET_NAME_VAR}
+  - S3_BUCKET_NAME=${S3_BUCKET_NAME:-$S3_BUCKET_NAME_STAGING}
 deploy:
-  provider: s3
-  on:
-    all_branches: true
-    repo: LLK/scratchjr-website
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: $S3_BUCKET_NAME
-  skip_cleanup: true
-  acl: public_read
-  cache_control: "maxage=86400, s-maxage=31536000 no-transform"
-  local_dir: build
+  - provider: s3
+    on:
+      repo: LLK/scratchjr-website
+      branch:
+        - master
+    access_key_id: $AWS_ACCESS_KEY_ID_PRODUCTION
+    secret_access_key: $AWS_SECRET_ACCESS_KEY_PRODUCTION
+    bucket: $S3_BUCKET_NAME
+    skip_cleanup: true
+    acl: public_read
+    cache_control: "maxage=86400, s-maxage=31536000 no-transform"
+    local_dir: build
+  - provider: s3
+    on:
+      repo: LLK/scratchjr-website
+      branch:
+        - develop
+    access_key_id: $AWS_ACCESS_KEY_ID_STAGING
+    secret_access_key: $AWS_SECRET_ACCESS_KEY_STAGING
+    bucket: $S3_BUCKET_NAME
+    skip_cleanup: true
+    acl: public_read
+    cache_control: "maxage=86400, s-maxage=31536000 no-transform"
+    local_dir: build
 after_deploy:
 - make sync-fastly
