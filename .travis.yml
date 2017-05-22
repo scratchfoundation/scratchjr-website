@@ -10,10 +10,9 @@ env:
   - FASTLY_SERVICE_ID_NAME=FASTLY_SERVICE_ID_$TRAVIS_BRANCH
   - FASTLY_SERVICE_ID=${!FASTLY_SERVICE_ID_NAME}
   - S3_BUCKET_NAME_master=scratchjr-www-production
-  - S3_BUCKET_NAME_STAGING=scratchjr-www-staging
+  - S3_BUCKET_NAME_develop=scratchjr-www-staging
   - S3_BUCKET_NAME_VAR=S3_BUCKET_NAME_$TRAVIS_BRANCH
   - S3_BUCKET_NAME=${!S3_BUCKET_NAME_VAR}
-  - S3_BUCKET_NAME=${S3_BUCKET_NAME:-$S3_BUCKET_NAME_STAGING}
 deploy:
   - provider: s3
     on:
