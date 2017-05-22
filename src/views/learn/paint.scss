@@ -1,0 +1,319 @@
+/* Guide 2 - Paint Editor Guide */
+
+/* 1. Undo */
+
+#paint-button-undo {
+    top: -54px;
+    left: 32px;
+}
+
+#paint-vertical-line-undo {
+    top: -20px;
+    left: 49px;
+    height: 27px;
+}
+
+#paint-dot-undo {
+    left: 47px;
+}
+
+/* 2. Redo */
+
+#paint-button-redo {
+    top: -54px;
+    left: 83px;
+}
+
+#paint-vertical-line-redo {
+    top: -20px;
+    left: 100px;
+    height: 27px;
+}
+
+#paint-dot-redo {
+    left: 98px;
+}
+
+/* 3. Select Shape */
+
+#paint-button-select-shape {
+    top: -54px;
+    left: 130px;
+}
+
+#paint-vertical-line-select-shape-1 {
+    top: -20px;
+    left: 146px;
+    height: 160px;
+}
+
+#paint-horizontal-line-select-shape-1 {
+    top: 140px;
+    left: 72px;
+    width: 75px;
+}
+
+#paint-vertical-line-select-shape-2 {
+    top: 70px;
+    left: 72px;
+    height: 145px;
+}
+
+#paint-horizontal-line-select-shape-2 {
+    top: 70px;
+    left: 62px;
+    width: 10px;
+}
+
+#paint-horizontal-line-select-shape-3 {
+    top: 215px;
+    left: 62px;
+    width: 11px;
+}
+
+/* 4. Character Name */
+
+#paint-button-character-name {
+    top: -54px;
+    left: 323px;
+}
+
+#paint-vertical-line-character-name {
+    top: -20px;
+    left: 340px;
+    height: 27px;
+}
+
+#paint-dot-character-name {
+    left: 338px;
+}
+
+/* 5. Cut */
+
+#paint-button-cut {
+    top: -54px;
+    left: 406px;
+}
+
+#paint-vertical-line-cut {
+    top: -20px;
+    left: 422px;
+    height: 306px;
+}
+
+#paint-horizontal-line-cut {
+    top: 286px;
+    left: 422px;
+    width: 180px;
+}
+
+#paint-dot-cut {
+    top: 284px;
+    left: 602px;
+}
+
+/* 6. Duplicate */
+
+#paint-button-duplicate {
+    top: -54px;
+    left: 486px;
+}
+
+#paint-vertical-line-duplicate {
+    top: -20px;
+    left: 502px;
+    height: 271px;
+}
+
+#paint-horizontal-line-duplicate {
+    top: 251px;
+    left: 502px;
+    width: 100px;
+}
+
+#paint-dot-duplicate {
+    top: 249px;
+    left: 602px;
+}
+
+/* 7. Rotate */
+
+#paint-button-rotate {
+    top: -54px;
+    left: 526px;
+}
+
+#paint-vertical-line-rotate {
+    top: -20px;
+    left: 542px;
+    height: 222px;
+}
+
+#paint-horizontal-line-rotate {
+    top: 202px;
+    left: 542px;
+    width: 60px;
+}
+
+#paint-dot-rotate {
+    top: 200px;
+    left: 602px;
+}
+
+/* 8. Drag */
+
+#paint-button-drag {
+    top: -54px;
+    left: 566px;
+}
+
+#paint-vertical-line-drag {
+    top: -20px;
+    left: 582px;
+    height: 185px;
+}
+
+#paint-horizontal-line-drag {
+    top: 164px;
+    left: 582px;
+    width: 22px;
+}
+
+#paint-dot-drag {
+    top: 162px;
+    left: 602px;
+}
+
+/* 9. Save */
+
+#paint-button-save {
+    top: -54px;
+    left: 608px;
+}
+
+#paint-vertical-line-save {
+    top: -20px;
+    left: 625px;
+    height: 27px;
+}
+
+#paint-dot-save {
+    top: 7px;
+    left: 623px;
+}
+
+/* 10. Fill */
+
+#paint-button-fill {
+    top: 497px;
+    left: 575px;
+}
+
+#paint-vertical-line-fill {
+    top: 377px;
+    left: 591px;
+    height: 121px;
+}
+
+#paint-horizontal-line-fill {
+    top: 377px;
+    left: 591px;
+    width: 13px;
+}
+
+#paint-dot-fill {
+    top: 375px;
+    left: 602px;
+}
+
+/* 11. Camera */
+
+#paint-button-camera {
+    top: 497px;
+    left: 535px;
+}
+
+#paint-vertical-line-camera {
+    top: 338px;
+    left: 551px;
+    height: 160px;
+}
+
+#paint-horizontal-line-camera {
+    top: 338px;
+    left: 551px;
+    width: 52px;
+}
+
+#paint-dot-camera {
+    top: 336px;
+    left: 602px;
+}
+
+/* 12. Select Color */
+
+#paint-button-select-color {
+    top: 497px;
+    left: 319px;
+}
+
+#paint-vertical-line-select-color-1 {
+    top: 466px;
+    left: 335px;
+    height: 32px;
+}
+
+#paint-horizontal-line-select-color-1 {
+    top: 466px;
+    left: 27px;
+    width: 614px;
+}
+
+#paint-vertical-line-select-color-2 {
+    top: 455px;
+    left: 27px;
+    height: 11px;
+}
+
+#paint-vertical-line-select-color-3 {
+    top: 455px;
+    left: 640px;
+    height: 11px;
+}
+
+/* 13. Line Size */
+
+#paint-button-select-line-size {
+    top: 497px;
+    left: 135px;
+}
+
+#paint-vertical-line-select-line-size-1 {
+    top: 310px;
+    left: 151px;
+    height: 187px;
+}
+
+#paint-horizontal-line-select-line-size-1 {
+    top: 310px;
+    left: 73px;
+    width: 79px;
+}
+
+#paint-vertical-line-select-line-size-2 {
+    top: 240px;
+    left: 73px;
+    height: 145px;
+}
+
+#paint-horizontal-line-select-line-size-2 {
+    top: 240px;
+    left: 63px;
+    width: 10px;
+}
+
+#paint-horizontal-line-select-line-size-3 {
+    top: 385px;
+    left: 63px;
+    width: 11px;
+}

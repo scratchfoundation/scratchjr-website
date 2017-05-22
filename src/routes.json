@@ -1,0 +1,42 @@
+[
+	{
+		"pattern": "^/$",
+		"name": "index",
+		"title": "Home"
+	},
+	{
+		"pattern": "^/about(/.+)*/?",
+		"name": "about",
+		"title": "About"
+	},
+	{
+		"pattern": "^/learn(/.+)*/?",
+		"name": "learn",
+		"title": "Learn"
+	},
+	{
+		"pattern": "^/teach(/.+)*/?",
+		"name": "teach",
+		"title": "Teach"
+	},
+	{
+		"pattern": "^/donate/?$",
+		"name": "donate",
+		"title": "Donate"
+	},
+	{
+		"pattern": "^/privacy/?$",
+		"name": "privacy",
+		"title": "Privacy"
+	},
+	{
+		"pattern": "^/hoc/?$",
+		"name": "hoc",
+		"title": "Hour of Code"
+	},
+	{
+		"pattern": "^/eula/?$",
+		"name": "eula",
+		"title": "Terms and Conditions"
+	}
+]

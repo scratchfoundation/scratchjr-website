@@ -1,10 +1,11 @@
 .swp
 
-/* Mac OS */
+# OSX
 .DS_Store
 
-/* NPM */
+# NPM
 /node_modules
+npm-*
 
-/* Build Files */
+# Build
 /build

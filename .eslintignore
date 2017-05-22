@@ -1,0 +1,8 @@
+bin/*
+dev-server/*
+node_modules/*
+static/*
+build/*
+intl/*
+locales/*
+**/*.min.js
