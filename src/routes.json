@@ -10,7 +10,7 @@
 		"title": "About"
 	},
 	{
-		"pattern": "^/about.html",
+		"pattern": "^/about\\.html(#.*)$",
 		"name": "about-redirect",
 		"redirect": "/about"
 	},
@@ -21,7 +21,7 @@
 	},
 	
 	{
-		"pattern": "^/learn.html",
+		"pattern": "^/learn\\.html(#.*)$",
 		"name": "learn-redirect",
 		"redirect": "/learn"
 	},
@@ -31,7 +31,7 @@
 		"title": "Teach"
 	},	
 	{
-		"pattern": "^/teach.html",
+		"pattern": "^/teach\\.html(#.*)$",
 		"name": "teach-redirect",
 		"redirect": "/teach"
 	},
@@ -41,7 +41,7 @@
 		"title": "Donate"
 	},
 	{
-		"pattern": "^/donate.html",
+		"pattern": "^/donate\\.html(#.*)$",
 		"name": "donate-redirect",
 		"redirect": "/donate"
 	},
@@ -51,7 +51,7 @@
 		"title": "Privacy"
 	},
 	{
-		"pattern": "^/privacy.html",
+		"pattern": "^/privacy\\.html(#.*)$",
 		"name": "privacy-redirect",
 		"redirect": "/privacy"
 	},
@@ -66,7 +66,7 @@
 		"title": "Terms and Conditions"
 	},
 	{
-		"pattern": "^/eula.html",
+		"pattern": "^/eula\\.html(#.*)$",
 		"name": "eula-redirect",
 		"redirect": "/eula"
 	}
