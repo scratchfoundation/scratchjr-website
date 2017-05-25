@@ -67,7 +67,7 @@
 	},
 	{
 		"pattern": "^/eula.html",
-		"name": "donate-redirect",
-		"redirect": "/donate"
+		"name": "eula-redirect",
+		"redirect": "/eula"
 	}
 ]
