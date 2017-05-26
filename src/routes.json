@@ -5,14 +5,29 @@
 		"title": "Home"
 	},
 	{
+		"pattern": "^/about\\.html",
+		"name": "about-redirect",
+		"redirect": "/about"
+	},
+	{
 		"pattern": "^/about(/.+)*/?",
 		"name": "about",
 		"title": "About"
 	},
 	{
+		"pattern": "^/learn\\.html",
+		"name": "learn-redirect",
+		"redirect": "/learn"
+	},
+	{
 		"pattern": "^/learn(/.+)*/?",
 		"name": "learn",
 		"title": "Learn"
+	},	
+	{
+		"pattern": "^/teach\\.html",
+		"name": "teach-redirect",
+		"redirect": "/teach"
 	},
 	{
 		"pattern": "^/teach(/.+)*/?",
@@ -20,9 +35,19 @@
 		"title": "Teach"
 	},
 	{
+		"pattern": "^/donate\\.html",
+		"name": "donate-redirect",
+		"redirect": "/donate"
+	},
+	{
 		"pattern": "^/donate/?$",
 		"name": "donate",
 		"title": "Donate"
+	},
+	{
+		"pattern": "^/privacy\\.html",
+		"name": "privacy-redirect",
+		"redirect": "/privacy"
 	},
 	{
 		"pattern": "^/privacy/?$",
@@ -33,6 +58,11 @@
 		"pattern": "^/hoc/?$",
 		"name": "hoc",
 		"title": "Hour of Code"
+	},
+	{
+		"pattern": "^/eula\\.html",
+		"name": "eula-redirect",
+		"redirect": "/eula"
 	},
 	{
 		"pattern": "^/eula/?$",
