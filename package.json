@@ -14,8 +14,8 @@
     "type": "git",
     "url": "https://github.com/LLK/scratchjr-website.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Massachusetts Institute of Technology",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/LLK/scratchjr-website/issues"
   },
