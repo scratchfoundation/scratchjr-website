@@ -1,0 +1,49 @@
+$question-color: #2898cd;
+$question-answer: #808080;
+
+.content-section {
+    min-height: 0;
+}
+
+.content-description-question {
+    margin-bottom: 10px;
+    width: 612px;
+    color: $question-color;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-description-answer {
+    margin-bottom: 20px;
+    line-height: 22px;
+    color: $question-answer;
+    font-size: 15px;
+}
+
+// Submenus
+.about-icon {
+    background-image: url("/images/infos_b.svg");
+    background-size: 100%;
+}
+
+.content-nav-item-selected .about-icon {
+    background-image: url("/images/infos_o.svg");
+}
+
+.host-icon {
+    background-image: url("/images/assessment_b.svg");
+    background-size: 100%;
+}
+
+.content-nav-item-selected .host-icon {
+    background-image: url("/images/assessment_o.svg");
+}
+
+.news-icon {
+    background-image: url("/images/press_b.svg");
+    background-size: 100%;
+}
+
+.content-nav-item-selected .news-icon {
+    background-image: url("/images/press_o.svg");
+}

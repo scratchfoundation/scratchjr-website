@@ -70,8 +70,12 @@ module.exports = {
             }]
         },
         {
-            test: /\.(png|jpg|gif|eot|svg|ttf|woff)$/,
+            test: /\.(png|PNG|jpg|JPG|gif|GIF|eot|svg|ttf|woff)$/,
             loader: 'url-loader'
+        },
+        {
+            test: /\.html$/,
+            loader: 'html-loader'
         },
         {
             test: /\.less$/,
