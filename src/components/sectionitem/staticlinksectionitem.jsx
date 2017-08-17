@@ -1,63 +1,73 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './sectionitem.scss';
 import TxDiv from '../transifex/txdiv.jsx';
 
-export class StaticLinkSectionItem extends React.Component {
-    render () {
-        let thumb;
-        const txContent = this.props.translateUrls ? 'translate_urls' : '';
-        if (typeof this.props.thumbnail === 'string') {
-            thumb = (<img
-                className="content-section-item-thumbnail-image"
-                src={this.props.thumbnail}
-            />);
-        } else {
-            thumb = this.props.thumbnail;
-        }
-        return (
-            <TxDiv
-                className={`content-section-${this.props.format}-item`}
-                txContent={txContent}
-            >
-                <a
-                    href={this.props.linkURL}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <div className="content-section-item-title">
-                        {this.props.title}
-                    </div>
-                </a>
-                <a
-                    href={this.props.linkURL}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    <div className="content-section-item-thumbnail">
-                        {thumb}
-                    </div>
-                </a>
-                <div className="content-section-item-description">
-                    {this.props.description || this.props.children}{' '}
-                    <a
-                        href={this.props.linkURL}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        {this.props.linkText}
-                    </a>
-                </div>
-            </TxDiv>
-        );
+const StaticLinkSectionItem = ({
+    children,
+    description,
+    format,
+    linkText,
+    linkURL,
+    thumbnail,
+    title,
+    translateUrls
+}) => {
+    let thumb;
+    const txContent = translateUrls ? 'translate_urls' : '';
+    if (typeof thumbnail === 'string') {
+        thumb = (<img
+            className="content-section-item-thumbnail-image"
+            src={thumbnail}
+        />);
+    } else {
+        thumb = thumbnail;
     }
-}
-StaticLinkSectionItem.propTypes = {
-    title: React.PropTypes.string.isRequired,
-    format: React.PropTypes.oneOf(['full', 'half']).isRequired,
-    thumbnail: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.string]).isRequired,
-    description: React.PropTypes.string,
-    linkURL: React.PropTypes.string.isRequired,
-    linkText: React.PropTypes.string.isRequired,
-    translateUrls: React.PropTypes.bool,
-    children: React.PropTypes.node
+    return (
+        <TxDiv
+            className={`content-section-${format}-item`}
+            txContent={txContent}
+        >
+            <a
+                href={linkURL}
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <div className="content-section-item-title">
+                    {title}
+                </div>
+            </a>
+            <a
+                href={linkURL}
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                <div className="content-section-item-thumbnail">
+                    {thumb}
+                </div>
+            </a>
+            <div className="content-section-item-description">
+                {description || children}{' '}
+                <a
+                    href={linkURL}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                >
+                    {linkText}
+                </a>
+            </div>
+        </TxDiv>
+    );
 };
+
+StaticLinkSectionItem.propTypes = {
+    children: PropTypes.node,
+    description: PropTypes.string,
+    format: PropTypes.oneOf(['full', 'half']).isRequired,
+    linkText: PropTypes.string.isRequired,
+    linkURL: PropTypes.string.isRequired,
+    thumbnail: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    title: PropTypes.string.isRequired,
+    translateUrls: PropTypes.bool
+};
+export default StaticLinkSectionItem;

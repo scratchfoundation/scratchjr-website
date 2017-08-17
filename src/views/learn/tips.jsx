@@ -1,14 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class TipsSection extends React.Component{
-    render () {
-        return (
-            <div>
-                {this.props.children}
-            </div>
-        );
-    }
-}
+const TipsSection = props => (
+    <div>
+        {props.children}
+    </div>
+);
 TipsSection.propTypes = {
-    children: React.PropTypes.node
+    children: PropTypes.node
 };
+export default TipsSection;

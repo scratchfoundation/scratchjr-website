@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {render} from 'react-dom';
 import {Router, Route, browserHistory, IndexRedirect} from 'react-router';
 import NavBar from '../../components/navbar/navbar.jsx';
@@ -13,47 +14,46 @@ import VideosSection from './videos.jsx';
 
 import './about.scss';
 
-export default class About extends React.Component {
-    render () {
-        const tabs = [
-            {
-                url: '/about/info',
-                text: 'Info',
-                section: 'info',
-                indexLink: false
-            }, {
-                url: '/about/press',
-                text: 'Press',
-                section: 'press',
-                indexLink: false
-            }, {
-                url: '/about/faq',
-                text: 'FAQ',
-                section: 'faq',
-                indexLink: false
-            }, {
-                url: '/about/videos',
-                text: 'Videos',
-                section: 'videos',
-                indexLink: false
-            }
+const About = props => {
+    const tabs = [
+        {
+            url: '/about/info',
+            text: 'Info',
+            section: 'info',
+            indexLink: false
+        }, {
+            url: '/about/press',
+            text: 'Press',
+            section: 'press',
+            indexLink: false
+        }, {
+            url: '/about/faq',
+            text: 'FAQ',
+            section: 'faq',
+            indexLink: false
+        }, {
+            url: '/about/videos',
+            text: 'Videos',
+            section: 'videos',
+            indexLink: false
+        }
 
-        ];
-        return (
-            <div>
-                <NavBar selected="about" />
-                <div id="content">
-                    <TabNav items={tabs} />
-                    {this.props.children}
-                </div>
-                <Footer />
+    ];
+    return (
+        <div>
+            <NavBar selected="about" />
+            <div id="content">
+                <TabNav items={tabs} />
+                {props.children}
             </div>
-        );
-    }
-}
-About.propTypes = {
-    children: React.PropTypes.node
+            <Footer />
+        </div>
+    );
 };
+About.propTypes = {
+    children: PropTypes.node
+};
+export default About;
 
 render((
     <Router history={browserHistory}>

@@ -14,6 +14,7 @@ export default class PaintSection extends React.Component {
             // default to first key item
             currentIndex: 0
         };
+        this.changeHandler = this.changeHandler.bind(this);
     }
     changeHandler (i) {
         this.setState({currentIndex: i});
@@ -43,7 +44,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-undo"
                         index={0}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 0}
                     >
                         <GuideButtonLine
@@ -59,7 +60,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-redo"
                         index={1}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 1}
                     >
                         <GuideButtonLine
@@ -75,7 +76,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-select-shape"
                         index={2}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 2}
                     >
                         <GuideButtonLine
@@ -103,7 +104,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-character-name"
                         index={3}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 3}
                     >
                         <GuideButtonLine
@@ -119,7 +120,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-cut"
                         index={4}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 4}
                     >
                         <GuideButtonLine
@@ -139,7 +140,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-duplicate"
                         index={5}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 5}
                     >
                         <GuideButtonLine
@@ -159,7 +160,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-rotate"
                         index={6}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 6}
                     >
                         <GuideButtonLine
@@ -179,7 +180,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-drag"
                         index={7}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 7}
                     >
                         <GuideButtonLine
@@ -199,7 +200,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-save"
                         index={8}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 8}
                     >
                         <GuideButtonLine
@@ -215,7 +216,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-fill"
                         index={9}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 9}
                     >
                         <GuideButtonLine
@@ -235,7 +236,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-camera"
                         index={10}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 10}
                     >
                         <GuideButtonLine
@@ -255,7 +256,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-select-color"
                         index={11}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 11}
                     >
                         <GuideButtonLine
@@ -279,7 +280,7 @@ export default class PaintSection extends React.Component {
                     <GuideButton
                         name="paint-button-select-line-size"
                         index={12}
-                        clickHandler={this.changeHandler.bind(this)}
+                        clickHandler={this.changeHandler}
                         selected={this.state.currentIndex === 12}
                     >
                         <GuideButtonLine

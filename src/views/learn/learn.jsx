@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {render} from 'react-dom';
 import {
     Router,
@@ -30,46 +31,45 @@ import PagesSection from './tips/pages.jsx';
 
 import './learn.scss';
 
-export default class Learn extends React.Component {
-    render () {
-        const tabs = [
-            {
-                url: '/learn/interface',
-                text: 'Interface Guide',
-                section: 'interface',
-                indexLink: false
-            }, {
-                url: '/learn/paint',
-                text: 'Paint Editor Guide',
-                section: 'paint',
-                indexLink: false
-            }, {
-                url: '/learn/blocks',
-                text: 'Block Descriptions',
-                section: 'blocks',
-                indexLink: false
-            }, {
-                url: '/learn/tips',
-                text: 'Tips & Hints',
-                section: 'tips',
-                indexLink: false
-            }
+const Learn = props => {
+    const tabs = [
+        {
+            url: '/learn/interface',
+            text: 'Interface Guide',
+            section: 'interface',
+            indexLink: false
+        }, {
+            url: '/learn/paint',
+            text: 'Paint Editor Guide',
+            section: 'paint',
+            indexLink: false
+        }, {
+            url: '/learn/blocks',
+            text: 'Block Descriptions',
+            section: 'blocks',
+            indexLink: false
+        }, {
+            url: '/learn/tips',
+            text: 'Tips & Hints',
+            section: 'tips',
+            indexLink: false
+        }
 
-        ];
-        return (
-            <div>
-                <NavBar selected="learn" />
-                <div id="content">
-                    <TabNav items={tabs} /> {this.props.children}
-                </div>
-                <Footer />
+    ];
+    return (
+        <div>
+            <NavBar selected="learn" />
+            <div id="content">
+                <TabNav items={tabs} /> {props.children}
             </div>
-        );
-    }
-}
-Learn.propTypes = {
-    children: React.PropTypes.node
+            <Footer />
+        </div>
+    );
 };
+Learn.propTypes = {
+    children: PropTypes.node
+};
+export default Learn;
 
 render((
     <Router

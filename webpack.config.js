@@ -2,6 +2,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
+// PostCss
+const autoprefixer = require('autoprefixer');
+const postcssVars = require('postcss-simple-vars');
+
 const routes = require('./src/routes.json');
 const TemplateConfig = require('./src/template-config.js');
 
@@ -26,29 +30,58 @@ module.exports = {
         filename: 'js/[name].bundle.js'
     },
     module: {
-        loaders: [{
-            test: /\.jsx$/,
+        rules: [{
+            test: /\.jsx?$/,
             loader: 'babel-loader',
             include: path.resolve(__dirname, 'src'),
-            query: {
+            options: {
                 presets: ['es2015', 'react']
             }
-        }, {
-            test: /\.scss$/,
-            loader: 'style!css!postcss-loader!sass'
-        }, {
-            test: /\.json$/,
-            loader: 'json-loader'
-        }, {
+        },
+        {
             test: /\.css$/,
-            loader: 'style!css!postcss-loader'
-        }, {
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'postcss-loader',
+                options: {
+                    ident: 'postcss',
+                    plugins: function () {
+                        return [
+                            postcssVars,
+                            autoprefixer({
+                                browsers: ['last 3 versions', 'Safari >= 8', 'iOS >= 8']
+                            })
+                        ];
+                    }
+                }
+            }]
+        },
+        {
+            test: /\.scss$/,
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'sass-loader'
+            }]
+        },
+        {
             test: /\.(png|jpg|gif|eot|svg|ttf|woff)$/,
             loader: 'url-loader'
-        }, {
+        },
+        {
             test: /\.less$/,
-            loader: 'style!css!less'
-        }]
+            use: [
+                'style-loader',
+                'css-loader',
+                'less-loader'
+            ]
+        }
+        ]
     },
     plugins: [
         new CopyWebpackPlugin([{

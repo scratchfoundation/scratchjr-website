@@ -1,14 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class AssessmentsSection extends React.Component {
-    render () {
-        return (
-            <div>
-                {this.props.children}
-            </div>
-        );
-    }
-}
+const AssessmentsSection = props => (
+    <div>
+        {props.children}
+    </div>
+);
 AssessmentsSection.propTypes = {
-    children: React.PropTypes.node
+    children: PropTypes.node
 };
+export default AssessmentsSection;

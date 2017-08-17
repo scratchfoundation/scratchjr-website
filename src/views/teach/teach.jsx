@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {render} from 'react-dom';
 import {Router, Route, browserHistory, IndexRedirect, IndexRoute, applyRouterMiddleware} from 'react-router';
 import {useScroll} from 'react-router-scroll';
@@ -18,41 +19,40 @@ import AssessmentsHomeSection from './assessments/home.jsx';
 import SolveitSection from './assessments/solveit.jsx';
 import './teach.scss';
 
-export default class Teach extends React.Component {
-    render () {
-        const tabs = [
-            {
-                url: '/teach/activities',
-                text: 'Activities',
-                section: 'activities',
-                indexLink: false
-            }, {
-                url: '/teach/curricula',
-                text: 'Curricula',
-                section: 'curricula',
-                indexLink: false
-            }, {
-                url: '/teach/assessments',
-                text: 'Assessments',
-                section: 'assessments',
-                indexLink: false
-            }
-        ];
-        return (
-            <div>
-                <NavBar selected="teach" />
-                <div id="content">
-                    <TabNav items={tabs} />
-                    {this.props.children}
-                </div>
-                <Footer />
+const Teach = props => {
+    const tabs = [
+        {
+            url: '/teach/activities',
+            text: 'Activities',
+            section: 'activities',
+            indexLink: false
+        }, {
+            url: '/teach/curricula',
+            text: 'Curricula',
+            section: 'curricula',
+            indexLink: false
+        }, {
+            url: '/teach/assessments',
+            text: 'Assessments',
+            section: 'assessments',
+            indexLink: false
+        }
+    ];
+    return (
+        <div>
+            <NavBar selected="teach" />
+            <div id="content">
+                <TabNav items={tabs} />
+                {props.children}
             </div>
-        );
-    }
-}
-Teach.propTypes = {
-    children: React.PropTypes.node
+            <Footer />
+        </div>
+    );
 };
+Teach.propTypes = {
+    children: PropTypes.node
+};
+export default Teach;
 
 render((
     <Router

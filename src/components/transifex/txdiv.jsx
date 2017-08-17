@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class TxDiv extends React.Component {
     render () {
@@ -22,8 +23,8 @@ export default class TxDiv extends React.Component {
     }
 }
 TxDiv.propTypes = {
-    children: React.PropTypes.node,
-    className: React.PropTypes.string,
-    id: React.PropTypes.string,
-    txContent: React.PropTypes.string.isRequired
+    children: PropTypes.node,
+    className: PropTypes.string,
+    id: PropTypes.string,
+    txContent: PropTypes.string.isRequired
 };

@@ -1,14 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class CurriculaSection extends React.Component {
-    render () {
-        return (
-            <div>
-                {this.props.children}
-            </div>
-        );
-    }
-}
+const CurriculaSection = props => (
+    <div>
+        {props.children}
+    </div>
+);
 CurriculaSection.propTypes = {
-    children: React.PropTypes.node
+    children: PropTypes.node
 };
+export default CurriculaSection;
