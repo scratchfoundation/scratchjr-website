@@ -1,12 +1,32 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {Route, Switch} from 'react-router-dom';
+import ReactRouterPropTypes from 'react-router-prop-types';
 
-const CurriculaSection = props => (
+import CurriculaHomeSection from './curricula/home.jsx';
+import AnimatedGenresSection from './curricula/animatedgenres.jsx';
+import PlaygroundSection from './curricula/playground.jsx';
+import LitMathSection from './curricula/litmath.jsx';
+
+const CurriculaSection = ({match}) => (
     <div>
-        {props.children}
+        <Switch>
+            <Route
+                path={`${match.url}/animated-genres`}
+                component={AnimatedGenresSection}
+            />
+            <Route
+                path={`${match.url}/playground`}
+                component={PlaygroundSection}
+            />
+            <Route
+                path={`${match.url}/literacy-math`}
+                component={LitMathSection}
+            />
+            <Route component={CurriculaHomeSection} />
+        </Switch>
     </div>
 );
 CurriculaSection.propTypes = {
-    children: PropTypes.node
+    match: ReactRouterPropTypes.match.isRequired
 };
 export default CurriculaSection;

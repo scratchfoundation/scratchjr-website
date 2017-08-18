@@ -21,7 +21,7 @@ const AssessmentsHome = () => (
             title="ScratchJr Solve-Its"
             format="full"
             thumbnail="/images/assessments/circle-the-blocks.png"
-            linkURL="/teach/assessments/solveit"
+            linkURL="/assessments/solveit"
             linkText="Read more"
         >
             A video playlist of full-screen ScratchJr programs,

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router';
+import {NavLink} from 'react-router-dom';
 import './tabnav.scss';
 
 const TabNav = ({items}) => (
     <div id="content-nav">
         {items.map(tab => (
-            <Link
+            <NavLink
                 to={tab.url}
                 activeClassName="content-nav-item-selected"
                 key={tab.section}
@@ -20,7 +20,7 @@ const TabNav = ({items}) => (
                         {tab.text}
                     </div>
                 </div>
-            </Link>
+            </NavLink>
         ))}
     </div>
 );

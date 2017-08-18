@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {render} from 'react-dom';
-import {Router, Route, browserHistory, IndexRedirect, IndexRoute, applyRouterMiddleware} from 'react-router';
-import {useScroll} from 'react-router-scroll';
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import TabNav from '../../components/tabnav/tabnav.jsx';
@@ -10,96 +8,60 @@ import PageNotFound from '../../components/pagenotfound/pagenotfound.jsx';
 
 import ActivitiesSection from './activities.jsx';
 import CurriculaSection from './curricula.jsx';
-import CurriculaHomeSection from './curricula/home.jsx';
-import AnimatedGenresSection from './curricula/animatedgenres.jsx';
-import PlaygroundSection from './curricula/playground.jsx';
-import LitMathSection from './curricula/litmath.jsx';
 import AssessmentsSection from './assessments.jsx';
-import AssessmentsHomeSection from './assessments/home.jsx';
-import SolveitSection from './assessments/solveit.jsx';
 import './teach.scss';
 
-const Teach = props => {
+const Teach = () => {
     const tabs = [
         {
-            url: '/teach/activities',
+            url: '/activities',
             text: 'Activities',
             section: 'activities',
             indexLink: false
         }, {
-            url: '/teach/curricula',
+            url: '/curricula',
             text: 'Curricula',
             section: 'curricula',
             indexLink: false
         }, {
-            url: '/teach/assessments',
+            url: '/assessments',
             text: 'Assessments',
             section: 'assessments',
             indexLink: false
         }
     ];
     return (
-        <div>
-            <NavBar selected="teach" />
-            <div id="content">
-                <TabNav items={tabs} />
-                {props.children}
+        <BrowserRouter basename="/teach">
+            <div>
+                <NavBar selected="teach" />
+                <div id="content">
+                    <TabNav items={tabs} />
+                    <Switch>
+                        <Redirect
+                            exact
+                            from="/"
+                            to="/activities"
+                        />
+                        <Route
+                            path="/activities"
+                            component={ActivitiesSection}
+                        />
+                        <Route
+                            path="/curricula"
+                            component={CurriculaSection}
+                        />
+                        <Route
+                            path="/assessments"
+                            component={AssessmentsSection}
+                        />
+                        <Route component={PageNotFound} />
+                    </Switch>
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </BrowserRouter>
+        
     );
 };
-Teach.propTypes = {
-    children: PropTypes.node
-};
-export default Teach;
 
-render((
-    <Router
-        history={browserHistory}
-        render={applyRouterMiddleware(useScroll())}
-    >
-        <Route
-            component={Teach}
-            path="/teach"
-        >
-            <Route
-                component={ActivitiesSection}
-                path="activities"
-            />
-            <Route
-                component={CurriculaSection}
-                path="curricula"
-            >
-                <IndexRoute component={CurriculaHomeSection} />
-                <Route
-                    component={AnimatedGenresSection}
-                    path="animated-genres"
-                />
-                <Route
-                    component={PlaygroundSection}
-                    path="playground"
-                />
-                <Route
-                    component={LitMathSection}
-                    path="literacy-math"
-                />
-            </Route>
-            <Route
-                component={AssessmentsSection}
-                path="assessments"
-            >
-                <IndexRoute component={AssessmentsHomeSection} />
-                <Route
-                    component={SolveitSection}
-                    path="solveit"
-                />
-            </Route>
-            <IndexRedirect to="activities" />
-            <Route
-                component={PageNotFound}
-                path="*"
-            />
-        </Route>
-    </Router>
-), document.getElementById('app'));
+render(<Teach />, document.getElementById('app'));

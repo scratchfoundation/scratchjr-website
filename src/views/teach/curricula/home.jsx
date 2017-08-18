@@ -37,7 +37,7 @@ const HomeSection = () => (
                 title="Animated Genres Curriculum"
                 format="full"
                 thumbnail="/images/slide1.png"
-                linkURL="/teach/curricula/animated-genres"
+                linkURL="/curricula/animated-genres"
                 linkText="Read more"
             >
                 This curriculum provides students with the opportunity to learn
@@ -50,7 +50,7 @@ const HomeSection = () => (
                 format="full"
                 thumbnail="/images/playground/playground.png"
                 linkText="Read more"
-                linkURL="/teach/curricula/playground"
+                linkURL="/curricula/playground"
             >
                 In the eight lessons of this curriculum, children learn how to use
                 ScratchJr as they re-create familiar playground games...
@@ -59,7 +59,7 @@ const HomeSection = () => (
                 title="Reinforcing Literacy and Math Curriculum"
                 format="full"
                 thumbnail="/images/literacymath/project1.png"
-                linkURL="/teach/curricula/literacy-math"
+                linkURL="/curricula/literacy-math"
                 linkText="Read more"
             >
                 These curricular modules describe ScratchJr projects that reinforce

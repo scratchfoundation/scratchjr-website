@@ -20,7 +20,7 @@ const TipsHome = () => (
                 title="Making, Renaming, and Deleting Projects"
                 format="full"
                 thumbnail="/images/tips/managing-projects.jpg"
-                linkURL="/learn/tips/manage-projects"
+                linkURL="/tips/manage-projects"
                 linkText="Watch video"
             >
                 Learn how to make a new project, rename an existing project, and delete a project.
@@ -30,7 +30,7 @@ const TipsHome = () => (
                 format="full"
                 thumbnail="/images/tips/character-animation.jpg"
                 description="Make a simple script by connecting blocks together."
-                linkURL="/learn/tips/character-animation"
+                linkURL="/tips/character-animation"
                 linkText="Watch video"
             />
             <LinkedSectionItem
@@ -38,7 +38,7 @@ const TipsHome = () => (
                 format="full"
                 thumbnail="/images/tips/multi-character.jpg"
                 description="Learn how to add characters to your project."
-                linkURL="/learn/tips/multi-character"
+                linkURL="/tips/multi-character"
                 linkText="Watch video"
             />
             <LinkedSectionItem
@@ -46,7 +46,7 @@ const TipsHome = () => (
                 format="full"
                 thumbnail="/images/tips/triggers.jpg"
                 description="Use trigger blocks to specify when a script should run."
-                linkURL="/learn/tips/trigger-blocks"
+                linkURL="/tips/trigger-blocks"
                 linkText="Watch video"
             />
             <LinkedSectionItem
@@ -54,7 +54,7 @@ const TipsHome = () => (
                 format="full"
                 thumbnail="/images/tips/share.png"
                 description="You can share projects by email. On iPads you can also share project by AirDrop."
-                linkURL="/learn/tips/share-projects"
+                linkURL="/tips/share-projects"
                 linkText="Read more"
                 translateUrls
             />
@@ -62,7 +62,7 @@ const TipsHome = () => (
                 title="Sample Projects"
                 format="full"
                 thumbnail="/images/tips/sample-projects.png"
-                linkURL="/learn/tips/sample-projects"
+                linkURL="/tips/sample-projects"
                 linkText="Read more"
                 translateUrls
             >
@@ -102,7 +102,7 @@ const TipsHome = () => (
                 format="full"
                 thumbnail="/images/tips/copy-script.png"
                 description=""
-                linkURL="/learn/tips/copy-scripts"
+                linkURL="/tips/copy-scripts"
                 linkText="Read more"
             >
                 You can copy a script (set of blocks) from one character to another in the same project.
@@ -112,7 +112,7 @@ const TipsHome = () => (
                 format="full"
                 thumbnail="/images/tips/multi-page.png"
                 description="Projects can have up to four pages with their own characters and scripts."
-                linkURL="/learn/tips/pages"
+                linkURL="/tips/pages"
                 linkText="Read more"
             />
             <SectionItem
