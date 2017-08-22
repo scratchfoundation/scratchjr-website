@@ -14,8 +14,9 @@ export default class InterfaceSection extends React.Component {
             // default to first key item
             currentIndex: 0
         };
+        this.handleClick = this.handleClick.bind(this);
     }
-    changeHandler (i) {
+    handleClick (i) {
         this.setState({currentIndex: i});
     }
     render () {
@@ -43,7 +44,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-save"
                         index={0}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 0}
                     >
                         <GuideButtonLine
@@ -59,7 +60,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-stage"
                         index={1}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 1}
                     >
                         <GuideButtonLine
@@ -87,7 +88,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-presentation-mode"
                         index={2}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 2}
                     >
                         <GuideButtonLine
@@ -103,7 +104,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-grid"
                         index={3}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 3}
                     >
                         <GuideButtonLine
@@ -119,7 +120,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-add-text"
                         index={4}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 4}
                     >
                         <GuideButtonLine
@@ -135,7 +136,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-change-background"
                         index={5}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 5}
                     >
                         <GuideButtonLine
@@ -151,7 +152,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-reset-characters"
                         index={6}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 6}
                     >
                         <GuideButtonLine
@@ -167,7 +168,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-green-flag"
                         index={7}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 7}
                     >
                         <GuideButtonLine
@@ -183,7 +184,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-pages"
                         index={8}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 8}
                     >
                         <GuideButtonLine
@@ -199,7 +200,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-project-information"
                         index={9}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 9}
                     >
                         <GuideButtonLine
@@ -215,7 +216,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-undo-redo"
                         index={10}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 10}
                     >
                         <GuideButtonLine
@@ -240,7 +241,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-programming-script"
                         index={11}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 11}
                     >
                         <GuideButtonLine
@@ -264,7 +265,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-programming-area"
                         index={12}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 12}
                     >
                         <GuideButtonLine
@@ -280,7 +281,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-block-palette"
                         index={13}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 13}
                     >
                         <GuideButtonLine
@@ -304,7 +305,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-block-categories"
                         index={14}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 14}
                     >
                         <GuideButtonLine
@@ -328,7 +329,7 @@ export default class InterfaceSection extends React.Component {
                     <GuideButton
                         name="interface-button-characters"
                         index={15}
-                        clickHandler={this.changeHandler.bind(this)}
+                        onClick={this.handleClick}
                         selected={this.state.currentIndex === 15}
                     >
                         <GuideButtonLine

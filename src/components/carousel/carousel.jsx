@@ -1,37 +1,41 @@
 import React from 'react';
 import Slider from 'react-slick';
+import PropTypes from 'prop-types';
 
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 import './carousel.scss';
+
 /**
  * Displays index page slideshow.
+ * @param {array} items - array of images to Displays
+ * @returns {React.Component} Slider Component
  */
-export default class Carousel extends React.Component {
-    render () {
-        const settings = {
-            dots: true,
-            arrows: false,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 6000,
-            fade: true,
-            speed: 500,
-            cssEase: 'linear'
-        };
-        return (
-            <Slider {... settings}>
-                {
-                    this.props.items.map((item, index) => (
-                        <div key={index}><img src={item} /></div>
-                    ))
-                }
-            </Slider>
-        );
-    }
-}
+const Carousel = ({items}) => {
+    const settings = {
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        fade: true,
+        speed: 500,
+        cssEase: 'linear'
+    };
+    return (
+        <Slider {...settings}>
+            {
+                items.map((item, index) => (
+                    <div key={index}><img src={item} /></div>
+                ))
+            }
+        </Slider>
+    );
+};
+ 
 Carousel.propTypes = {
-    items: React.PropTypes.arrayOf(
-        React.PropTypes.string
+    items: PropTypes.arrayOf(
+        PropTypes.string
     )
 };
+export default Carousel;

@@ -1,14 +1,22 @@
 import React from 'react';
+import {Route, Switch} from 'react-router-dom';
+import ReactRouterPropTypes from 'react-router-prop-types';
 
-export default class AssessmentsSection extends React.Component {
-    render () {
-        return (
-            <div>
-                {this.props.children}
-            </div>
-        );
-    }
-}
+import AssessmentsHomeSection from './assessments/home.jsx';
+import SolveitSection from './assessments/solveit.jsx';
+
+const AssessmentsSection = ({match}) => (
+    <div>
+        <Switch>
+            <Route
+                path={`${match.url}/solveit`}
+                component={SolveitSection}
+            />
+            <Route component={AssessmentsHomeSection} />
+        </Switch>
+    </div>
+);
 AssessmentsSection.propTypes = {
-    children: React.PropTypes.node
+    match: ReactRouterPropTypes.match.isRequired
 };
+export default AssessmentsSection;
