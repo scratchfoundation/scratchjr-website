@@ -9,7 +9,7 @@ export default class GuideButton extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick () {
-        this.props.clickHandler(this.props.index);
+        this.props.onClick(this.props.index);
     }
     render () {
         const classes = classNames({
@@ -33,9 +33,9 @@ export default class GuideButton extends React.Component {
 
 GuideButton.propTypes = {
     children: PropTypes.node,
-    clickHandler: PropTypes.func.isRequired,
     index: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
     selected: PropTypes.bool
 };
 GuideButton.defaultProps = {selected: false};

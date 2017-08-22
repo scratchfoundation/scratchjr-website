@@ -82,7 +82,6 @@ const Privacy = () => (
         <Footer />
     </div>
 );
-export default Privacy;
 
 render(
     <Privacy />,

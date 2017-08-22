@@ -36,7 +36,6 @@ const Donate = () => (
         <Footer />
     </div>
 );
-export default Donate;
 
 render(
     <Donate />,

@@ -55,7 +55,6 @@ const HourOfCode = () => (
         <Footer />
     </div>
 );
-export default HourOfCode;
 
 render(
     <HourOfCode />,

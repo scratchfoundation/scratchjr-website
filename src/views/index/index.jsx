@@ -135,7 +135,6 @@ const Index = () => {
         </div>
     );
 };
-export default Index;
 
 render(
     <Index />, document.getElementById('app'));

@@ -242,7 +242,6 @@ const Eula = () => (
         <Footer />
     </div>
 );
-export default Eula;
 
 render(
     <Eula />,
