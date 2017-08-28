@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import ScrollManager from '../../components/scrollmanager/scrollmanager.jsx';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import TabNav from '../../components/tabnav/tabnav.jsx';
@@ -32,33 +33,52 @@ const Teach = () => {
     ];
     return (
         <BrowserRouter basename="/teach">
-            <div>
-                <NavBar selected="teach" />
-                <div id="content">
-                    <TabNav items={tabs} />
-                    <Switch>
-                        <Redirect
-                            exact
-                            from="/"
-                            to="/activities"
+            <ScrollManager basename="/teach">
+                <div>
+                    <NavBar selected="teach" />
+                    <div id="content">
+                        <TabNav items={tabs} />
+                        <Switch>
+                            <Redirect
+                                exact
+                                from="/"
+                                to="/activities"
+                            />
+                            <Route
+                                path="/activities"
+                                component={ActivitiesSection}
+                            />
+                            <Route
+                                path="/curricula"
+                                component={CurriculaSection}
+                            />
+                            <Route
+                                path="/assessments"
+                                component={AssessmentsSection}
+                            />
+                            <Route component={PageNotFound} />
+                        </Switch>
+                    </div>
+                    <Footer />
+                    <footer id="print-footer">
+                        <img
+                            alt="Creative commons logo"
+                            className="cc-logo"
+                            src="/images/cc-logo.png"
                         />
-                        <Route
-                            path="/activities"
-                            component={ActivitiesSection}
+                        <div className="footer-text">
+                            Created by the Developmental Technologies Research Group at Tufts University<br />
+                            This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+                            International License.
+                        </div>
+                        <img
+                            alt="DevTech logo"
+                            className="devtech-logo"
+                            src="/images/DevTechLogo.png"
                         />
-                        <Route
-                            path="/curricula"
-                            component={CurriculaSection}
-                        />
-                        <Route
-                            path="/assessments"
-                            component={AssessmentsSection}
-                        />
-                        <Route component={PageNotFound} />
-                    </Switch>
+                    </footer>
                 </div>
-                <Footer />
-            </div>
+            </ScrollManager>
         </BrowserRouter>
         
     );
