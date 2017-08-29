@@ -16,7 +16,7 @@ const NewsSection = () => (
             <Timeline
                 dataSource={{
                     sourceType: 'widget',
-                    widgetId: '900362519658848256'
+                    widgetId: '902299281767505920'
                 }}
                 options={{
                     username: 'Scratch',
