@@ -1,32 +1,5 @@
 /* CSS Document */
 
-@media print{
-	div#footer, div#header, div#content-nav{
-		display: none;
-	}
-	html body div#content div.page-break{
-		page-break-after: always;
-	}
-
-	html div.print-br{
-		display: inline-block;
-	}
-
-	div.no-print{
-		display:none;
-	}
-	html footer#footer-print{
-		display:flex;
-
-		position: fixed;
-		bottom: 0;
-	} 
-	.txlive-langselector {
-		display:none;
-	}
-
-}
-
 h2{
 	/* bold, underline, font-size a little bit bigger*/
 	font-weight: bold;
@@ -83,10 +56,6 @@ ul.bullet-list {
 
 }
 
-#footer-print{
-	display:none;
-}
-
 html img.description-img{
 	width: 60%;
 	margin-left:auto;
@@ -122,7 +91,6 @@ img.cc-logo{
 	margin: 1%;
 }
 
-
 img.devtech-logo{
 	height: 90%;
 	width: auto;
@@ -144,4 +112,34 @@ $description-color: #808080;
     color: #2898cd;
     font-size: 16px;
     font-weight: 900;
+}
+@media print{
+	div#footer, div#header, div#content-nav{
+		display: none;
+	}
+	html body div#content div.page-break{
+		page-break-after: always;
+	}
+
+	html div.print-br{
+		display: inline-block;
+	}
+
+	div.no-print{
+		display:none;
+	}
+	.print-credit {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+	}
+	html footer#footer-print{
+		display:flex;
+		position: fixed;
+		bottom: 0;
+	} 
+	.txlive-langselector {
+		display:none;
+	}
+
 }
