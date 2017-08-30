@@ -10,7 +10,7 @@
     /*.content-section-items-container.mod-page-break-after{
     page-break-after: always;
   }*/
-    .dot-separater.mod-page-break-after {
+    .mod-page-break-after {
         page-break-after: always;
     }
     .content-section-item-description {
@@ -106,4 +106,85 @@ p.dot-separater {
 
 .animated_genres table td {
     padding: 4%;
+}
+
+/* Adjust large screenshot dimensions*/
+.counting_and_cardinality img.screenshot{
+	width:100%;
+	height:auto;
+}
+
+/* Text of list items within tables are left aligned */
+.counting_and_cardinality table ul li {
+	text-align: left;
+}
+
+/*  */
+.counting_and_cardinality table{
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	page-break-inside:auto;
+}
+
+/*  */
+.counting_and_cardinality table td{
+	padding:4%;
+}
+
+/*  */
+.counting_and_cardinality table tr{
+	padding:4%;
+	page-break-inside:avoid; 
+	page-break-after:auto;
+}
+
+.naming_uppercase_and_lowercase_letters img{
+  max-width:70%;
+  height:auto;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters table{
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+  page-break-inside:auto;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters table td{
+  padding:4%;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters table tr{
+  padding:4%;
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.naming_uppercase_and_lowercase_letters_part2 img{
+  max-width:70%;
+  height:auto;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters_part2 table{
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+  page-break-inside:auto;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters_part2 table td{
+  padding:4%;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters_part2 table tr{
+  padding:4%;
+  page-break-inside:avoid; 
+  page-break-after:auto;
 }

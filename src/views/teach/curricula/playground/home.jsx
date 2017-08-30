@@ -52,7 +52,7 @@ const PlaygroundHome = ({match}) => (
                 thumbnail="/images/playground/lesson4.png"
                 title="Lesson 4: Dance the Hokey Pokey"
             >
-                Record your own voice, and use the Sound, Speed, and Wait blocks...   
+                Record your own voice, and use the Sound, Speed, and Wait blocks...
             </LinkedSectionItem>
             <LinkedSectionItem
                 format="half"
@@ -82,14 +82,13 @@ const PlaygroundHome = ({match}) => (
                 Learn how to make several scenes for one project...
             </LinkedSectionItem>
             <LinkedSectionItem
-                description=""
                 format="half"
                 linkText="Read more"
                 linkURL={`${match.url}/full#lesson8`}
                 thumbnail="/images/playground/lesson8.png"
                 title="Lesson 8: Free Choice"
             >
-                Learn how to use Paint Editor to make your own characters and backgrounds...    
+                Learn how to use Paint Editor to make your own characters and backgrounds...
             </LinkedSectionItem>
         </div>
     </Section>

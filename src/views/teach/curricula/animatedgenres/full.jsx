@@ -9,7 +9,7 @@ import '../../../../components/sectionitem/sectionitem.scss';
 const AnimatedGenresHtml = ({location}) => (
     <ScrollIntoView id={location.hash}>
         {/* eslint-disable react/no-danger */}
-        <div dangerouslySetInnerHTML={{__html: htmlContent}} /> 
+        <div dangerouslySetInnerHTML={{__html: htmlContent}} />
         {/* eslint-enable react/no-danger */}
     </ScrollIntoView>
 );
