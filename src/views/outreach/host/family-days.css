@@ -1,0 +1,145 @@
+/* CSS Document */
+
+h2{
+	/* bold, underline, font-size a little bit bigger*/
+	font-weight: bold;
+	font-size: 200%;
+	text-align: left;
+}
+
+h3{
+	/* bold, underline, font-size a little bit bigger*/
+	font-weight: bold;
+	font-size: 110%;
+}
+
+h3.tip-sheet-title{
+	font-weight: bold;
+	margin:0;
+	padding:0;
+	text-align: left;
+}
+
+div.family-coding-activity-prompts-content{
+	font-size: 130%;
+
+}
+
+div.suggested-questions-content{
+	font-size: 130%;
+
+}
+
+.inline{
+	display:inline;
+}
+
+.inline-block{
+	display:inline-block;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.left-align{
+	text-align:left;
+}
+
+html div.full-extend{
+	width:100%;
+}
+
+ul.bullet-list {
+	list-style-type: disc;
+
+}
+
+html img.description-img{
+	width: 60%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+div.print-br{
+	display: none;
+}
+
+/*Footer*/
+footer#footer-print{
+	display: none;
+	flex-direction: row;
+	flex-basis: auto;
+  	align-items: center;
+	justify-content: center;
+	height: 4%;
+  	width: 100%;
+}
+
+div.footer-text-print{
+	margin-left: 1%;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 10pt;
+	color: #333333;
+}
+
+img.cc-logo{
+	height:90%;
+	width: auto;
+	object-fit: contain;
+	margin: 1%;
+}
+
+img.devtech-logo{
+	height: 90%;
+	width: auto;
+	margin: 1%;
+	object-fit: contain;
+
+}
+
+/*
+$title-color: #2898cd;
+$description-color: #808080;
+*/
+
+.fd-section-title {
+    display: inline-block;
+    padding-bottom: 10px;
+    width: 60%;
+    line-height: 18px;
+    color: #2898cd;
+    font-size: 16px;
+    font-weight: 900;
+}
+@media print{
+	div#footer, div#header, div#content-nav{
+		display: none;
+	}
+	html body div#content div.page-break{
+		page-break-after: always;
+	}
+
+	html div.print-br{
+		display: inline-block;
+	}
+
+	div.no-print{
+		display:none;
+	}
+	.print-credit {
+		display: flex;
+		position: fixed;
+		bottom: 0;
+	}
+	html footer#footer-print{
+		display:flex;
+		position: fixed;
+		bottom: 0;
+	} 
+	.txlive-langselector {
+		display:none;
+	}
+
+}

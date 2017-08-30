@@ -33,6 +33,16 @@
 		"pattern": "^/teach(/.+)*/?",
 		"name": "teach",
 		"title": "Teach"
+	},	
+	{
+		"pattern": "^/outreach\\.html",
+		"name": "outreach-redirect",
+		"redirect": "/outreach"
+	},
+	{
+		"pattern": "^/outreach(/.+)*/?",
+		"name": "outreach",
+		"title": "Outreach"
 	},
 	{
 		"pattern": "^/donate\\.html",
