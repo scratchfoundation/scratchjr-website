@@ -47,7 +47,6 @@
     "postcss-simple-vars": "4.0.0",
     "react": "15.6.1",
     "react-dom": "15.6.1",
-    "react-router": "3.0.5",
     "react-router-dom": "4.2.2",
     "react-router-prop-types": "0.0.1",
     "react-slick": "0.15.0",
