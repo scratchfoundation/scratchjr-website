@@ -88,7 +88,7 @@ const Index = () => {
                             href="https://medium.com/scratchfoundation-blog/10-things-to-try-right-now-with-your-child-on-scratch-and-scratchjr-defd7f8ad0d1"
                         >
                         10 things to try right now with your child on Scratch and ScratchJr
-                        </a>, hands-on activities for getting started.
+                        </a>, hands-on activities for getting started with ScratchJr.
                     </div>
                     <div className="content-news-body">
                         Check out tips for creating with your child: <a href="https://medium.com/scratchfoundation-blog/creating-together-3041662c970a">
@@ -96,7 +96,10 @@ const Index = () => {
                         </a> by the Scratch Foundation.
                     </div>
                     <div className="content-news-body">
-                        ScratchJr is now available in more languages!
+                        Find out about <a
+                            href="/outreach"
+                        >ScratchJr Family Days
+                        </a>.
                     </div>
                 </div>
 
