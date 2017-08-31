@@ -1,7 +1,7 @@
 import React from 'react';
 import htmlContent from './numbers.html';
 
-import '../full.css';
+import '../../print.css';
 import '../../../../components/sectionitem/sectionitem.scss';
 
 const NumbersHtml = () => (

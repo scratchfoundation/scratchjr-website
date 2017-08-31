@@ -1,7 +1,9 @@
 import React from 'react';
+import ReactRouterPropTypes from 'react-router-prop-types';
+import {Link} from 'react-router-dom';
 import Section from '../../../components/sectionitem/section.jsx';
 
-const SolveitSection = () => (
+const SolveitSection = ({match}) => (
     <Section
         id="solveit-section"
         title="ScratchJr Solve-Its"
@@ -38,13 +40,7 @@ const SolveitSection = () => (
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="/assessments/solve-it-answer-sheet.pdf"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        Student answer sheet
-                    </a>
+                    <Link to={`${match.path}/answersheet`}>Student answer sheet</Link>
                 </li>
                 <li>
                     <a
@@ -98,4 +94,7 @@ const SolveitSection = () => (
         </div>
     </Section>
 );
+SolveitSection.propTypes = {
+    match: ReactRouterPropTypes.match.isRequired
+};
 export default SolveitSection;

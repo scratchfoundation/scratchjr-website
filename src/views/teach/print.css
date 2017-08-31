@@ -188,3 +188,11 @@ p.dot-separater {
   page-break-inside:avoid; 
   page-break-after:auto;
 }
+
+.student_answer_sheet img{
+  width: 70%;
+}
+
+.student_answer_sheet img.small-image{
+  width:30%;
+}

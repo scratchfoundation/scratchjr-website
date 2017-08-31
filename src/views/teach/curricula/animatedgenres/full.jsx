@@ -3,7 +3,7 @@ import htmlContent from './animatedgenres.html';
 import ReactRouterPropTypes from 'react-router-prop-types';
 import {ScrollIntoView} from 'rrc';
 
-import '../full.css';
+import '../../print.css';
 import '../../../../components/sectionitem/sectionitem.scss';
 
 const AnimatedGenresHtml = ({location}) => (

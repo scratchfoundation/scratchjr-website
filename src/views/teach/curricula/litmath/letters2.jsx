@@ -1,7 +1,7 @@
 import React from 'react';
 import htmlContent from './naming_letters_part2.html';
 
-import '../full.css';
+import '../../print.css';
 import '../../../../components/sectionitem/sectionitem.scss';
 
 const Letters2Html = () => (
