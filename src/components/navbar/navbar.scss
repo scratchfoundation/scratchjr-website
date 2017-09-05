@@ -17,20 +17,21 @@ $nav-selected-color: #0a7199;
 }
 
 #header-nav {
+    display: flex;
     position: relative;
+    justify-content: space-around;
     float: right;
+    width: 700px;
 }
 
 .header-nav-item-wrapper {
-    float: left;
+    flex: 1 0 auto;
 }
 
 .header-nav-item {
-    float: left;
     padding-top: 23px;
-    padding-right: 35px;
-    padding-left: 35px;
     height: 35px;
+    text-align: center;
     letter-spacing: 1px;
     color: $nav-text-color;
     font-family: "Lucida Grande", arial, sans-serif;
