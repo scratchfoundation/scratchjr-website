@@ -51,7 +51,7 @@
     "react-router-dom": "4.2.2",
     "react-router-prop-types": "0.0.1",
     "react-slick": "0.15.0",
-    "react-twitter-widgets": "1.5.0",
+    "react-twitter-widgets": "1.5.1",
     "sass-lint": "^1.11.1",
     "sass-loader": "^6.0.6",
     "slick-carousel": "1.7.1",
