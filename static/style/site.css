@@ -64,3 +64,37 @@ img { display: block; }
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+/*Print Footer*/
+/* we expect pages to print will have a print media query to make the footer visible */
+footer#print-footer{
+  display: none;
+  flex-direction: row;
+  flex-basis: auto;
+  align-items: center;
+  justify-content: center;
+  height: 4%;
+  width: 100%;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  font-size: 10pt;
+  color: #333333;
+}
+
+#print-footer .footer-text{
+  margin-left: 1%;
+}
+
+img.cc-logo{
+  height:90%;
+  width: auto;
+  object-fit: contain;
+  margin: 1%;
+}
+
+img.devtech-logo{
+  height: 90%;
+  width: auto;
+  margin: 1%;
+  object-fit: contain;
+
+}

@@ -35,6 +35,7 @@ module.exports = {
             loader: 'babel-loader',
             include: path.resolve(__dirname, 'src'),
             options: {
+                plugins: ['transform-object-rest-spread'],
                 presets: ['es2015', 'react']
             }
         },
@@ -70,7 +71,7 @@ module.exports = {
             }]
         },
         {
-            test: /\.(png|PNG|jpg|JPG|gif|GIF|eot|svg|ttf|woff)$/,
+            test: /\.(png|jpg|gif|eot|svg|ttf|woff)$/i,
             loader: 'url-loader'
         },
         {

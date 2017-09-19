@@ -1,0 +1,198 @@
+/* CSS Document */
+
+@media print {
+    div#footer, div#header, div#content-nav {
+        display: none;
+    }
+    .content-section-items-container {
+        page-break-after: always;
+    }
+    /*.content-section-items-container.mod-page-break-after{
+    page-break-after: always;
+  }*/
+    .mod-page-break-after {
+        page-break-after: always;
+    }
+    .content-section-item-description {
+        display: block;
+    }
+    .page-break {
+        page-break-after: always;
+    }
+    .print-br {
+        display: inline-block;
+    }
+    .no-print {
+        display: none;
+    }
+    html footer#print-footer {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+    }
+    .txlive-langselector {
+        display: none;
+    }
+}
+
+h2 {
+    /* bold, underline, font-size a little bit bigger*/
+    font-weight: bold;
+    font-size: 200%;
+    text-align: left;
+}
+
+h3 {
+    /* bold, underline, font-size a little bit bigger*/
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.full-extend {
+    width: 100%;
+}
+
+ul.bullet-list {
+    list-style-type: disc;
+}
+
+#footer-print {
+    display: none;
+}
+
+html img.description-img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.print-br {
+    display: none;
+}
+
+p.dot-separater {
+    text-align: center;
+    width: 100%;
+    color: #21A4DC;
+    margin: 0 auto;
+}
+
+.animated_genres table ul li {
+    text-align: left;
+}
+
+.animated_genres table {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.animated_genres table td {
+    padding: 4%;
+}
+
+/* Adjust large screenshot dimensions*/
+.counting_and_cardinality img.screenshot{
+	width:100%;
+	height:auto;
+}
+
+/* Text of list items within tables are left aligned */
+.counting_and_cardinality table ul li {
+	text-align: left;
+}
+
+/*  */
+.counting_and_cardinality table{
+	width:100%;
+	margin:0 auto;
+	text-align: center;
+	page-break-inside:auto;
+}
+
+/*  */
+.counting_and_cardinality table td{
+	padding:4%;
+}
+
+/*  */
+.counting_and_cardinality table tr{
+	padding:4%;
+	page-break-inside:avoid; 
+	page-break-after:auto;
+}
+
+.naming_uppercase_and_lowercase_letters img{
+  max-width:70%;
+  height:auto;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters table{
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+  page-break-inside:auto;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters table td{
+  padding:4%;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters table tr{
+  padding:4%;
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.naming_uppercase_and_lowercase_letters_part2 img{
+  max-width:70%;
+  height:auto;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters_part2 table{
+  width:100%;
+  margin:0 auto;
+  text-align: center;
+  page-break-inside:auto;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters_part2 table td{
+  padding:4%;
+}
+
+/*  */
+.naming_uppercase_and_lowercase_letters_part2 table tr{
+  padding:4%;
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.student_answer_sheet img{
+  width: 70%;
+}
+
+.student_answer_sheet img.small-image{
+  width:30%;
+}

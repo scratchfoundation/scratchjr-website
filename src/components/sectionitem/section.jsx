@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './sectionitem.scss';
 import TxDiv from '../transifex/txdiv.jsx';
-import ScrollToTopOnMount from '../scrolltotoponmount/scrolltotoponmount.jsx';
 
 const Section = ({
     children,
@@ -18,7 +17,6 @@ const Section = ({
             id={id}
             txContent={txContent}
         >
-            <ScrollToTopOnMount />
             <div className="content-section-title">
                 {title}
             </div>
