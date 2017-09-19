@@ -1,5 +1,4 @@
 import React from 'react';
-import StaticLinkSectionItem from '../../../components/sectionitem/staticlinksectionitem.jsx';
 import LinkedSectionItem from '../../../components/sectionitem/linkedsectionitem.jsx';
 import TxDiv from '../../../components/transifex/txdiv.jsx';
 
@@ -29,11 +28,11 @@ const AssessmentsHome = () => (
             on their understanding of programming concepts.
         </LinkedSectionItem>
 
-        <StaticLinkSectionItem
+        <LinkedSectionItem
             title="Reverse-Engineering Assessment"
             format="full"
             thumbnail="/images/assessments/reverse-engineer.png"
-            linkURL="/assessments/reverse-engineer-and-labels.pdf"
+            linkURL="/assessments/reverse-engineering"
             linkText="Read more"
         >
             In this more in-depth assessment, students can build on the
@@ -42,8 +41,14 @@ const AssessmentsHome = () => (
             able to project videos on a projector. Students view a full-screen
             ScratchJr project without seeing the code for the characters&apos;
             programs. They then reconstruct the scripts of the project
-            using pre-printed blocks, provided at the end of the document...
-        </StaticLinkSectionItem>
+            using <a
+                href="/assessments/block-labels.png"
+                rel="noopener noreferrer"
+                target="_blank"
+            >
+                pre-printed blocks
+            </a>, provided at the end of the document...
+        </LinkedSectionItem>
     </TxDiv>
 );
 export default AssessmentsHome;
