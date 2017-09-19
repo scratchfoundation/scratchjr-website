@@ -84,17 +84,22 @@ const Index = () => {
                         News
                     </div>
                     <div className="content-news-body">
-                        Check out some tips for <a
-                            href="https://medium.com/scratchfoundation-blog/scratch-day-for-younger-children-4eba6d07cefc"
+                        <a
+                            href="https://medium.com/scratchfoundation-blog/10-things-to-try-right-now-with-your-child-on-scratch-and-scratchjr-defd7f8ad0d1"
                         >
-                        hosting a Scratch Day event for younger children</a> with ScratchJr.
+                        10 things to try right now with your child on Scratch and ScratchJr
+                        </a>, hands-on activities for getting started with ScratchJr.
                     </div>
                     <div className="content-news-body">
-                        ScratchJr was named one of the <a href="http://www.slj.com/2016/12/reviews/best-of/top-10-tech-2016/">Top
-                        10 Tech</a> by School Library Journal.
+                        Check out tips for creating with your child: <a href="https://medium.com/scratchfoundation-blog/creating-together-3041662c970a">
+                        Creating Together
+                        </a> by the Scratch Foundation.
                     </div>
                     <div className="content-news-body">
-                        ScratchJr is now available in more languages!
+                        Find out about <a
+                            href="/outreach"
+                        >ScratchJr Family Days
+                        </a>.
                     </div>
                 </div>
 
