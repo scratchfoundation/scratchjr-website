@@ -49,7 +49,7 @@
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-router-dom": "4.2.2",
-    "react-router-prop-types": "0.0.1",
+    "react-router-prop-types": "0.0.2",
     "react-slick": "0.15.4",
     "react-twitter-widgets": "1.5.1",
     "sass-lint": "^1.11.1",
