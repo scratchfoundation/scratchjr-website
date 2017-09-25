@@ -24,15 +24,8 @@ const HostHomeSection = () => (
                 the research portion of ScratchJr
                 Family Days, though it is not
                 mandatory for running a ScratchJr family event.
-                Should you wish to participate, please sign up by filling out a {' '}
-                    <a
-                        href="https://goo.gl/forms/h1LWQWPOZ8azHNAt2"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                            short questionaire
-                    </a>.
-                We appreciate your feedback!</p>
+                Should you wish to participate, please sign up by filling out a
+                short questionnaire below. We appreciate your feedback!</p>
             </div>
         </div>
         
