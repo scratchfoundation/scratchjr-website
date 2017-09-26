@@ -37,7 +37,7 @@
     "eslint-config-scratch": "^4.0.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-react": "^7.2.1",
-    "express": "4.15.4",
+    "express": "5.0.0-alpha.6",
     "fastly": "2.2.0",
     "file-loader": "^1.0.0",
     "html-loader": "^0.5.1",
