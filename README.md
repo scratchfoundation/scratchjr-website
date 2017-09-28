@@ -3,7 +3,7 @@ scratchjr-website
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/LLK/scratchjr-website.svg?token=725b7f371ef5a5a54601315ff92d7315bc5d19ff52918847e2eb136efe75b263&ts=1502931528186)](https://greenkeeper.io/)
 
-Code for the Scratch Jr Website
+Code for the Scratch Jr [website](http://scratchjr.org/)
 
 ### Before Getting Started
 * Make sure you have node (v4.2 or higher) and npm [installed](https://docs.npmjs.com/getting-started/installing-node)
@@ -19,7 +19,7 @@ make build
 npm start
 ```
 
-During development, `npm start` watches any update you make to files in either `./static` or `./src` and triggers a rebuild of the project.  In development the build is stored in memory, and not served from the `./build` directory.
+During development, `npm start` watches any update you make to files in either `./static` or `./src` and triggers a rebuild of the project.  In development, the build is stored in memory, and not served from the `./build` directory.
 
 When running `npm start`, here are some important log messages to keep an eye out for:
 * `webpack: bundle is now VALID.` – the bundle has been loaded into memory and is now viewable in the browser. This will show up both once `npm start` has completed its setup, and also once updates you make to files have been re-compiled for viewing in the browser.
