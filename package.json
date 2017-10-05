@@ -34,7 +34,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.6",
     "eslint": "^4.4.1",
-    "eslint-config-scratch": "^4.0.0",
+    "eslint-config-scratch": "^5.0.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-react": "^7.2.1",
     "express": "4.15.4",
