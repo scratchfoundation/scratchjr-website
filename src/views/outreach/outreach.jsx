@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import ScrollManager from '../../components/scrollmanager/scrollmanager.jsx';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import TabNav from '../../components/tabnav/tabnav.jsx';
@@ -33,35 +34,37 @@ const Outreach = () => {
     ];
     return (
         <BrowserRouter basename="/outreach">
-            <div>
-                <NavBar selected="outreach" />
-                <div id="content">
-                    <TabNav items={tabs} />
-                    <Switch>
-                        <Redirect
-                            exact
-                            from="/"
-                            to="/about"
-                        />
-                        <Route
-                            path="/about"
-                            component={AboutSection}
-                        />
-                        <Route
-                            path="/host"
-                            component={HostSection}
-                        />
-                        <Route
-                            path="/news"
-                            component={NewsSection}
-                        />
-                        <Route
-                            component={PageNotFound}
-                        />
-                    </Switch>
+            <ScrollManager basename="/outreach">
+                <div>
+                    <NavBar selected="outreach" />
+                    <div id="content">
+                        <TabNav items={tabs} />
+                        <Switch>
+                            <Redirect
+                                exact
+                                from="/"
+                                to="/about"
+                            />
+                            <Route
+                                path="/about"
+                                component={AboutSection}
+                            />
+                            <Route
+                                path="/host"
+                                component={HostSection}
+                            />
+                            <Route
+                                path="/news"
+                                component={NewsSection}
+                            />
+                            <Route
+                                component={PageNotFound}
+                            />
+                        </Switch>
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-            </div>
+            </ScrollManager>
         </BrowserRouter>
     );
 };

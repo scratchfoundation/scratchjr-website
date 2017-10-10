@@ -70,6 +70,11 @@
 		"title": "Hour of Code"
 	},
 	{
+		"pattern": "^/familydays/?$",
+		"name": "familydays",
+		"title": "Family Days"
+	},
+	{
 		"pattern": "^/eula\\.html",
 		"name": "eula-redirect",
 		"redirect": "/eula"
