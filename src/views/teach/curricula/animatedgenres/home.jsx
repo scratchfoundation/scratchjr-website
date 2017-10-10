@@ -60,7 +60,7 @@ const AnimatedGenresHome = ({match}) => (
             </Link>
             <br />
             <Link to={`${match.url}/full#lesson6`}>
-                Lesson 6 - Numbers and Repeating Sentences
+                Lesson 6 - Numbers and Repeating Sequences
             </Link>
             <br />
             <Link to={`${match.url}/full#lesson7`}>
