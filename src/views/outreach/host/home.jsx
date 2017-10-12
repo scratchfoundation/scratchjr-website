@@ -1,8 +1,7 @@
 import React from 'react';
 
 class HostHomeSection extends React.Component {
-    componentDidMount () {
-        const ifr = this.ifr;
+    scrollIframeOnLoad (ifr) {
         ifr.addEventListener('load',
             () => {
                 window.scrollTo(0, 0);
@@ -39,9 +38,7 @@ class HostHomeSection extends React.Component {
                 </div>
                 
                 <iframe
-                    ref={c => { 
-                        this.ifr = c; 
-                    }}
+                    ref={this.scrollIframeOnLoad}
                     src="https://docs.google.com/forms/d/e/1FAIpQLSd1I1N3ayxldpnDz2CBWa8KFRuZ5XB1yqz5PPC96dFd9qhTiA/viewform?embedded=true"
                     width="900"
                     height="2000"
