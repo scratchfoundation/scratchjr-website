@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import ScrollManager from '../../components/scrollmanager/scrollmanager.jsx';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import TabNav from '../../components/tabnav/tabnav.jsx';
@@ -40,39 +41,41 @@ const Learn = () => {
     ];
     return (
         <BrowserRouter basename="/learn">
-            <div>
-                <NavBar selected="learn" />
-                <div id="content">
-                    <TabNav items={tabs} />
-                    <Switch>
-                        <Redirect
-                            exact
-                            from="/"
-                            to="/interface"
-                        />
-                        <Route
-                            path="/interface"
-                            component={InterfaceSection}
-                        />
-                        <Route
-                            path="/paint"
-                            component={PaintSection}
-                        />
-                        <Route
-                            path="/blocks"
-                            component={BlocksSection}
-                        />
-                        <Route
-                            path="/tips"
-                            component={TipsSection}
-                        />
-                        <Route
-                            component={PageNotFound}
-                        />
-                    </Switch>
+            <ScrollManager basename="/learn">
+                <div>
+                    <NavBar selected="learn" />
+                    <div id="content">
+                        <TabNav items={tabs} />
+                        <Switch>
+                            <Redirect
+                                exact
+                                from="/"
+                                to="/interface"
+                            />
+                            <Route
+                                path="/interface"
+                                component={InterfaceSection}
+                            />
+                            <Route
+                                path="/paint"
+                                component={PaintSection}
+                            />
+                            <Route
+                                path="/blocks"
+                                component={BlocksSection}
+                            />
+                            <Route
+                                path="/tips"
+                                component={TipsSection}
+                            />
+                            <Route
+                                component={PageNotFound}
+                            />
+                        </Switch>
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-            </div>
+            </ScrollManager>
         </BrowserRouter>
     );
 };
