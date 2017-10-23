@@ -1,24 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './guidebuttonline.scss';
 
-export default class GuideButtonLine extends React.Component {
-    render () {
-        let lineClass = 'guide-vertical-line';
-        if (this.props.type === 'dot') {
-            lineClass = 'guide-dot';
-        } else if (this.props.type === 'horizontal') {
-            lineClass = 'guide-horizontal-line';
-        }
-        return (
-            <div
-                className={lineClass}
-                id={this.props.id}
-            />
-        );
+const GuideButtonLine = ({
+    id,
+    type
+}) => {
+    let lineClass = 'guide-vertical-line';
+    if (type === 'dot') {
+        lineClass = 'guide-dot';
+    } else if (type === 'horizontal') {
+        lineClass = 'guide-horizontal-line';
     }
-}
+    return (
+        <div
+            className={lineClass}
+            id={id}
+        />
+    );
+};
 
 GuideButtonLine.propTypes = {
-    id: React.PropTypes.string.isRequired,
-    type: React.PropTypes.oneOf(['dot', 'vertical', 'horizontal']).isRequired
+    id: PropTypes.string.isRequired,
+    type: PropTypes.oneOf(['dot', 'vertical', 'horizontal']).isRequired
 };
+export default GuideButtonLine;

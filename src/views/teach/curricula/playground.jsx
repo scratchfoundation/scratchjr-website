@@ -1,34 +1,22 @@
 import React from 'react';
-import {Section} from '../../../components/sectionitem/section.jsx';
-import {StaticLinkSectionItem} from '../../../components/sectionitem/staticlinksectionitem.jsx';
-import activities from './playground.json';
+import {Route, Switch} from 'react-router-dom';
+import ReactRouterPropTypes from 'react-router-prop-types';
 
-export default class Playground extends React.Component {
-    render () {
-        return (
-            <Section
-                id="playground-curriculum-section"
-                title="Playground Curriculum"
-                translateUrls
-            >
-                <div className="content-section-description">
-                    This curriculum provides an introduction to ScratchJr by re-creating
-                    familiar children&apos;s games using the ScratchJr characters and programming blocks.
-                    <a href="curricula/playground/playground-games-full.pdf">
-                        [Download all lessons as one file]
-                    </a>
-                </div>
-                <div className="content-section-items-container">
-                    {activities.map((activity, index) => (
-                        <StaticLinkSectionItem
-                            key={index}
-                            format="half"
-                            linkText="Read more"
-                            {...activity}
-                        />
-                        ))}
-                </div>
-            </Section>
-        );
-    }
-}
+import PlaygroundHtml from './playground/full.jsx';
+import PlaygroundHome from './playground/home.jsx';
+
+const PlaygroundSection = ({match}) => (
+    <div>
+        <Switch>
+            <Route
+                path={`${match.url}/full`}
+                component={PlaygroundHtml}
+            />
+            <Route component={PlaygroundHome} />
+        </Switch>
+    </div>
+);
+PlaygroundSection.propTypes = {
+    match: ReactRouterPropTypes.match.isRequired
+};
+export default PlaygroundSection;

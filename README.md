@@ -1,6 +1,8 @@
 scratchjr-website
 =================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/LLK/scratchjr-website.svg?token=725b7f371ef5a5a54601315ff92d7315bc5d19ff52918847e2eb136efe75b263&ts=1502931528186)](https://greenkeeper.io/)
+
 Code for the Scratch Jr Website
 
 ### Before Getting Started

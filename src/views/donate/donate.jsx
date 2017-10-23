@@ -5,41 +5,37 @@ import Footer from '../../components/footer/footer.jsx';
 
 import './donate.scss';
 
-export default class Donate extends React.Component {
-    render () {
-        return (
-            <div>
-                <NavBar selected="donate" />
-                <div id="content">
-                    <div className="content-section">
+const Donate = () => (
+    <div>
+        <NavBar selected="donate" />
+        <div id="content">
+            <div className="content-section">
 
-                        <h1>Donate</h1>
+                <h1>Donate</h1>
 
-                        <p>
-                            If you enjoy using the free ScratchJr app, please consider
-                            making a donation to the Scratch Foundation (
-                            <a href="//www.scratchfoundation.org/">www.scratchfoundation.org</a>),
-                            a nonprofit organization that provides ongoing support for ScratchJr.
-                            We appreciate donations of all sizes, large and small.
-                        </p>
+                <p>
+                    If you enjoy using the free ScratchJr app, please consider
+                    making a donation to the Scratch Foundation (
+                    <a href="//www.scratchfoundation.org/">www.scratchfoundation.org</a>),
+                    a nonprofit organization that provides ongoing support for ScratchJr.
+                    We appreciate donations of all sizes, large and small.
+                </p>
 
-                        <div className="donation-block">
-                            <a
-                                href="https://secure.donationpay.org/scratchfoundation/"
-                                id="donate-button"
-                            >
-                                <div className="blue-button">
-                                    Donate
-                                </div>
-                            </a>
+                <div className="donation-block">
+                    <a
+                        href="https://secure.donationpay.org/scratchfoundation/"
+                        id="donate-button"
+                    >
+                        <div className="blue-button">
+                            Donate
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <Footer />
             </div>
-        );
-    }
-}
+        </div>
+        <Footer />
+    </div>
+);
 
 render(
     <Donate />,

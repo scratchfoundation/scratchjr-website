@@ -1,23 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './guidekey.scss';
 
-export default class GuideKey extends React.Component {
-    render () {
-        return (
-            <div id="guide-key">
-                <div id="key-header">
-                    {`${this.props.id} | ${this.props.title}`}
-                </div>
-                <div id="key-description">
-                    {this.props.description}
-                </div>
-            </div>
-        );
-    }
-}
+const GuideKey = ({
+    description,
+    id,
+    title
+}) => (
+    <div id="guide-key">
+        <div id="key-header">
+            {`${id} | ${title}`}
+        </div>
+        <div id="key-description">
+            {description}
+        </div>
+    </div>
+);
 
 GuideKey.propTypes = {
-    id: React.PropTypes.number.isRequired,
-    title: React.PropTypes.string.isRequired,
-    description: React.PropTypes.string.isRequired
+    description: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired
 };
+export default GuideKey;

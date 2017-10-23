@@ -1,20 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class PressItem extends React.Component {
-    render () {
-        return (
-            <div className="content-description-answer">
-                <a href={this.props.url}>
-                    {this.props.title}
-                </a>&nbsp;-&nbsp;
-                {this.props.source}. {this.props.dateString}
-            </div>
-        );
-    }
-}
+const PressItem = ({
+    dateString,
+    source,
+    title,
+    url
+}) => (
+    <div className="content-description-answer">
+        <a href={url}>
+            {title}
+        </a>{' - '}
+        {source}. {dateString}
+    </div>
+);
+
 PressItem.propTypes = {
-    title: React.PropTypes.string.isRequired,
-    url: React.PropTypes.string.isRequired,
-    source: React.PropTypes.string.isRequired,
-    dateString: React.PropTypes.string.isRequired
+    dateString: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
 };
+export default PressItem;

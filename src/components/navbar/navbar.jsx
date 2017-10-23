@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './navbar.scss';
 
@@ -48,6 +49,13 @@ export default class NavBar extends React.Component {
                         </a>
                     </div>
                     <div className="header-nav-item-wrapper">
+                        <a href="/outreach">
+                            <div className={this.generateHeaderClasses('outreach')}>
+                                Outreach
+                            </div>
+                        </a>
+                    </div>
+                    <div className="header-nav-item-wrapper">
                         <a href="/donate">
                             <div className={this.generateHeaderClasses('donate')}>
                                 Donate
@@ -60,5 +68,5 @@ export default class NavBar extends React.Component {
     }
 }
 NavBar.propTypes = {
-    selected: React.PropTypes.node
+    selected: PropTypes.node
 };
