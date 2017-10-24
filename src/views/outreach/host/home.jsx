@@ -2,10 +2,12 @@ import React from 'react';
 
 class HostHomeSection extends React.Component {
     scrollIframeOnLoad (ifr) {
-        ifr.addEventListener('load',
-            () => {
-                window.scrollTo(0, 0);
-            });
+        if (ifr !== null) {
+            ifr.addEventListener('load',
+                () => {
+                    window.scrollTo(0, 0);
+                });
+        }
     }
     render () {
         return (
