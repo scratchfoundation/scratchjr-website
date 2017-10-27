@@ -1,5 +1,6 @@
 $nav-text-color: #fff;
 $nav-selected-color: #0a7199;
+$nav-hover-color: #2793c5;
 
 #header {
     margin: auto;
@@ -29,7 +30,7 @@ $nav-selected-color: #0a7199;
 }
 
 .header-nav-item-wrapper:hover {
-    background-color: #2793c5
+    background-color: $nav-hover-color;
 }
 
 .header-nav-item-wrapper > a {
