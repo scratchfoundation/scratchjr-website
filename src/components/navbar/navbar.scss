@@ -28,6 +28,14 @@ $nav-selected-color: #0a7199;
     flex: 1 0 auto;
 }
 
+.header-nav-item-wrapper:hover {
+    background-color: #2793c5
+}
+
+.header-nav-item-wrapper > a {
+    text-decoration: none;
+}
+
 .header-nav-item {
     padding-top: 23px;
     height: 35px;
