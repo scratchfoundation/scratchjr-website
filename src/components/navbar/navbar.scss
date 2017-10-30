@@ -1,5 +1,6 @@
 $nav-text-color: #fff;
 $nav-selected-color: #0a7199;
+$nav-hover-color: #2793c5;
 
 #header {
     margin: auto;
@@ -26,6 +27,14 @@ $nav-selected-color: #0a7199;
 
 .header-nav-item-wrapper {
     flex: 1 0 auto;
+}
+
+.header-nav-item-wrapper:hover {
+    background-color: $nav-hover-color;
+}
+
+.header-nav-item-wrapper > a {
+    text-decoration: none;
 }
 
 .header-nav-item {
