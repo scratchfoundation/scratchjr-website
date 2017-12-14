@@ -137,9 +137,12 @@ const InfoSection = () => (
                 </div>
 
                 <div className="content-description-answer">
-                    <span>Other supporters from the ScratchJr Kickstarter
-                        campaign:</span> <span className="notranslate">Aaron Suggs, Abe Stein,
-                        Abinash Bishoyi, Adam Bellow,
+                    <span>
+                        Other supporters from the ScratchJr Kickstarter
+                        campaign:
+                    </span>
+                    <span className="notranslate">
+                        Aaron Suggs, Abe Stein, Abinash Bishoyi, Adam Bellow,
                         Adam Skylar Miner, Adriana Moscatelli, Adrienne Tilley, Agnes Wagenh&auml;user
                         Aidan Raney, Aiden &amp; Eryn Murphy, Akim Boyko, Akinsola Akinbiyi,
                         Alain-Christian, Albert Oldfield, Alex Abdugafarov, Alexander &amp; Edward Grabon,
@@ -260,10 +263,7 @@ const InfoSection = () => (
                         V.R. Bones, Andrew Walton, Wayne Blackburn, Wendy E. Rowe, Will Ober, William
                         Bettridge-Radford, William Wnekowicz, Wincent Balin, Xose P&eacute;rez, Yannick
                         Methot, Yeou-Hsiang Cheng, Yoojin Lim, Yoshihiro Kawahara, Yrjan Tangenes, Zachary
-                        Kestenbaum, Zack Chapple, Z&eacute;bulon Grav&eacute;, Zoe Franklyn,
-                        &amp; 141Learning.
-                    </span>
-
+                        Kestenbaum, Zack Chapple, Z&eacute;bulon Grav&eacute;, Zoe Franklyn, &amp; 141Learning.</span>
                 </div>
             </div>
 
