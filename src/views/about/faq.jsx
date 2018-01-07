@@ -44,7 +44,7 @@ const FAQSection = () => (
                     Yes, there is a guide to ScratchJr. Written by app creators Professor Marina
                     Umaschi Bers of the DevTech Research Group at Tufts University
                     and Mitchel Resnick of the Lifelong Kindergarten Group at the MIT
-                    Media Lab, this new book is an easy-to-use, hands on resource for parents and
+                    Media Lab, this new book is an easy-to-use, hands-on resource for parents and
                     educators alike to teach children how to code with ScratchJr. Read
                     an <a
                         href="https://medium.com/scratchfoundation-blog/helping-young-children-experiment-explore-and-express-themselves-with-code-69a450d42005#.9fq210a4q"
