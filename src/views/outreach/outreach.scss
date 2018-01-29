@@ -20,6 +20,16 @@ $question-answer: #808080;
     font-size: 15px;
 }
 
+.content-photos {
+    display: flex;
+    padding-top: 40px;
+}
+
+.content-photos img {
+    width: 225px;
+    height: 150px;
+}
+
 // Submenus
 .about-icon {
     background-image: url("/images/infos_b.svg");
