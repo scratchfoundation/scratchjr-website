@@ -65,6 +65,13 @@ img { display: block; }
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/*Print Header*/
+/* we expect pages to print will have a print media query to make the header visible */
+header#print-header{
+  display: none;
+  width: 25%;
+}
+
 /*Print Footer*/
 /* we expect pages to print will have a print media query to make the footer visible */
 footer#print-footer{
@@ -82,6 +89,13 @@ footer#print-footer{
 
 #print-footer .footer-text{
   margin-left: 1%;
+}
+
+img.scratchjrlogo{
+	height:auto;
+	width:100%;
+	object-fit:contain;
+	margin:1%;
 }
 
 img.cc-logo{

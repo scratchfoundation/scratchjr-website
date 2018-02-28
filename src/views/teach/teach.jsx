@@ -36,6 +36,7 @@ const Teach = () => {
             <ScrollManager basename="/teach">
                 <div>
                     <NavBar selected="teach" />
+                    
                     <div id="content">
                         <TabNav items={tabs} />
                         <Switch>

@@ -1,50 +1,69 @@
 import React from 'react';
-import StaticLinkSectionItem from '../../components/sectionitem/staticlinksectionitem.jsx';
-import TxDiv from '../../components/transifex/txdiv.jsx';
+import {Route, Switch} from 'react-router-dom';
+import ReactRouterPropTypes from 'react-router-prop-types';
 
-import activities from './activities.json';
+import ActivitiesHomeSection from './activities/home.jsx';
+import DriveAcrossTheCityHtml from './activities/drive_across_the_city.jsx';
+import RunARaceHtml from './activities/run_a_race.jsx';
+import SunsetHtml from './activities/sunset.jsx';
+import MoonriseAfterSunsetHtml from './activities/moonrise_after_sunset.jsx';
+import SpookyForestHtml from './activities/spooky_forest.jsx';
+import DribbleABasketballHtml from './activities/dribble_a_basketball.jsx';
+import DancePartyHtml from './activities/dance_party.jsx';
+import MeetAndGreetHtml from './activities/meet_and_greet.jsx';
+import ConversationHtml from './activities/conversation.jsx';
 
-const ActivitiesSection = () => (
-    <div
-        className="content-section"
-        id="activities-section"
-    >
-        <div className="content-section-title">
-            Activities
-        </div>
-        <div className="content-section-description">
-            Each of these activities gives you a quick way to learn how
-            to do new things with ScratchJr. They are listed here in
-            order of simplest to hardest, but feel free to play around
-            in any order you&apos;d like!
-        </div>
-        <TxDiv
-            className="content-section-items-container"
-            txContent="translate_urls"
-        >
-            <StaticLinkSectionItem
-                title="Introduction"
-                format="full"
-                thumbnail="/images/activitycards/intro.png"
-                description="Watch this video for a brief introduction to ScratchJr's interface..."
-                linkText="See more"
-                linkURL="https://www.youtube.com/watch?v=ciWPaEgscr0&feature=youtu.be"
+const ActivitiesSection = ({match}) => (
+    <div>
+        <header id="print-header">
+            <img
+                alt="ScratchJr logo"
+                className="scratchjrlogo"
+                src="/images/scratchjrlogo.png"
             />
-        </TxDiv>
-        <TxDiv
-            className="content-section-items-container"
-            txContent="translate_urls"
-        >
-            {activities.map((activity, index) => (
-                <StaticLinkSectionItem
-                    key={index}
-                    format="half"
-                    {...activity}
-                    linkText="Read more"
-                />
-            ))}
-
-        </TxDiv>
+        </header>
+        <Switch>
+        	<Route
+                path={`${match.url}/drive_across_the_city`}
+                component={DriveAcrossTheCityHtml}
+            />
+            <Route
+                path={`${match.url}/run_a_race`}
+                component={RunARaceHtml}
+            />
+            <Route
+                path={`${match.url}/sunset`}
+                component={SunsetHtml}
+            />
+            <Route
+                path={`${match.url}/moonrise_after_sunset`}
+                component={MoonriseAfterSunsetHtml}
+            />
+            <Route
+                path={`${match.url}/spooky_forest`}
+                component={SpookyForestHtml}
+            />
+            <Route
+                path={`${match.url}/dribble_a_basketball`}
+                component={DribbleABasketballHtml}
+            />
+            <Route
+                path={`${match.url}/dance_party`}
+                component={DancePartyHtml}
+            />
+            <Route
+                path={`${match.url}/meet_and_greet`}
+                component={MeetAndGreetHtml}
+            />
+            <Route
+                path={`${match.url}/conversation`}
+                component={ConversationHtml}
+            />
+            <Route component={ActivitiesHomeSection} />
+        </Switch>
     </div>
 );
+ActivitiesSection.propTypes = {
+    match: ReactRouterPropTypes.match.isRequired
+};
 export default ActivitiesSection;
