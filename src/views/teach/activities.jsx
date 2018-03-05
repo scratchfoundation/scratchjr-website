@@ -23,7 +23,7 @@ const ActivitiesSection = ({match}) => (
             />
         </header>
         <Switch>
-        	<Route
+            <Route
                 path={`${match.url}/drive_across_the_city`}
                 component={DriveAcrossTheCityHtml}
             />

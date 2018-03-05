@@ -30,7 +30,7 @@ const ActivitiesHome = () => (
             title="1. Drive Across the City"
             format="half"
             thumbnail="/images/activitycards/card01-car.png"
-            description="Pick a background and a character, and use a motion block to make a car drive across the city..."
+            description="Pick a background and a character, and use a motion block to make a car drive across the city..." // eslint-disable-line max-len
             linkText="Read more"
             linkURL="/activities/drive_across_the_city"
         />
@@ -101,4 +101,3 @@ const ActivitiesHome = () => (
     </TxDiv>
 );
 export default ActivitiesHome;
-    
