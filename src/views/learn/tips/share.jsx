@@ -76,9 +76,7 @@ const ShareSection = () => (
             After they have opened the project once, the blue ribbon
             will disappear from the Home screen.
             <br />
-            <em>Note: You can only send attachments on a iPad through the iPad&apos;s
-                <strong>Mail</strong>
-                app.</em>
+            <em>Note: You can only send attachments on a iPad through the iPad&apos;s<strong>Mail</strong>app.</em>
         </div>
         <div className="content-section-item-title">
             Sharing by AirDrop
