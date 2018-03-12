@@ -1,0 +1,18 @@
+{
+    "key1": {
+        "message": "A Spooky Forest",
+        "description": "Preview picture for spooky forest project"
+    },
+    "key2": {
+        "message": "Oh, hi dog!",
+        "description": "Conversation in meet and greet project"
+    },
+    "key3": {
+        "message": "Woof! Woof!",
+        "description": "Conversation in meet and greet project"
+    },
+    "key4": {
+        "message": "Welcome!",
+        "description": "Preview picture for conversation project"
+    }
+}
