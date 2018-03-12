@@ -35,7 +35,7 @@ const Teach = () => {
         <BrowserRouter basename="/teach">
             <ScrollManager basename="/teach">
                 <div>
-                    <NavBar selected="teach" />                 
+                    <NavBar selected="teach" />
                     <div id="content">
                         <TabNav items={tabs} />
                         <Switch>
