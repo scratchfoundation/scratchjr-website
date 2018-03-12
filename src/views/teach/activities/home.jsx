@@ -33,7 +33,7 @@ const ActivitiesHome = () => (
                 thumbnail="/images/activitycards/card01-car.png"
                 description="Pick a background and a character, and use a motion block to make a car drive across the city..." // eslint-disable-line max-len
                 linkText="Read more"
-                linkURL="/activities/drive_across_the_city"
+                linkURL="/activities/drive-across-the-city"
             />
             <LinkedSectionItem
                 title="2. Run a Race"
@@ -41,7 +41,7 @@ const ActivitiesHome = () => (
                 thumbnail="/images/activitycards/card03-race.png"
                 description="Use the speed block to speed up or slow down a character..."
                 linkText="Read more"
-                linkURL="/activities/run_a_race"
+                linkURL="/activities/run-a-race"
             />
             <LinkedSectionItem
                 title="3. Sunset"
@@ -57,7 +57,7 @@ const ActivitiesHome = () => (
                 thumbnail="/images/activitycards/card07-moon.png"
                 description="Learn how to add a new page to change scene..."
                 linkText="Read more"
-                linkURL="/activities/moonrise_after_sunset"
+                linkURL="/activities/moonrise-after-sunset"
             />
             <LinkedSectionItem
                 title="5. Spooky Forest"
@@ -65,7 +65,7 @@ const ActivitiesHome = () => (
                 thumbnail="/images/activitycards/card05-forest.png"
                 description="Make multiple characters with their own scripts..."
                 linkText="Read more"
-                linkURL="/activities/spooky_forest"
+                linkURL="/activities/spooky-forest"
             />
             <LinkedSectionItem
                 title="6. Dribble a Basketball"
@@ -73,7 +73,7 @@ const ActivitiesHome = () => (
                 thumbnail="/images/activitycards/card04-dribble.png"
                 description="Learn how to use the repeat block to dribble a basketball..."
                 linkText="Read more"
-                linkURL="/activities/dribble_a_basketball"
+                linkURL="/activities/dribble-a-basketball"
             />
             <LinkedSectionItem
                 title="7. Dance Party"
@@ -81,7 +81,7 @@ const ActivitiesHome = () => (
                 thumbnail="/images/activitycards/card02-dance.png"
                 description="Use sound and motion blocks and a start again block to make characters dance..."
                 linkText="Read more"
-                linkURL="/activities/dance_party"
+                linkURL="/activities/dance-party"
             />
             <LinkedSectionItem
                 title="8. Meet and Greet"
@@ -89,7 +89,7 @@ const ActivitiesHome = () => (
                 thumbnail="/images/activitycards/card08-greet.png"
                 description="Use the envelope to send a message from one character to another..."
                 linkText="Read more"
-                linkURL="/activities/meet_and_greet"
+                linkURL="/activities/meet-and-greet"
             />
             <LinkedSectionItem
                 title="9. Conversation"
