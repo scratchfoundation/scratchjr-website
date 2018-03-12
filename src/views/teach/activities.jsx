@@ -24,11 +24,11 @@ const ActivitiesSection = ({match}) => (
         </header>
         <Switch>
             <Route
-                path={`${match.url}/drive_across_the_city`}
+                path={`${match.url}/drive-across-the-city`}
                 component={DriveAcrossTheCityHtml}
             />
             <Route
-                path={`${match.url}/run_a_race`}
+                path={`${match.url}/run-a-race`}
                 component={RunARaceHtml}
             />
             <Route
@@ -36,23 +36,23 @@ const ActivitiesSection = ({match}) => (
                 component={SunsetHtml}
             />
             <Route
-                path={`${match.url}/moonrise_after_sunset`}
+                path={`${match.url}/moonrise-after-sunset`}
                 component={MoonriseAfterSunsetHtml}
             />
             <Route
-                path={`${match.url}/spooky_forest`}
+                path={`${match.url}/spooky-forest`}
                 component={SpookyForestHtml}
             />
             <Route
-                path={`${match.url}/dribble_a_basketball`}
+                path={`${match.url}/dribble-a-basketball`}
                 component={DribbleABasketballHtml}
             />
             <Route
-                path={`${match.url}/dance_party`}
+                path={`${match.url}/dance-party`}
                 component={DancePartyHtml}
             />
             <Route
-                path={`${match.url}/meet_and_greet`}
+                path={`${match.url}/meet-and-greet`}
                 component={MeetAndGreetHtml}
             />
             <Route
