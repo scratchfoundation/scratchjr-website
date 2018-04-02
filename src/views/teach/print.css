@@ -292,6 +292,7 @@ p.dot-separater {
     body {
       background-color: white;
     }
+    /*Activities*/
     .activity-title {
       color:#f49d25;
       text-align: left;
@@ -301,10 +302,10 @@ p.dot-separater {
       margin:0;
     }
     .activity-preview img {
-      height:110px;
+      height:150px;
     }
     .activity-instructions {
-      max-height:800px;
+      max-height:780px;
       width:100%;
       display:flex;
       flex-direction: column;
@@ -316,28 +317,50 @@ p.dot-separater {
       margin: 0 0 10px 0;
     }
     .activity-step-description-line {
-      margin:5px;
+      margin:10px;
     }
     .activity-step-description-component img {
-      width:35%;
+      width:45%;
     }
     .activity-step-description-component img.fill-line {
-      width:56%;
+      width:70%;
     }
     .activity-step-description-component p {
-      margin:0;
+      font-size:20px;
+      margin:10px;
     }
     .activity-step-description-component p.dialogue{
       margin-bottom:2px;
-      font-size:10px;
     }
     .activity-extension {
       page-break-inside: avoid;
       margin:10px;
+      font-size:20px;
     }
     .activity-extension-picture img {
       width:50px;
     }
+    /*Long activities*/
+    .long-activity {
+      font-size:15px;
+    }
+    .long-activity .activity-preview img {
+      height:110px;
+    }
+    .long-activity .activity-step-description-component img {
+      width:35%;
+    }
+    .long-activity .activity-step-description-component img.fill-line {
+      width:54%;
+    }
+    .long-activity .activity-step-description-component p.dialogue{
+      margin-bottom:2px;
+      font-size:12px;
+    }
+    .long-activity .activity-step-description-line {
+      margin:5px;
+    }
+
     .page-break {
       page-break-after: always;
     }
