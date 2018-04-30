@@ -1,40 +1,5 @@
 /* CSS Document */
 
-@media print {
-    div#footer, div#header, div#content-nav {
-        display: none;
-    }
-    .content-section-items-container {
-        page-break-after: always;
-    }
-    /*.content-section-items-container.mod-page-break-after{
-    page-break-after: always;
-  }*/
-    .mod-page-break-after {
-        page-break-after: always;
-    }
-    .content-section-item-description {
-        display: block;
-    }
-    .page-break {
-        page-break-after: always;
-    }
-    .print-br {
-        display: inline-block;
-    }
-    .no-print {
-        display: none;
-    }
-    html footer#print-footer {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-    }
-    .txlive-langselector {
-        display: none;
-    }
-}
-
 h2 {
     /* bold, underline, font-size a little bit bigger*/
     font-weight: bold;
@@ -195,4 +160,232 @@ p.dot-separater {
 
 .student_answer_sheet img.small-image{
   width:30%;
+}
+
+.activity-title{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color:#f49d25;
+}
+
+.activities-content-section{
+  margin-left:70px;
+  margin-right:70px;
+}
+
+.activity-preview{
+  display:flex;
+  width:100%;
+  justify-content: space-around;
+  margin:10px;
+}
+
+.activity-step{
+  border:1px solid #3099C9;
+  margin-top:30px;
+}
+
+.activity-step-title{
+  background-color:#3099C9; 
+  color:white; 
+  font-size:1.5em; 
+  font-weight:bold;
+  padding:10px;
+}
+
+.activity-step-description{
+  
+}
+
+.activity-step-description-line{
+  margin-top:30px;
+  margin-bottom:30px;
+  display:flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.center-align{
+  justify-content: center;
+  align-items: center;
+}
+
+.activity-step-description-component{
+  
+}
+
+.activity-step-description-component p{
+  text-align:center;
+}
+
+.activity-step-description-component p.dialogue{
+  border:2px solid lightgray;
+  border-radius:5px;
+  padding:5px;
+  display:inline;
+}
+
+.activity-step-description-component img{
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+}
+
+.center-align img{
+  margin-right:2px;
+}
+
+.activity-step-description-component img.fill-line{
+  width:80%;
+}
+
+.activity-button {
+  min-width:25%;
+}
+
+.activity-button img{
+  width:25%;
+}
+
+.activity-extension{
+  margin-top:50px;
+  margin-bottom:50px;
+  border:2px solid #007199;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+
+.activity-extension-picture{
+  background-color:#007199;
+  padding:10px;
+}
+
+.activity-extension-text ul{
+  margin:0;
+}
+
+.activity-extension-text ul li{
+  padding:5px;
+}
+
+@media print {
+    div#footer, div#header, div#content-nav {
+        display: none;
+    }
+    .content-section-items-container {
+        page-break-after: always;
+      }
+    /*.content-section-items-container.mod-page-break-after{
+    page-break-after: always;
+    }*/
+    .mod-page-break-after {
+      page-break-after: always;
+    }
+    .content-section-item-description {
+      display: block;
+    }
+    body {
+      background-color: white;
+    }
+    /*Activities*/
+    .activity-title {
+      color:#f49d25;
+      text-align: left;
+      max-width:75%;
+    }
+    .activities-content-section {
+      margin:0;
+    }
+    .activity-preview img {
+      height:150px;
+    }
+    .activity-instructions {
+      max-height:780px;
+      width:100%;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .activity-step {
+      page-break-inside: avoid;
+      width:47.5%;
+      margin: 0 0 10px 0;
+    }
+    .activity-step-description-line {
+      margin:10px;
+    }
+    .activity-step-description-component img {
+      width:45%;
+    }
+    .activity-step-description-component img.fill-line {
+      width:70%;
+    }
+    .activity-step-description-component p {
+      font-size:20px;
+      margin:10px;
+    }
+    .activity-step-description-component p.dialogue{
+      margin-bottom:2px;
+    }
+    .activity-extension {
+      page-break-inside: avoid;
+      margin:10px;
+      font-size:20px;
+    }
+    .activity-extension-picture img {
+      width:50px;
+    }
+    /*Long activities*/
+    .long-activity {
+      font-size:15px;
+    }
+    .long-activity .activity-preview img {
+      height:110px;
+    }
+    .long-activity .activity-step-description-component img {
+      width:35%;
+    }
+    .long-activity .activity-step-description-component img.fill-line {
+      width:54%;
+    }
+    .long-activity .activity-step-description-component p.dialogue{
+      margin-bottom:2px;
+      font-size:12px;
+    }
+    .long-activity .activity-step-description-line {
+      margin:5px;
+    }
+
+    .page-break {
+      page-break-after: always;
+    }
+    .print-br {
+        display: inline-block;
+    }
+    .no-print {
+        display: none;
+    }
+    html footer#print-footer {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+    }
+    html header#print-header {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    .txlive-langselector {
+        display: none;
+    }
+    @page {
+      size:portrait;
+      margin:1cm;
+    }
 }
