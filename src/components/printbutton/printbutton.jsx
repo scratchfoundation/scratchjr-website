@@ -7,7 +7,12 @@ export default class PrintButton extends React.Component {
     }
     render () {
         return (
-            <button onClick={this.handleClick} className="blue-button print">Print</button>
+            <button
+                onClick={this.handleClick}
+                className="blue-button print"
+            >
+                Print
+            </button>
         );
     }
 }
