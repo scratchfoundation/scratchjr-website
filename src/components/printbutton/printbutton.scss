@@ -1,0 +1,15 @@
+.printbutton-container {
+	width: 100%;
+	display: inline-flex;
+	justify-content: flex-end;
+}
+.print {
+	margin: 20px;
+	margin-bottom: 0;
+}
+
+@media print {
+	.printbutton-container {
+		display: none;
+	}
+}
