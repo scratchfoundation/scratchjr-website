@@ -23,11 +23,11 @@ const NewsSection = () => (
         <div className="fd-news-feed">
             <Timeline
                 dataSource={{
-                    sourceType: 'widget',
-                    widgetId: '902299281767505920'
+                    sourceType: 'url',
+                    url: 'https://twitter.com/ScratchJr/timelines/1021452548371288064?ref_src=twsrc%5Etfw'
                 }}
                 options={{
-                    username: 'Scratch',
+                    username: 'ScratchJr',
                     width: '600',
                     height: '800',
                     chrome: 'noheader nofooter'
