@@ -222,7 +222,7 @@ p.dot-separater {
   text-align:center;
 }
 
-.activity-step-description-component p.dialogue{
+.dialogue .activity-step-description-component p{
   border:2px solid lightgray;
   border-radius:5px;
   padding:5px;
@@ -305,7 +305,7 @@ p.dot-separater {
       height:150px;
     }
     .activity-instructions {
-      max-height:780px;
+      max-height:770px;
       width:100%;
       display:flex;
       flex-direction: column;
@@ -329,13 +329,22 @@ p.dot-separater {
       font-size:20px;
       margin:10px;
     }
-    .activity-step-description-component p.dialogue{
+    html[lang="ja"] .activity-step-description-component p {
+      font-size:14px;
+      margin:7px;
+    }
+    .dialogue .activity-step-description-component p {
       margin-bottom:2px;
     }
     .activity-extension {
       page-break-inside: avoid;
       margin:10px;
       font-size:20px;
+    }
+    html[lang="ja"] .activity-extension {
+      page-break-inside: avoid;
+      margin:10px;
+      font-size:15px;
     }
     .activity-extension-picture img {
       width:50px;
@@ -353,9 +362,13 @@ p.dot-separater {
     .long-activity .activity-step-description-component img.fill-line {
       width:54%;
     }
-    .long-activity .activity-step-description-component p.dialogue{
+    .long-activity .dialogue .activity-step-description-component p {
       margin-bottom:2px;
       font-size:12px;
+    }
+    html[lang="ja"] .long-activity .dialogue .activity-step-description-component img {
+      width:25px;
+      margin-left:10px;
     }
     .long-activity .activity-step-description-line {
       margin:5px;
