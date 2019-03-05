@@ -81,19 +81,20 @@ const Index = () => {
                 {/* end content-graphic */}
                 <div className="content-news">
                     <div className="content-news-header">
-                        News
+                       News
                     </div>
                     <div className="content-news-body">
                         <a
-                            href="https://medium.com/scratchfoundation-blog/10-things-to-try-right-now-with-your-child-on-scratch-and-scratchjr-defd7f8ad0d1"
+                            href="https://www.amazon.com/Official-ScratchJr-Book-Help-Learn/dp/1593276710/"
                         >
-                        10 things to try right now with your child on Scratch and ScratchJr
-                        </a>, hands-on activities for getting started with ScratchJr.
+                            The Official ScratchJr Book
+                        </a> is the perfect companion to the app and makes coding easy and fun for all.
                     </div>
                     <div className="content-news-body">
-                        Check out tips for creating with your child: <a href="https://medium.com/scratchfoundation-blog/creating-together-3041662c970a">
-                        Creating Together
-                        </a> by the Scratch Foundation.
+                        The <a href="https://www.amazon.com/ScratchJr-Coding-Cards-Creative-Activities/dp/1593278993/">
+                            ScratchJr Coding Cards
+                        </a> are a deck of 75 activity cards covering fun and
+                        exciting projects designed to educate young children with ScratchJr.
                     </div>
                     <div className="content-news-body">
                         Find out about <a
