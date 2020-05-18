@@ -56,7 +56,7 @@
     "react-twitter-widgets": "1.7.1",
     "rrc": "0.10.1",
     "sass-lint": "1.11.1",
-    "sass-loader": "6.0.6",
+    "sass-loader": "7.3.1",
     "slick-carousel": "^1.8.1",
     "style-loader": "0.19.0",
     "url-loader": "0.6.2",
