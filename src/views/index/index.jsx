@@ -52,20 +52,6 @@ const Index = () => {
                                     src="/images/GooglePlay.svg"
                                 />
                             </a>
-                            <a
-                                href="https://chrome.google.com/webstore/detail/scratchjr/oipimoeophamdcmjcfameoojlbhbgjda"
-                            >
-                                <img
-                                    alt="Download on the Chrome Web Store"
-                                    src="/images/ChromeWebStore_Badge.svg"
-                                />
-                            </a>
-                            <a href="https://www.amazon.com/gp/product/B01AKGTD2E">
-                                <img
-                                    alt="Get it on Amazon"
-                                    src="/images/amazon-underground-app-us-black.svg"
-                                />
-                            </a>
                         </div>
                         {/* end store-badges */}
                     </div>
@@ -95,12 +81,6 @@ const Index = () => {
                             ScratchJr Coding Cards
                         </a> are a deck of 75 activity cards covering fun and
                         exciting projects designed to educate young children with ScratchJr.
-                    </div>
-                    <div className="content-news-body">
-                        Find out about <a
-                            href="/outreach"
-                        >ScratchJr Family Days
-                        </a>.
                     </div>
                 </div>
 

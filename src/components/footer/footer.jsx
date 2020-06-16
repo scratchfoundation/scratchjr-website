@@ -32,7 +32,7 @@ const Footer = () => (
             </div>
             <div id="footer-nav">
                 <a
-                    href="https://docs.google.com/forms/d/1wBrCl5Dy4-5AAzcmkQigKplKpv37M0O8YQPKo0FjUpo/viewform?usp=send_form"
+                    href="http://eepurl.com/3ytf5"
                 >
                     <div className="blue-button">
                         Join Mailing List
