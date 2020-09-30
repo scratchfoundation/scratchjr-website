@@ -1,4 +1,4 @@
-## scratchjr-website
+## scratchjr-website -To build the website from Scratch
 #### Code for the [ScratchJr website](https://scratchjr.org)
 
 [![Build Status](https://travis-ci.org/LLK/scratchjr-website.svg?branch=develop)](https://travis-ci.org/LLK/scratchjr-website)
