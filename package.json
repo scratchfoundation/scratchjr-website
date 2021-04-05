@@ -30,7 +30,7 @@
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
-    "classnames": "2.2.5",
+    "classnames": "2.3.1",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.28.6",
     "eslint": "4.19.0",
