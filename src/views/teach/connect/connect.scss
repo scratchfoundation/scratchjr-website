@@ -1,0 +1,28 @@
+$text-color: #808080;
+
+p {
+    margin-right: 35px;
+    margin-left: 35px;
+    line-height: 22px;
+    color: $text-color;
+    font-size: 15px;
+}
+
+.connect-block {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 25px
+}
+
+#connect-button {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 65%;
+}

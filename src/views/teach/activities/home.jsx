@@ -1,5 +1,4 @@
 import React from 'react';
-import StaticLinkSectionItem from '../../../components/sectionitem/staticlinksectionitem.jsx';
 import LinkedSectionItem from '../../../components/sectionitem/linkedsectionitem.jsx';
 import TxDiv from '../../../components/transifex/txdiv.jsx';
 
@@ -19,14 +18,6 @@ const ActivitiesHome = () => (
             in any order you&apos;d like! For more ScratchJr resources
             developed by DevTech Research Group, click <a href="http://sites.tufts.edu/devtech/research/scratchjr/">here</a>.
         </div>
-        <StaticLinkSectionItem
-            title="Introduction"
-            format="full"
-            thumbnail="/images/activitycards/intro.png"
-            description="Watch this video for a brief introduction to ScratchJr's interface..."
-            linkText="See more"
-            linkURL="https://www.youtube.com/watch?v=ciWPaEgscr0&feature=youtu.be"
-        />
         <div className="content-section-items-container">
             <LinkedSectionItem
                 title="1. Drive Across the City"

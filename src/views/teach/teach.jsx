@@ -8,8 +8,9 @@ import TabNav from '../../components/tabnav/tabnav.jsx';
 import PageNotFound from '../../components/pagenotfound/pagenotfound.jsx';
 
 import ActivitiesSection from './activities.jsx';
-import CurriculaSection from './curricula.jsx';
-import AssessmentsSection from './assessments.jsx';
+import ResourcesSection from './resources.jsx';
+import ConnectSection from './connect.jsx';
+
 import './teach.scss';
 
 const Teach = () => {
@@ -20,15 +21,16 @@ const Teach = () => {
             section: 'activities',
             indexLink: false
         }, {
-            url: '/curricula',
-            text: 'Curricula',
-            section: 'curricula',
+            url: '/resources',
+            text: 'Resources',
+            section: 'curricula',     //icon
             indexLink: false
         }, {
-            url: '/assessments',
-            text: 'Assessments',
-            section: 'assessments',
+            url: '/connect',
+            text: 'ScratchJr Connect', 
+            section: 'assessments',     // icon
             indexLink: false
+
         }
     ];
     return (
@@ -49,12 +51,12 @@ const Teach = () => {
                                 component={ActivitiesSection}
                             />
                             <Route
-                                path="/curricula"
-                                component={CurriculaSection}
+                                path="/resources"
+                                component={ResourcesSection}
                             />
                             <Route
-                                path="/assessments"
-                                component={AssessmentsSection}
+                                path="/connect"
+                                component={ConnectSection}
                             />
                             <Route component={PageNotFound} />
                         </Switch>
