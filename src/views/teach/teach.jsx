@@ -23,14 +23,13 @@ const Teach = () => {
         }, {
             url: '/resources',
             text: 'Resources',
-            section: 'curricula',     //icon
+            section: 'curricula',
             indexLink: false
         }, {
             url: '/connect',
-            text: 'ScratchJr Connect', 
-            section: 'assessments',     // icon
+            text: 'ScratchJr Connect',
+            section: 'assessments',
             indexLink: false
-
         }
     ];
     return (

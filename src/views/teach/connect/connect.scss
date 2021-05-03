@@ -11,8 +11,8 @@ p {
 .connect-block {
     display: block;
     margin-bottom: 20px;
+    padding: 25px;
     text-align: center;
-    padding: 25px
 }
 
 #connect-button {
@@ -21,8 +21,8 @@ p {
 }
 
 .center {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
 }

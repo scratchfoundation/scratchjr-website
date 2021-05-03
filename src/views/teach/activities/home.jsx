@@ -15,8 +15,7 @@ const ActivitiesHome = () => (
             Each of these activities gives you a quick way to learn how
             to do new things with ScratchJr. They are listed here in
             order of simplest to hardest, but feel free to play around
-            in any order you&apos;d like! For more ScratchJr resources
-            developed by DevTech Research Group, click <a href="http://sites.tufts.edu/devtech/research/scratchjr/">here</a>.
+            in any order you&apos;d like!
         </div>
         <div className="content-section-items-container">
             <LinkedSectionItem

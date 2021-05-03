@@ -14,8 +14,8 @@ const HomeSection = () => (
             supplemental materials to be used in and out of the classroom. We hope
             that by using these materials, teachers are better able to bring
             ScratchJr to life! For further ideas and inspiration for teaching
-            activities, see our ScratchJr Connect page or visit&nbsp; 
-             <a href="https://sites.tufts.edu/devtech/">DevTech Research Group</a>.
+            activities, see our <a href="/teach/connect">ScratchJr Connect page</a> or visit&nbsp;
+            <a href="https://sites.tufts.edu/devtech/">DevTech Research Group</a>.
             <br />
         </div>
         <StaticLinkSectionItem
