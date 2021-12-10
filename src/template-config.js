@@ -28,5 +28,6 @@ module.exports = {
 
     // Analytics & Monitoring
     /* global process:false */
-    ga_tracker: process.env.GA_TRACKER || ''
+    ga_tracker: process.env.GA_TRACKER || '',
+    gtm_id: process.env.GTM_ID || ''
 };
