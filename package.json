@@ -46,7 +46,7 @@
     "lodash.debounce": "4.0.8",
     "lodash.defaults": "4.2.0",
     "node-sass": "4.14.1",
-    "postcss-loader": "2.0.6",
+    "postcss-loader": "3.0.0",
     "postcss-simple-vars": "4.0.0",
     "react": "15.6.2",
     "react-dom": "15.6.2",
