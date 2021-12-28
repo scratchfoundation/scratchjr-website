@@ -47,7 +47,7 @@
     "lodash.defaults": "4.2.0",
     "node-sass": "4.14.1",
     "postcss-loader": "2.0.6",
-    "postcss-simple-vars": "4.0.0",
+    "postcss-simple-vars": "5.0.2",
     "react": "15.6.2",
     "react-dom": "15.6.2",
     "react-router-dom": "4.2.2",
