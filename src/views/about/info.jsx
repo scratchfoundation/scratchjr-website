@@ -83,7 +83,7 @@ const InfoSection = () => (
                     Who Created ScratchJr?
                 </div>
                 <div className="content-description-answer">
-                    ScratchJr is a collaboration between the{" "}
+                    ScratchJr was developed by the{" "}
                     <a href="//ase.tufts.edu/devtech/">
                         Developmental Technologies (DevTech) Research Group
                     </a>{" "}
@@ -131,12 +131,14 @@ const InfoSection = () => (
                     Who Helped to Translate ScratchJr?
                 </div>
                 <div className="content-description-answer">
-                    ScratchJr has been translated into Spanish by Teresa
+                    ScratchJr has been translated into more than a dozen
+                    languages with the generous help of volunteer translators
+                    from around the world. Special thanks go to the translators
+                    who helped with our first translation into Spanish: Teresa
                     Mart&iacute;nez P&eacute;rez, childhood education student;
                     Marta Bonet Garrosa, Manuela Lara Lara, and Lidia
-                    Pi&ntilde;eiro Cordero, of Editorial Santillana; Sergio
-                    Antolinez, CEO of Tecnoaprendo; and Luisa Mar&iacute;a
-                    Palacios Maroto.
+                    Pi&ntilde;eiro, of Editorial Santillana; Sergio Antolinez,
+                    CEO of Tecnoaprendo; and Luisa Mar&iacute;a Palacios Maroto.
                 </div>
             </div>
             <div className="content-description-section">
