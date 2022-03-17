@@ -1,11 +1,11 @@
-import React from "react";
-import "./footer.scss";
+import React from 'react';
+import './footer.scss';
 
 const Footer = () => (
     <div id="footer">
         <span id="footer-text">
-            <strong>ScratchJr</strong> is a collaboration between the DevTech
-            Research Group at Tufts University, and the Scratch Foundation.
+            <strong>ScratchJr</strong> is a collaboration between the DevTech Research Group at
+            Tufts University, and the Scratch Foundation.
         </span>
         <div id="footer-social">
             <div id="social-links">
