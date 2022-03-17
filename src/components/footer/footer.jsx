@@ -1,13 +1,11 @@
-import React from 'react';
-import './footer.scss';
+import React from "react";
+import "./footer.scss";
 
 const Footer = () => (
     <div id="footer">
         <span id="footer-text">
-            <strong>ScratchJr</strong> is a collaboration between the
-            DevTech Research Group at Tufts University, the Lifelong
-            Kindergarten Group at the MIT Media Lab, and the Playful
-            Invention Company.
+            <strong>ScratchJr</strong> is a collaboration between the DevTech
+            Research Group at Tufts University, and the Scratch Foundation.
         </span>
         <div id="footer-social">
             <div id="social-links">
@@ -31,18 +29,12 @@ const Footer = () => (
                 </a>
             </div>
             <div id="footer-nav">
-                <a
-                    href="http://eepurl.com/3ytf5"
-                >
-                    <div className="blue-button">
-                        Join Mailing List
-                    </div>
+                <a href="http://eepurl.com/3ytf5">
+                    <div className="blue-button">Join Mailing List</div>
                 </a>
                 &nbsp;
                 <a href="mailto:info@scratchjr.org">
-                    <div className="blue-button">
-                        Contact Us
-                    </div>
+                    <div className="blue-button">Contact Us</div>
                 </a>
             </div>
         </div>
