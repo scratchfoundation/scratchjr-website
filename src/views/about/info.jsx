@@ -41,7 +41,7 @@ const InfoSection = () => (
 
                 <div className="content-description-answer">
                     ScratchJr is available as a free app for iPads, Android tablets, and
-                    Chromebooks. For more information about ScratchJr, see{' '}
+                    Chromebooks. For more information about ScratchJr, see
                     <a href="https://scratchjr.org">scratchjr.org</a>.
                 </div>
             </div>
@@ -68,31 +68,24 @@ const InfoSection = () => (
             <div className="content-description-section">
                 <div className="content-description-question">Who Created ScratchJr?</div>
                 <div className="content-description-answer">
-                    ScratchJr was developed by the{' '}
-                    <a href="//ase.tufts.edu/devtech/">
+                    ScratchJr was developed by
+                    the <a href="//ase.tufts.edu/devtech/">
                         Developmental Technologies (DevTech) Research Group
-                    </a>{' '}
-                    at the{' '}
-                    <a href="//ase.tufts.edu/epcshd/">
+                    </a> at
+                    the <a href="//ase.tufts.edu/epcshd/">
                         Eliot-Pearson Department of Child Study and Human Development
-                    </a>{' '}
-                    at <a href="//www.tufts.edu/">Tufts University</a> (led by{' '}
-                    <a href="//www.tufts.edu/~mbers01/">Marina Umaschi Bers</a>, with contributions
-                    from Amanda Strawhacker, Claire Caine, Louise Flannery, Elizabeth Kazakoff and
-                    Dylan Portelance), the <a href="h//llk.media.mit.edu/">Lifelong Kindergarten</a>{' '}
-                    group at the <a href="//www.media.mit.edu/">MIT Media Lab</a> (led by{' '}
-                    <a href="//web.media.mit.edu/~mres/">Mitchel Resnick</a>, with contributions
+                    </a>
+                     at <a href="//www.tufts.edu/">Tufts University</a> (led
+                     by <a href="//www.tufts.edu/~mbers01/">Marina Umaschi Bers</a>, with contributions
+                    from Amanda Strawhacker, Claire Caine, Louise Flannery, Elizabeth Kazakoff and Dylan Portelance), the <a href="h//llk.media.mit.edu/">Lifelong Kindergarten</a> group at the <a href="//www.media.mit.edu/">MIT Media Lab</a> (led by <a href="//web.media.mit.edu/~mres/">Mitchel Resnick</a>, with contributions
                     from Chris Garrity, Tim Mickel, Carl Bowman, Champika Fernando, Natalie Rusk,
-                    Sayamindu Dasgupta, and Chris Graves), and the{' '}
-                    <a href="//www.playfulinvention.com/">Playful Invention Company</a> (led by
+                    Sayamindu Dasgupta, and Chris Graves), and the <a href="//www.playfulinvention.com/">Playful Invention Company</a> (led by
                     Paula Bont&aacute; and Brian Silverman, with contributions from Jack Geddes and
-                    Adrian Gabriel). The Android version of ScratchJr was implemented by{' '}
-                    <a href="//www.twosigma.com/">Two Sigma</a> (led by Mark Roth, with
+                    Adrian Gabriel). The Android version of ScratchJr was implemented by <a href="//www.twosigma.com/">Two Sigma</a> (led by Mark Roth, with
                     contributions from Kevin Hu), with input from Benesse Corp.
                 </div>
                 <div className="content-description-answer">
-                    The graphics and illustrations for ScratchJr were created by{' '}
-                    <a href="//www.hvingtquatre.com/">HvingtQuatre Company</a> (led by Julien
+                    The graphics and illustrations for ScratchJr were created by <a href="//www.hvingtquatre.com/">HvingtQuatre Company</a> (led by Julien
                     Gelifier and Adrien Valesa), <a href="//sarahjt.com/">Sarah Thomson</a>, Peter
                     Mueller, and Jillian Lombardi. Paula Aguilera of the MIT Media Lab produced the
                     ScratchJr video. We would also like to thank everyone who participated in the
@@ -116,11 +109,8 @@ const InfoSection = () => (
             <div className="content-description-section">
                 <div className="content-description-question">Who Supported ScratchJr?</div>
                 <div className="content-description-answer">
-                    The ScratchJr project has received generous financial support from the{' '}
-                    <a href="//www.nsf.gov/">National Science Foundation</a> (NSF DRL-1118664),{' '}
-                    <a href="//scratchfoundation.org/">Scratch Foundation</a>,{' '}
-                    <a href="//www.legofoundation.com/">LEGO Foundation</a>,{' '}
-                    <a href="//www.btplc.com/">British Telecommunications</a>, and Adobe Systems.
+                    The ScratchJr project has received generous financial support from
+                    the <a href="//www.nsf.gov/">National Science Foundation</a> (NSF DRL-1118664), <a href="//scratchfoundation.org/">Scratch Foundation</a>, <a href="//www.legofoundation.com/">LEGO Foundation</a>, <a href="//www.btplc.com/">British Telecommunications</a>, and Adobe Systems.
                 </div>
                 <div className="content-description-answer">
                     If you enjoy using this free app, please consider making a donation to the
@@ -130,7 +120,7 @@ const InfoSection = () => (
                     appreciate donations of all sizes, large and small.
                 </div>
                 <div className="content-description-answer">
-                    <span>Platinum supporters from the ScratchJr Kickstarter campaign:</span>{' '}
+                    <span>Platinum supporters from the ScratchJr Kickstarter campaign:</span>
                     <span className="notranslate">
                         Jeremy Deutsch, Kenneth Ehlert, Catherine Greenspon, Mark Loughridge, JoAnn
                         Gantz Bendetson, and Shirley Resnick.

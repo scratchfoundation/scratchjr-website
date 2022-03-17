@@ -1,5 +1,7 @@
 $link-blue: #2898cd;
 $text-color: #808080;
+$summary-background: #e0f5ff;
+$summary-border: #ccc;
 
 h2 {
     margin-top: 10px;
@@ -19,9 +21,9 @@ ul {
 }
 
 .summary {
+    border: 1px solid $summary-border;
+    background-color: $summary-background;
     padding: 12px;
-    border: 1px solid #cccccc;
-    background-color:#e0f5ff;
     font-style: italic;
 }
 
