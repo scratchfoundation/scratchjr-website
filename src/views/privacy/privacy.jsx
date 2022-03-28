@@ -132,9 +132,7 @@ const Privacy = () => (
                         this data will not directly or indirectly reveal your identity.
                     </li>
                     <li>
-                        <strong>Legal.</strong>We may use your Personal Information to enforce our{' '}
-                        <a href="https://www.scratchjr.org/eula">End User License Agreement</a>{' '}
-                        (EULA), to defend our legal rights, and to comply with our legal obligations
+                        <strong>Legal.</strong> We may use your Personal Information to enforce our <a href="https://www.scratchjr.org/eula">End User License Agreement</a> (EULA), to defend our legal rights, and to comply with our legal obligations
                         and internal policies.
                     </li>
                 </ul>
