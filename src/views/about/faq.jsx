@@ -46,16 +46,16 @@ const FAQSection = () => (
                     Umaschi Bers of the DevTech Research Group at Tufts University and Mitchel
                     Resnick of the Lifelong Kindergarten Group at the MIT Media Lab, this new book
                     is an easy-to-use, hands-on resource for parents and educators alike to teach
-                    children how to code with ScratchJr. Read an{' '}
-                    <a
+                    children how to code with ScratchJr. Read
+                    an <a
                         href="https://medium.com/scratchfoundation-blog/helping-young-children-experiment-explore-and-express-themselves-with-code-69a450d42005#.9fq210a4q"
                         rel="noopener noreferrer"
                         target="_blank"
                     >
                         excerpt of the book
                     </a>
-                    . You can buy your copy through{' '}
-                    <a
+                    . You can buy your copy
+                    through <a
                         href="https://www.nostarch.com/scratchjr"
                         rel="noopener noreferrer"
                         target="_blank"
@@ -71,12 +71,8 @@ const FAQSection = () => (
                     Will ScratchJr run on my Chromebook?
                 </div>
                 <div className="content-description-answer">
-                    The Android version of ScratchJr that is available on the{' '}
-                    <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
-                        Google Play Store
-                    </a>{' '}
-                    will run on all Chromebooks with the capability of running android apps. This
-                    will work on both touchscreen and non-touchscreen Chromebooks.
+                    The Android version of ScratchJr that is available on
+                    the <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">Google Play Store</a> will run on all Chromebooks with the capability of running android apps. This will work on both touchscreen and non-touchscreen Chromebooks.
                 </div>
             </div>
 
@@ -103,15 +99,15 @@ const FAQSection = () => (
 
             <div className="content-description-section">
                 <div className="content-description-question">
-                    Why can&apos;t ScratchJr record a sound or take a picture?
+                Why can&apos;t ScratchJr record a sound or take a picture?
                 </div>
                 <div className="content-description-answer">
-                    If ScratchJr can&apos;t record sounds or take a picture with the camera, it
-                    might be that you didn&apos;t give ScratchJr access to the camera or microphone
-                    when you first downloaded the app. You can change this by going to{' '}
-                    <em>Settings &gt; Privacy &gt; Camera</em> on your device. If the ScratchJr
-                    toggle is off, turn it on. Do the same for the microphone, under{' '}
-                    <em>Settings &gt; Privacy &gt; Microphone</em>
+                    If ScratchJr can&apos;t record sounds or take a picture with the camera,
+                    it might be that you didn&apos;t give ScratchJr access to the camera or
+                    microphone when you first downloaded the app.
+                    You can change this by going to <em>Settings &gt; Privacy &gt; Camera</em> on your device.
+                    If the ScratchJr toggle is off, turn it on. Do the same for the microphone,
+                    under <em>Settings &gt; Privacy &gt; Microphone</em>
                 </div>
             </div>
 
@@ -122,8 +118,8 @@ const FAQSection = () => (
                 <div className="content-description-answer">
                     Currently ScratchJr supports 20 languages including English, we hope to include
                     translation to other languages in future versions of ScratchJr. If you&apos;re
-                    interested in volunteering to help with translations, please fill out the{' '}
-                    <a href="https://docs.google.com/a/media.mit.edu/forms/d/e/1FAIpQLSeskFZM3X6R9y7tsm51e6urAEhi5yW2fpBhnQea2yKwmqmWhw/viewform">
+                    interested in volunteering to help with translations, please fill out the
+                    <a href="https://forms.gle/sRDtwWwnmkihCUtu8">
                         translator application form
                     </a>
                     , and we will contact you with details.
