@@ -1,5 +1,7 @@
 $link-blue: #2898cd;
 $text-color: #808080;
+$summary-background: #e0f5ff;
+$summary-border: #ccc;
 
 h2 {
     margin-top: 10px;
@@ -16,4 +18,19 @@ ul {
     line-height: 22px;
     color: $text-color;
     font-size: 15px;
+}
+
+.summary {
+    border: 1px solid $summary-border;
+    background-color: $summary-background;
+    padding: 12px;
+    font-style: italic;
+}
+
+.header-adjust {
+    margin-right: 10px;
+}
+
+li {
+    margin-bottom: 12px;
 }
