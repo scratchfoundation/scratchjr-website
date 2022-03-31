@@ -41,8 +41,8 @@ const InfoSection = () => (
 
                 <div className="content-description-answer">
                     ScratchJr is available as a free app for iPads, Android tablets, and
-                    Chromebooks. For more information about ScratchJr, see
-                    <a href="https://scratchjr.org">scratchjr.org</a>.
+                    Chromebooks. For more information about ScratchJr,
+                    see <a href="https://scratchjr.org">scratchjr.org</a>.
                 </div>
             </div>
 
@@ -82,7 +82,7 @@ const InfoSection = () => (
                      Elizabeth Kazakoff and
                      Dylan Portelance), the <a href="h//llk.media.mit.edu/">Lifelong Kindergarten</a> group at
                      the <a href="//www.media.mit.edu/">MIT Media Lab</a>
-                     (led by <a href="//web.media.mit.edu/~mres/">Mitchel Resnick</a>, with contributions
+                    &nbsp;(led by <a href="//web.media.mit.edu/~mres/">Mitchel Resnick</a>, with contributions
                     from Chris Garrity, Tim Mickel, Carl Bowman, Champika Fernando, Natalie Rusk,
                     Sayamindu Dasgupta,
                     and Chris Graves),
