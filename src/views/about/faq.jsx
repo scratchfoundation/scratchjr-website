@@ -118,7 +118,7 @@ const FAQSection = () => (
                 <div className="content-description-answer">
                     Currently ScratchJr supports 20 languages including English, we hope to include
                     translation to other languages in future versions of ScratchJr. If you&apos;re
-                    interested in volunteering to help with translations, please fill out the
+                    interested in volunteering to help with translations, please fill out the&nbsp;
                     <a href="https://forms.gle/sRDtwWwnmkihCUtu8">
                         translator application form
                     </a>
