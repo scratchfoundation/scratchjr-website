@@ -47,7 +47,7 @@ const StaticLinkSectionItem = ({
                 </div>
             </a>
             <div className="content-section-item-description">
-                {description || children}{' '}
+                {description || children}
                 <a
                     href={linkURL}
                     rel="noopener noreferrer"
