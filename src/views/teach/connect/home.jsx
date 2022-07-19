@@ -27,7 +27,7 @@ const ConnectHome = () => (
 
         <div className="connect-block">
             <a
-                href="https://scratchjrconnect.tufts.edu/"
+                href="https://connect.scratchjr.org/"
                 id="connect-button"
                 target="_blank"
                 rel="noopener noreferrer"
