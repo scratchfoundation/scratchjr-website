@@ -1,6 +1,8 @@
 language: node_js
 node_js:
 - 17
+install:
+  "npm install --legacy-peer-deps"
 cache:
   directories:
   - node_modules
