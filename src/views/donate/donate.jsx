@@ -10,25 +10,22 @@ const Donate = () => (
         <NavBar selected="donate" />
         <div id="content">
             <div className="content-section">
-
                 <h1>Donate</h1>
 
                 <p>
-                    If you enjoy using the free ScratchJr app, please consider
-                    making a donation to the Scratch Foundation (
-                    <a href="//www.scratchfoundation.org/">www.scratchfoundation.org</a>),
-                    a nonprofit organization that provides ongoing support for ScratchJr.
-                    We appreciate donations of all sizes, large and small.
+                    If you enjoy using the free ScratchJr app, please consider making a donation to
+                    the Scratch Foundation (
+                    <a href="//www.scratchfoundation.org/">www.scratchfoundation.org</a>), a
+                    nonprofit organization that provides ongoing support for ScratchJr. We
+                    appreciate donations of all sizes, large and small.
                 </p>
 
                 <div className="donation-block">
                     <a
-                        href="https://secure.donationpay.org/scratchfoundation/"
+                        href="https://www.scratchfoundation.org/donate"
                         id="donate-button"
                     >
-                        <div className="blue-button">
-                            Donate
-                        </div>
+                        <div className="blue-button">Donate</div>
                     </a>
                 </div>
             </div>
@@ -37,6 +34,4 @@ const Donate = () => (
     </div>
 );
 
-render(
-    <Donate />,
-    document.getElementById('app'));
+render(<Donate />, document.getElementById('app'));
