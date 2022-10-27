@@ -13,7 +13,7 @@ const Index = () => {
         '/images/slide2.png',
         '/images/slide3.png',
         '/images/slide4.png',
-        '/images/slide5.png',
+        '/images/slide5.png'
     ];
     return (
         <div>
@@ -41,7 +41,10 @@ const Index = () => {
                                 />
                             </a>
                             <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">
-                                <img alt="Get it on Google Play" src="/images/GooglePlay.svg" />
+                                <img
+                                    alt="Get it on Google Play"
+                                    src="/images/GooglePlay.svg"
+                                />
                             </a>
                             <a href="https://www.amazon.com/Scratch-Foundation-ScratchJr/dp/B01AKGTD2E">
                                 <img
@@ -56,7 +59,10 @@ const Index = () => {
                 </div>
                 {/* end content-text */}
                 <div id="content-graphic">
-                    <img id="content-graphic-item" src="/images/homegraphic.png" />
+                    <img
+                        id="content-graphic-item"
+                        src="/images/homegraphic.png"
+                    />
                 </div>
                 {/* end content-graphic */}
                 <div className="content-news">
@@ -93,13 +99,13 @@ const Index = () => {
                         <Timeline
                             dataSource={{
                                 sourceType: 'profile',
-                                screenName: 'ScratchJr',
+                                screenName: 'ScratchJr'
                             }}
                             options={{
                                 username: 'ScratchJr',
                                 width: '425',
                                 height: '250',
-                                chrome: 'noheader nofooter',
+                                chrome: 'noheader nofooter'
                             }}
                         />
                     </div>

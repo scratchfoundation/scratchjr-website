@@ -21,7 +21,10 @@ const Donate = () => (
                 </p>
 
                 <div className="donation-block">
-                    <a href="https://www.scratchfoundation.org/donate" id="donate-button">
+                    <a
+                        href="https://www.scratchfoundation.org/donate"
+                        id="donate-button"
+                    >
                         <div className="blue-button">Donate</div>
                     </a>
                 </div>
