@@ -24,9 +24,14 @@ jobs:
       - run:
           name: Build Site
           command: npm run build
-      - run: 
-          name: Deploy
-          command: echo "we would deploy to s3 here"
+      - when:
+          condition:
+              or:
+                - equal: [ develop, << pipeline.git.branch >> ]
+          steps:
+            - run:
+                name: Deploy to Staging
+                command: echo "deploy to staging"
 workflows:
   build_and_deploy_scratchjr-website:
     jobs: 
