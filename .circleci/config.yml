@@ -9,10 +9,12 @@ executors:
   scratchjr-website-executor:
     docker:
       - image: cimg/node:17.0.0
+    resource_class: small
 jobs:
   setup_app:
     executor: scratchjr-website-executor
     steps:
+      - checkout
       - run:
           name: Install Dependencies
           command: npm  install
