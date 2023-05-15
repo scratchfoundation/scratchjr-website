@@ -11,7 +11,7 @@ executors:
       - image: cimg/node:17.0.0
     resource_class: small
 jobs:
-  setup_app:
+  setup_and_deploy:
     executor: scratchjr-website-executor
     steps:
       - checkout
@@ -19,13 +19,16 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
+          name: Lint Site Code
+          command: npm run test
+      - run:
           name: Build Site
           command: npm run build
       - run: 
-          name: list files
-          command: cd build && ls -la
+          name: Deploy
+          command: echo "we would deploy to s3 here"
 workflows:
   build_and_deploy_scratchjr-website:
     jobs: 
-      - setup_app:
-          name: Setup App
+      - setup_and_deploy:
+          name: Setup and Deploy ScratchJR Website
