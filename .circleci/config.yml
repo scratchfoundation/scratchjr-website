@@ -17,10 +17,13 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: npm  install
+          command: npm install
       - run:
-          name: List
-          command: ls -la
+          name: Build Site
+          command: npm run build
+      - run: 
+          name: list files
+          command: cd build && ls -la
 workflows:
   build_and_deploy_scratchjr-website:
     jobs: 
