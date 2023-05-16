@@ -2,25 +2,38 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/configuration-reference/#jobs
-jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/configuration-reference/#executor-job
+orbs: 
+  slack: circleci/slack@4.12.5
+  aws-s3: circleci/aws-s3@3.1.1
+executors:
+  scratchjr-website-executor:
     docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/configuration-reference/#steps
+      - image: cimg/node:17.0.0
+    resource_class: small
+jobs:
+  setup_and_deploy:
+    executor: scratchjr-website-executor
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-
-# Orchestrate jobs using workflows
-# See: https://circleci.com/docs/configuration-reference/#workflows
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Lint Site Code
+          command: npm run test
+      - run:
+          name: Build Site
+          command: npm run build
+      - when:
+          condition:
+              or:
+                - equal: [ develop, << pipeline.git.branch >> ]
+          steps:
+            - run:
+                name: Deploy to Staging
+                command: echo "deploy to staging"
 workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+  build_and_deploy_scratchjr-website:
+    jobs: 
+      - setup_and_deploy:
+          name: Setup and Deploy ScratchJR Website
