@@ -42,7 +42,7 @@ const LinkedSectionItem = ({
                 </TxDiv>
             </Link>
             <div className="content-section-item-description">
-                {description || children}
+                {description || children} &nbsp;
                 <Link to={linkURL}>
                     {linkText}
                 </Link>
