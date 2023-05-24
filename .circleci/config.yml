@@ -10,6 +10,24 @@ executors:
     docker:
       - image: cimg/node:17.0.0
     resource_class: small
+
+aliases:
+  - &deploy
+    steps:
+      - aws-s3/sync:
+          aws-access-key-id: AWS_ACCESS_KEY
+          aws-region: AWS_REGION
+          aws-secret-access-key: AWS_SECRET_KEY
+          from: ./build
+          to: '${AWS_BUCKET}'
+      - slack/notify:
+          channel: C033BNUG2F7
+          event: fail
+          template: SLACK_SCRATCHJR_FAIL
+      - slack/notify:
+          channel: C033BNUG2F7
+          event: pass
+          template: SLACK_SCRATCHJR_SUCCESS
 jobs:
   setup_and_deploy:
     executor: scratchjr-website-executor
@@ -28,12 +46,16 @@ jobs:
           condition:
               or:
                 - equal: [ develop, << pipeline.git.branch >> ]
-          steps:
-            - run:
-                name: Deploy to Staging
-                command: echo "deploy to staging"
+          <<: *deploy
+      - when:
+          condition:
+              or:
+                - equal: [ master, << pipeline.git.branch >> ]
+          <<: *deploy
 workflows:
   build_and_deploy_scratchjr-website:
     jobs: 
       - setup_and_deploy:
           name: Setup and Deploy ScratchJR Website
+          context:
+            - slack-notifications
