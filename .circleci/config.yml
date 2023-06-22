@@ -15,9 +15,9 @@ aliases:
   - &deploy
     steps:
       - aws-s3/sync:
-          aws-access-key-id: AWS_ACCESS_KEY
+          profile-name: default
+          role-arn: "arn:aws:iam::307680192167:role/circleci-oidc-role"
           aws-region: AWS_REGION
-          aws-secret-access-key: AWS_SECRET_KEY
           from: ./build
           to: '${AWS_BUCKET}'
       - slack/notify:
