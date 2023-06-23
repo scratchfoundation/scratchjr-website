@@ -16,7 +16,7 @@ aliases:
     steps:
       - aws-s3/sync:
           profile-name: default
-          role-arn: "arn:aws:iam::307680192167:role/circleci-oidc-role"
+          role-arn: AWS_OIDC_IAM_ROLE
           aws-region: AWS_REGION
           from: ./build
           to: '${AWS_BUCKET}'
