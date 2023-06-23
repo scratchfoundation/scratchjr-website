@@ -19,7 +19,7 @@ aliases:
           role-arn: AWS_OIDC_IAM_ROLE
           aws-region: AWS_REGION
           from: ./build
-          to: '${AWS_BUCKET}'
+          to: '${S3_BUCKET_NAME_develop}'
       - slack/notify:
           channel: C033BNUG2F7
           event: fail
