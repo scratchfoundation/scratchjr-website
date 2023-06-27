@@ -14,9 +14,9 @@ executors:
 aliases:
   - &deploy
     steps:
-      - aws-s3/sync:
-          profile-name: default
+      - aws-s3/configure:
           role-arn: AWS_OIDC_IAM_ROLE
+      - aws-s3/sync:
           aws-region: AWS_REGION
           from: ./build
           to: '${S3_BUCKET_NAME_develop}'
