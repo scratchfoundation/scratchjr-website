@@ -14,12 +14,6 @@ executors:
 aliases:
   - &deploy
     steps:
-      - aws-s3/configure:
-          role-arn: AWS_OIDC_IAM_ROLE
-      - aws-s3/sync:
-          aws-region: AWS_REGION
-          from: ./build
-          to: '${S3_BUCKET_NAME_develop}'
       - slack/notify:
           channel: C033BNUG2F7
           event: fail
@@ -46,11 +40,23 @@ jobs:
           condition:
               or:
                 - equal: [ develop, << pipeline.git.branch >> ]
+          steps:
+            - aws-s3/sync:
+                role-arn: AWS_OIDC_IAM_ROLE
+                aws-region: AWS_REGION
+                from: ./build
+                to: '${S3_BUCKET_NAME_develop}'
           <<: *deploy
       - when:
           condition:
               or:
                 - equal: [ master, << pipeline.git.branch >> ]
+          steps:
+            - aws-s3/sync:
+                role-arn: AWS_OIDC_IAM_ROLE
+                aws-region: AWS_REGION
+                from: ./build
+                to: '${S3_BUCKET_NAME_develop}'
           <<: *deploy
 workflows:
   build_and_deploy_scratchjr-website:
