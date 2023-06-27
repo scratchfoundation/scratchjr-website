@@ -42,7 +42,7 @@ jobs:
                 - equal: [ develop, << pipeline.git.branch >> ]
           steps:
             - aws-s3/sync:
-                role-arn: AWS_OIDC_IAM_ROLE
+                role-arn: '${AWS_OIDC_IAM_ROLE}'
                 aws-region: AWS_REGION
                 from: ./build
                 to: '${S3_BUCKET_NAME_develop}'
@@ -53,7 +53,7 @@ jobs:
                 - equal: [ master, << pipeline.git.branch >> ]
           steps:
             - aws-s3/sync:
-                role-arn: AWS_OIDC_IAM_ROLE
+                role-arn: '${AWS_OIDC_IAM_ROLE}'
                 aws-region: AWS_REGION
                 from: ./build
                 to: '${S3_BUCKET_NAME_develop}'
