@@ -17,11 +17,11 @@ aliases:
       - slack/notify:
           channel: C033BNUG2F7
           event: fail
-          template: SLACK_SCRATCHJR_FAIL
+          template: SLACK_SCRATCH_JR_SITE_FAIL
       - slack/notify:
           channel: C033BNUG2F7
           event: pass
-          template: SLACK_SCRATCHJR_SUCCESS
+          template: SLACK_SCRATCH_JR_SITE_SUCCESS
 jobs:
   setup_and_deploy:
     executor: scratchjr-website-executor
@@ -58,7 +58,7 @@ jobs:
                 role-session-name: "master-branch-session"
                 aws-region: AWS_REGION
                 from: ./build
-                to: '${S3_BUCKET_NAME_develop}'
+                to: '${S3_BUCKET_NAME_PRODUCTION}'
           <<: *deploy
 workflows:
   build_and_deploy_scratchjr-website:
