@@ -1,5 +1,4 @@
 import React from 'react';
-import {Timeline} from 'react-twitter-widgets';
 
 const NewsSection = () => (
     <div
@@ -19,20 +18,6 @@ const NewsSection = () => (
                     Tweet #ScratchJrFamily
                 </div>
             </a>
-        </div>
-        <div className="fd-news-feed">
-            <Timeline
-                dataSource={{
-                    sourceType: 'url',
-                    url: 'https://twitter.com/ScratchJr/timelines/1021452548371288064?ref_src=twsrc%5Etfw'
-                }}
-                options={{
-                    username: 'ScratchJr',
-                    width: '600',
-                    height: '800',
-                    chrome: 'noheader nofooter'
-                }}
-            />
         </div>
     </div>
 );

@@ -1,6 +1,5 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {Timeline} from 'react-twitter-widgets';
 import NavBar from '../../components/navbar/navbar.jsx';
 import Footer from '../../components/footer/footer.jsx';
 import Carousel from '../../components/carousel/carousel.jsx';
@@ -94,20 +93,6 @@ const Index = () => {
                                 <div className="blue-button">Tweet @ScratchJr</div>
                             </a>
                         </div>
-                    </div>
-                    <div id="disscussion-tweets">
-                        <Timeline
-                            dataSource={{
-                                sourceType: 'profile',
-                                screenName: 'ScratchJr'
-                            }}
-                            options={{
-                                username: 'ScratchJr',
-                                width: '425',
-                                height: '250',
-                                chrome: 'noheader nofooter'
-                            }}
-                        />
                     </div>
                 </div>
             </div>
