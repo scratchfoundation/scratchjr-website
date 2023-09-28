@@ -9,3 +9,7 @@ npm-*
 
 # Build
 /build
+
+# act
+.secrets
+.env
