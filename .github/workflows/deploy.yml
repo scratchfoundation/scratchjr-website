@@ -16,7 +16,7 @@ jobs:
           with:
             node-version: '17.x'
         - name: Install Dependencies
-          run: npm install --legacy-peer-deps
+          run: npm ci --legacy-peer-deps
         - name: Lint Site Code
           run: npm run test
         - name: Build Site
