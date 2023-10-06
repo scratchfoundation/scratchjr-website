@@ -1,0 +1,32 @@
+name: Build and Deploy ScratchJr Website
+
+on:
+    push:
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        permissions:
+            id-token: write
+            contents: write
+        environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
+        steps:
+        - uses: actions/checkout@v4
+        - name: Use Node 17x
+          uses: actions/setup-node@v3
+          with:
+            node-version: '17.x'
+        - name: Install Dependencies
+          run: npm ci --legacy-peer-deps
+        - name: Lint Site Code
+          run: npm run test
+        - name: Build Site
+          run: npm run build
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v4
+          with:
+            role-to-assume: ${{ secrets.AWS_OIDC_ROLE }}
+            role-session-name: GitHub-Action-Role
+            aws-region: ${{ vars.AWS_REGION }}
+        - name: Upload to S3
+          run: |
+                aws s3 sync ./build s3://${{ vars.AWS_S3_BUCKET }}/junior/
