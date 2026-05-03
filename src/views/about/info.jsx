@@ -76,11 +76,11 @@ const InfoSection = () => (
                         Eliot-Pearson Department of Child Study and Human Development
                     </a>
                      at <a href="//www.tufts.edu/">Tufts University</a>
-                     (led by <a href="//www.tufts.edu/~mbers01/">Marina Umaschi Bers</a>, with contributions from
+                     (led by <a href="//sites.tufts.edu/mbers01/">Marina Umaschi Bers</a>, with contributions from
                      Amanda Strawhacker, Claire Caine,
                      Louise Flannery,
                      Elizabeth Kazakoff and
-                     Dylan Portelance), the <a href="h//llk.media.mit.edu/">Lifelong Kindergarten</a> group at
+                     Dylan Portelance), the <a href="//llk.media.mit.edu/">Lifelong Kindergarten</a> group at
                      the <a href="//www.media.mit.edu/">MIT Media Lab</a>
                     &nbsp;(led by <a href="//web.media.mit.edu/~mres/">Mitchel Resnick</a>, with contributions
                     from Chris Garrity, Tim Mickel, Carl Bowman, Champika Fernando, Natalie Rusk,
@@ -95,8 +95,8 @@ const InfoSection = () => (
                 </div>
                 <div className="content-description-answer">
                     The graphics and illustrations for ScratchJr were
-                    created by <a href="//www.hvingtquatre.com/">HvingtQuatre Company</a> (led by Julien
-                    Gelifier and Adrien Valesa), <a href="//sarahjt.com/">Sarah Thomson</a>, Peter
+                    created by <a href="//web.archive.org/web/20180312103157/https://www.hvingtquatre.com/">HvingtQuatre Company</a> (led by Julien
+                    Gelifier and Adrien Valesa), <a href="//web.archive.org/web/20161027090110/https://www.sarahjt.com/">Sarah Thomson</a>, Peter
                     Mueller, and Jillian Lombardi. Paula Aguilera of the MIT Media Lab produced the
                     ScratchJr video. We would also like to thank everyone who participated in the
                     beta-test communities for iPad and Android, particularly Sergio Antolinez,
@@ -132,7 +132,7 @@ const InfoSection = () => (
                             <a href="//www.legofoundation.com/">LEGO Foundation</a>
                         </li>
                         <li>
-                            <a href="//www.btplc.com/">British Telecommunications</a>
+                            <a href="//web.archive.org/web/20180227092013/https://www.btplc.com/">British Telecommunications</a>
                         </li>
                         <li>Adobe Systems.</li>
                     </ul>
