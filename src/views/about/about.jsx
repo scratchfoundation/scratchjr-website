@@ -30,12 +30,13 @@ const About = () => {
             text: 'FAQ',
             section: 'faq',
             indexLink: false
-        }, {
-            url: '/videos',
-            text: 'Videos',
-            section: 'videos',
-            indexLink: false
-        }
+         }, 
+        // {
+        //     url: '/videos',
+        //     text: 'Videos',
+        //     section: 'videos',
+        //     indexLink: false
+        // }
 
     ];
     return (
@@ -62,10 +63,10 @@ const About = () => {
                             path="/faq"
                             component={FAQSection}
                         />
-                        <Route
+                        {/* <Route
                             path="/videos"
                             component={VideosSection}
-                        />
+                        /> */}
                         <Route
                             component={PageNotFound}
                         />

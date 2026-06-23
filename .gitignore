@@ -13,3 +13,5 @@ npm-*
 # act
 .secrets
 .env
+scratchjr.zip
+*.zip

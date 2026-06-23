@@ -35,7 +35,10 @@ $question-answer: #808080;
 /* SUBMENUS */
 
 .content-nav-item {
-    width: 24.9% !important;
+    display: inline-block;    /* 👈 Add this to unlock the width property */
+    width: 33.33% !important; 
+    box-sizing: border-box;   /* Prevents padding from breaking the 33% math */
+    float: left;
 }
 
 .info-icon {
@@ -45,6 +48,7 @@ $question-answer: #808080;
 
 .content-nav-item-selected  .info-icon {
     background-image: url("/images/infos_o.svg");
+
 }
 
 .press-icon {
@@ -56,14 +60,14 @@ $question-answer: #808080;
     background-image: url("/images/press_o.svg");
 }
 
-.videos-icon {
-    background-image: url("/images/videos_b.svg");
-    background-size: 100%;
-}
+// .videos-icon {
+//     background-image: url("/images/videos_b.svg");
+//     background-size: 100%;
+// }
 
-.content-nav-item-selected  .videos-icon {
-    background-image: url("/images/videos_o.svg");
-}
+// .content-nav-item-selected  .videos-icon {
+//     background-image: url("/images/videos_o.svg");
+// }
 
 .faq-icon {
     background-image: url("/images/faq_b.svg");

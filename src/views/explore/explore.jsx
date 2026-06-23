@@ -12,9 +12,9 @@ import PaintSection from './paint.jsx';
 import BlocksSection from './blocks.jsx';
 import TipsSection from './tips.jsx';
 
-import './learn.scss';
+import './explore.scss';
 
-const Learn = () => {
+const Explore = () => {
     const tabs = [
         {
             url: '/interface',
@@ -40,10 +40,10 @@ const Learn = () => {
 
     ];
     return (
-        <BrowserRouter basename="/learn">
-            <ScrollManager basename="/learn">
+        <BrowserRouter basename="/explore">
+            <ScrollManager basename="/explore">
                 <div>
-                    <NavBar selected="learn" />
+                    <NavBar selected="explore" />
                     <div id="content">
                         <TabNav items={tabs} />
                         <Switch>
@@ -80,4 +80,4 @@ const Learn = () => {
     );
 };
 
-render(<Learn />, document.getElementById('app'));
+render(<Explore />, document.getElementById('app'));

@@ -49,10 +49,10 @@ $link-blue: #2898cd;
     background-image: url("/images/videos_o.svg");
 }
 
-
 #tips-nav .content-nav-item-description {
     width: 40%;
 }
+
 .content-nav-item-description {
     float: left;
     margin-top: 25px;
@@ -63,17 +63,18 @@ $link-blue: #2898cd;
 }
 
 .download-guide-link {
+    display: block;
+    text-align: right;
+    padding-right: 15px;    // remove padding, let it sit at the natural right edge
     position: relative;
     top: 10px;
-    left: 680px;
     z-index: 1000;
 }
-
 /* Guide Elements */
 
-.content-section.learn-interface,
-.content-section.learn-paint,
-.content-section.learn-blocks {
+.content-section.explore-interface,
+.content-section.explore-paint,
+.content-section.explore-blocks {
     display: inline;
     margin: 0;
 }
@@ -82,16 +83,15 @@ $link-blue: #2898cd;
     position: relative;
 }
 
-.learn-tab {
+.explore-tab {
     display: none;
 }
 
-.learn-tab-selected {
+.explore-tab-selected {
     display: inline;
 }
 
-
-.learn-interface:after, .learn-paint:after {
+.explore-interface:after, .explore-paint:after {
     display: block;
     clear: both;
     visibility: hidden;
@@ -104,13 +104,24 @@ $link-blue: #2898cd;
 .paint-container {
     position: relative;
     margin-top: 75px;
+    overflow: visible;
+    display: flex;
+    align-items: flex-start;
+    padding-right: 20px;    // add this — prevents right-side clipping
 }
 
-
 .ipad-project-view {
-    float: left;
+    float: none;
     margin-left: 21px;
+    margin-top: 0;
     width: 629px;
+    flex-shrink: 0;
+}
+
+#interface-section,
+#paint-section {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Guide 3 - Block Descriptions */

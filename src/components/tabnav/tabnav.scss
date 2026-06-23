@@ -26,24 +26,28 @@ $white: #fff;
     border-right: none;
 }
 
-.content-nav-item-selected .content-nav-item::before, .content-nav-item-selected .content-nav-item::after {
-
+.content-nav-item-selected .content-nav-item::before,
+.content-nav-item-selected .content-nav-item::after {
     position: absolute;
     top: 100%;
-    left: 145px;
+    left: 50%;
+    transform: translateX(-50%);
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
     content: "";
 }
 
 .content-nav-item-selected .content-nav-item:before {
-    border-top: 10px solid $tabnav-border;
-    border-top: 10px solid $selected-notch;
+    border-top: 12px solid $tabnav-border;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
 }
 
-.content-nav-item-selected .content-nav-item:after{
+.content-nav-item-selected .content-nav-item:after {
     z-index: 1;
     border-top: 10px solid $white;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
 }
 
 .content-nav-item-icon {
