@@ -1,32 +1,68 @@
 name: Build and Deploy ScratchJr Website
 
 on:
-    push:
+  push:
+    branches: [develop, master]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
-        permissions:
-            id-token: write
-            contents: write
-        environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
-        steps:
-        - uses: actions/checkout@v4
-        - name: Use Node 17x
-          uses: actions/setup-node@v4
-          with:
-            node-version: '17.x'
-        - name: Install Dependencies
-          run: npm ci --legacy-peer-deps
-        - name: Lint Site Code
-          run: npm run test
-        - name: Build Site
-          run: npm run build
-        - name: Configure AWS Credentials
-          uses: aws-actions/configure-aws-credentials@v4
-          with:
-            role-to-assume: ${{ secrets.AWS_OIDC_ROLE }}
-            role-session-name: GitHub-Action-Role
-            aws-region: ${{ vars.AWS_REGION }}
-        - name: Upload to S3
-          run: |
-                aws s3 sync ./build s3://${{ vars.AWS_S3_BUCKET }}/junior/
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node 17x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '17.x'
+      - name: Install Dependencies
+        run: npm ci --legacy-peer-deps
+      - name: Lint Site Code
+        run: make lint
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node 17x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '17.x'
+      - name: Install Dependencies
+        run: npm ci --legacy-peer-deps
+      - name: Build Site
+        run: npm run build
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build/
+          retention-days: 1
+
+  deploy:
+    needs: [lint, build]
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
+    steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: build/
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_OIDC_ROLE }}
+          role-session-name: GitHub-Action-Role
+          aws-region: ${{ vars.AWS_REGION }}
+      - name: Upload to S3
+        run: |
+          aws s3 sync ./build s3://${{ vars.AWS_S3_BUCKET }}/junior/
