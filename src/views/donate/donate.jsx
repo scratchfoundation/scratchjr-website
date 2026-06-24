@@ -13,18 +13,21 @@ const Donate = () => (
                 <h1>Donate</h1>
 
                 <p>
-                   If you enjoy using this free app, curricular materials, and teaching resources please consider making a donation to the DevTech Research Group, which  provides ongoing support for all materials and outreach supporting, professional development and research. We appreciate donations of all sizes, large and small. 
+                    If you enjoy using this free app, curricular materials, and teaching
+                    resources please consider making a donation to the DevTech Research Group,
+                    which provides ongoing support for all materials and outreach supporting,
+                    professional development and research. We appreciate donations of all sizes,
+                    large and small.
                 </p>
 
                 <div className="donation-block">
                     <a
-                        href="CHANGE LINK TO DONATE PAGE" //change this when ready 
+                        href="CHANGE LINK TO DONATE PAGE" // change this when ready
                         id="donate-button"
                     >
                         <div className="blue-button">Donate</div>
                     </a>
                 </div>
-                
 
                 <p>
                     The ScratchJr project has received generous financial support from:
@@ -56,7 +59,7 @@ const Donate = () => (
                         Oakman, Al Sweigart, Althea Champagnie, Amelia G. Kahler, Amélie
                         Marian, Ana Aparecida Abrantes da Silva, Anasol Peña-Rios, Anastasia
                         & Guenevere Miller, Anat Paskin-Cherniavsky, Anatole Debierre,
-                        André "Takras" Nordstrand, Andreas Elf, Andreas Thaller,
+                        André &quot;Takras&quot; Nordstrand, Andreas Elf, Andreas Thaller,
                         Andrew Morris, Andrew Reback, Andy Gray, Andy Schmitz, Ann Chao, Ann
                         Nicholson, Anna Valderzalm, Annie Huddleston, Anthony Christopher Vicari,
                         Anthony Deighton, Ari Bader-Natal, Ariel Malka, Ariel Segall, Arlin Maeve
@@ -148,7 +151,7 @@ const Donate = () => (
                         Lingampally, Patrick Bernhardt, Patrick Conway, Pau Córdoba, Paul A.
                         Stancik, Paul Brody, Paul Grasso, Paul Muston, Pepijn Kummel, Per Mosseby,
                         Peter Jaros, Pfautz Family, Philipp Thun, Philly Cashion, Pierre Thienpont,
-                        PK Shiu, Polly Murray, Pontus "Ponni" Nilsson, Rachel Lea Fox,
+                        PK Shiu, Polly Murray, Pontus &quot;Ponni&quot; Nilsson, Rachel Lea Fox,
                         Rahul Walawalkar, Ramona Bernard, Randy Lynn, Rebecca Hornstein Doede,
                         Richard Monson-Haefel, Rick Anderson, Rick Yvanovich, Rik Bennett,
                         rkt88edmo, Rob Guth, Rob MacAndrew, Robert Elek, Robert T. Williams Jr.,

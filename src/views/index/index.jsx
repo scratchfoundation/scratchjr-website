@@ -28,7 +28,8 @@ const Index = () => {
                     <div id="content-body">
                         With ScratchJr, young children (ages 5-7) can
                         program their own interactive stories and games. In the process, they learn
-                        to solve problems, design projects, express themselves creatively, and develop socio-emotional skills.
+                        to solve problems, design projects, express themselves creatively, and develop
+                        socio-emotional skills.
                         <div id="store-badges">
                             <a href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
                                 <img
