@@ -65,6 +65,16 @@
 		"title": "Donate"
 	},
 	{
+		"pattern": "^/support\\.html",
+		"name": "support-redirect",
+		"redirect": "/support"
+	},
+	{
+		"pattern": "^/support/?$",
+		"name": "support",
+		"title": "Support"
+	},
+	{
 		"pattern": "^/privacy\\.html",
 		"name": "privacy-redirect",
 		"redirect": "/privacy"

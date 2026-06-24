@@ -34,7 +34,9 @@ const ProfessionalDevHome = () => (
                 linkURL="https://sites.bc.edu/devtech/professional-development/"
                 linkText="Learn more"
             >
-                The DevTech Research Group also offers in-person professional development workshops
+                The DevTech Research Group at Boston College
+                also offers in-person and virtual
+                professional development workshops
                 and trainings.
             </StaticLinkSectionItem>
         </div>

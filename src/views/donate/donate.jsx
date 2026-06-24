@@ -22,7 +22,7 @@ const Donate = () => (
 
                 <div className="donation-block">
                     <a
-                        href="CHANGE LINK TO DONATE PAGE" // change this when ready
+                        href="/support"
                         id="donate-button"
                     >
                         <div className="blue-button">Donate</div>

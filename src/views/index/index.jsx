@@ -79,14 +79,20 @@ const Index = () => {
                     <img
                         className="stat-image"
                         src="/images/Languages.png"
-                        alt="21 Languages"
+                        alt="20+ Languages"
                     />
+                </div>
+
+                <div
+                    id="last-updated"
+                >
+                    Last updated: June, 2026
                 </div>
 
                 <div className="content-news">
                     <div className="content-news-body">
                         The {' '}<a href="https://sites.bc.edu/codingasanotherlanguage/">
-                            Coding as Another Language Curriculum
+                            Coding as Another Language Curriculum (CAL)
                         </a>{' '}
                          is the official curriculum of ScratchJr.
                          It supports young learners in developing new ways
