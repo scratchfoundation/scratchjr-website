@@ -1,0 +1,55 @@
+// Mirrors the About / info.jsx styling (carried over from about.scss).
+// Each page is its own webpack bundle, so these rules must live here for the
+// research page to pick them up.
+
+$question-color: #2898cd;
+$question-answer: #808080;
+
+#content-description {
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+.content-description-section {
+    display: block;
+    margin-bottom: 35px;
+    overflow: auto;
+}
+
+.content-description-question {
+    margin-bottom: 10px;
+    width: 612px;
+    color: $question-color;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-description-answer {
+    margin-bottom: 20px;
+    line-height: 22px;
+    color: $question-answer;
+    font-size: 15px;
+}
+
+.content-description-answer a {
+    text-decoration: none;
+    color: $question-color;
+}
+
+.content-description-answer a:hover {
+    text-decoration: underline;
+}
+
+// Stat blurbs row — mirrors #stats-section on the home page, sized for five images.
+#stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.stat-image {
+    width: 18%;
+    max-width: 180px;
+}

@@ -15,14 +15,14 @@
 		"title": "About"
 	},
 	{
-		"pattern": "^/learn\\.html",
-		"name": "learn-redirect",
-		"redirect": "/learn"
+		"pattern": "^/explore\\.html",
+		"name": "explore-redirect",
+		"redirect": "/explore"
 	},
 	{
-		"pattern": "^/learn(/.+)*/?",
-		"name": "learn",
-		"title": "Learn"
+		"pattern": "^/explore(/.+)*/?",
+		"name": "explore",
+		"title": "Explore"
 	},	
 	{
 		"pattern": "^/teach\\.html",
@@ -43,6 +43,16 @@
 		"pattern": "^/outreach(/.+)*/?",
 		"name": "outreach",
 		"title": "Outreach"
+	},
+	{
+		"pattern": "^/research\\.html",
+		"name": "research-redirect",
+		"redirect": "/research"
+	},
+	{
+		"pattern": "^/research/?$",
+		"name": "research",
+		"title": "Research"
 	},
 	{
 		"pattern": "^/donate\\.html",

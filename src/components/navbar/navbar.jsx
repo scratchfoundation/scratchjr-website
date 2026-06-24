@@ -35,9 +35,9 @@ export default class NavBar extends React.Component {
                         </a>
                     </div>
                     <div className="header-nav-item-wrapper">
-                        <a href="/learn">
-                            <div className={this.generateHeaderClasses('learn')}>
-                                Learn
+                        <a href="/explore">
+                            <div className={this.generateHeaderClasses('explore')}>
+                                Explore
                             </div>
                         </a>
                     </div>
@@ -49,9 +49,9 @@ export default class NavBar extends React.Component {
                         </a>
                     </div>
                     <div className="header-nav-item-wrapper">
-                        <a href="/outreach">
-                            <div className={this.generateHeaderClasses('outreach')}>
-                                Outreach
+                        <a href="/research">
+                            <div className={this.generateHeaderClasses('research')}>
+                                Research
                             </div>
                         </a>
                     </div>

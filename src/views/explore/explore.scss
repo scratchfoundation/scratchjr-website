@@ -18,7 +18,7 @@ $link-blue: #2898cd;
     background-size: 100%;
 }
 
-.content-nav-item-selected  .interface-icon {
+.content-nav-item-selected .interface-icon {
     background-image: url("/images/interface_o.svg");
 }
 
@@ -27,7 +27,7 @@ $link-blue: #2898cd;
     background-size: 100%;
 }
 
-.content-nav-item-selected  .paint-icon {
+.content-nav-item-selected .paint-icon {
     background-image: url("/images/paint_o.svg");
 }
 
@@ -36,7 +36,7 @@ $link-blue: #2898cd;
     background-size: 100%;
 }
 
-.content-nav-item-selected  .blocks-icon {
+.content-nav-item-selected .blocks-icon {
     background-image: url("/images/blocks_o.svg");
 }
 
@@ -45,14 +45,14 @@ $link-blue: #2898cd;
     background-size: 100%;
 }
 
-.content-nav-item-selected  .tips-icon {
+.content-nav-item-selected .tips-icon {
     background-image: url("/images/videos_o.svg");
 }
-
 
 #tips-nav .content-nav-item-description {
     width: 40%;
 }
+
 .content-nav-item-description {
     float: left;
     margin-top: 25px;
@@ -63,17 +63,18 @@ $link-blue: #2898cd;
 }
 
 .download-guide-link {
+    display: block;
     position: relative;
     top: 10px;
-    left: 680px;
     z-index: 1000;
+    padding-right: 15px;    // remove padding, let it sit at the natural right edge
+    text-align: right;
 }
-
 /* Guide Elements */
 
-.content-section.learn-interface,
-.content-section.learn-paint,
-.content-section.learn-blocks {
+.content-section.explore-interface,
+.content-section.explore-paint,
+.content-section.explore-blocks {
     display: inline;
     margin: 0;
 }
@@ -82,16 +83,15 @@ $link-blue: #2898cd;
     position: relative;
 }
 
-.learn-tab {
+.explore-tab {
     display: none;
 }
 
-.learn-tab-selected {
+.explore-tab-selected {
     display: inline;
 }
 
-
-.learn-interface:after, .learn-paint:after {
+.explore-interface::after, .explore-paint::after {
     display: block;
     clear: both;
     visibility: hidden;
@@ -102,15 +102,26 @@ $link-blue: #2898cd;
 
 .interface-container,
 .paint-container {
+    display: flex;
     position: relative;
+    align-items: flex-start;
     margin-top: 75px;
+    padding-right: 20px;    // add this — prevents right-side clipping
+    overflow: visible;
 }
 
-
 .ipad-project-view {
-    float: left;
+    flex-shrink: 0;
+    float: none;
+    margin-top: 0;
     margin-left: 21px;
     width: 629px;
+}
+
+#interface-section,
+#paint-section {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 /* Guide 3 - Block Descriptions */
@@ -200,7 +211,7 @@ $link-blue: #2898cd;
     margin-left: 11%;
 }
 
-.blocks-category-container:after {
+.blocks-category-container::after {
     display: block;
     clear: both;
     visibility: hidden;

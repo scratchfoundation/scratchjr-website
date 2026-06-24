@@ -8,11 +8,11 @@ import './index.scss';
 
 const Index = () => {
     const images = [
-        '/images/slide1.png',
-        '/images/slide2.png',
-        '/images/slide3.png',
-        '/images/slide4.png',
-        '/images/slide5.png'
+        '/images/newslide1.png',
+        '/images/newslide2.png',
+        '/images/newslide3.png',
+        '/images/newslide4.png',
+        '/images/newslide5.png'
     ];
     return (
         <div>
@@ -24,14 +24,12 @@ const Index = () => {
 
                 <div id="content-text">
                     <div id="content-header-first">ScratchJr</div>
-                    {/* end content-header-first */}
                     <div id="content-header-second">Coding for young children</div>
-                    {/* end content-header-second */}
                     <div id="content-body">
-                        Coding is the new literacy! With ScratchJr, young children (ages 5-7) can
+                        With ScratchJr, young children (ages 5-7) can
                         program their own interactive stories and games. In the process, they learn
-                        to solve problems, design projects, and express themselves creatively on the
-                        computer.
+                        to solve problems, design projects, express themselves creatively, and develop
+                        socio-emotional skills.
                         <div id="store-badges">
                             <a href="https://itunes.apple.com/us/app/scratchjr/id895485086?ls=1&mt=8">
                                 <img
@@ -52,20 +50,48 @@ const Index = () => {
                                 />
                             </a>
                         </div>
-                        {/* end store-badges */}
                     </div>
-                    {/* end content-body */}
                 </div>
-                {/* end content-text */}
+
                 <div id="content-graphic">
                     <img
                         id="content-graphic-item"
                         src="/images/homegraphic.png"
                     />
                 </div>
-                {/* end content-graphic */}
+
+                <div id="stats-section">
+                    <img
+                        className="stat-image"
+                        src="/images/Downloads.png"
+                        alt="70M+ Downloads"
+                    />
+                    <img
+                        className="stat-image"
+                        src="/images/Projects.png"
+                        alt="400M+ Projects Created"
+                    />
+                    <img
+                        className="stat-image"
+                        src="/images/Countries.png"
+                        alt="194 Countries"
+                    />
+                    <img
+                        className="stat-image"
+                        src="/images/Languages.png"
+                        alt="21 Languages"
+                    />
+                </div>
+
                 <div className="content-news">
-                    <div className="content-news-header">News</div>
+                    <div className="content-news-body">
+                        The {' '}<a href="https://sites.bc.edu/codingasanotherlanguage/">
+                            Coding as Another Language Curriculum
+                        </a>{' '}
+                         is the official curriculum of ScratchJr.
+                         It supports young learners in developing new ways
+                         of thinking and expressing themselves.
+                    </div>
                     <div className="content-news-body">
                         <a href="https://www.amazon.com/Official-ScratchJr-Book-Help-Learn/dp/1593276710/">
                             The Official ScratchJr Book
@@ -80,23 +106,12 @@ const Index = () => {
                         are a deck of 75 activity cards covering fun and exciting projects designed
                         to educate young children with ScratchJr.
                     </div>
-                </div>
-
-                <div id="discussion-container">
-                    <div id="discussion-text">
-                        <div id="discussion-header">Join the Discussion</div>
-                        <div id="discussion-body">
-                            We introduced ourselves. Now it&apos;s your turn. Drop us a line with
-                            feedback, report bugs &amp; glitches, or just say &apos;hi!&apos;
-                            <br />
-                            <a href=" https://twitter.com/intent/tweet?screen_name=ScratchJr">
-                                <div className="blue-button">Tweet @ScratchJr</div>
-                            </a>
-                        </div>
+                    <div className="content-news-body">
+                        Coming Soon: The Official ScratchJr Activity Book!
                     </div>
                 </div>
+
             </div>
-            {/* end content */}
             <Footer />
         </div>
     );
