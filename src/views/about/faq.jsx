@@ -5,7 +5,9 @@ const FAQSection = () => (
     <div className="content-section" id="faq-section">
         <div className="content-section-title">Frequently Asked Questions</div>
         <div className="content-section-description">
-            Find answers to your troubleshooting questions here. For additional help, please contact us at <a href="mailto: info@scratchjr.org">info@scratchjr.org</a>
+            Find answers to your troubleshooting questions here. For additional help,
+            please contact us at{' '}
+            <a href="mailto:info@scratchjr.org">info@scratchjr.org</a>
         </div>
         <div id="content-description">
             <div className="content-description-section">
@@ -14,37 +16,50 @@ const FAQSection = () => (
                 </div>
                 <div className="content-description-answer">
                     <p>
-        ScratchJr has been developed for iPads and Android tablets. You can install the latest version on iPads running iOS 10+ or tablets running Android 5+. It can be downloaded from the Apple App store, Google Play store, or Amazon App store. If you have an older device, the store may offer to install the last compatible version.
-      </p>
-      
-      <p>
-        Other devices, including Chromebooks, Macbooks with an M1 or M2 chip, or Windows 11 PCs are able to run the app with some limitations. The main limitation is that the app runs in its own virtual container on the device, which must be enabled and limits certain capabilities such as project exporting and importing.
-      </p>
-      
-      <p>
-        Below are the full parameters and links for downloading ScratchJr on available devices:
-      </p>
-      
-      <ul>
-        <li>
-          The current iPad version will work on devices running iOS 10.0+, again, we recommend a device with a screen that is 7 inches or larger for optimal user experience
-        </li>
-        <li>
-          Any Chromebook that has the capability of installing apps from the Google Play store can install the Android version of ScratchJr.
-        </li>
-        <li>
-          Any Fire tablet created after 2014 can download from the Amazon store.
-        </li>
-        <li>
-          The current Android version will work on devices that are running Android 5.0+, we recommend a device with a screen that is 7 inches or larger for optimal user experience
-        </li>
-        <li>
-          Macbooks with an M1 or M2 chip can download from the Apple App store (see "for iPads and iPhones" in the App store)
-        </li>
-        <li>
-          Any Windows 11 PC, with the amazon app store installed from the Microsoft store can download ScratchJr from the Amazon App Store.
-        </li>
-      </ul>
+                        ScratchJr has been developed for iPads and Android tablets. You can
+                        install the latest version on iPads running iOS 10+ or tablets running
+                        Android 5+. It can be downloaded from the Apple App store, Google Play
+                        store, or Amazon App store. If you have an older device, the store may
+                        offer to install the last compatible version.
+                    </p>
+                    <p>
+                        Other devices, including Chromebooks, Macbooks with an M1 or M2 chip, or
+                        Windows 11 PCs are able to run the app with some limitations. The main
+                        limitation is that the app runs in its own virtual container on the
+                        device, which must be enabled and limits certain capabilities such as
+                        project exporting and importing.
+                    </p>
+                    <p>
+                        Below are the full parameters and links for downloading ScratchJr on
+                        available devices:
+                    </p>
+                    <ul>
+                        <li>
+                            The current iPad version will work on devices running iOS 10.0+,
+                            again, we recommend a device with a screen that is 7 inches or larger
+                            for optimal user experience
+                        </li>
+                        <li>
+                            Any Chromebook that has the capability of installing apps from the
+                            Google Play store can install the Android version of ScratchJr.
+                        </li>
+                        <li>
+                            Any Fire tablet created after 2014 can download from the Amazon store.
+                        </li>
+                        <li>
+                            The current Android version will work on devices that are running
+                            Android 5.0+, we recommend a device with a screen that is 7 inches or
+                            larger for optimal user experience
+                        </li>
+                        <li>
+                            Macbooks with an M1 or M2 chip can download from the Apple App store
+                            (see &ldquo;for iPads and iPhones&rdquo; in the App store)
+                        </li>
+                        <li>
+                            Any Windows 11 PC, with the Amazon app store installed from the
+                            Microsoft store, can download ScratchJr from the Amazon App Store.
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -58,16 +73,17 @@ const FAQSection = () => (
                     >
                         <img
                             src="/images/scratchjr-book.png"
+                            alt="The Official ScratchJr Book"
                             width="100"
                             height="auto"
                             style={{float: 'right'}}
                         />
                     </a>
                     Yes, there is a guide to ScratchJr. Written by app creators Professor Marina
-                    Umaschi Bers of the DevTech Research Group at Tufts University, now at Boston College, and Mitchel
-                    Resnick of the Lifelong Kindergarten Group at the MIT Media Lab, this book
-                    is an easy-to-use, hands-on resource for parents and educators alike to teach
-                    children how to code with ScratchJr. Read
+                    Umaschi Bers of the DevTech Research Group at Tufts University, now at Boston
+                    College, and Mitchel Resnick of the Lifelong Kindergarten Group at the MIT
+                    Media Lab, this book is an easy-to-use, hands-on resource for parents and
+                    educators alike to teach children how to code with ScratchJr. Read
                     an <a
                         href="https://medium.com/scratchfoundation-blog/helping-young-children-experiment-explore-and-express-themselves-with-code-69a450d42005#.9fq210a4q"
                         rel="noopener noreferrer"
@@ -120,15 +136,15 @@ const FAQSection = () => (
 
             <div className="content-description-section">
                 <div className="content-description-question">
-                Why can&apos;t ScratchJr record a sound or take a picture?
+                    Why can&apos;t ScratchJr record a sound or take a picture?
                 </div>
                 <div className="content-description-answer">
                     If ScratchJr can&apos;t record sounds or take a picture with the camera,
                     it might be that you didn&apos;t give ScratchJr access to the camera or
                     microphone when you first downloaded the app.
-                    You can change this by going to <em>Settings &gt; Privacy &gt; Camera</em> on your device.
-                    If the ScratchJr toggle is off, turn it on. Do the same for the microphone,
-                    under <em>Settings &gt; Privacy &gt; Microphone</em>
+                    You can change this by going to <em>Settings &gt; Privacy &gt; Camera</em> on
+                    your device. If the ScratchJr toggle is off, turn it on. Do the same for the
+                    microphone, under <em>Settings &gt; Privacy &gt; Microphone</em>
                 </div>
             </div>
 

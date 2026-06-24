@@ -9,7 +9,7 @@ import PageNotFound from '../../components/pagenotfound/pagenotfound.jsx';
 import InfoSection from './info.jsx';
 import PressSection from './press.jsx';
 import FAQSection from './faq.jsx';
-import VideosSection from './videos.jsx';
+// import VideosSection from './videos.jsx';
 
 import './about.scss';
 
@@ -30,14 +30,13 @@ const About = () => {
             text: 'FAQ',
             section: 'faq',
             indexLink: false
-         }, 
+        }
         // {
         //     url: '/videos',
         //     text: 'Videos',
         //     section: 'videos',
         //     indexLink: false
         // }
-
     ];
     return (
         <BrowserRouter basename="/about">
@@ -71,12 +70,10 @@ const About = () => {
                             component={PageNotFound}
                         />
                     </Switch>
-                    
                 </div>
                 <Footer />
             </div>
         </BrowserRouter>
-        
     );
 };
 
