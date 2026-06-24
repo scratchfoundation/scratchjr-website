@@ -15,14 +15,14 @@
 		"title": "About"
 	},
 	{
-		"pattern": "^/learn\\.html",
-		"name": "learn-redirect",
-		"redirect": "/learn"
+		"pattern": "^/explore\\.html",
+		"name": "explore-redirect",
+		"redirect": "/explore"
 	},
 	{
-		"pattern": "^/learn(/.+)*/?",
-		"name": "learn",
-		"title": "Learn"
+		"pattern": "^/explore(/.+)*/?",
+		"name": "explore",
+		"title": "Explore"
 	},	
 	{
 		"pattern": "^/teach\\.html",
@@ -45,6 +45,16 @@
 		"title": "Outreach"
 	},
 	{
+		"pattern": "^/research\\.html",
+		"name": "research-redirect",
+		"redirect": "/research"
+	},
+	{
+		"pattern": "^/research/?$",
+		"name": "research",
+		"title": "Research"
+	},
+	{
 		"pattern": "^/donate\\.html",
 		"name": "donate-redirect",
 		"redirect": "/donate"
@@ -53,6 +63,16 @@
 		"pattern": "^/donate/?$",
 		"name": "donate",
 		"title": "Donate"
+	},
+	{
+		"pattern": "^/support\\.html",
+		"name": "support-redirect",
+		"redirect": "/support"
+	},
+	{
+		"pattern": "^/support/?$",
+		"name": "support",
+		"title": "Support"
 	},
 	{
 		"pattern": "^/privacy\\.html",

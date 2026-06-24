@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64px" height="64px" viewBox="0 0 64 64">
+  <!-- Clipboard board: blue silhouette behind white inset = outlined look -->
+  <rect x="11" y="11" width="30" height="45" rx="4" fill="#5BA8D9"/>
+  <rect x="13" y="13" width="26" height="41" rx="3" fill="#FFFFFF"/>
+
+  <!-- Text lines -->
+  <rect x="17" y="25" width="18" height="2.6" rx="1.3" fill="#5BA8D9"/>
+  <rect x="17" y="32" width="18" height="2.6" rx="1.3" fill="#5BA8D9"/>
+  <rect x="17" y="39" width="12" height="2.6" rx="1.3" fill="#5BA8D9"/>
+
+  <!-- Clip at top -->
+  <rect x="19" y="7" width="14" height="9" rx="2.5" fill="#5BA8D9"/>
+  <rect x="21.5" y="9.2" width="9" height="4.6" rx="1.5" fill="#C3E3F5"/>
+
+  <!-- Pencil, laid diagonally over the lower right -->
+  <g transform="translate(49,13) rotate(120)">
+    <!-- eraser + body (outline) -->
+    <rect x="0" y="-4" width="20" height="8" rx="2.5" fill="#5BA8D9"/>
+    <!-- body fill -->
+    <rect x="2" y="-2" width="15" height="4" rx="1.3" fill="#C3E3F5"/>
+    <!-- ferrule band -->
+    <rect x="6" y="-4" width="2.2" height="8" fill="#5BA8D9"/>
+    <!-- wood cone (outline) -->
+    <polygon points="20,-4 20,4 30,0" fill="#5BA8D9"/>
+    <!-- wood cone (fill) -->
+    <polygon points="20.5,-2.4 20.5,2.4 26.5,0" fill="#C3E3F5"/>
+    <!-- sharp graphite point -->
+    <polygon points="26.5,-1.2 26.5,1.2 30.2,0" fill="#5BA8D9"/>
+  </g>
+</svg>

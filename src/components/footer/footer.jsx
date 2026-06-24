@@ -38,9 +38,9 @@ const Footer = () => (
                 </a>
             </div>
         </div>
-        <div className="footer-links">
+        {/* <div className="footer-links">
             <a href="/privacy">Privacy Policy</a>
-        </div>
+        </div> */}
     </div>
 );
 export default Footer;

@@ -9,7 +9,8 @@ import PageNotFound from '../../components/pagenotfound/pagenotfound.jsx';
 
 import ActivitiesSection from './activities.jsx';
 import ResourcesSection from './resources.jsx';
-import ConnectSection from './connect.jsx';
+import CurriculumSection from './curriculum.jsx';
+import ProfessionalDevSection from './professionaldev.jsx';
 
 import './teach.scss';
 
@@ -20,15 +21,23 @@ const Teach = () => {
             text: 'Activities',
             section: 'activities',
             indexLink: false
-        }, {
-            url: '/resources',
-            text: 'Resources',
+        },
+        {
+            url: '/curriculum',
+            text: 'Curriculum',
             section: 'curricula',
             indexLink: false
-        }, {
-            url: '/connect',
-            text: 'ScratchJr Connect',
+        },
+        {
+            url: '/resources',
+            text: 'Resources',
             section: 'assessments',
+            indexLink: false
+        },
+        {
+            url: '/professional-development',
+            text: 'Professional Development',
+            section: 'profdev',
             indexLink: false
         }
     ];
@@ -54,8 +63,12 @@ const Teach = () => {
                                 component={ResourcesSection}
                             />
                             <Route
-                                path="/connect"
-                                component={ConnectSection}
+                                path="/curriculum"
+                                component={CurriculumSection}
+                            />
+                            <Route
+                                path="/professional-development"
+                                component={ProfessionalDevSection}
                             />
                             <Route component={PageNotFound} />
                         </Switch>
@@ -68,9 +81,10 @@ const Teach = () => {
                             src="/images/cc-logo.png"
                         />
                         <div className="footer-text">
-                            Created by the Developmental Technologies Research Group at Tufts University<br />
-                            This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
-                            International License.
+                            Created by the Developmental Technologies Research Group at Boston
+                            College<br />
+                            This work is licensed under a Creative Commons Attribution-ShareAlike
+                            4.0 International License.
                         </div>
                         <img
                             alt="DevTech logo"
@@ -81,7 +95,6 @@ const Teach = () => {
                 </div>
             </ScrollManager>
         </BrowserRouter>
-        
     );
 };
 

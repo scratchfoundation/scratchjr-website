@@ -26,3 +26,45 @@
 .content-nav-item-selected .assessments-icon {
     background-image: url("/images/blocks_o.svg");
 }
+
+/* Professional Development tab icon — clipboard & pencil, matching the
+   ScratchJr icon style. SVGs live in static/images/. */
+.profdev-icon {
+    background-image: url("/images/profdev_b.svg");
+    background-size: 100%;
+}
+
+.content-nav-item-selected .profdev-icon {
+    background-image: url("/images/profdev_o.svg");
+}
+
+/* Fit four tabs across the row. */
+.content-nav-item {
+    flex: 1 1 24.9% !important;
+    width: 24.9% !important;
+    max-width: 24.9% !important;
+}
+
+/* Let a long label (e.g. "Professional Development") wrap to two tidy,
+   vertically-centered lines without breaking the 100px tab row.
+   These overrides only load on the Teach page bundle, so the About and
+   Explore tab bars are unaffected. Replaces the old line-height:100px
+   single-line centering trick from tabnav.scss. */
+#content-nav a .content-nav-item {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+#content-nav .content-nav-item-icon {
+    flex: 0 0 auto;
+    margin-top: 0;
+}
+
+#content-nav .content-nav-item-description {
+    float: none;
+    margin-left: 15px;
+    line-height: 1.25;
+    font-size: 12pt;
+}

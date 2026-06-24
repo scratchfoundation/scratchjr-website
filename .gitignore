@@ -9,3 +9,9 @@ npm-*
 
 # Build
 /build
+
+# act
+.secrets
+.env
+scratchjr.zip
+*.zip

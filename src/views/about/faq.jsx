@@ -5,25 +5,61 @@ const FAQSection = () => (
     <div className="content-section" id="faq-section">
         <div className="content-section-title">Frequently Asked Questions</div>
         <div className="content-section-description">
-            Find answers to your troubleshooting questions here.
+            Find answers to your troubleshooting questions here. For additional help,
+            please contact us at{' '}
+            <a href="mailto:info@scratchjr.org">info@scratchjr.org</a>
         </div>
         <div id="content-description">
             <div className="content-description-section">
                 <div className="content-description-question">
-                    Will ScratchJr run on my iPad or tablet?
+                    What devices can I run ScratchJr on?
                 </div>
                 <div className="content-description-answer">
-                    ScratchJr runs on both iPads and Android tablets. ScratchJr can be installed on
-                    any iPad running iOS 9.3 or greater. Previous versions of ScratchJr running on
-                    earlier versions of iOS will not receive any more updates. ScratchJr can also be
-                    installed on any Android tablet, 7 inches or larger, that are running Android
-                    5.0 (Lollipop) or greater. You may be able to install earlier versions of
-                    ScratchJr from the Google Play store that are compatible with earlier versions
-                    of Android, but they are no longer supported and are not receiving updates.
-                    <br />
-                    <br />
-                    We recommend iPads running iOS 11 or higher and Android tablets running Android
-                    7 or higher.
+                    <p>
+                        ScratchJr has been developed for iPads and Android tablets. You can
+                        install the latest version on iPads running iOS 10+ or tablets running
+                        Android 5+. It can be downloaded from the Apple App store, Google Play
+                        store, or Amazon App store. If you have an older device, the store may
+                        offer to install the last compatible version.
+                    </p>
+                    <p>
+                        Other devices, including Chromebooks, Macbooks with an M1 or M2 chip, or
+                        Windows 11 PCs are able to run the app with some limitations. The main
+                        limitation is that the app runs in its own virtual container on the
+                        device, which must be enabled and limits certain capabilities such as
+                        project exporting and importing.
+                    </p>
+                    <p>
+                        Below are the full parameters and links for downloading ScratchJr on
+                        available devices:
+                    </p>
+                    <ul>
+                        <li>
+                            The current iPad version will work on devices running iOS 10.0+,
+                            again, we recommend a device with a screen that is 7 inches or larger
+                            for optimal user experience
+                        </li>
+                        <li>
+                            Any Chromebook that has the capability of installing apps from the
+                            Google Play store can install the Android version of ScratchJr.
+                        </li>
+                        <li>
+                            Any Fire tablet created after 2014 can download from the Amazon store.
+                        </li>
+                        <li>
+                            The current Android version will work on devices that are running
+                            Android 5.0+, we recommend a device with a screen that is 7 inches or
+                            larger for optimal user experience
+                        </li>
+                        <li>
+                            Macbooks with an M1 or M2 chip can download from the Apple App store
+                            (see &ldquo;for iPads and iPhones&rdquo; in the App store)
+                        </li>
+                        <li>
+                            Any Windows 11 PC, with the Amazon app store installed from the
+                            Microsoft store, can download ScratchJr from the Amazon App Store.
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -37,16 +73,17 @@ const FAQSection = () => (
                     >
                         <img
                             src="/images/scratchjr-book.png"
+                            alt="The Official ScratchJr Book"
                             width="100"
                             height="auto"
                             style={{float: 'right'}}
                         />
                     </a>
                     Yes, there is a guide to ScratchJr. Written by app creators Professor Marina
-                    Umaschi Bers of the DevTech Research Group at Tufts University and Mitchel
-                    Resnick of the Lifelong Kindergarten Group at the MIT Media Lab, this new book
-                    is an easy-to-use, hands-on resource for parents and educators alike to teach
-                    children how to code with ScratchJr. Read
+                    Umaschi Bers of the DevTech Research Group at Tufts University, now at Boston
+                    College, and Mitchel Resnick of the Lifelong Kindergarten Group at the MIT
+                    Media Lab, this book is an easy-to-use, hands-on resource for parents and
+                    educators alike to teach children how to code with ScratchJr. Read
                     an <a
                         href="https://medium.com/scratchfoundation-blog/helping-young-children-experiment-explore-and-express-themselves-with-code-69a450d42005#.9fq210a4q"
                         rel="noopener noreferrer"
@@ -68,22 +105,55 @@ const FAQSection = () => (
 
             <div className="content-description-section">
                 <div className="content-description-question">
+                    Are there ScratchJr Coding Cards?
+                </div>
+                <div className="content-description-answer">
+                    <a
+                        href="https://nostarch.com/scratchjrcards"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <img
+                            src="/images/scratchjr-coding-cards.png"
+                            alt="ScratchJr Coding Cards"
+                            width="100"
+                            height="auto"
+                            style={{float: 'right'}}
+                        />
+                    </a>
+                    Yes! The ScratchJr Coding Cards are a deck of 75 activity cards that offer fun,
+                    creative projects to help children build coding skills with ScratchJr. Each card
+                    shows a project idea on one side and simple step-by-step instructions on the
+                    other, so children can explore and learn at their own pace. You can buy your
+                    copy through <a
+                        href="https://nostarch.com/scratchjrcards"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        No Starch Press
+                    </a>
+                    !
+                </div>
+            </div>
+
+            {/* <div className="content-description-section">
+                <div className="content-description-question">
                     Will ScratchJr run on my Chromebook?
                 </div>
                 <div className="content-description-answer">
                     The Android version of ScratchJr that is available on
                     the <a href="https://play.google.com/store/apps/details?id=org.scratchjr.android">Google Play Store</a> will run on all Chromebooks with the capability of running android apps. This will work on both touchscreen and non-touchscreen Chromebooks.
                 </div>
-            </div>
+            </div> */}
 
-            <div className="content-description-section">
+            {/* <div className="content-description-section">
                 <div className="content-description-question">
                     Are you planning to release a Web version of ScratchJr?
                 </div>
                 <div className="content-description-answer">
                     We are still in the early planning stages for a Web version.
                 </div>
-            </div>
+            </div> */}
 
             <div className="content-description-section">
                 <div className="content-description-question">
@@ -99,15 +169,15 @@ const FAQSection = () => (
 
             <div className="content-description-section">
                 <div className="content-description-question">
-                Why can&apos;t ScratchJr record a sound or take a picture?
+                    Why can&apos;t ScratchJr record a sound or take a picture?
                 </div>
                 <div className="content-description-answer">
                     If ScratchJr can&apos;t record sounds or take a picture with the camera,
                     it might be that you didn&apos;t give ScratchJr access to the camera or
                     microphone when you first downloaded the app.
-                    You can change this by going to <em>Settings &gt; Privacy &gt; Camera</em> on your device.
-                    If the ScratchJr toggle is off, turn it on. Do the same for the microphone,
-                    under <em>Settings &gt; Privacy &gt; Microphone</em>
+                    You can change this by going to <em>Settings &gt; Privacy &gt; Camera</em> on
+                    your device. If the ScratchJr toggle is off, turn it on. Do the same for the
+                    microphone, under <em>Settings &gt; Privacy &gt; Microphone</em>
                 </div>
             </div>
 
@@ -138,7 +208,7 @@ const FAQSection = () => (
             </div>
 
             <div className="content-description-section">
-                <em className="content-description-answer">Last updated: April, 2022</em>
+                <em className="content-description-answer">Last updated: June, 2026</em>
             </div>
         </div>
     </div>

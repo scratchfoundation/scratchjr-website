@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LLK/scratchjr-website.git"
+    "url": "https://github.com/scratchfoundation/scratchjr-website.git"
   },
   "author": "Massachusetts Institute of Technology",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/LLK/scratchjr-website/issues"
+    "url": "https://github.com/scratchfoundation/scratchjr-website/issues"
   },
-  "homepage": "https://github.com/LLK/scratchjr-website",
+  "homepage": "https://github.com/scratchfoundation/scratchjr-website",
   "devDependencies": {
     "async": "1.5.2",
     "autoprefixer": "7.1.3",
