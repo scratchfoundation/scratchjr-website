@@ -85,7 +85,6 @@ const Index = () => {
 
                 <div
                     id="last-updated"
-                    style={{marginTop: '8px', paddingRight: '15px', color: '#808080', textAlign: 'right', fontSize: '12px'}}
                 >
                     Last updated: June, 2026
                 </div>
