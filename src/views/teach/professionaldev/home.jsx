@@ -14,7 +14,7 @@ const ProfessionalDevHome = () => (
             Coding as Another Language (CAL) curriculum into their classrooms with confidence.
         </div>
         <div className="content-section-items-container">
-            {/* TODO: replace linkURL, thumbnail, and description with real content. */}
+            {/* Thumbnails are placeholders — add images at static/images/profdev/. */}
             <StaticLinkSectionItem
                 title="TeachCAL"
                 format="full"
@@ -23,9 +23,9 @@ const ProfessionalDevHome = () => (
                 linkText="Learn more"
             >
                 TeachCAL offers online professional development for educators teaching the
-                Coding as Another Language curriculum. This free, self-paced, asynchronous course 
-                is designed to help educators learn how to teach coding and computational thinking 
-                with ScratchJr in conversation with natural language and literacy skills. 
+                Coding as Another Language curriculum. This free, self-paced, asynchronous
+                course is designed to help educators learn how to teach coding and computational
+                thinking with ScratchJr in conversation with natural language and literacy skills.
             </StaticLinkSectionItem>
             <StaticLinkSectionItem
                 title="DevTech In-Person PD Opportunities"
@@ -35,7 +35,7 @@ const ProfessionalDevHome = () => (
                 linkText="Learn more"
             >
                 The DevTech Research Group also offers in-person professional development workshops
-                and trainings. 
+                and trainings.
             </StaticLinkSectionItem>
         </div>
     </div>
