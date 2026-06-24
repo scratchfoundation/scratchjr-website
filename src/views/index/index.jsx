@@ -88,8 +88,8 @@ const Index = () => {
                         The {' '}<a href="https://sites.bc.edu/codingasanotherlanguage/">
                             Coding as Another Language Curriculum
                         </a>{' '}
-                         is the official curriculum of ScratchJr. 
-                         It supports young learners in developing new ways 
+                         is the official curriculum of ScratchJr.
+                         It supports young learners in developing new ways
                          of thinking and expressing themselves.
                     </div>
                     <div className="content-news-body">

@@ -50,10 +50,12 @@ const HomeSection = () => (
                     linkText="Purchase"
                 >
                     A deck of 75 activity cards covering fun and exciting projects designed to
-                    guide and inspire young children as they engage with ScratchJr. 
-                    The ScratchJr Coding Cards encourage kids to think creatively and systematically while developing computational thinking skills.
-                    As they work through the deck, kids will learn powerful ideas about computer science 
-                    by using ScratchJr programming blocks to make characters move, jump, dance, sing, and more. 
+                    guide and inspire young children as they engage with ScratchJr.
+                    The ScratchJr Coding Cards encourage kids to think creatively and
+                    systematically while developing computational thinking skills.
+                    As they work through the deck, kids will learn powerful ideas about computer science
+                    by using ScratchJr programming blocks to make characters move, jump, dance, sing,
+                    and more.
                      
 
                 </StaticLinkSectionItem>
@@ -64,12 +66,12 @@ const HomeSection = () => (
                     linkURL="https://www.amazon.com/Official-ScratchJr-Book-Help-Learn/dp/1593276710/"
                     linkText="Purchase"
                 >
-                    The perfect companion to the app, making coding easy and fun for all. 
+                    The perfect companion to the app, making coding easy and fun for all.
                     Each chapter includes several activities to help kids develop computational thinking, 
-                    problem-solving, and design skills. 
-                    In each activity, you’ll find: step-by-step, easy-to-follow directions, 
+                    problem-solving, and design skills.
+                    In each activity, you’ll find: step-by-step, easy-to-follow directions,
                     ways to connect the activity with literacy and math concepts,
-                    tips for grown-ups, 
+                    tips for grown-ups,
                     and creative challenges to take the learning further.
 
                 </StaticLinkSectionItem>
