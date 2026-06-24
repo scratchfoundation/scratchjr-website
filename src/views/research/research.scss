@@ -32,8 +32,8 @@ $question-answer: #808080;
 }
 
 .content-description-answer a {
-    color: $question-color;
     text-decoration: none;
+    color: $question-color;
 }
 
 .content-description-answer a:hover {
@@ -44,8 +44,8 @@ $question-answer: #808080;
 #stats-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     padding: 10px 0;
 }
 

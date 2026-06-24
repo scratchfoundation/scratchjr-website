@@ -26,6 +26,7 @@
 .content-nav-item-selected .assessments-icon {
     background-image: url("/images/blocks_o.svg");
 }
+
 /* Professional Development tab icon — clipboard & pencil, matching the
    ScratchJr icon style. SVGs live in static/images/. */
 .profdev-icon {
@@ -36,11 +37,12 @@
 .content-nav-item-selected .profdev-icon {
     background-image: url("/images/profdev_o.svg");
 }
+
 /* Fit four tabs across the row. */
 .content-nav-item {
+    flex: 1 1 24.9% !important;
     width: 24.9% !important;
     max-width: 24.9% !important;
-    flex: 1 1 24.9% !important;
 }
 
 /* Let a long label (e.g. "Professional Development") wrap to two tidy,
@@ -56,8 +58,8 @@
 }
 
 #content-nav .content-nav-item-icon {
-    margin-top: 0;
     flex: 0 0 auto;
+    margin-top: 0;
 }
 
 #content-nav .content-nav-item-description {
