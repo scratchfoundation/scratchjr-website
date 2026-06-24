@@ -65,46 +65,52 @@ $social-active: #f79331;
     text-align: center;
     text-decoration: none;
     color: $link-color;
+
+    &:visited {
+        color: $link-color;
+    }
 }
 
-.social-link:visited {
-    color: $link-color;
+.sjr-icon-twitter {
+
+    &::before {
+        display: block;
+        border-radius: 50%;
+        background-color: $twitter-color;
+        width: 30px;
+        height: 30px;
+        line-height: 1.75em;
+        font-size: 1.1em;
+        content: "\ea91";
+    }
+
+    &:hover::before {
+        background-color: $social-active;
+    }
+
+    span {
+        display: none;
+    }
 }
 
-.sjr-icon-twitter:before {
-    display: block;
-    border-radius: 50%;
-    background-color: $twitter-color;
-    width: 30px;
-    height: 30px;
-    line-height: 1.75em;
-    font-size: 1.1em;
-    content: "\ea91";
-}
+.sjr-icon-facebook {
 
-.sjr-icon-twitter:hover::before {
-    background-color: $social-active;
-}
+    &::before {
+        display: block;
+        border-radius: 50%;
+        background-color: $facebook-color;
+        width: 30px;
+        height: 30px;
+        line-height: 1.4em;
+        font-size: 1.2em;
+        content: "\ea8c";
+    }
 
-.sjr-icon-twitter span {
-    display: none;
-}
+    &:hover::before {
+        background-color: $social-active;
+    }
 
-.sjr-icon-facebook:before {
-    display: block;
-    border-radius: 50%;
-    background-color: $facebook-color;
-    width: 30px;
-    height: 30px;
-    line-height: 1.4em;
-    font-size: 1.2em;
-    content: "\ea8c";
-}
-
-.sjr-icon-facebook:hover:before {
-    background-color: $social-active;
-}
-
-.sjr-icon-facebook span {
-    display: none;
+    span {
+        display: none;
+    }
 }

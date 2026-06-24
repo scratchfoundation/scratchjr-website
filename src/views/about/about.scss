@@ -35,10 +35,10 @@ $question-answer: #808080;
 /* SUBMENUS */
 
 .content-nav-item {
-    display: inline-block;    /* 👈 Add this to unlock the width property */
-    width: 33.33% !important; 
-    box-sizing: border-box;   /* Prevents padding from breaking the 33% math */
+    display: inline-block;
     float: left;
+    width: 33.33% !important;
+    box-sizing: border-box;
 }
 
 .info-icon {
@@ -46,9 +46,8 @@ $question-answer: #808080;
     background-size: 100%;
 }
 
-.content-nav-item-selected  .info-icon {
+.content-nav-item-selected .info-icon {
     background-image: url("/images/infos_o.svg");
-
 }
 
 .press-icon {
@@ -56,7 +55,7 @@ $question-answer: #808080;
     background-size: 100%;
 }
 
-.content-nav-item-selected  .press-icon {
+.content-nav-item-selected .press-icon {
     background-image: url("/images/press_o.svg");
 }
 
@@ -65,7 +64,7 @@ $question-answer: #808080;
 //     background-size: 100%;
 // }
 
-// .content-nav-item-selected  .videos-icon {
+// .content-nav-item-selected .videos-icon {
 //     background-image: url("/images/videos_o.svg");
 // }
 
@@ -74,6 +73,6 @@ $question-answer: #808080;
     background-size: 100%;
 }
 
-.content-nav-item-selected  .faq-icon {
+.content-nav-item-selected .faq-icon {
     background-image: url("/images/faq_o.svg");
 }

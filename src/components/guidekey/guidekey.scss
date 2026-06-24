@@ -4,12 +4,12 @@ $key-description-color: #808080;
 $key-header-background: $key-border-color;
 
 #guide-key {
-    margin-left: 10px;
+    flex-shrink: 0;
     margin-top: 0;
+    margin-left: 10px;
     border: 1px solid $key-border-color;
     width: 200px;    // reduced from 225px
     min-height: 472px;
-    flex-shrink: 0;
 }
 
 #key-header {
