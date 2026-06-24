@@ -103,6 +103,39 @@ const FAQSection = () => (
                 </div>
             </div>
 
+            <div className="content-description-section">
+                <div className="content-description-question">
+                    Are there ScratchJr Coding Cards?
+                </div>
+                <div className="content-description-answer">
+                    <a
+                        href="https://nostarch.com/scratchjrcards"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <img
+                            src="/images/scratchjr-coding-cards.png"
+                            alt="ScratchJr Coding Cards"
+                            width="100"
+                            height="auto"
+                            style={{float: 'right'}}
+                        />
+                    </a>
+                    Yes! The ScratchJr Coding Cards are a deck of 75 activity cards that offer fun,
+                    creative projects to help children build coding skills with ScratchJr. Each card
+                    shows a project idea on one side and simple step-by-step instructions on the
+                    other, so children can explore and learn at their own pace. You can buy your
+                    copy through <a
+                        href="https://nostarch.com/scratchjrcards"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        No Starch Press
+                    </a>
+                    !
+                </div>
+            </div>
+
             {/* <div className="content-description-section">
                 <div className="content-description-question">
                     Will ScratchJr run on my Chromebook?
@@ -175,7 +208,7 @@ const FAQSection = () => (
             </div>
 
             <div className="content-description-section">
-                <em className="content-description-answer">Last updated: April, 2026</em>
+                <em className="content-description-answer">Last updated: June, 2026</em>
             </div>
         </div>
     </div>

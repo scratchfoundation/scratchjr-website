@@ -20,7 +20,7 @@ const Research = () => (
                     DevTech Research Group has{' '}
                     <a href="https://sites.bc.edu/devtech/research/scratchjr-around-the-world-2/">
                         studied ScratchJr&rsquo;s global impact
-                    </a>, using their findings to create evidence-based curricula and assessments.
+                    </a>, using findings to design evidence-based curricula and assessments.
                 </div>
 
                 <div className="content-description-answer">
@@ -50,22 +50,37 @@ const Research = () => (
                             src="/images/research/papers.png"
                             alt="Number of research papers published"
                         />
-                        <img
+                        {/* <img
                             className="stat-image"
                             src="/images/research/curricula.png"
                             alt="Number of curricula created"
-                        />
+                        /> */}
                     </div>
                 </div>
 
                 <div id="content-description">
                     <div className="content-description-section">
                         <div className="content-description-question">
+                            Global Research Partnerships
+                        </div>
+                        <div className="content-description-answer">
+                            The DevTech Research Group worked with over 10 international
+                            partners to study ScratchJr around the world. Explore the{' '}
+                            <a href="https://sites.bc.edu/devtech/research/scratchjr-around-the-world-2/">
+                                ScratchJr international studies here
+                            </a>.
+                        </div>
+                    </div>
+                    
+                    <div className="content-description-section">
+                        <div className="content-description-question">
                             Assessments
                         </div>
                         <div className="content-description-answer">
-                            The DevTech Research Group has developed assessments to help measure
-                            how children learn with ScratchJr. Explore the{' '}
+                            The DevTech Research Group has developed many play-based
+                            assessments to help evaluate how children learn with ScratchJr,
+                            including a project rubric and a series of task-based challenges.
+                            Explore the{' '}
                             <a href="https://sites.bc.edu/devtech/assessments/scratchjr-instruments/">
                                 ScratchJr assessment instruments
                             </a>.
