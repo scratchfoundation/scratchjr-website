@@ -67,7 +67,7 @@ const HomeSection = () => (
                     linkText="Purchase"
                 >
                     The perfect companion to the app, making coding easy and fun for all.
-                    Each chapter includes several activities to help kids develop computational thinking, 
+                    Each chapter includes several activities to help kids develop computational thinking,
                     problem-solving, and design skills.
                     In each activity, you’ll find: step-by-step, easy-to-follow directions,
                     ways to connect the activity with literacy and math concepts,
