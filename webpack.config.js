@@ -1,6 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const sass = require('sass');
 
 // PostCss
 const autoprefixer = require('autoprefixer');
@@ -67,7 +68,10 @@ module.exports = {
             }, {
                 loader: 'css-loader'
             }, {
-                loader: 'sass-loader'
+                loader: 'sass-loader',
+                options: {
+                    implementation: sass
+                }
             }]
         },
         {
