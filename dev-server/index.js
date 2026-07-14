@@ -19,7 +19,7 @@ for (var routeId in routes) {
 
 app.use(webpackDevMiddleware(compiler, {
     headers: {
-        'X-From-Webpack': true
+        'X-From-Webpack': 'true'
     }
 }));
 
