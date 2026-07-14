@@ -1,3 +1,7 @@
+// Serve a development build by default; must be set before the webpack
+// config is required so it picks up the mode.
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 var express = require('express');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpack = require('webpack');

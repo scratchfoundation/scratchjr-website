@@ -10,6 +10,12 @@ const postcssVars = require('postcss-simple-vars');
 const routes = require('./src/routes.json');
 const TemplateConfig = require('./src/template-config.js');
 
+// Default to a production build; opt down to development only when asked
+// (the dev server and staging deploys set NODE_ENV=development). webpack's
+// mode also sets the bundle's process.env.NODE_ENV, so this flips React's
+// dev/prod build to match.
+const mode = process.env.NODE_ENV === 'development' ? 'development' : 'production';
+
 // Prepare all entry points
 const entry = {};
 routes.forEach(route => {
@@ -19,7 +25,7 @@ routes.forEach(route => {
 });
 
 module.exports = {
-    mode: 'production',
+    mode: mode,
     entry: entry,
     output: {
         path: path.resolve(__dirname, 'build'),
