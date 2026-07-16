@@ -3,9 +3,8 @@ const Fastly = require('fastly');
 /*
  * Fastly configuration helpers built on the official fastly-js client.
  *
- * Wraps the per-resource API classes and exposes Promise-returning, upsert-by-
- * name helpers with stable signatures so callers don't deal with the client's
- * create-vs-update split. Authenticates the shared ApiClient on construction.
+ * Wraps the per-resource API classes and exposes Promise-returning helpers with
+ * stable signatures. Authenticates the shared ApiClient on construction.
  *
  * @param {string} apiToken Fastly API token
  * @param {string} serviceId Fastly service id
@@ -14,9 +13,8 @@ module.exports = (apiToken, serviceId) => {
     Fastly.ApiClient.instance.authenticate(apiToken);
 
     const versionApi = new Fastly.VersionApi();
-    const conditionApi = new Fastly.ConditionApi();
     const headerApi = new Fastly.HeaderApi();
-    const responseObjectApi = new Fastly.ResponseObjectApi();
+    const snippetApi = new Fastly.SnippetApi();
     const purgeApi = new Fastly.PurgeApi();
 
     // Upsert-by-name: fastly-js has no upsert, so update (PUT by name) and fall
@@ -25,6 +23,11 @@ module.exports = (apiToken, serviceId) => {
         if (err && err.status === 404) return create();
         throw err;
     });
+
+    const ignoreMissing = err => {
+        if (err && err.status === 404) return null;
+        throw err;
+    };
 
     const withService = (version, extra) => Object.assign(
         {service_id: serviceId, version_id: version},
@@ -55,16 +58,13 @@ module.exports = (apiToken, serviceId) => {
             return versionApi.cloneServiceVersion({service_id: serviceId, version_id: version});
         },
 
-        // Upsert a Fastly condition entry.
-        setCondition: (version, condition) => {
+        // Compile-check a version's generated VCL without activating it. Resolves
+        // with {status, msg}; status is 'ok' when the version is valid.
+        validateVersion: version => {
             if (!serviceId) {
-                return Promise.reject(new Error('Failed to set condition. No serviceId configured'));
+                return Promise.reject(new Error('Failed to validate version. No serviceId configured.'));
             }
-            const params = withService(version, condition);
-            return upsert(
-                () => conditionApi.updateCondition(Object.assign({condition_name: condition.name}, params)),
-                () => conditionApi.createCondition(params)
-            );
+            return versionApi.validateServiceVersion({service_id: serviceId, version_id: version});
         },
 
         // Upsert a Fastly header entry.
@@ -79,21 +79,21 @@ module.exports = (apiToken, serviceId) => {
             );
         },
 
-        // Upsert a Fastly response object. The client takes the body wrapped in
-        // create_response_object_request for both create and update.
-        setResponseObject: (version, responseObject) => {
+        // Replace a versioned VCL snippet. fastly-js updateSnippet sends no body,
+        // so delete any existing snippet of this name (ignoring 404) then create.
+        setSnippet: (version, snippet) => {
             if (!serviceId) {
-                return Promise.reject(new Error('Failed to set response object. No serviceId configured'));
+                return Promise.reject(new Error('Failed to set snippet. No serviceId configured'));
             }
-            return upsert(
-                () => responseObjectApi.updateResponseObject(withService(version, {
-                    response_object_name: responseObject.name,
-                    create_response_object_request: responseObject
-                })),
-                () => responseObjectApi.createResponseObject(withService(version, {
-                    create_response_object_request: responseObject
-                }))
-            );
+            return snippetApi.deleteSnippet({service_id: serviceId, version_id: version, name: snippet.name})
+                .catch(ignoreMissing)
+                .then(() => snippetApi.createSnippet(withService(version, {
+                    name: snippet.name,
+                    type: snippet.type,
+                    content: snippet.content,
+                    priority: snippet.priority,
+                    dynamic: '0'
+                })));
         },
 
         // Activate a version.
