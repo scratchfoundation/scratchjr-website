@@ -46,6 +46,6 @@ Use `^C` to stop the node process `npm start` starts.
 | ------------------------ | ------- | ------------------------------------------------ |
 | `FASTLY_SERVICE_ID`      | `''`    | Fastly service ID for `bin/configure-fastly.js`  |
 | `FASTLY_API_KEY`         | `''`    | Fastly API key for `bin/configure-fastly.js`     |
-| `FASTLY_ACTIVATE_CHANGES`| `false` | Activate changes and purge all after configuring |
+| `FASTLY_ACTIVATE_CHANGES`| `false` | Set to `true` to activate changes and purge all after configuring |
 | `AWS_ACCESS_KEY_ID`      | `''`    | AWS access key id for S3                         |
 | `AWS_SECRET_ACCESS_KEY`  | `''`    | AWS secret access key for S3                     |

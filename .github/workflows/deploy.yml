@@ -96,7 +96,9 @@ jobs:
           aws s3 sync ./build s3://${{ vars.AWS_S3_BUCKET }}/junior/
 
   configure-fastly:
-    needs: [setup, lint, build]
+    # Runs after deploy so new origin content is uploaded before new routing
+    # can go live; also skips if the S3 upload failed.
+    needs: [setup, lint, build, deploy]
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment: ${{ needs.setup.outputs.environment }}
@@ -113,6 +115,7 @@ jobs:
         env:
           FASTLY_API_KEY: ${{ secrets.FASTLY_API_KEY }}
           FASTLY_SERVICE_ID: ${{ vars.FASTLY_SERVICE_ID }}
-          # Set this var in an Environment to have that environment's deploys
-          # activate the new version; leave it unset to configure + validate only.
+          # Set this var to "true" in an Environment to have that environment's
+          # deploys activate the new version; any other value configures and
+          # validates only.
           FASTLY_ACTIVATE_CHANGES: ${{ vars.FASTLY_ACTIVATE_CHANGES }}

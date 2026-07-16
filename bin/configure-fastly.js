@@ -38,7 +38,7 @@ const configureFastly = async () => {
 
 configureFastly()
     .then(async version => {
-        if (!process.env.FASTLY_ACTIVATE_CHANGES) return;
+        if (process.env.FASTLY_ACTIVATE_CHANGES !== 'true') return;
         const response = await fastly.activateVersion(version);
         process.stdout.write(`Successfully configured and activated version ${response.number}\n`);
         await fastly.purgeAll(FASTLY_SERVICE_ID);
