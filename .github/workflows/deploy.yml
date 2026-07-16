@@ -94,3 +94,25 @@ jobs:
       - name: Upload to S3
         run: |
           aws s3 sync ./build s3://${{ vars.AWS_S3_BUCKET }}/junior/
+
+  configure-fastly:
+    needs: [setup, lint, build]
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    environment: ${{ needs.setup.outputs.environment }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node 22x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+      - name: Install Dependencies
+        run: npm ci --legacy-peer-deps
+      - name: Configure Fastly
+        run: npm run sync-fastly
+        env:
+          FASTLY_API_KEY: ${{ secrets.FASTLY_API_KEY }}
+          FASTLY_SERVICE_ID: ${{ vars.FASTLY_SERVICE_ID }}
+          # Set this var in an Environment to have that environment's deploys
+          # activate the new version; leave it unset to configure + validate only.
+          FASTLY_ACTIVATE_CHANGES: ${{ vars.FASTLY_ACTIVATE_CHANGES }}
