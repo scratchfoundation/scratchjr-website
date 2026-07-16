@@ -1,0 +1,5 @@
+# Preserves the targets that were previously passed inline to autoprefixer.
+# Shared by autoprefixer (PostCSS) and @babel/preset-env.
+last 3 versions
+Safari >= 8
+iOS >= 8

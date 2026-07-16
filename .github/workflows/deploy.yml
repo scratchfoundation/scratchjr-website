@@ -11,31 +11,59 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      environment: ${{ steps.env.outputs.environment }}
+      node_env: ${{ steps.env.outputs.node_env }}
+    steps:
+      - name: Resolve deploy environment and build mode
+        id: env
+        run: |
+          if [ "$GITHUB_REF" = "refs/heads/master" ]; then
+            environment=production
+          else
+            environment=staging
+          fi
+          # Staging ships a development build for easier debugging;
+          # production ships a production build. NODE_ENV follows the
+          # environment so the two can't drift.
+          if [ "$environment" = "production" ]; then
+            node_env=production
+          else
+            node_env=development
+          fi
+          echo "environment=$environment" >> "$GITHUB_OUTPUT"
+          echo "node_env=$node_env" >> "$GITHUB_OUTPUT"
+
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 17x
+      - name: Use Node 22x
         uses: actions/setup-node@v4
         with:
-          node-version: '17.x'
+          node-version: '22.x'
       - name: Install Dependencies
         run: npm ci --legacy-peer-deps
       - name: Lint Site Code
         run: make lint
 
   build:
+    needs: [setup]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 17x
+      - name: Use Node 22x
         uses: actions/setup-node@v4
         with:
-          node-version: '17.x'
+          node-version: '22.x'
       - name: Install Dependencies
         run: npm ci --legacy-peer-deps
       - name: Build Site
         run: npm run build
+        env:
+          NODE_ENV: ${{ needs.setup.outputs.node_env }}
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -44,13 +72,13 @@ jobs:
           retention-days: 1
 
   deploy:
-    needs: [lint, build]
+    needs: [setup, lint, build]
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       id-token: write
       contents: read
-    environment: ${{ github.ref == 'refs/heads/master' && 'production' || 'staging' }}
+    environment: ${{ needs.setup.outputs.environment }}
     steps:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
