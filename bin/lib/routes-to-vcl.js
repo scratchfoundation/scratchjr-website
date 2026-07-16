@@ -4,8 +4,9 @@
  * Instead of creating one Fastly condition + response object + header per route
  * (which accumulates objects and burns a synthetic status code per redirect),
  * the whole route table is rendered into a few snippets that are overwritten by
- * name on every run. Exact redirects and section rewrites become table lookups;
- * a single reused internal status code drives every 301.
+ * name on every run. Exact redirects and section rewrites become table lookups,
+ * while a "prefix" redirect becomes a regex rewrite that moves a whole renamed
+ * path tree; a single reused internal status code drives every 301.
  *
  * Returns an array of snippet specs: {name, type, priority, content}.
  */
@@ -19,6 +20,9 @@ const REDIRECT_STATUS = 700;
 // Escape a string for use inside a VCL double-quoted literal.
 const vclString = value => `"${String(value).replace(/\\/g, '\\\\')
     .replace(/"/g, '\\"')}"`;
+
+// Escape a literal path for use inside a VCL regular expression.
+const vclRegex = value => String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 // Derive the literal source path a redirect route matches, from its pattern.
 // Redirect patterns are anchored literal paths (e.g. "^/about\\.html"); strip
@@ -45,11 +49,19 @@ const renderTable = (name, entries) => {
 
 const routesToSnippets = routes => {
     const redirectEntries = [];
+    const prefixRedirects = [];
     const sectionEntries = [];
 
     routes.forEach(route => {
         if (route.redirect) {
-            redirectEntries.push([redirectSourcePath(route), route.redirect]);
+            const source = redirectSourcePath(route);
+            // A prefix redirect moves a whole renamed path tree to the new path
+            // (preserving the sub-path); a plain redirect maps one exact path.
+            if (route.prefix) {
+                prefixRedirects.push([source, route.redirect]);
+            } else {
+                redirectEntries.push([source, route.redirect]);
+            }
             return;
         }
         if (route.name === 'index') return; // handled explicitly in recv
@@ -62,13 +74,24 @@ const routesToSnippets = routes => {
     ].join('\n\n');
 
     const recv = [
-        '# Redirect legacy .html paths to their clean URL (single reused status).',
+        '# Redirect exact legacy paths to their clean URL (single reused status).',
         'declare local var.redirect STRING;',
         'set var.redirect = table.lookup(redirects, req.url.path, "");',
         'if (var.redirect != "") {',
         '    set req.http.X-Redirect-Location = var.redirect;',
         `    error ${REDIRECT_STATUS};`,
         '}',
+        ...prefixRedirects.flatMap(([source, target]) => {
+            const src = vclRegex(source);
+            return [
+                '',
+                `# Redirect the renamed ${source} tree to ${target}, preserving the sub-path.`,
+                `if (req.url.path ~ "^${src}(/.*)?$") {`,
+                `    set req.http.X-Redirect-Location = regsub(req.url.path, "^${src}", "${target}");`,
+                `    error ${REDIRECT_STATUS};`,
+                '}'
+            ];
+        }),
         '',
         '# Serve section pages by rewriting to their static html file.',
         'if (req.url.path == "/") {',

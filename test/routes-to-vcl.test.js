@@ -1,12 +1,14 @@
 const assert = require('assert');
 const {routesToSnippets, redirectSourcePath, REDIRECT_STATUS} = require('../bin/lib/routes-to-vcl');
 
-// A small fixture covering each route shape: index, a redirect, a prefix
-// section, an exact section, and a section with no redirect pair.
+// A small fixture covering each route shape: index, an exact redirect, a prefix
+// (renamed-section) redirect, a prefix section, an exact section, and a section
+// with no redirect pair.
 const routes = [
     {pattern: '^/$', name: 'index', title: 'Home'},
     {pattern: '^/about\\.html', name: 'about-redirect', redirect: '/about'},
     {pattern: '^/about(/.+)*/?', name: 'about', title: 'About'},
+    {pattern: '^/learn', name: 'learn-path-redirect', redirect: '/explore', prefix: true},
     {pattern: '^/research/?$', name: 'research', title: 'Research'},
     {pattern: '^/hoc/?$', name: 'hoc', title: 'Hour of Code'}
 ];
@@ -39,6 +41,18 @@ assert.ok(recv.content.includes('table.lookup(sections, var.section'), 'recv loo
 assert.ok(recv.content.includes(`error ${REDIRECT_STATUS}`), 'recv raises the redirect sentinel');
 assert.ok(recv.content.includes('set req.url = "/index.html"'), 'recv handles the root path');
 
+// A prefix (renamed-section) redirect renders as a regsub in recv, not an exact
+// table row, so the old path and all its sub-paths move to the new path.
+assert.ok(!tables.content.includes('"/learn"'), 'prefix redirect source is not an exact table row');
+assert.ok(
+    recv.content.includes('req.url.path ~ "^/learn(/.*)?$"'),
+    'recv matches the renamed prefix and its sub-paths'
+);
+assert.ok(
+    recv.content.includes('regsub(req.url.path, "^/learn", "/explore")'),
+    'recv rewrites the old prefix to the new path, preserving the rest'
+);
+
 // Error snippet.
 const error = byName['app-routes-error'];
 assert.strictEqual(error.type, 'error');
@@ -49,6 +63,8 @@ assert.ok(error.content.includes('set obj.http.Location = req.http.X-Redirect-Lo
 // redirectSourcePath derives literal paths and rejects real regexes.
 assert.strictEqual(redirectSourcePath({pattern: '^/about\\.html'}), '/about.html');
 assert.strictEqual(redirectSourcePath({pattern: '^/eula\\.html$'}), '/eula.html');
+// A prefix redirect uses a bare path (no .html) as its source.
+assert.strictEqual(redirectSourcePath({pattern: '^/learn'}), '/learn');
 assert.throws(
     () => redirectSourcePath({pattern: '^/projects/(\\d+)'}),
     /not a literal path/,
