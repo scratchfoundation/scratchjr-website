@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "scratchjr-website =================",
   "scripts": {
-    "start": "make start",
-    "stop": "make stop",
-    "test": "make test",
-    "watch": "make watch",
-    "build": "make build",
-    "dev": "make watch && make start &"
+    "clean": "rm -rf ./build && mkdir -p build",
+    "build": "npm run clean && webpack --bail",
+    "lint": "eslint . --ext .js,.jsx && sass-lint -v ./src/*.scss && sass-lint -v ./src/**/*.scss",
+    "start": "node ./dev-server/index.js",
+    "sync-fastly": "node ./bin/configure-fastly.js",
+    "test": "npm run lint && npm run build"
   },
   "repository": {
     "type": "git",

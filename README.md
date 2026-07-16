@@ -10,7 +10,7 @@
 ### To Build
 ```bash
 npm install
-make build
+npm run build
 ```
 
 Note: There will be a warning about a peer dependency on jquery. You can ignore it because slick-carousel is only used for stylesheets.
