@@ -13,16 +13,8 @@ module.exports = (apiToken, serviceId) => {
     Fastly.ApiClient.instance.authenticate(apiToken);
 
     const versionApi = new Fastly.VersionApi();
-    const headerApi = new Fastly.HeaderApi();
     const snippetApi = new Fastly.SnippetApi();
     const purgeApi = new Fastly.PurgeApi();
-
-    // Upsert-by-name: fastly-js has no upsert, so update (PUT by name) and fall
-    // back to create (POST) when the resource does not yet exist (404).
-    const upsert = (update, create) => update().catch(err => {
-        if (err && err.status === 404) return create();
-        throw err;
-    });
 
     const ignoreMissing = err => {
         if (err && err.status === 404) return null;
@@ -65,18 +57,6 @@ module.exports = (apiToken, serviceId) => {
                 return Promise.reject(new Error('Failed to validate version. No serviceId configured.'));
             }
             return versionApi.validateServiceVersion({service_id: serviceId, version_id: version});
-        },
-
-        // Upsert a Fastly header entry.
-        setFastlyHeader: (version, header) => {
-            if (!serviceId) {
-                return Promise.reject(new Error('Failed to set header. No serviceId configured'));
-            }
-            const params = withService(version, header);
-            return upsert(
-                () => headerApi.updateHeaderObject(Object.assign({header_name: header.name}, params)),
-                () => headerApi.createHeaderObject(params)
-            );
         },
 
         // Replace a versioned VCL snippet. fastly-js updateSnippet sends no body,

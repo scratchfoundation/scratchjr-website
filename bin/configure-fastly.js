@@ -2,8 +2,6 @@ const routeJson = require('../src/routes.json');
 const {routesToSnippets} = require('./lib/routes-to-vcl');
 
 const FASTLY_SERVICE_ID = process.env.FASTLY_SERVICE_ID || '';
-const S3_BUCKET_NAME = process.env.S3_BUCKET_NAME || '';
-const BUCKET_NAME_HEADER_NAME = 'Bucket name';
 
 const fastly = require('./lib/fastly-extended')(process.env.FASTLY_API_KEY, FASTLY_SERVICE_ID);
 
@@ -22,17 +20,6 @@ const getWorkingVersion = async () => {
     return response.number;
 };
 
-// Route origin requests to the S3 bucket.
-const setBucketNameHeader = version => fastly.setFastlyHeader(version, {
-    name: BUCKET_NAME_HEADER_NAME,
-    action: 'set',
-    ignore_if_set: 0,
-    type: 'REQUEST',
-    dst: 'http.host',
-    src: `"${S3_BUCKET_NAME}"`,
-    priority: 1
-});
-
 // Render routes.json into VCL snippets and write them to the version.
 const setAppRouteSnippets = version => Promise.all(
     routesToSnippets(routeJson).map(snippet => fastly.setSnippet(version, snippet))
@@ -40,10 +27,7 @@ const setAppRouteSnippets = version => Promise.all(
 
 const configureFastly = async () => {
     const version = await getWorkingVersion();
-    await Promise.all([
-        setBucketNameHeader(version),
-        setAppRouteSnippets(version)
-    ]);
+    await setAppRouteSnippets(version);
     // Compile-check the generated VCL before anything tries to activate it.
     const validation = await fastly.validateVersion(version);
     if (validation.status !== 'ok') {
