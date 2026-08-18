@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $content-white: #fff;
 $header-grey: #7f7f7f;
 $header-orange:  #f5a322;
@@ -120,7 +122,7 @@ $last-updated-color: #808080;
 #discussion-header {
     margin-top: 32px;
     margin-left: 40px;
-    color: darken($header-grey, 10%);
+    color: color.adjust($header-grey, $lightness: -10%);
     font-size: 20px;
 }
 
@@ -134,7 +136,7 @@ $last-updated-color: #808080;
     font-size: 14pt;
 }
 
-#disscussion-tweets {
+#discussion-tweets {
     float: right;
     width: 50%;
 }
