@@ -26,7 +26,7 @@ const Donate = () => (
                         id="donate-button"
                         rel="noopener noreferrer"
                         target="_blank"
-                        >
+                    >
                         <div className="blue-button">Donate</div>
                     </a>
                 </div>
