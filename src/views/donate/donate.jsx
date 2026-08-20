@@ -22,8 +22,10 @@ const Donate = () => (
 
                 <div className="donation-block">
                     <a
-                        href="/support"
+                        href="https://www.givecampus.com/campaigns/82338/donations/new"
                         id="donate-button"
+                        rel="noopener noreferrer"
+                        target="_blank"
                     >
                         <div className="blue-button">Donate</div>
                     </a>

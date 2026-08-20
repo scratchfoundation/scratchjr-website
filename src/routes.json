@@ -20,10 +20,21 @@
 		"redirect": "/explore"
 	},
 	{
+		"pattern": "^/learn\\.html",
+		"name": "learn-redirect",
+		"redirect": "/explore"
+	},
+	{
+		"pattern": "^/learn",
+		"name": "learn-path-redirect",
+		"redirect": "/explore",
+		"prefix": true
+	},
+	{
 		"pattern": "^/explore(/.+)*/?",
 		"name": "explore",
 		"title": "Explore"
-	},	
+	},
 	{
 		"pattern": "^/teach\\.html",
 		"name": "teach-redirect",
@@ -33,7 +44,7 @@
 		"pattern": "^/teach(/.+)*/?",
 		"name": "teach",
 		"title": "Teach"
-	},	
+	},
 	{
 		"pattern": "^/outreach\\.html",
 		"name": "outreach-redirect",
